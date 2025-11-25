@@ -171,3 +171,10 @@ script_execute(easy_cam_set_position, id, clamp(x+shakeh,base_width/2,room_width
 /// @DnDArgument : "var_1" "shakev"
 shakeh = shakeh*-.8;
 shakev = shakev*-.8;
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 63726543
+/// @DnDArgument : "expr" "clamp(panning_strength,0,.5)"
+/// @DnDArgument : "var" "panning_strength"
+panning_strength = clamp(panning_strength,0,.5);

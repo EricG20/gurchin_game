@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"level_data_get_key",
+  "isCompatibility":false,
+  "isDnD":true,
+  "name":"level_data_get_key",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

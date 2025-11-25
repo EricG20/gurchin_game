@@ -1,0 +1,84 @@
+/// @DnDAction : YoYo Games.Common.Execute_Script
+/// @DnDVersion : 1.1
+/// @DnDHash : 19E8EF50
+/// @DnDArgument : "script" "flash_reduce"
+/// @DnDSaveInfo : "script" "flash_reduce"
+script_execute(flash_reduce);
+
+/// @DnDAction : YoYo Games.Common.Execute_Script
+/// @DnDVersion : 1.1
+/// @DnDHash : 493C8123
+/// @DnDArgument : "script" "check_ground"
+/// @DnDSaveInfo : "script" "check_ground"
+script_execute(check_ground);
+
+/// @DnDAction : YoYo Games.Common.Execute_Script
+/// @DnDVersion : 1.1
+/// @DnDHash : 6E865C25
+/// @DnDArgument : "script" "movement_stuff"
+/// @DnDSaveInfo : "script" "movement_stuff"
+script_execute(movement_stuff);
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 36BC9442
+/// @DnDArgument : "expr" "facing"
+/// @DnDArgument : "var" "hsp"
+hsp = facing;
+
+/// @DnDAction : YoYo Games.Collisions.If_Object_At
+/// @DnDVersion : 1.1
+/// @DnDHash : 325A8AF8
+/// @DnDArgument : "x" "facing"
+/// @DnDArgument : "x_relative" "1"
+/// @DnDArgument : "y" "3"
+/// @DnDArgument : "y_relative" "1"
+/// @DnDArgument : "object" "o_solid"
+/// @DnDArgument : "not" "1"
+/// @DnDSaveInfo : "object" "o_solid"
+var l325A8AF8_0 = instance_place(x + facing, y + 3, o_solid);
+if (!(l325A8AF8_0 > 0))
+{
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 6F0C6F4F
+	/// @DnDParent : 325A8AF8
+	/// @DnDArgument : "expr" "-facing"
+	/// @DnDArgument : "var" "facing"
+	facing = -facing;
+}
+
+/// @DnDAction : YoYo Games.Collisions.If_Object_At
+/// @DnDVersion : 1.1
+/// @DnDHash : 5BAE664B
+/// @DnDArgument : "x" "facing*5"
+/// @DnDArgument : "x_relative" "1"
+/// @DnDArgument : "y" "-5"
+/// @DnDArgument : "y_relative" "1"
+/// @DnDArgument : "object" "o_solid"
+/// @DnDSaveInfo : "object" "o_solid"
+var l5BAE664B_0 = instance_place(x + facing*5, y + -5, o_solid);
+if ((l5BAE664B_0 > 0))
+{
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 5E75421E
+	/// @DnDParent : 5BAE664B
+	/// @DnDArgument : "expr" "-facing"
+	/// @DnDArgument : "var" "facing"
+	facing = -facing;
+}
+
+/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDVersion : 1
+/// @DnDHash : 44B79C17
+/// @DnDArgument : "var" "hp"
+/// @DnDArgument : "op" "3"
+if(hp <= 0)
+{
+	/// @DnDAction : YoYo Games.Instances.Destroy_Instance
+	/// @DnDVersion : 1
+	/// @DnDHash : 423831B4
+	/// @DnDParent : 44B79C17
+	instance_destroy();
+}

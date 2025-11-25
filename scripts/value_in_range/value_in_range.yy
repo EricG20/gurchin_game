@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"value_in_range",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"value_in_range",
+  "parent":{
+    "name":"Gradient",
+    "path":"folders/Scripts/Gradient.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

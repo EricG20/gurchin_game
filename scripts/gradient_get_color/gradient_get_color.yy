@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"gradient_get_color",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"gradient_get_color",
+  "parent":{
+    "name":"Gradient",
+    "path":"folders/Scripts/Gradient.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"gradient_create",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"gradient_create",
+  "parent":{
+    "name":"Gradient",
+    "path":"folders/Scripts/Gradient.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

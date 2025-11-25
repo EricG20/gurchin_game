@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sndSpeechDefault",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.0847619,
+  "exportDir":"",
+  "name":"sndSpeechDefault",
+  "parent":{
+    "name":"textboxy",
+    "path":"folders/Sounds/textboxy.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sndSpeechDefault",
+  "volume":1.0,
+}

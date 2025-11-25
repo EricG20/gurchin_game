@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"boost_control",
+  "isCompatibility":false,
+  "isDnD":true,
+  "name":"boost_control",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

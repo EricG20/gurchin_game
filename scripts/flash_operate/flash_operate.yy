@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"flash_operate",
+  "isCompatibility":false,
+  "isDnD":true,
+  "name":"flash_operate",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

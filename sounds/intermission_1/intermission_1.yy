@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"intermission_1",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":3,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":60.0,
+  "exportDir":"",
+  "name":"intermission_1",
+  "parent":{
+    "name":"chill",
+    "path":"folders/Sounds/music/chill.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"intermission_1.ogg",
+  "volume":1.0,
+}

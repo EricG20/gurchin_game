@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"easy_cam_get_rotation",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"easy_cam_get_rotation",
+  "parent":{
+    "name":"easy_cam",
+    "path":"folders/Scripts/easy_cam.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

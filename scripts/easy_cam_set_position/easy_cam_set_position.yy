@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"easy_cam_set_position",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"easy_cam_set_position",
+  "parent":{
+    "name":"easy_cam",
+    "path":"folders/Scripts/easy_cam.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

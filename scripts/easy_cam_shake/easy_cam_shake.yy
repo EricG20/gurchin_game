@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"easy_cam_shake",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"easy_cam_shake",
+  "parent":{
+    "name":"easy_cam",
+    "path":"folders/Scripts/easy_cam.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

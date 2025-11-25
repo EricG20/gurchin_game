@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"enum_easy_cam_size_type",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"enum_easy_cam_size_type",
+  "parent":{
+    "name":"easy_cam",
+    "path":"folders/Scripts/easy_cam.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -209,6 +209,7 @@
     {"id":{"name":"scr_approach","path":"scripts/scr_approach/scr_approach.yy",},},
     {"id":{"name":"scr_change_song","path":"scripts/scr_change_song/scr_change_song.yy",},},
     {"id":{"name":"scr_fadeout_song","path":"scripts/scr_fadeout_song/scr_fadeout_song.yy",},},
+    {"id":{"name":"scr_grade_point_reward","path":"scripts/scr_grade_point_reward/scr_grade_point_reward.yy",},},
     {"id":{"name":"scr_grade","path":"scripts/scr_grade/scr_grade.yy",},},
     {"id":{"name":"scr_laser","path":"scripts/scr_laser/scr_laser.yy",},},
     {"id":{"name":"scr_load_game","path":"scripts/scr_load_game/scr_load_game.yy",},},

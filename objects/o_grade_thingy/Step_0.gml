@@ -33,9 +33,9 @@ if(increment <= 180){	/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDParent : 7F2AC6DA
 		/// @DnDArgument : "soundid" "points"
 		/// @DnDArgument : "gain" ".5"
-		/// @DnDArgument : "pitch" "random_range(.4,1.6)"
+		/// @DnDArgument : "pitch" "random_range(.9,1.6)"
 		/// @DnDSaveInfo : "soundid" "points"
-		audio_play_sound(points, 0, 0, .5, undefined, random_range(.4,1.6));}}
+		audio_play_sound(points, 0, 0, .5, undefined, random_range(.9,1.6));}}
 
 /// @DnDAction : YoYo Games.Common.Else
 /// @DnDVersion : 1

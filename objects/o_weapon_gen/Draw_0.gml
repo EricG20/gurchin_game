@@ -63,11 +63,25 @@ var l3111867F_0 = state;switch(l3111867F_0){	/// @DnDAction : YoYo Games.Swit
 		/// @DnDVersion : 1
 		/// @DnDHash : 1C6D2EBE
 		/// @DnDParent : 4CA9CA7A
-		/// @DnDArgument : "var" "floor(cooldown)%15"
-		if(floor(cooldown)%15 == 0){	/// @DnDAction : YoYo Games.Common.Execute_Script
+		/// @DnDArgument : "var" "floor(cooldown)%40"
+		if(floor(cooldown)%40 == 0){	/// @DnDAction : YoYo Games.Common.Execute_Script
 			/// @DnDVersion : 1.1
 			/// @DnDHash : 3927E1B8
 			/// @DnDParent : 1C6D2EBE
 			/// @DnDArgument : "script" "msg_stop"
 			/// @DnDSaveInfo : "script" "msg_stop"
-			script_execute(msg_stop);}	break;}
+			script_execute(msg_stop);}
+	
+		/// @DnDAction : YoYo Games.Drawing.Draw_Healthbar
+		/// @DnDVersion : 1
+		/// @DnDHash : 72D990FA
+		/// @DnDParent : 4CA9CA7A
+		/// @DnDArgument : "x1" "bbox_left"
+		/// @DnDArgument : "y1" "bbox_bottom-20"
+		/// @DnDArgument : "x2" "bbox_right"
+		/// @DnDArgument : "y2" "bbox_bottom"
+		/// @DnDArgument : "direction" "1"
+		/// @DnDArgument : "value" "cooldown/4"
+		/// @DnDArgument : "backcol" "$FF000000"
+		/// @DnDArgument : "barcol" "$FF000000"
+		draw_healthbar(bbox_left, bbox_bottom-20, bbox_right, bbox_bottom, cooldown/4, $FF000000 & $FFFFFF, $FFFFFF & $FFFFFF, $FFFFFF & $FFFFFF, 1, (($FF000000>>24) != 0), (($FF000000>>24) != 0));	break;}

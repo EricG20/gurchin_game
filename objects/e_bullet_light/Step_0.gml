@@ -15,10 +15,10 @@ image_yscale = (1+alpher/2);
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 5FD76C98
-/// @DnDArgument : "expr" ".1"
+/// @DnDArgument : "expr" ".2*global.game_speed"
 /// @DnDArgument : "expr_relative" "1"
 /// @DnDArgument : "var" "alpher"
-alpher += .1;
+alpher += .2*global.game_speed;
 
 /// @DnDAction : YoYo Games.Switch.Switch
 /// @DnDVersion : 1

@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":1.018776,
+  "duration":0.9947846,
   "exportDir":"",
   "name":"sfx_engine",
   "parent":{

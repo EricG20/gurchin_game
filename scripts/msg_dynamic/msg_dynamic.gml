@@ -18,11 +18,11 @@ function msg_dynamic() {
 
 	if (!variable_instance_exists(id, "char")) char = 0;
 	//This is the speed at which the text is drawn. You may change it:
-	var text_speed = 0.25;
+	var text_speed = 0.40*global.game_speed;
 	if (argument_count>1){
 		if (keyboard_check(argument[1])==true){
 			//this is the boosted text speed
-			text_speed = 0.6;
+			text_speed = 0.8*global.game_speed;
 		}
 	}
 
@@ -41,6 +41,10 @@ function msg_dynamic() {
 	//get position
 	var x_loc = x + xm;
 	var y_loc = (y + ym) - height;
+	if (object_index == o_gilbert_gun) {
+		x_loc += glorb_x;
+		y_loc += glorb_y;
+	}
 	//get arrow offset
 	var arrow_xm = sprite_get_width(arrow_sprite)/2 - sprite_get_xoffset(arrow_sprite);
 	//top left corner

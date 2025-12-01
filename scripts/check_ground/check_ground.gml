@@ -25,11 +25,11 @@ function check_ground() {	/// @DnDAction : YoYo Games.Switch.Switch
 			/// @DnDHash : 37BD7261
 			/// @DnDParent : 120FA095
 			/// @DnDArgument : "x_relative" "1"
-			/// @DnDArgument : "y" "global.grav"
+			/// @DnDArgument : "y" "1"
 			/// @DnDArgument : "y_relative" "1"
 			/// @DnDArgument : "object" "o_solid"
 			/// @DnDSaveInfo : "object" "o_solid"
-			var l37BD7261_0 = instance_place(x + 0, y + global.grav, [o_solid]);if ((l37BD7261_0 > 0)){	/// @DnDAction : YoYo Games.Common.Variable
+			var l37BD7261_0 = instance_place(x + 0, y + 1, [o_solid]);if ((l37BD7261_0 > 0)){	/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDVersion : 1
 				/// @DnDHash : 153E271F
 				/// @DnDParent : 37BD7261
@@ -42,12 +42,12 @@ function check_ground() {	/// @DnDAction : YoYo Games.Switch.Switch
 			/// @DnDHash : 6D58B33A
 			/// @DnDParent : 120FA095
 			/// @DnDArgument : "x_relative" "1"
-			/// @DnDArgument : "y" "global.grav"
+			/// @DnDArgument : "y" "1"
 			/// @DnDArgument : "y_relative" "1"
 			/// @DnDArgument : "target" "duke"
 			/// @DnDArgument : "object" "o_onewayplats"
 			/// @DnDSaveInfo : "object" "o_onewayplats"
-			var l6D58B33A_0 = instance_place(x + 0, y + global.grav, [o_onewayplats]);
+			var l6D58B33A_0 = instance_place(x + 0, y + 1, [o_onewayplats]);
 			duke = l6D58B33A_0;if ((l6D58B33A_0 > 0)){	/// @DnDAction : YoYo Games.Common.If_Variable
 				/// @DnDVersion : 1
 				/// @DnDHash : 2A0A4DD1

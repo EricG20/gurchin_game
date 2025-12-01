@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"process_pylon_kill",
+  "isCompatibility":false,
+  "isDnD":true,
+  "name":"process_pylon_kill",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -6,11 +6,11 @@
     "path":"audiogroups/effect_audio",
   },
   "bitDepth":1,
-  "channelFormat":0,
+  "channelFormat":1,
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.24161,
+  "duration":0.24160998,
   "exportDir":"",
   "name":"sfx_smallboom",
   "parent":{

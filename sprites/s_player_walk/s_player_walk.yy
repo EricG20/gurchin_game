@@ -5,7 +5,7 @@
   "bbox_bottom":144,
   "bbox_left":47,
   "bbox_right":93,
-  "bbox_top":95,
+  "bbox_top":92,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
@@ -53,14 +53,24 @@
       "Keyframes":[
         {"$Keyframe<MessageEventKeyframe>":"","Channels":{
             "0":{"$MessageEventKeyframe":"","Events":[
-                "player_step_dust",
+                "step_sound",
               ],"resourceType":"MessageEventKeyframe","resourceVersion":"2.0",},
-          },"Disabled":false,"id":"5f51e8a8-b818-44c5-9a0b-09f04226d3ce","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<MessageEventKeyframe>","resourceVersion":"2.0","Stretch":false,},
+          },"Disabled":false,"id":"51c938e8-fd00-4cb7-9340-8ec9d82fb4e6","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<MessageEventKeyframe>","resourceVersion":"2.0","Stretch":false,},
         {"$Keyframe<MessageEventKeyframe>":"","Channels":{
             "0":{"$MessageEventKeyframe":"","Events":[
                 "player_step_dust",
               ],"resourceType":"MessageEventKeyframe","resourceVersion":"2.0",},
-          },"Disabled":false,"id":"4bc79b35-4b99-42a3-9871-732b9b93551a","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<MessageEventKeyframe>","resourceVersion":"2.0","Stretch":false,},
+          },"Disabled":false,"id":"d3ea763d-e2f2-4ccd-b561-db5a436c832a","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<MessageEventKeyframe>","resourceVersion":"2.0","Stretch":false,},
+        {"$Keyframe<MessageEventKeyframe>":"","Channels":{
+            "0":{"$MessageEventKeyframe":"","Events":[
+                "step_sound",
+              ],"resourceType":"MessageEventKeyframe","resourceVersion":"2.0",},
+          },"Disabled":false,"id":"a82ee7a2-788e-42fb-ab7f-7d031494e3dc","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<MessageEventKeyframe>","resourceVersion":"2.0","Stretch":false,},
+        {"$Keyframe<MessageEventKeyframe>":"","Channels":{
+            "0":{"$MessageEventKeyframe":"","Events":[
+                "player_step_dust",
+              ],"resourceType":"MessageEventKeyframe","resourceVersion":"2.0",},
+          },"Disabled":false,"id":"01946737-2a89-44ff-b11e-f332cea8cf4c","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<MessageEventKeyframe>","resourceVersion":"2.0","Stretch":false,},
       ],
       "resourceType":"KeyframeStore<MessageEventKeyframe>",
       "resourceVersion":"2.0",

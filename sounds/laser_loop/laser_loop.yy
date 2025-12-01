@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"laser_loop",
+  "audioGroupId":{
+    "name":"effect_audio",
+    "path":"audiogroups/effect_audio",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.07256236,
+  "exportDir":"",
+  "name":"laser_loop",
+  "parent":{
+    "name":"gilbert",
+    "path":"folders/Sounds/gilbert.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"laser_loop.ogg",
+  "volume":1.0,
+}

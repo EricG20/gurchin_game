@@ -42,9 +42,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
+    "name":"s_ui_knob",
+    "path":"sprites/s_ui_knob/s_ui_knob.yy",
+  },
+  "spriteMaskId":{
     "name":"s_mini_player",
     "path":"sprites/s_mini_player/s_mini_player.yy",
   },
-  "spriteMaskId":null,
   "visible":true,
 }

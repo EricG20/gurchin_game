@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.7232,
+  "duration":0.72,
   "exportDir":"",
   "name":"sfx_dry_boost",
   "parent":{

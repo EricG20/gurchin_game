@@ -1,15 +1,4 @@
-/// @DnDAction : YoYo Games.Common.If_Undefined
+/// @DnDAction : YoYo Games.Game.Restart_Game
 /// @DnDVersion : 1
-/// @DnDHash : 16AD4CCE
-/// @DnDArgument : "var" "cutscene"
-/// @DnDArgument : "not" "1"
-if(cutscene != undefined)
-{
-	/// @DnDAction : YoYo Games.Sequences.Sequence_Set_Head
-	/// @DnDVersion : 1
-	/// @DnDHash : 7828BD5F
-	/// @DnDParent : 16AD4CCE
-	/// @DnDArgument : "sequenceelmid" "cutscene"
-	/// @DnDArgument : "var" "48"
-	layer_sequence_headpos(cutscene, 48);
-}
+/// @DnDHash : 27EE309A
+game_restart();

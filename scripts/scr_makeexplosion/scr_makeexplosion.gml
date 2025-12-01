@@ -6,9 +6,9 @@
 /// @DnDArgument : "funcName" "scr_makeexplosion"
 /// @DnDArgument : "arg" "x_offset=x"
 /// @DnDArgument : "arg_1" "y_offset=y"
-/// @DnDArgument : "arg_2" "include_bottom=true"
+/// @DnDArgument : "arg_2" "include_bottom=false"
 /// @DnDArgument : "arg_3" "scale=1"
-function scr_makeexplosion(x_offset=x, y_offset=y, include_bottom=true, scale=1) {	/// @DnDAction : YoYo Games.Common.Execute_Script
+function scr_makeexplosion(x_offset=x, y_offset=y, include_bottom=false, scale=1) {	/// @DnDAction : YoYo Games.Common.Execute_Script
 	/// @DnDVersion : 1.1
 	/// @DnDHash : 2660D99B
 	/// @DnDInput : 2

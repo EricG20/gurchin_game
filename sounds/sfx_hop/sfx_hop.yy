@@ -6,11 +6,11 @@
     "path":"audiogroups/effect_audio",
   },
   "bitDepth":1,
-  "channelFormat":0,
+  "channelFormat":1,
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.232721,
+  "duration":0.23272109,
   "exportDir":"",
   "name":"sfx_hop",
   "parent":{
@@ -22,5 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"sfx_hop.wav",
-  "volume":1.0,
+  "volume":0.6,
 }

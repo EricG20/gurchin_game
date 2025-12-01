@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"jackpot",
+  "audioGroupId":{
+    "name":"effect_audio",
+    "path":"audiogroups/effect_audio",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":3.0865307,
+  "exportDir":"",
+  "name":"jackpot",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":22050,
+  "soundFile":"jackpot.ogg",
+  "volume":1.0,
+}

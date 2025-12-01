@@ -35,5 +35,5 @@
     "path":"sprites/s_roboguts/s_roboguts.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

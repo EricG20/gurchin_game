@@ -1,3 +1,14 @@
+/// @DnDAction : YoYo Games.Random.Randomize
+/// @DnDVersion : 1
+/// @DnDHash : 3617FA59
+randomize();
+
+/// @DnDAction : YoYo Games.Common.Set_Global
+/// @DnDVersion : 1
+/// @DnDHash : 75E9B451
+/// @DnDArgument : "var" "targ_x"
+global.targ_x = 0;
+
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 56DC358E
@@ -41,11 +52,11 @@ setting_data = ds_map_create();
 /// @DnDVersion : 1
 /// @DnDHash : 638D44D0
 /// @DnDInput : 2
-/// @DnDArgument : "value" ".3"
+/// @DnDArgument : "value" ".34"
 /// @DnDArgument : "value_1" "noone"
 /// @DnDArgument : "var" "grav"
 /// @DnDArgument : "var_1" "the_gate"
-global.grav = .3;
+global.grav = .34;
 global.the_gate = noone;
 
 /// @DnDAction : YoYo Games.Common.Execute_Script

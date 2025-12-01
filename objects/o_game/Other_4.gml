@@ -50,7 +50,33 @@ var l61EB12DC_0 = state;switch(l61EB12DC_0){	/// @DnDAction : YoYo Games.Swit
 				/// @DnDArgument : "ypos" "sethisy"
 				/// @DnDArgument : "objectid" "o_player"
 				/// @DnDSaveInfo : "objectid" "o_player"
-				instance_create_layer(sethisx, sethisy, "Instances", o_player);	break;
+				instance_create_layer(sethisx, sethisy, "Instances", o_player);
+			
+				/// @DnDAction : YoYo Games.Random.Choose
+				/// @DnDVersion : 1
+				/// @DnDHash : 6A7DF5DD
+				/// @DnDInput : 2
+				/// @DnDParent : 559C0940
+				/// @DnDArgument : "var" "curr_song"
+				/// @DnDArgument : "option" "intermission_1"
+				/// @DnDArgument : "option_1" "intermission_2"
+				curr_song = choose(intermission_1, intermission_2);
+			
+				/// @DnDAction : YoYo Games.Audio.Play_Audio
+				/// @DnDVersion : 1.1
+				/// @DnDHash : 59301C10
+				/// @DnDParent : 559C0940
+				/// @DnDArgument : "soundid" "curr_song"
+				/// @DnDArgument : "loop" "1"
+				audio_play_sound(curr_song, 0, 1, 1.0, undefined, 1.0);
+			
+				/// @DnDAction : YoYo Games.Common.Variable
+				/// @DnDVersion : 1
+				/// @DnDHash : 09FDFCA9
+				/// @DnDParent : 559C0940
+				/// @DnDArgument : "expr" "gm.PYLON"
+				/// @DnDArgument : "var" "state"
+				state = gm.PYLON;	break;
 		
 			/// @DnDAction : YoYo Games.Switch.Case
 			/// @DnDVersion : 1
@@ -138,7 +164,18 @@ var l61EB12DC_0 = state;switch(l61EB12DC_0){	/// @DnDAction : YoYo Games.Swit
 		/// @DnDArgument : "soundid" "menu"
 		/// @DnDArgument : "loop" "1"
 		/// @DnDSaveInfo : "soundid" "menu"
-		audio_play_sound(menu, 0, 1, 1.0, undefined, 1.0);	break;
+		audio_play_sound(menu, 0, 1, 1.0, undefined, 1.0);
+	
+		/// @DnDAction : YoYo Games.Sequences.Sequence_Create
+		/// @DnDVersion : 1
+		/// @DnDHash : 28213854
+		/// @DnDParent : 64AB5EB5
+		/// @DnDArgument : "xpos" "1920"
+		/// @DnDArgument : "var" "settings_dododo"
+		/// @DnDArgument : "sequenceid" "settings_page"
+		/// @DnDArgument : "layer" ""Instances""
+		/// @DnDSaveInfo : "sequenceid" "settings_page"
+		settings_dododo = layer_sequence_create("Instances", 1920, 0, settings_page);	break;
 
 	/// @DnDAction : YoYo Games.Switch.Case
 	/// @DnDVersion : 1

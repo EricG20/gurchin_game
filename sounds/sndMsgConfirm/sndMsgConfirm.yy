@@ -2,8 +2,8 @@
   "$GMSound":"v2",
   "%Name":"sndMsgConfirm",
   "audioGroupId":{
-    "name":"audiogroup_default",
-    "path":"audiogroups/audiogroup_default",
+    "name":"effect_audio",
+    "path":"audiogroups/effect_audio",
   },
   "bitDepth":1,
   "channelFormat":1,

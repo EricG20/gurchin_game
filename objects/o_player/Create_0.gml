@@ -1,11 +1,13 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 265018CA
-/// @DnDInput : 2
+/// @DnDInput : 3
 /// @DnDArgument : "var" "head_offset_x"
 /// @DnDArgument : "var_1" "head_offset_y"
+/// @DnDArgument : "var_2" "hair_offset_y"
 head_offset_x = 0;
 head_offset_y = 0;
+hair_offset_y = 0;
 
 /// @DnDAction : YoYo Games.Instances.Create_Instance
 /// @DnDVersion : 1
@@ -13,10 +15,10 @@ head_offset_y = 0;
 /// @DnDArgument : "xpos_relative" "1"
 /// @DnDArgument : "ypos_relative" "1"
 /// @DnDArgument : "var" "mygurn"
-/// @DnDArgument : "objectid" "o_gon"
+/// @DnDArgument : "objectid" "o_shottgun"
 /// @DnDArgument : "layer" ""Instances_Front""
-/// @DnDSaveInfo : "objectid" "o_gon"
-mygurn = instance_create_layer(x + 0, y + 0, "Instances_Front", o_gon);
+/// @DnDSaveInfo : "objectid" "o_shottgun"
+mygurn = instance_create_layer(x + 0, y + 0, "Instances_Front", o_shottgun);
 
 /// @DnDAction : YoYo Games.Instances.Create_Instance
 /// @DnDVersion : 1

@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"long_brain_fart",
+  "audioGroupId":{
+    "name":"effect_audio",
+    "path":"audiogroups/effect_audio",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":1,
+  "compressionQuality":0,
+  "conversionMode":0,
+  "duration":11.8595915,
+  "exportDir":"",
+  "name":"long_brain_fart",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":11025,
+  "soundFile":"long_brain_fart.mp3",
+  "volume":1.0,
+}

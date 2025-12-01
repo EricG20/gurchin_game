@@ -16,12 +16,4 @@ function scr_save_settings(key, valu) {	/// @DnDAction : YoYo Games.Common.Exe
 	/// @description Execute Code
 	ds_map_replace(o_game.setting_data,key,valu);
 	ds_map_secure_save(o_game.setting_data,file_name);
-	}
-
-	/// @DnDAction : YoYo Games.Audio.Play_Audio
-	/// @DnDVersion : 1.1
-	/// @DnDHash : 39AB3F59
-	/// @DnDParent : 2AA6CD4F
-	/// @DnDArgument : "soundid" "sfx_dry_boost"
-	/// @DnDSaveInfo : "soundid" "sfx_dry_boost"
-	audio_play_sound(sfx_dry_boost, 0, 0, 1.0, undefined, 1.0);}
+	}}

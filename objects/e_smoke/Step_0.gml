@@ -2,7 +2,7 @@
 /// @DnDVersion : 1
 /// @DnDHash : 3555EAEC
 /// @DnDInput : 4
-/// @DnDArgument : "expr" ".008/scale"
+/// @DnDArgument : "expr" "(.008/scale)*global.game_speed"
 /// @DnDArgument : "expr_relative" "1"
 /// @DnDArgument : "expr_1" "animcurve_channel_evaluate(corve,mov)*scale"
 /// @DnDArgument : "expr_2" "animcurve_channel_evaluate(corve,mov)*scale"
@@ -11,7 +11,7 @@
 /// @DnDArgument : "var_1" "image_xscale"
 /// @DnDArgument : "var_2" "image_yscale"
 /// @DnDArgument : "var_3" "image_alpha"
-mov += .008/scale;
+mov += (.008/scale)*global.game_speed;
 image_xscale = animcurve_channel_evaluate(corve,mov)*scale;
 image_yscale = animcurve_channel_evaluate(corve,mov)*scale;
 image_alpha = 1.5-mov;
@@ -19,9 +19,9 @@ image_alpha = 1.5-mov;
 /// @DnDAction : YoYo Games.Instances.Set_Instance_Var
 /// @DnDVersion : 1
 /// @DnDHash : 15532B6F
-/// @DnDArgument : "value" "speed*.7"
+/// @DnDArgument : "value" "speed*power(.7,global.game_speed)"
 /// @DnDArgument : "instvar" "3"
-speed = speed*.7;
+speed = speed*power(.7,global.game_speed);
 
 /// @DnDAction : YoYo Games.Common.If_Undefined
 /// @DnDVersion : 1

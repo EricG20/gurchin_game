@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"wah_6",
+  "audioGroupId":{
+    "name":"effect_audio",
+    "path":"audiogroups/effect_audio",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.18943311,
+  "exportDir":"",
+  "name":"wah_6",
+  "parent":{
+    "name":"gilbert",
+    "path":"folders/Sounds/gilbert.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":22050,
+  "soundFile":"wah_6.ogg",
+  "volume":1.0,
+}

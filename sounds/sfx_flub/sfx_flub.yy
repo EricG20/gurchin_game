@@ -1,18 +1,18 @@
 {
   "$GMSound":"v2",
-  "%Name":"sfx_footstep",
+  "%Name":"sfx_flub",
   "audioGroupId":{
     "name":"effect_audio",
     "path":"audiogroups/effect_audio",
   },
   "bitDepth":1,
   "channelFormat":1,
-  "compression":0,
+  "compression":1,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.06249433,
+  "duration":0.22598639,
   "exportDir":"",
-  "name":"sfx_footstep",
+  "name":"sfx_flub",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":22050,
-  "soundFile":"sfx_footstep.wav",
-  "volume":0.49,
+  "soundFile":"sfx_flub.ogg",
+  "volume":1.0,
 }

@@ -19,8 +19,9 @@ audio_play_sound(sfx_smallboom, 0, 0, 1.0, undefined, 1.0);
 /// @DnDVersion : 1.1
 /// @DnDHash : 05F826BD
 /// @DnDArgument : "script" "process_pylon_kill"
+/// @DnDArgument : "arg" "50"
 /// @DnDSaveInfo : "script" "process_pylon_kill"
-script_execute(process_pylon_kill);
+script_execute(process_pylon_kill, 50);
 
 /// @DnDAction : YoYo Games.Loops.Repeat
 /// @DnDVersion : 1

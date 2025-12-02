@@ -34,6 +34,24 @@ function movement_stuff() {	/// @DnDAction : YoYo Games.Common.If_Variable
 		
 			/// @DnDAction : YoYo Games.Switch.Case
 			/// @DnDVersion : 1
+			/// @DnDHash : 2AFC8CE4
+			/// @DnDParent : 13B4DA78
+			/// @DnDArgument : "const" "o_flub"
+			case o_flub:	/// @DnDAction : YoYo Games.Common.If_Expression
+				/// @DnDVersion : 1
+				/// @DnDHash : 25B70926
+				/// @DnDParent : 2AFC8CE4
+				/// @DnDArgument : "expr" "on_ground"
+				if(on_ground){	/// @DnDAction : YoYo Games.Common.Variable
+					/// @DnDVersion : 1
+					/// @DnDHash : 2A70215C
+					/// @DnDParent : 25B70926
+					/// @DnDArgument : "expr" "hsp*power(.8,global.game_speed)"
+					/// @DnDArgument : "var" "hsp"
+					hsp = hsp*power(.8,global.game_speed);}	break;
+		
+			/// @DnDAction : YoYo Games.Switch.Case
+			/// @DnDVersion : 1
 			/// @DnDHash : 72C8157D
 			/// @DnDParent : 13B4DA78
 			/// @DnDArgument : "const" "o_enemy_runna"

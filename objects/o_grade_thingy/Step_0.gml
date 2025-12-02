@@ -353,8 +353,10 @@ else{	/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDHash : 38643CA4
 				/// @DnDParent : 645AF4DF
 				/// @DnDArgument : "soundid" "sfx_explosion"
+				/// @DnDArgument : "gain" ".3"
+				/// @DnDArgument : "pitch" "random_range(.8,1.2)"
 				/// @DnDSaveInfo : "soundid" "sfx_explosion"
-				audio_play_sound(sfx_explosion, 0, 0, 1.0, undefined, 1.0);
+				audio_play_sound(sfx_explosion, 0, 0, .3, undefined, random_range(.8,1.2));
 			
 				/// @DnDAction : YoYo Games.Common.Execute_Script
 				/// @DnDVersion : 1.1

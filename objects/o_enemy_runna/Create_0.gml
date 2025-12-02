@@ -3,13 +3,13 @@
 /// @DnDHash : 0D66D393
 /// @DnDInput : 3
 /// @DnDArgument : "expr_1" "c_red"
-/// @DnDArgument : "expr_2" "random_range(4,9)"
+/// @DnDArgument : "expr_2" "random_range(3,5)"
 /// @DnDArgument : "var" "flashAlpha"
 /// @DnDArgument : "var_1" "flashColor"
 /// @DnDArgument : "var_2" "running_variance"
 flashAlpha = 0;
 flashColor = c_red;
-running_variance = random_range(4,9);
+running_variance = random_range(3,5);
 
 /// @DnDAction : YoYo Games.Instances.Set_Instance_Var
 /// @DnDVersion : 1

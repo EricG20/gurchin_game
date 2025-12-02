@@ -50,9 +50,16 @@ global.game_speed = global.game_time*((delta_time/1000000)/(1/60));
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 6D377558
-/// @DnDArgument : "expr" "scr_approach(display_score, scor, 2*global.game_speed)"
+/// @DnDArgument : "expr" "scr_approach(display_score, scor, 4*global.game_speed)"
 /// @DnDArgument : "var" "display_score"
-display_score = scr_approach(display_score, scor, 2*global.game_speed);
+display_score = scr_approach(display_score, scor, 4*global.game_speed);
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 02CFC2D9
+/// @DnDArgument : "expr" "scr_approach(display_flub, flub, global.game_speed)"
+/// @DnDArgument : "var" "display_flub"
+display_flub = scr_approach(display_flub, flub, global.game_speed);
 
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1
@@ -72,10 +79,10 @@ if(!(floor(display_score) == scor)){	/// @DnDAction : YoYo Games.Audio.If_Audi
 		/// @DnDHash : 3CB0F40B
 		/// @DnDParent : 61494CC0
 		/// @DnDArgument : "soundid" "points"
-		/// @DnDArgument : "gain" "4"
-		/// @DnDArgument : "pitch" "clamp(point_distance(0, display_score_start,0,display_score)*.02, .8, 5)"
+		/// @DnDArgument : "gain" "3"
+		/// @DnDArgument : "pitch" "clamp(point_distance(0, display_score_start,0,display_score)*.01, .8, 4)"
 		/// @DnDSaveInfo : "soundid" "points"
-		audio_play_sound(points, 0, 0, 4, undefined, clamp(point_distance(0, display_score_start,0,display_score)*.02, .8, 5));}}
+		audio_play_sound(points, 0, 0, 3, undefined, clamp(point_distance(0, display_score_start,0,display_score)*.01, .8, 4));}}
 
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1
@@ -223,9 +230,9 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 		/// @DnDVersion : 1
 		/// @DnDHash : 43BBB354
 		/// @DnDParent : 2051C63F
-		/// @DnDArgument : "expr" "clamp(combo_bar-.6*global.game_speed,0,530)"
+		/// @DnDArgument : "expr" "clamp(combo_bar-.9*global.game_speed,0,530)"
 		/// @DnDArgument : "var" "combo_bar"
-		combo_bar = clamp(combo_bar-.6*global.game_speed,0,530);
+		combo_bar = clamp(combo_bar-.9*global.game_speed,0,530);
 	
 		/// @DnDAction : YoYo Games.Common.If_Variable
 		/// @DnDVersion : 1

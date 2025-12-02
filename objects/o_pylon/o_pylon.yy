@@ -40,8 +40,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"s_player_win",
-    "path":"sprites/s_player_win/s_player_win.yy",
+    "name":"s_stupidcrystal",
+    "path":"sprites/s_stupidcrystal/s_stupidcrystal.yy",
   },
   "spriteMaskId":null,
   "visible":true,

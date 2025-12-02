@@ -1,3 +1,27 @@
+/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDVersion : 1
+/// @DnDHash : 7679BDD7
+/// @DnDArgument : "var" "distance_to_object(o_player)"
+/// @DnDArgument : "op" "1"
+/// @DnDArgument : "value" "150"
+if(distance_to_object(o_player) < 150){	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 5DFE9122
+	/// @DnDParent : 7679BDD7
+	/// @DnDArgument : "expr" "lengthdir_x(2,point_direction(x,y,o_player.x,o_player.y))"
+	/// @DnDArgument : "expr_relative" "1"
+	/// @DnDArgument : "var" "hsp"
+	hsp += lengthdir_x(2,point_direction(x,y,o_player.x,o_player.y));
+
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 20F5FA40
+	/// @DnDParent : 7679BDD7
+	/// @DnDArgument : "expr" "lengthdir_y(2, point_direction(x,y,o_player.x,o_player.y))"
+	/// @DnDArgument : "expr_relative" "1"
+	/// @DnDArgument : "var" "vsp"
+	vsp += lengthdir_y(2, point_direction(x,y,o_player.x,o_player.y));}
+
 /// @DnDAction : YoYo Games.Common.Execute_Script
 /// @DnDVersion : 1.1
 /// @DnDHash : 251CB6D9

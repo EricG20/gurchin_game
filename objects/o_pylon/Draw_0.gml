@@ -12,8 +12,7 @@ draw_sprite_ext(sprite_index, image_index, x + 0, y-50 - sin(current_time*.002)*
 /// @DnDHash : 79D50C10
 /// @DnDArgument : "x_relative" "1"
 /// @DnDArgument : "y_relative" "1"
-/// @DnDArgument : "xscale" "3"
-/// @DnDArgument : "yscale" ".2"
-/// @DnDArgument : "sprite" "sprite_index"
+/// @DnDArgument : "sprite" "s_crystal_alter"
 /// @DnDArgument : "frame" "image_index"
-draw_sprite_ext(sprite_index, image_index, x + 0, y + 0, 3, .2, 0, $FFFFFF & $ffffff, 1);
+/// @DnDSaveInfo : "sprite" "s_crystal_alter"
+draw_sprite_ext(s_crystal_alter, image_index, x + 0, y + 0, 1, 1, 0, $FFFFFF & $ffffff, 1);

@@ -45,8 +45,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"s_piztol",
-    "path":"sprites/s_piztol/s_piztol.yy",
+    "name":"s_piztol_display",
+    "path":"sprites/s_piztol_display/s_piztol_display.yy",
   },
   "spriteMaskId":null,
   "visible":true,

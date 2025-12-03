@@ -6,7 +6,7 @@
 if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 4BF0D8A0
-	/// @DnDInput : 7
+	/// @DnDInput : 9
 	/// @DnDParent : 7299994B
 	/// @DnDArgument : "expr" "o_player.x-2*o_player.facing"
 	/// @DnDArgument : "expr_1" "o_player.y- 41+o_player.head_offset_y"
@@ -16,6 +16,8 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDArgument : "expr_5" "-1*global.game_speed"
 	/// @DnDArgument : "expr_relative_5" "1"
 	/// @DnDArgument : "expr_6" "clamp(charge,0,120)"
+	/// @DnDArgument : "expr_7" "lengthdir_x(76, image_angle)"
+	/// @DnDArgument : "expr_8" "lengthdir_y(76, image_angle)"
 	/// @DnDArgument : "var" "x"
 	/// @DnDArgument : "var_1" "y"
 	/// @DnDArgument : "var_2" "kickbackx"
@@ -23,6 +25,8 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDArgument : "var_4" "kickbacky"
 	/// @DnDArgument : "var_5" "charge"
 	/// @DnDArgument : "var_6" "charge"
+	/// @DnDArgument : "var_7" "glorp_x"
+	/// @DnDArgument : "var_8" "glorp_y"
 	x = o_player.x-2*o_player.facing;
 	y = o_player.y- 41+o_player.head_offset_y;
 	kickbackx = kickbackx*.7;
@@ -30,6 +34,8 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 	kickbacky = kickbacky*.7;
 	charge += -1*global.game_speed;
 	charge = clamp(charge,0,120);
+	glorp_x = lengthdir_x(76, image_angle);
+	glorp_y = lengthdir_y(76, image_angle);
 
 	/// @DnDAction : YoYo Games.Instances.Sprite_Rotate
 	/// @DnDVersion : 1
@@ -73,14 +79,14 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 					/// @DnDVersion : 1
 					/// @DnDHash : 0BCEFDD0
 					/// @DnDParent : 05D3A6F9
-					/// @DnDArgument : "xpos" "8*o_player.facing"
+					/// @DnDArgument : "xpos" "8*o_player.facing+glorp_x"
 					/// @DnDArgument : "xpos_relative" "1"
-					/// @DnDArgument : "ypos" "-10"
+					/// @DnDArgument : "ypos" "-10+glorp_y"
 					/// @DnDArgument : "ypos_relative" "1"
 					/// @DnDArgument : "var" "mybb"
 					/// @DnDArgument : "objectid" "o_bullet"
 					/// @DnDSaveInfo : "objectid" "o_bullet"
-					mybb = instance_create_layer(x + 8*o_player.facing, y + -10, "Instances", o_bullet);
+					mybb = instance_create_layer(x + 8*o_player.facing+glorp_x, y + -10+glorp_y, "Instances", o_bullet);
 				
 					/// @DnDAction : YoYo Games.Common.Temp_Variable
 					/// @DnDVersion : 1
@@ -93,29 +99,22 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 					/// @DnDAction : YoYo Games.Instances.Set_Instance_Var
 					/// @DnDVersion : 1
 					/// @DnDHash : 5705668B
-					/// @DnDInput : 6
+					/// @DnDInput : 4
 					/// @DnDApplyTo : mybb
 					/// @DnDParent : 05D3A6F9
 					/// @DnDArgument : "value" "(51+random_range(-3,3))*global.game_speed"
 					/// @DnDArgument : "value_1" "bulletrotation"
 					/// @DnDArgument : "value_2" "s_ironbullet"
 					/// @DnDArgument : "value_3" "(speed*.2)/global.game_speed"
-					/// @DnDArgument : "value_4" "hspeed*(1.5/global.game_speed)"
-					/// @DnDArgument : "value_relative_4" "1"
-					/// @DnDArgument : "value_5" "vspeed*(1.5/global.game_speed)"
-					/// @DnDArgument : "value_relative_5" "1"
 					/// @DnDArgument : "instvar" "3"
 					/// @DnDArgument : "instvar_1" "2"
 					/// @DnDArgument : "instvar_2" "10"
 					/// @DnDArgument : "instvar_3" "15"
-					/// @DnDArgument : "instvar_5" "1"
 					with(mybb) {
 					speed = (51+random_range(-3,3))*global.game_speed;
 					direction = bulletrotation;
 					sprite_index = s_ironbullet;
 					image_xscale = (speed*.2)/global.game_speed;
-					x += hspeed*(1.5/global.game_speed);
-					y += vspeed*(1.5/global.game_speed);
 					}
 				
 					/// @DnDAction : YoYo Games.Instances.Sprite_Rotate

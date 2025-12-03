@@ -75,7 +75,7 @@ function scr_grade_point_reward() {	/// @DnDAction : YoYo Games.Common.If_Vari
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 6F9C8D07
-	/// @DnDInput : 4
+	/// @DnDInput : 5
 	/// @DnDParent : 09BDD0B1
 	/// @DnDArgument : "expr" "o_game.grade_tally"
 	/// @DnDArgument : "expr_relative" "1"
@@ -83,7 +83,9 @@ function scr_grade_point_reward() {	/// @DnDAction : YoYo Games.Common.If_Vari
 	/// @DnDArgument : "var_1" "o_game.grade_tally"
 	/// @DnDArgument : "var_2" "o_game.new_points"
 	/// @DnDArgument : "var_3" "o_game.new_flub"
+	/// @DnDArgument : "var_4" "o_game.player_lost_health"
 	o_game.grade_tally_total += o_game.grade_tally;
 	o_game.grade_tally = 0;
 	o_game.new_points = 0;
-	o_game.new_flub = 0;}
+	o_game.new_flub = 0;
+	o_game.player_lost_health = 0;}

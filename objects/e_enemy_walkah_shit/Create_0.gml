@@ -17,6 +17,17 @@ hsp = random_range(7,-7);
 image_index = 0;
 bruh = irandom_range(0,4);
 
+/// @DnDAction : YoYo Games.Instances.Set_Instance_Var
+/// @DnDVersion : 1
+/// @DnDHash : 138E0499
+/// @DnDInput : 2
+/// @DnDArgument : "value" "random_range(1,3)"
+/// @DnDArgument : "value_1" "random_range(1,3)"
+/// @DnDArgument : "instvar" "15"
+/// @DnDArgument : "instvar_1" "16"
+image_xscale = random_range(1,3);
+image_yscale = random_range(1,3);
+
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 1C656A4F

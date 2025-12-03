@@ -16,9 +16,9 @@ o_game.new_flub += flubbington;
 /// @DnDHash : 11A7FE71
 /// @DnDArgument : "soundid" "sfx_flub"
 /// @DnDArgument : "gain" ".5+flubbington*.5"
-/// @DnDArgument : "pitch" "1.0+flubbington*.1"
+/// @DnDArgument : "pitch" "random_range(.8,1.2)"
 /// @DnDSaveInfo : "soundid" "sfx_flub"
-audio_play_sound(sfx_flub, 0, 0, .5+flubbington*.5, undefined, 1.0+flubbington*.1);
+audio_play_sound(sfx_flub, 0, 0, .5+flubbington*.5, undefined, random_range(.8,1.2));
 
 /// @DnDAction : YoYo Games.Instances.Destroy_Instance
 /// @DnDVersion : 1

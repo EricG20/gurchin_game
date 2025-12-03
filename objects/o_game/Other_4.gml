@@ -55,12 +55,14 @@ var l61EB12DC_0 = state;switch(l61EB12DC_0){	/// @DnDAction : YoYo Games.Swit
 				/// @DnDAction : YoYo Games.Random.Choose
 				/// @DnDVersion : 1
 				/// @DnDHash : 6A7DF5DD
-				/// @DnDInput : 2
+				/// @DnDInput : 4
 				/// @DnDParent : 559C0940
 				/// @DnDArgument : "var" "curr_song"
 				/// @DnDArgument : "option" "intermission_1"
 				/// @DnDArgument : "option_1" "intermission_2"
-				curr_song = choose(intermission_1, intermission_2);
+				/// @DnDArgument : "option_2" "intermission_3"
+				/// @DnDArgument : "option_3" "intermission_4"
+				curr_song = choose(intermission_1, intermission_2, intermission_3, intermission_4);
 			
 				/// @DnDAction : YoYo Games.Audio.Play_Audio
 				/// @DnDVersion : 1.1

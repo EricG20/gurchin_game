@@ -2,9 +2,11 @@
 /// @DnDVersion : 1
 /// @DnDHash : 635359D0
 /// @DnDComment : // Script assets have changed for v2.3.0 see$(13_10)// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+/// @DnDInput : 2
 /// @DnDArgument : "funcName" "process_pylon_kill"
 /// @DnDArgument : "arg" "bounty=50"
-function process_pylon_kill(bounty=50) {	/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDArgument : "arg_1" "flub_rate=irandom_range(0,5)"
+function process_pylon_kill(bounty=50, flub_rate=irandom_range(0,5)) {	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 5EABA602
 	/// @DnDInput : 2
@@ -59,8 +61,8 @@ function process_pylon_kill(bounty=50) {	/// @DnDAction : YoYo Games.Common.Va
 	/// @DnDVersion : 1
 	/// @DnDHash : 4A460D4E
 	/// @DnDParent : 635359D0
-	/// @DnDArgument : "times" "clamp(floor(random_range(-3,bounty/20)),0,100)"
-	repeat(clamp(floor(random_range(-3,bounty/20)),0,100)){	/// @DnDAction : YoYo Games.Instances.Create_Instance
+	/// @DnDArgument : "times" "flub_rate"
+	repeat(flub_rate){	/// @DnDAction : YoYo Games.Instances.Create_Instance
 		/// @DnDVersion : 1
 		/// @DnDHash : 0B266708
 		/// @DnDParent : 4A460D4E

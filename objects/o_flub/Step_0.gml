@@ -3,38 +3,41 @@
 /// @DnDHash : 7679BDD7
 /// @DnDArgument : "var" "distance_to_object(o_player)"
 /// @DnDArgument : "op" "1"
-/// @DnDArgument : "value" "150"
-if(distance_to_object(o_player) < 150){	/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDArgument : "value" "200"
+if(distance_to_object(o_player) < 200){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 5DFE9122
 	/// @DnDParent : 7679BDD7
-	/// @DnDArgument : "expr" "lengthdir_x(2,point_direction(x,y,o_player.x,o_player.y))"
-	/// @DnDArgument : "expr_relative" "1"
-	/// @DnDArgument : "var" "hsp"
-	hsp += lengthdir_x(2,point_direction(x,y,o_player.x,o_player.y));
+	/// @DnDArgument : "expr" "scr_approach(x,o_player.x, point_distance(x,0,o_player.x,0)*.1*global.game_speed)"
+	/// @DnDArgument : "var" "x"
+	x = scr_approach(x,o_player.x, point_distance(x,0,o_player.x,0)*.1*global.game_speed);
 
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 20F5FA40
 	/// @DnDParent : 7679BDD7
-	/// @DnDArgument : "expr" "lengthdir_y(2, point_direction(x,y,o_player.x,o_player.y))"
-	/// @DnDArgument : "expr_relative" "1"
-	/// @DnDArgument : "var" "vsp"
-	vsp += lengthdir_y(2, point_direction(x,y,o_player.x,o_player.y));}
+	/// @DnDArgument : "expr" "scr_approach(y,o_player.y, point_distance(y,0,o_player.y,0)*.1*global.game_speed)"
+	/// @DnDArgument : "var" "y"
+	y = scr_approach(y,o_player.y, point_distance(y,0,o_player.y,0)*.1*global.game_speed);}
 
-/// @DnDAction : YoYo Games.Common.Execute_Script
-/// @DnDVersion : 1.1
-/// @DnDHash : 251CB6D9
-/// @DnDArgument : "script" "check_ground"
-/// @DnDSaveInfo : "script" "check_ground"
-script_execute(check_ground);
+/// @DnDAction : YoYo Games.Common.Else
+/// @DnDVersion : 1
+/// @DnDHash : 1573470C
+else{	/// @DnDAction : YoYo Games.Common.Execute_Script
+	/// @DnDVersion : 1.1
+	/// @DnDHash : 251CB6D9
+	/// @DnDParent : 1573470C
+	/// @DnDArgument : "script" "check_ground"
+	/// @DnDSaveInfo : "script" "check_ground"
+	script_execute(check_ground);
 
-/// @DnDAction : YoYo Games.Common.Execute_Script
-/// @DnDVersion : 1.1
-/// @DnDHash : 1C7CABE2
-/// @DnDArgument : "script" "movement_stuff"
-/// @DnDSaveInfo : "script" "movement_stuff"
-script_execute(movement_stuff);
+	/// @DnDAction : YoYo Games.Common.Execute_Script
+	/// @DnDVersion : 1.1
+	/// @DnDHash : 1C7CABE2
+	/// @DnDParent : 1573470C
+	/// @DnDArgument : "script" "movement_stuff"
+	/// @DnDSaveInfo : "script" "movement_stuff"
+	script_execute(movement_stuff);}
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
@@ -43,18 +46,6 @@ script_execute(movement_stuff);
 /// @DnDArgument : "expr_relative" "1"
 /// @DnDArgument : "var" "incr"
 incr += .1*global.game_speed;
-
-/// @DnDAction : YoYo Games.Particles.Effect
-/// @DnDVersion : 1
-/// @DnDHash : 0876B57E
-/// @DnDArgument : "x" "random_range(-10,10)*flubbington*.5"
-/// @DnDArgument : "x_relative" "1"
-/// @DnDArgument : "y" "random_range(-4,20)*flubbington*.5"
-/// @DnDArgument : "y_relative" "1"
-/// @DnDArgument : "type" "7"
-/// @DnDArgument : "where" "1"
-/// @DnDArgument : "color" "$FFFFFFFF"
-effect_create_above(7, x + random_range(-10,10)*flubbington*.5, y + random_range(-4,20)*flubbington*.5, 0, $FFFFFFFF & $ffffff);
 
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1

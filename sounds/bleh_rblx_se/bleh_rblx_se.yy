@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"bleh_rblx_se",
+  "audioGroupId":{
+    "name":"effect_audio",
+    "path":"audiogroups/effect_audio",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":1,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.6,
+  "exportDir":"",
+  "name":"bleh_rblx_se",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":11025,
+  "soundFile":"bleh_rblx_se.mp3",
+  "volume":1.0,
+}

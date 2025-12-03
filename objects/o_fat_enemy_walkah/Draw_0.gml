@@ -9,8 +9,8 @@
 /// @DnDArgument : "yscale_relative" "1"
 /// @DnDArgument : "sprite" "sprite_index"
 /// @DnDArgument : "frame" "image_index"
-/// @DnDArgument : "col" "$FFFF00FF"
-draw_sprite_ext(sprite_index, image_index, x + 0, y + 0, image_xscale + 0, image_yscale + 0, 0, $FFFF00FF & $ffffff, 1);
+/// @DnDArgument : "col" "$FFFFFFFF"
+draw_sprite_ext(sprite_index, image_index, x + 0, y + 0, image_xscale + 0, image_yscale + 0, 0, $FFFFFFFF & $ffffff, 1);
 
 /// @DnDAction : YoYo Games.Common.Execute_Script
 /// @DnDVersion : 1.1

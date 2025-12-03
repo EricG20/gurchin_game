@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"hmm_player_or_pylon",
+  "isCompatibility":false,
+  "isDnD":true,
+  "name":"hmm_player_or_pylon",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -15,10 +15,10 @@ hair_offset_y = 0;
 /// @DnDArgument : "xpos_relative" "1"
 /// @DnDArgument : "ypos_relative" "1"
 /// @DnDArgument : "var" "mygurn"
-/// @DnDArgument : "objectid" "o_shottgun"
+/// @DnDArgument : "objectid" "o_bat"
 /// @DnDArgument : "layer" ""Instances_Front""
-/// @DnDSaveInfo : "objectid" "o_shottgun"
-mygurn = instance_create_layer(x + 0, y + 0, "Instances_Front", o_shottgun);
+/// @DnDSaveInfo : "objectid" "o_bat"
+mygurn = instance_create_layer(x + 0, y + 0, "Instances_Front", o_bat);
 
 /// @DnDAction : YoYo Games.Instances.Create_Instance
 /// @DnDVersion : 1

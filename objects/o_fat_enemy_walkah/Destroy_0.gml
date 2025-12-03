@@ -30,10 +30,19 @@ script_execute(scr_makeexplosion, x, y, on_ground, .5);
 /// @DnDAction : YoYo Games.Common.Execute_Script
 /// @DnDVersion : 1.1
 /// @DnDHash : 13EDE4E7
+/// @DnDInput : 2
 /// @DnDArgument : "script" "process_pylon_kill"
 /// @DnDArgument : "arg" "100"
+/// @DnDArgument : "arg_1" "irandom_range(6,10)"
 /// @DnDSaveInfo : "script" "process_pylon_kill"
-script_execute(process_pylon_kill, 100);
+script_execute(process_pylon_kill, 100, irandom_range(6,10));
+
+/// @DnDAction : YoYo Games.Common.Execute_Script
+/// @DnDVersion : 1.1
+/// @DnDHash : 66A91D98
+/// @DnDArgument : "script" "play_kill_sound"
+/// @DnDSaveInfo : "script" "play_kill_sound"
+script_execute(play_kill_sound);
 
 /// @DnDAction : YoYo Games.Loops.Repeat
 /// @DnDVersion : 1
@@ -46,5 +55,6 @@ repeat(irandom_range(5,9)){	/// @DnDAction : YoYo Games.Instances.Create_Insta
 	/// @DnDArgument : "xpos_relative" "1"
 	/// @DnDArgument : "ypos_relative" "1"
 	/// @DnDArgument : "objectid" "e_enemy_walkah_shit"
+	/// @DnDArgument : "layer" ""Effects""
 	/// @DnDSaveInfo : "objectid" "e_enemy_walkah_shit"
-	instance_create_layer(x + 0, y + 0, "Instances", e_enemy_walkah_shit);}
+	instance_create_layer(x + 0, y + 0, "Effects", e_enemy_walkah_shit);}

@@ -1,7 +1,12 @@
-/// @DnDAction : YoYo Games.Drawing.Draw_Self
+/// @DnDAction : YoYo Games.Drawing.Draw_Sprite_Transformed
 /// @DnDVersion : 1
-/// @DnDHash : 7C061364
-draw_self();
+/// @DnDHash : 4CA023BC
+/// @DnDArgument : "x_relative" "1"
+/// @DnDArgument : "y" "sin(current_time*(.003))*6"
+/// @DnDArgument : "y_relative" "1"
+/// @DnDArgument : "sprite" "sprite_index"
+/// @DnDArgument : "frame" "image_index"
+draw_sprite_ext(sprite_index, image_index, x + 0, y + sin(current_time*(.003))*6, 1, 1, 0, $FFFFFF & $ffffff, 1);
 
 /// @DnDAction : YoYo Games.Switch.Switch
 /// @DnDVersion : 1
@@ -28,9 +33,9 @@ var l3111867F_0 = state;switch(l3111867F_0){	/// @DnDAction : YoYo Games.Swit
 				/// @DnDHash : 1BAFEE46
 				/// @DnDParent : 0CCC7B51
 				/// @DnDArgument : "script" "msg_static"
-				/// @DnDArgument : "arg" ""WEAPON GENERATOR ONLINE. PRESS -E- TO GENERATE WEAPON. (REQUIRES 500 POINTS)""
+				/// @DnDArgument : "arg" ""WEAPON GENERATOR ONLINE. PRESS -E- TO GENERATE WEAPON. (REQUIRES 300 FLUB)""
 				/// @DnDSaveInfo : "script" "msg_static"
-				script_execute(msg_static, "WEAPON GENERATOR ONLINE. PRESS -E- TO GENERATE WEAPON. (REQUIRES 500 POINTS)");}
+				script_execute(msg_static, "WEAPON GENERATOR ONLINE. PRESS -E- TO GENERATE WEAPON. (REQUIRES 300 FLUB)");}
 		
 			/// @DnDAction : YoYo Games.Common.Else
 			/// @DnDVersion : 1

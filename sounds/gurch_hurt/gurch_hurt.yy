@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"gurch_hurt",
+  "audioGroupId":{
+    "name":"effect_audio",
+    "path":"audiogroups/effect_audio",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":1,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.7356009,
+  "exportDir":"",
+  "name":"gurch_hurt",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":11025,
+  "soundFile":"gurch_hurt.ogg",
+  "volume":1.0,
+}

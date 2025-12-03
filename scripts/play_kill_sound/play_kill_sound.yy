@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"play_kill_sound",
+  "isCompatibility":false,
+  "isDnD":true,
+  "name":"play_kill_sound",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

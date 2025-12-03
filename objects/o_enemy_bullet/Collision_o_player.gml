@@ -6,21 +6,25 @@
 if(other.iframes <= 0){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 3C04A27F
-	/// @DnDInput : 4
+	/// @DnDInput : 5
 	/// @DnDParent : 3BB49EAC
 	/// @DnDArgument : "expr" "ps.HIT"
 	/// @DnDArgument : "expr_1" "hspeed*.2"
 	/// @DnDArgument : "expr_2" "-1"
 	/// @DnDArgument : "expr_relative_2" "1"
 	/// @DnDArgument : "expr_3" "-8"
+	/// @DnDArgument : "expr_4" "-200"
+	/// @DnDArgument : "expr_relative_4" "1"
 	/// @DnDArgument : "var" "other.state"
 	/// @DnDArgument : "var_1" "other.knockback_speed"
 	/// @DnDArgument : "var_2" "other.hp"
 	/// @DnDArgument : "var_3" "other.vsp"
+	/// @DnDArgument : "var_4" "o_game.combo_bar"
 	other.state = ps.HIT;
 	other.knockback_speed = hspeed*.2;
 	other.hp += -1;
 	other.vsp = -8;
+	o_game.combo_bar += -200;
 
 	/// @DnDAction : YoYo Games.Instances.Create_Instance
 	/// @DnDVersion : 1

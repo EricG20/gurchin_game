@@ -54,8 +54,8 @@ function check_ground() {	/// @DnDAction : YoYo Games.Switch.Switch
 				/// @DnDParent : 6D58B33A
 				/// @DnDArgument : "var" "bbox_bottom"
 				/// @DnDArgument : "op" "1"
-				/// @DnDArgument : "value" "duke.bbox_top+2"
-				if(bbox_bottom < duke.bbox_top+2){	/// @DnDAction : YoYo Games.Common.Variable
+				/// @DnDArgument : "value" "duke.bbox_top+1"
+				if(bbox_bottom < duke.bbox_top+1){	/// @DnDAction : YoYo Games.Common.Variable
 					/// @DnDVersion : 1
 					/// @DnDHash : 68E423F6
 					/// @DnDParent : 2A0A4DD1

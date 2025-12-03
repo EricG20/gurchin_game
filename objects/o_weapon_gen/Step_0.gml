@@ -41,20 +41,22 @@ if(distance_to_object(o_player) < 100){	/// @DnDAction : YoYo Games.Switch.Swi
 					/// @DnDVersion : 1
 					/// @DnDHash : 38CD74CB
 					/// @DnDParent : 50413893
-					/// @DnDArgument : "var" "o_game.scor"
+					/// @DnDArgument : "var" "o_game.flub"
 					/// @DnDArgument : "op" "4"
-					if(o_game.scor >= 0){	/// @DnDAction : YoYo Games.Common.Variable
+					/// @DnDArgument : "value" "300"
+					if(o_game.flub >= 300){	/// @DnDAction : YoYo Games.Common.Variable
 						/// @DnDVersion : 1
 						/// @DnDHash : 7F89887C
 						/// @DnDInput : 3
 						/// @DnDParent : 38CD74CB
+						/// @DnDArgument : "expr" "-300"
 						/// @DnDArgument : "expr_relative" "1"
 						/// @DnDArgument : "expr_1" "ps.HIT"
 						/// @DnDArgument : "expr_2" "400"
-						/// @DnDArgument : "var" "o_game.scor"
+						/// @DnDArgument : "var" "o_game.flub"
 						/// @DnDArgument : "var_1" "state"
 						/// @DnDArgument : "var_2" "cooldown"
-						o_game.scor += 0;
+						o_game.flub += -300;
 						state = ps.HIT;
 						cooldown = 400;
 					
@@ -143,16 +145,30 @@ var l4ACEE4AF_0 = state;switch(l4ACEE4AF_0){	/// @DnDAction : YoYo Games.Swit
 			/// @DnDParent : 26B74FB8
 			/// @DnDArgument : "var" "gun_to_be_num"
 			/// @DnDArgument : "op" "4"
-			if(gun_to_be_num >= 0){	/// @DnDAction : YoYo Games.Random.Choose
+			/// @DnDArgument : "value" ".05"
+			if(gun_to_be_num >= .05){	/// @DnDAction : YoYo Games.Random.Choose
 				/// @DnDVersion : 1
 				/// @DnDHash : 7959F18F
-				/// @DnDInput : 3
+				/// @DnDInput : 4
 				/// @DnDParent : 7A2EF430
 				/// @DnDArgument : "var" "gun_to_be"
 				/// @DnDArgument : "option" "o_gon"
 				/// @DnDArgument : "option_1" "o_machgun"
 				/// @DnDArgument : "option_2" "o_shottgun"
-				gun_to_be = choose(o_gon, o_machgun, o_shottgun);}
+				/// @DnDArgument : "option_3" "o_bat"
+				gun_to_be = choose(o_gon, o_machgun, o_shottgun, o_bat);}
+		
+			/// @DnDAction : YoYo Games.Common.Else
+			/// @DnDVersion : 1
+			/// @DnDHash : 0D4B7569
+			/// @DnDParent : 26B74FB8
+			else{	/// @DnDAction : YoYo Games.Random.Choose
+				/// @DnDVersion : 1
+				/// @DnDHash : 5F7AE179
+				/// @DnDParent : 0D4B7569
+				/// @DnDArgument : "var" "gun_to_be"
+				/// @DnDArgument : "option" "o_gilbert_gun"
+				gun_to_be = choose(o_gilbert_gun);}
 		
 			/// @DnDAction : YoYo Games.Instances.Create_Instance
 			/// @DnDVersion : 1

@@ -12,8 +12,25 @@ instance_create_layer(x + 0, y + 0, "Effects", e_explosion);
 /// @DnDVersion : 1.1
 /// @DnDHash : 301DD99B
 /// @DnDArgument : "soundid" "sfx_smallboom"
+/// @DnDArgument : "pitch" "random_range(.9,1.2)"
 /// @DnDSaveInfo : "soundid" "sfx_smallboom"
-audio_play_sound(sfx_smallboom, 0, 0, 1.0, undefined, 1.0);
+audio_play_sound(sfx_smallboom, 0, 0, 1.0, undefined, random_range(.9,1.2));
+
+/// @DnDAction : YoYo Games.Common.Execute_Script
+/// @DnDVersion : 1.1
+/// @DnDHash : 33865FFA
+/// @DnDArgument : "script" "play_kill_sound"
+/// @DnDSaveInfo : "script" "play_kill_sound"
+script_execute(play_kill_sound);
+
+/// @DnDAction : YoYo Games.Audio.Play_Audio
+/// @DnDVersion : 1.1
+/// @DnDHash : 31A90076
+/// @DnDArgument : "soundid" "bleh_rblx_se"
+/// @DnDArgument : "gain" "1.5"
+/// @DnDArgument : "pitch" "random_range(1,1.4)"
+/// @DnDSaveInfo : "soundid" "bleh_rblx_se"
+audio_play_sound(bleh_rblx_se, 0, 0, 1.5, undefined, random_range(1,1.4));
 
 /// @DnDAction : YoYo Games.Common.Execute_Script
 /// @DnDVersion : 1.1

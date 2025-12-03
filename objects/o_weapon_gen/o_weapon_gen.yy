@@ -37,8 +37,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"s_asshole",
-    "path":"sprites/s_asshole/s_asshole.yy",
+    "name":"s_box",
+    "path":"sprites/s_box/s_box.yy",
   },
   "spriteMaskId":null,
   "visible":true,

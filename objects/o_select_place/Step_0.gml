@@ -76,6 +76,7 @@ if(vinnyvariable <= 0){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDAction : YoYo Games.Rooms.Go_To_Room
 	/// @DnDVersion : 1
 	/// @DnDHash : 36A16C45
+	/// @DnDApplyTo : o_game
 	/// @DnDParent : 028050AA
-	/// @DnDArgument : "room" "sel_room"
-	room_goto(sel_room);}
+	/// @DnDArgument : "room" "other.sel_room"
+	with(o_game) room_goto(other.sel_room);}

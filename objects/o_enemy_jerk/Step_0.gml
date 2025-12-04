@@ -468,10 +468,10 @@ var l5517DD1C_0 = state;switch(l5517DD1C_0){	/// @DnDAction : YoYo Games.Swit
 			/// @DnDArgument : "xpos_relative" "1"
 			/// @DnDArgument : "ypos" "irandom_range(-60,0)"
 			/// @DnDArgument : "ypos_relative" "1"
-			/// @DnDArgument : "objectid" "e_explosion"
+			/// @DnDArgument : "objectid" "o_vermin_explosion"
 			/// @DnDArgument : "layer" ""Effects""
-			/// @DnDSaveInfo : "objectid" "e_explosion"
-			instance_create_layer(x + irandom_range(-40,40), y + irandom_range(-60,0), "Effects", e_explosion);
+			/// @DnDSaveInfo : "objectid" "o_vermin_explosion"
+			instance_create_layer(x + irandom_range(-40,40), y + irandom_range(-60,0), "Effects", o_vermin_explosion);
 		
 			/// @DnDAction : YoYo Games.Instances.Create_Instance
 			/// @DnDVersion : 1

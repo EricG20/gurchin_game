@@ -21,5 +21,6 @@ function play_kill_sound() {	/// @DnDAction : YoYo Games.Random.Choose
 	/// @DnDHash : 0B8E07EC
 	/// @DnDParent : 0831D6EF
 	/// @DnDArgument : "soundid" "killsfx"
+	/// @DnDArgument : "gain" ".9"
 	/// @DnDArgument : "pitch" "random_range(.8,1.2)"
-	audio_play_sound(killsfx, 0, 0, 1.0, undefined, random_range(.8,1.2));}
+	audio_play_sound(killsfx, 0, 0, .9, undefined, random_range(.8,1.2));}

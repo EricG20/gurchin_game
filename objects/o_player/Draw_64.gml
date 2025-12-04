@@ -31,9 +31,9 @@ draw_sprite_ext(s_gurch_icon, 0, 70, 70, 1, 1, 0, $FFFFFF & $ffffff, sin(iframes
 /// @DnDArgument : "x" "85"
 /// @DnDArgument : "y" "120"
 /// @DnDArgument : "sprite" "s_fuel"
-/// @DnDArgument : "number" "v_fuel/5"
+/// @DnDArgument : "number" "v_fuel/2"
 /// @DnDSaveInfo : "sprite" "s_fuel"
-var l36415906_0 = sprite_get_width(s_fuel);var l36415906_1 = 0;for(var l36415906_2 = v_fuel/5; l36415906_2 > 0; --l36415906_2) {	draw_sprite(s_fuel, 0, 85 + l36415906_1, 120);	l36415906_1 += l36415906_0;}
+var l36415906_0 = sprite_get_width(s_fuel);var l36415906_1 = 0;for(var l36415906_2 = v_fuel/2; l36415906_2 > 0; --l36415906_2) {	draw_sprite(s_fuel, 0, 85 + l36415906_1, 120);	l36415906_1 += l36415906_0;}
 
 /// @DnDAction : YoYo Games.Drawing.Draw_Sprite_Transformed
 /// @DnDVersion : 1

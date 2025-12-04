@@ -21,18 +21,15 @@ var l5B45B2EB_0 = anim;switch(l5B45B2EB_0){	/// @DnDAction : YoYo Games.Switc
 			if(ds_list_find_index(collided_with,other.id) == -1){	/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDVersion : 1
 				/// @DnDHash : 765083D9
-				/// @DnDInput : 4
+				/// @DnDInput : 3
 				/// @DnDParent : 37114FC4
 				/// @DnDArgument : "expr" "lengthdir_x(10*(image_xscale),image_angle)"
 				/// @DnDArgument : "expr_1" "lengthdir_y(10*(image_xscale),image_angle)"
-				/// @DnDArgument : "expr_2" "false"
-				/// @DnDArgument : "expr_3" "-2"
-				/// @DnDArgument : "expr_relative_3" "1"
+				/// @DnDArgument : "expr_2" "-2"
+				/// @DnDArgument : "expr_relative_2" "1"
 				/// @DnDArgument : "var" "other.hsp"
 				/// @DnDArgument : "var_1" "other.vsp"
-				/// @DnDArgument : "var_2" "other.on_ground"
-				/// @DnDArgument : "var_3" "other.y"
+				/// @DnDArgument : "var_2" "other.y"
 				other.hsp = lengthdir_x(10*(image_xscale),image_angle);
 				other.vsp = lengthdir_y(10*(image_xscale),image_angle);
-				other.on_ground = false;
 				other.y += -2;}}	break;}

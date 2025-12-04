@@ -3,10 +3,10 @@
 /// @DnDHash : 73511552
 /// @DnDArgument : "xpos_relative" "1"
 /// @DnDArgument : "ypos_relative" "1"
-/// @DnDArgument : "objectid" "e_explosion"
+/// @DnDArgument : "objectid" "o_vermin_explosion"
 /// @DnDArgument : "layer" ""Effects""
-/// @DnDSaveInfo : "objectid" "e_explosion"
-instance_create_layer(x + 0, y + 0, "Effects", e_explosion);
+/// @DnDSaveInfo : "objectid" "o_vermin_explosion"
+instance_create_layer(x + 0, y + 0, "Effects", o_vermin_explosion);
 
 /// @DnDAction : YoYo Games.Audio.Play_Audio
 /// @DnDVersion : 1.1
@@ -19,9 +19,10 @@ audio_play_sound(sfx_smallboom, 0, 0, 1.0, undefined, random_range(.9,1.2));
 /// @DnDAction : YoYo Games.Common.Execute_Script
 /// @DnDVersion : 1.1
 /// @DnDHash : 33865FFA
+/// @DnDDisabled : 1
 /// @DnDArgument : "script" "play_kill_sound"
 /// @DnDSaveInfo : "script" "play_kill_sound"
-script_execute(play_kill_sound);
+
 
 /// @DnDAction : YoYo Games.Audio.Play_Audio
 /// @DnDVersion : 1.1

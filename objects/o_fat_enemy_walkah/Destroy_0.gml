@@ -5,7 +5,7 @@
 /// @DnDArgument : "ypos_relative" "1"
 /// @DnDArgument : "objectid" "e_explosion"
 /// @DnDArgument : "layer" ""Effects""
-/// @DnDSaveInfo : "objectid" "e_explosion"
+/// @DnDSaveInfo : "objectid" "o_vermin_explosion"
 instance_create_layer(x + 0, y + 0, "Effects", e_explosion);
 
 /// @DnDAction : YoYo Games.Audio.Play_Audio

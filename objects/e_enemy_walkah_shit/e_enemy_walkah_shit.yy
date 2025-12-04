@@ -38,9 +38,6 @@
     "name":"vermin_blood_air",
     "path":"sprites/vermin_blood_air/vermin_blood_air.yy",
   },
-  "spriteMaskId":{
-    "name":"vermin_blood_air",
-    "path":"sprites/vermin_blood_air/vermin_blood_air.yy",
-  },
+  "spriteMaskId":null,
   "visible":true,
 }

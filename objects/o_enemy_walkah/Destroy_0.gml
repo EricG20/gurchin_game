@@ -18,9 +18,10 @@ audio_play_sound(sfx_smallboom, 0, 0, 1.0, undefined, 1.0);
 /// @DnDAction : YoYo Games.Common.Execute_Script
 /// @DnDVersion : 1.1
 /// @DnDHash : 33349B1A
+/// @DnDDisabled : 1
 /// @DnDArgument : "script" "play_kill_sound"
 /// @DnDSaveInfo : "script" "play_kill_sound"
-script_execute(play_kill_sound);
+
 
 /// @DnDAction : YoYo Games.Common.Execute_Script
 /// @DnDVersion : 1.1

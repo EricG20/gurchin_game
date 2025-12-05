@@ -193,9 +193,9 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 		/// @DnDVersion : 1
 		/// @DnDHash : 403B5F5A
 		/// @DnDParent : 2051C63F
-		/// @DnDArgument : "code" "var _cam_x = o_camera.x ;$(13_10)var _cam_y = o_camera.y ;$(13_10)layer_x("Backgrounds_1", _cam_x * .99 + current_time*power(.01,1));$(13_10)layer_y("Backgrounds_1", _cam_y *.99);$(13_10)layer_x("Backgrounds_2", _cam_x * .90 + current_time*power(.04,1));$(13_10)layer_y("Backgrounds_2", _cam_y *.90);$(13_10)layer_x("Backgrounds_3", _cam_x * .85 + current_time*power(.09,1));$(13_10)layer_y("Backgrounds_3", _cam_y *.85);$(13_10)layer_x("Backgrounds_4", _cam_x * .80 + current_time*power(.1,1));$(13_10)layer_y("Backgrounds_4", _cam_y *.80);$(13_10)layer_x("Backgrounds_5", _cam_x * .75 + current_time*power(.15,1));$(13_10)layer_y("Backgrounds_5", _cam_y *.75);$(13_10)layer_x("Backgrounds_6", _cam_x * .70 + current_time*power(.2,1));$(13_10)layer_y("Backgrounds_6", _cam_y *.70);$(13_10)layer_x("Backgrounds_7", _cam_x * .65 + current_time*power(.3, 1));$(13_10)layer_y("Backgrounds_7", _cam_y *.65);"
-		var _cam_x = o_camera.x ;
-		var _cam_y = o_camera.y ;
+		/// @DnDArgument : "code" "var _cam_x = o_camera.x;$(13_10)var _cam_y = o_camera.y;$(13_10)layer_x("Backgrounds_1", _cam_x * .99 + current_time*power(.01,1));$(13_10)layer_y("Backgrounds_1", _cam_y *.99);$(13_10)layer_x("Backgrounds_2", _cam_x * .90 + current_time*power(.04,1));$(13_10)layer_y("Backgrounds_2", _cam_y *.90);$(13_10)layer_x("Backgrounds_3", _cam_x * .85 + current_time*power(.09,1));$(13_10)layer_y("Backgrounds_3", _cam_y *.85);$(13_10)layer_x("Backgrounds_4", _cam_x * .80 + current_time*power(.1,1));$(13_10)layer_y("Backgrounds_4", _cam_y *.80);$(13_10)layer_x("Backgrounds_5", _cam_x * .75 + current_time*power(.15,1));$(13_10)layer_y("Backgrounds_5", _cam_y *.75);$(13_10)layer_x("Backgrounds_6", _cam_x * .70 + current_time*power(.2,1));$(13_10)layer_y("Backgrounds_6", _cam_y *.70);$(13_10)layer_x("Backgrounds_7", _cam_x * .65 + current_time*power(.3, 1));$(13_10)layer_y("Backgrounds_7", _cam_y *.65);"
+		var _cam_x = o_camera.x;
+		var _cam_y = o_camera.y;
 		layer_x("Backgrounds_1", _cam_x * .99 + current_time*power(.01,1));
 		layer_y("Backgrounds_1", _cam_y *.99);
 		layer_x("Backgrounds_2", _cam_x * .90 + current_time*power(.04,1));
@@ -210,6 +210,99 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 		layer_y("Backgrounds_6", _cam_y *.70);
 		layer_x("Backgrounds_7", _cam_x * .65 + current_time*power(.3, 1));
 		layer_y("Backgrounds_7", _cam_y *.65);
+	
+		/// @DnDAction : YoYo Games.Common.If_Expression
+		/// @DnDVersion : 1
+		/// @DnDHash : 546D23C3
+		/// @DnDParent : 2051C63F
+		/// @DnDArgument : "expr" "(scor >= 2000) && (reward_one == false)"
+		if((scor >= 2000) && (reward_one == false)){	/// @DnDAction : YoYo Games.Common.Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 63A329D2
+			/// @DnDInput : 3
+			/// @DnDParent : 546D23C3
+			/// @DnDArgument : "expr" "true"
+			/// @DnDArgument : "expr_1" "1.5"
+			/// @DnDArgument : "expr_2" "1.2"
+			/// @DnDArgument : "var" "reward_one"
+			/// @DnDArgument : "var_1" "global.ammo_bonus"
+			/// @DnDArgument : "var_2" "global.reload_bonus"
+			reward_one = true;
+			global.ammo_bonus = 1.5;
+			global.reload_bonus = 1.2;
+		
+			/// @DnDAction : YoYo Games.Common.Execute_Script
+			/// @DnDVersion : 1.1
+			/// @DnDHash : 18B64BC1
+			/// @DnDParent : 546D23C3
+			/// @DnDArgument : "script" "scr_white_flash"
+			/// @DnDArgument : "arg" ".8"
+			/// @DnDSaveInfo : "script" "scr_white_flash"
+			script_execute(scr_white_flash, .8);}
+	
+		/// @DnDAction : YoYo Games.Common.If_Expression
+		/// @DnDVersion : 1
+		/// @DnDHash : 6C0EEB99
+		/// @DnDParent : 2051C63F
+		/// @DnDArgument : "expr" "(scor >= 6000) && (reward_two == false)"
+		if((scor >= 6000) && (reward_two == false)){	/// @DnDAction : YoYo Games.Common.Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 6123858C
+			/// @DnDInput : 3
+			/// @DnDParent : 6C0EEB99
+			/// @DnDArgument : "expr" "true"
+			/// @DnDArgument : "expr_1" "1.4"
+			/// @DnDArgument : "expr_2" "1.5"
+			/// @DnDArgument : "var" "reward_two"
+			/// @DnDArgument : "var_1" "global.firerate_bonus"
+			/// @DnDArgument : "var_2" "global.reload_bonus"
+			reward_two = true;
+			global.firerate_bonus = 1.4;
+			global.reload_bonus = 1.5;
+		
+			/// @DnDAction : YoYo Games.Common.Execute_Script
+			/// @DnDVersion : 1.1
+			/// @DnDHash : 689D6D7B
+			/// @DnDParent : 6C0EEB99
+			/// @DnDArgument : "script" "scr_white_flash"
+			/// @DnDArgument : "arg" ".8"
+			/// @DnDSaveInfo : "script" "scr_white_flash"
+			script_execute(scr_white_flash, .8);}
+	
+		/// @DnDAction : YoYo Games.Common.If_Expression
+		/// @DnDVersion : 1
+		/// @DnDHash : 6B05F170
+		/// @DnDParent : 2051C63F
+		/// @DnDArgument : "expr" "(scor >= 20000) && (reward_three == false)"
+		if((scor >= 20000) && (reward_three == false)){	/// @DnDAction : YoYo Games.Common.Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 69BCFC52
+			/// @DnDInput : 5
+			/// @DnDParent : 6B05F170
+			/// @DnDArgument : "expr" "true"
+			/// @DnDArgument : "expr_1" "1.8"
+			/// @DnDArgument : "expr_2" "1.8"
+			/// @DnDArgument : "expr_3" "2"
+			/// @DnDArgument : "expr_4" "1.3"
+			/// @DnDArgument : "var" "reward_three"
+			/// @DnDArgument : "var_1" "global.firerate_bonus"
+			/// @DnDArgument : "var_2" "global.reload_bonus"
+			/// @DnDArgument : "var_3" "global.booster_bonus"
+			/// @DnDArgument : "var_4" "global.movementspeed_bonus"
+			reward_three = true;
+			global.firerate_bonus = 1.8;
+			global.reload_bonus = 1.8;
+			global.booster_bonus = 2;
+			global.movementspeed_bonus = 1.3;
+		
+			/// @DnDAction : YoYo Games.Common.Execute_Script
+			/// @DnDVersion : 1.1
+			/// @DnDHash : 59F6FF0A
+			/// @DnDParent : 6B05F170
+			/// @DnDArgument : "script" "scr_white_flash"
+			/// @DnDArgument : "arg" ".8"
+			/// @DnDSaveInfo : "script" "scr_white_flash"
+			script_execute(scr_white_flash, .8);}
 	
 		/// @DnDAction : YoYo Games.Common.If_Variable
 		/// @DnDVersion : 1

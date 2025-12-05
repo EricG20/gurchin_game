@@ -21,11 +21,11 @@ function player_controlz() {	/// @DnDAction : YoYo Games.Common.If_Expression
 			/// @DnDParent : 64D7FCA8
 			/// @DnDArgument : "expr" "-.5*global.game_speed"
 			/// @DnDArgument : "expr_relative" "1"
-			/// @DnDArgument : "expr_1" "clamp(hsp,-5.5,5.5)"
+			/// @DnDArgument : "expr_1" "clamp(hsp,-5.5*global.movementspeed_bonus,5.5*global.movementspeed_bonus)"
 			/// @DnDArgument : "var" "hsp"
 			/// @DnDArgument : "var_1" "hsp"
 			hsp += -.5*global.game_speed;
-			hsp = clamp(hsp,-5.5,5.5);
+			hsp = clamp(hsp,-5.5*global.movementspeed_bonus,5.5*global.movementspeed_bonus);
 		
 			/// @DnDAction : YoYo Games.Collisions.If_Object_At
 			/// @DnDVersion : 1.1
@@ -82,11 +82,11 @@ function player_controlz() {	/// @DnDAction : YoYo Games.Common.If_Expression
 			/// @DnDParent : 7862B48D
 			/// @DnDArgument : "expr" ".5*global.game_speed"
 			/// @DnDArgument : "expr_relative" "1"
-			/// @DnDArgument : "expr_1" "clamp(hsp,-5.5,5.5)"
+			/// @DnDArgument : "expr_1" "clamp(hsp,-5.5*global.movementspeed_bonus,5.5*global.movementspeed_bonus)"
 			/// @DnDArgument : "var" "hsp"
 			/// @DnDArgument : "var_1" "hsp"
 			hsp += .5*global.game_speed;
-			hsp = clamp(hsp,-5.5,5.5);
+			hsp = clamp(hsp,-5.5*global.movementspeed_bonus,5.5*global.movementspeed_bonus);
 		
 			/// @DnDAction : YoYo Games.Collisions.If_Object_At
 			/// @DnDVersion : 1.1
@@ -468,11 +468,11 @@ function player_controlz() {	/// @DnDAction : YoYo Games.Common.If_Expression
 				/// @DnDInput : 2
 				/// @DnDParent : 36F626D2
 				/// @DnDArgument : "expr" "-4"
-				/// @DnDArgument : "expr_1" "140"
+				/// @DnDArgument : "expr_1" "140*global.firerate_bonus"
 				/// @DnDArgument : "var" "vsp"
 				/// @DnDArgument : "var_1" "melee_cooldown"
 				vsp = -4;
-				melee_cooldown = 140;
+				melee_cooldown = 140*global.firerate_bonus;
 			
 				/// @DnDAction : YoYo Games.Instances.Create_Instance
 				/// @DnDVersion : 1

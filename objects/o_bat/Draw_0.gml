@@ -61,7 +61,14 @@ var l29A2478F_0 = anim;switch(l29A2478F_0){	/// @DnDAction : YoYo Games.Switc
 		/// @DnDArgument : "rot_relative" "1"
 		/// @DnDArgument : "sprite" "sprite_index"
 		/// @DnDArgument : "frame" "image_index"
-		draw_sprite_ext(sprite_index, image_index, x + o_player.facing*kickbackx+shakex+o_player.hsp, y + shakey+kickbacky+o_player.vsp, image_xscale + 0, o_player.facing*image_yscale, image_angle + androtate*o_player.facing, $FFFFFF & $ffffff, 1);	break;
+		draw_sprite_ext(sprite_index, image_index, x + o_player.facing*kickbackx+shakex+o_player.hsp, y + shakey+kickbacky+o_player.vsp, image_xscale + 0, o_player.facing*image_yscale, image_angle + androtate*o_player.facing, $FFFFFF & $ffffff, 1);
+	
+		/// @DnDAction : YoYo Games.Instances.Sprite_Animation_Speed
+		/// @DnDVersion : 1
+		/// @DnDHash : 23AD8C85
+		/// @DnDParent : 0A3B8944
+		/// @DnDArgument : "speed" "global.firerate_bonus"
+		image_speed = global.firerate_bonus;	break;
 
 	/// @DnDAction : YoYo Games.Switch.Case
 	/// @DnDVersion : 1
@@ -83,6 +90,12 @@ var l29A2478F_0 = anim;switch(l29A2478F_0){	/// @DnDAction : YoYo Games.Switc
 		rotate_amount = image_angle;
 		sprite_index = s_bat_charge;
 		numbah += -1;
+	
+		/// @DnDAction : YoYo Games.Instances.Sprite_Animation_Speed
+		/// @DnDVersion : 1
+		/// @DnDHash : 7F33A32A
+		/// @DnDParent : 79ADA57F
+		image_speed = 1;
 	
 		/// @DnDAction : YoYo Games.Drawing.Draw_Sprite_Transformed
 		/// @DnDVersion : 1

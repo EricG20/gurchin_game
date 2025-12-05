@@ -6,8 +6,24 @@ randomize();
 /// @DnDAction : YoYo Games.Common.Set_Global
 /// @DnDVersion : 1
 /// @DnDHash : 75E9B451
+/// @DnDInput : 6
+/// @DnDArgument : "value_1" "1"
+/// @DnDArgument : "value_2" "1"
+/// @DnDArgument : "value_3" "1"
+/// @DnDArgument : "value_4" "1"
+/// @DnDArgument : "value_5" "1"
 /// @DnDArgument : "var" "targ_x"
+/// @DnDArgument : "var_1" "firerate_bonus"
+/// @DnDArgument : "var_2" "ammo_bonus"
+/// @DnDArgument : "var_3" "booster_bonus"
+/// @DnDArgument : "var_4" "movementspeed_bonus"
+/// @DnDArgument : "var_5" "reload_bonus"
 global.targ_x = 0;
+global.firerate_bonus = 1;
+global.ammo_bonus = 1;
+global.booster_bonus = 1;
+global.movementspeed_bonus = 1;
+global.reload_bonus = 1;
 
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
@@ -47,6 +63,20 @@ score_level_data = ds_map_create();
 /// @DnDHash : 693FF82E
 /// @DnDArgument : "var" "setting_data"
 setting_data = ds_map_create();
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 4C12EF5F
+/// @DnDInput : 3
+/// @DnDArgument : "expr" "false"
+/// @DnDArgument : "expr_1" "false"
+/// @DnDArgument : "expr_2" "false"
+/// @DnDArgument : "var" "reward_one"
+/// @DnDArgument : "var_1" "reward_two"
+/// @DnDArgument : "var_2" "reward_three"
+reward_one = false;
+reward_two = false;
+reward_three = false;
 
 /// @DnDAction : YoYo Games.Common.Set_Global
 /// @DnDVersion : 1

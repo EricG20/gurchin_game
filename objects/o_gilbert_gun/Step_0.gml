@@ -259,13 +259,13 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 					/// @DnDInput : 3
 					/// @DnDParent : 120390CF
 					/// @DnDArgument : "expr" "stance.RELOAD"
-					/// @DnDArgument : "expr_1" "200"
+					/// @DnDArgument : "expr_1" "200/global.reload_bonus"
 					/// @DnDArgument : "expr_2" "false"
 					/// @DnDArgument : "var" "anim"
 					/// @DnDArgument : "var_1" "charge"
 					/// @DnDArgument : "var_2" "laser_out"
 					anim = stance.RELOAD;
-					charge = 200;
+					charge = 200/global.reload_bonus;
 					laser_out = false;
 				
 					/// @DnDAction : YoYo Games.Audio.Play_Audio
@@ -310,8 +310,8 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDVersion : 1
 				/// @DnDHash : 48AF556A
 				/// @DnDParent : 3A9CC710
-				/// @DnDArgument : "var" "floor(ammo) mod 4"
-				if(floor(ammo) mod 4 == 0){	/// @DnDAction : YoYo Games.Data Structures.DS_Clear
+				/// @DnDArgument : "var" "floor(ammo) mod floor(4/global.reload_bonus)"
+				if(floor(ammo) mod floor(4/global.reload_bonus) == 0){	/// @DnDAction : YoYo Games.Data Structures.DS_Clear
 					/// @DnDVersion : 1
 					/// @DnDHash : 27C3180E
 					/// @DnDParent : 48AF556A
@@ -405,13 +405,13 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDInput : 3
 			/// @DnDParent : 02B908F3
 			/// @DnDArgument : "expr" "stance.RELOAD"
-			/// @DnDArgument : "expr_1" "200"
+			/// @DnDArgument : "expr_1" "200/global.reload_bonus"
 			/// @DnDArgument : "expr_2" "false"
 			/// @DnDArgument : "var" "anim"
 			/// @DnDArgument : "var_1" "charge"
 			/// @DnDArgument : "var_2" "laser_out"
 			anim = stance.RELOAD;
-			charge = 200;
+			charge = 200/global.reload_bonus;
 			laser_out = false;
 		
 			/// @DnDAction : YoYo Games.Audio.Play_Audio
@@ -455,9 +455,9 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDHash : 2E11666B
 			/// @DnDInput : 2
 			/// @DnDParent : 3CBDD2E5
-			/// @DnDArgument : "expr" "ammo_cap"
+			/// @DnDArgument : "expr" "ammo_cap*global.ammo_bonus"
 			/// @DnDArgument : "expr_1" "stance.CASUAL"
 			/// @DnDArgument : "var" "ammo"
 			/// @DnDArgument : "var_1" "anim"
-			ammo = ammo_cap;
+			ammo = ammo_cap*global.ammo_bonus;
 			anim = stance.CASUAL;}}}

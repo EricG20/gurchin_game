@@ -108,10 +108,10 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 47FE55B3
 			/// @DnDParent : 628F30F9
-			/// @DnDArgument : "expr" "1.5*global.game_speed"
+			/// @DnDArgument : "expr" "(1.5*global.game_speed)*global.reload_bonus"
 			/// @DnDArgument : "expr_relative" "1"
 			/// @DnDArgument : "var" "charge"
-			charge += 1.5*global.game_speed;
+			charge += (1.5*global.game_speed)*global.reload_bonus;
 		
 			/// @DnDAction : YoYo Games.Common.If_Variable
 			/// @DnDVersion : 1

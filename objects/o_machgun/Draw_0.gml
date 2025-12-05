@@ -152,18 +152,22 @@ var l29A2478F_0 = anim;switch(l29A2478F_0){	/// @DnDAction : YoYo Games.Switc
 		/// @DnDSaveInfo : "sprite" "s_machgun_w_hands"
 		draw_sprite_ext(s_machgun_w_hands, image_index, o_player.x+(kickbackx+shakex), o_player.y+(shakey+kickbacky)-41+(o_player.head_offset_y)/2, 1, o_player.facing, image_angle + androtate*o_player.facing, $FFFFFF & $ffffff, 1);
 	
-		/// @DnDAction : YoYo Games.Drawing.Draw_Healthbar
-		/// @DnDVersion : 1
-		/// @DnDHash : 32ED3482
+		/// @DnDAction : YoYo Games.Common.Execute_Script
+		/// @DnDVersion : 1.1
+		/// @DnDHash : 7189F921
+		/// @DnDInput : 11
 		/// @DnDParent : 309F228F
-		/// @DnDArgument : "x1" "mouse_x-19"
-		/// @DnDArgument : "y1" "mouse_y-50"
-		/// @DnDArgument : "x2" "mouse_x-2"
-		/// @DnDArgument : "y2" "mouse_y+50"
-		/// @DnDArgument : "direction" "3"
-		/// @DnDArgument : "value" "100-(charge/180 * 100)"
-		/// @DnDArgument : "backcol" "$BD000000"
-		/// @DnDArgument : "barcol" "$00000000"
-		/// @DnDArgument : "mincol" "$FFFF0000"
-		/// @DnDArgument : "maxcol" "$FF00FF00"
-		draw_healthbar(mouse_x-19, mouse_y-50, mouse_x-2, mouse_y+50, 100-(charge/180 * 100), $BD000000 & $FFFFFF, $FFFF0000 & $FFFFFF, $FF00FF00 & $FFFFFF, 3, (($BD000000>>24) != 0), (($00000000>>24) != 0));	break;}
+		/// @DnDArgument : "script" "draw_wheel_ext"
+		/// @DnDArgument : "arg" "mouse_x"
+		/// @DnDArgument : "arg_1" "mouse_y"
+		/// @DnDArgument : "arg_2" "40"
+		/// @DnDArgument : "arg_3" "30"
+		/// @DnDArgument : "arg_4" "c_lime"
+		/// @DnDArgument : "arg_5" "charge"
+		/// @DnDArgument : "arg_6" "180/global.reload_bonus"
+		/// @DnDArgument : "arg_7" "1"
+		/// @DnDArgument : "arg_8" "90"
+		/// @DnDArgument : "arg_9" "false"
+		/// @DnDArgument : "arg_10" "1"
+		/// @DnDSaveInfo : "script" "draw_wheel_ext"
+		script_execute(draw_wheel_ext, mouse_x, mouse_y, 40, 30, c_lime, charge, 180/global.reload_bonus, 1, 90, false, 1);	break;}

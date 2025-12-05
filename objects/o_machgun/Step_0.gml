@@ -81,8 +81,8 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDParent : 3F4C6B2D
 			/// @DnDArgument : "var" "charge"
 			/// @DnDArgument : "op" "4"
-			/// @DnDArgument : "value" "8"
-			if(charge >= 8){	/// @DnDAction : YoYo Games.Audio.Play_Audio
+			/// @DnDArgument : "value" "8/global.firerate_bonus"
+			if(charge >= 8/global.firerate_bonus){	/// @DnDAction : YoYo Games.Audio.Play_Audio
 				/// @DnDVersion : 1.1
 				/// @DnDHash : 30B085F3
 				/// @DnDParent : 3A9CC710
@@ -228,11 +228,11 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 					/// @DnDInput : 2
 					/// @DnDParent : 120390CF
 					/// @DnDArgument : "expr" "stance.RELOAD"
-					/// @DnDArgument : "expr_1" "180"
+					/// @DnDArgument : "expr_1" "180/global.reload_bonus"
 					/// @DnDArgument : "var" "anim"
 					/// @DnDArgument : "var_1" "charge"
 					anim = stance.RELOAD;
-					charge = 180;
+					charge = 180/global.reload_bonus;
 				
 					/// @DnDAction : YoYo Games.Audio.Play_Audio
 					/// @DnDVersion : 1.1
@@ -260,11 +260,11 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDInput : 2
 			/// @DnDParent : 02B908F3
 			/// @DnDArgument : "expr" "stance.RELOAD"
-			/// @DnDArgument : "expr_1" "180"
+			/// @DnDArgument : "expr_1" "180/global.reload_bonus"
 			/// @DnDArgument : "var" "anim"
 			/// @DnDArgument : "var_1" "charge"
 			anim = stance.RELOAD;
-			charge = 180;
+			charge = 180/global.reload_bonus;
 		
 			/// @DnDAction : YoYo Games.Audio.Play_Audio
 			/// @DnDVersion : 1.1
@@ -299,9 +299,9 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDHash : 2E11666B
 			/// @DnDInput : 2
 			/// @DnDParent : 3CBDD2E5
-			/// @DnDArgument : "expr" "ammo_cap"
+			/// @DnDArgument : "expr" "ammo_cap*global.ammo_bonus"
 			/// @DnDArgument : "expr_1" "stance.CASUAL"
 			/// @DnDArgument : "var" "ammo"
 			/// @DnDArgument : "var_1" "anim"
-			ammo = ammo_cap;
+			ammo = ammo_cap*global.ammo_bonus;
 			anim = stance.CASUAL;}}}

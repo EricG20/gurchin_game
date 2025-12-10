@@ -280,7 +280,7 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 					/// @DnDAction : YoYo Games.Random.Choose
 					/// @DnDVersion : 1
 					/// @DnDHash : 6A6C53BA
-					/// @DnDInput : 13
+					/// @DnDInput : 14
 					/// @DnDParent : 120390CF
 					/// @DnDArgument : "var" "blessage"
 					/// @DnDArgument : "option" ""I can fire more lasers... if you ask nicely.""
@@ -293,10 +293,11 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 					/// @DnDArgument : "option_7" ""You make for a good sidekick!""
 					/// @DnDArgument : "option_8" ""Give me a sec...""
 					/// @DnDArgument : "option_9" ""What can I say? I'm just the best!""
-					/// @DnDArgument : "option_10" ""I think all the time, sometimes!""
+					/// @DnDArgument : "option_10" ""Small things come in... uhh... nevermind...""
 					/// @DnDArgument : "option_11" ""Hey, so... do I get clothes too?""
-					/// @DnDArgument : "option_12" ""So... me, or the screaming thing?""
-					blessage = choose("I can fire more lasers... if you ask nicely.", "Fodder.", "You got anything to eat, buddy?", "Zzz...", "HEY! Ease up on the grip!", "YO! Tighten your grip, will you?", "Any chance you got a sister?", "You make for a good sidekick!", "Give me a sec...", "What can I say? I'm just the best!", "I think all the time, sometimes!", "Hey, so... do I get clothes too?", "So... me, or the screaming thing?");
+					/// @DnDArgument : "option_12" ""My stomach hurts...""
+					/// @DnDArgument : "option_13" ""REAL THUGS TURN AIM PAN TO THE MAX!!""
+					blessage = choose("I can fire more lasers... if you ask nicely.", "Fodder.", "You got anything to eat, buddy?", "Zzz...", "HEY! Ease up on the grip!", "YO! Tighten your grip, will you?", "Any chance you got a sister?", "You make for a good sidekick!", "Give me a sec...", "What can I say? I'm just the best!", "Small things come in... uhh... nevermind...", "Hey, so... do I get clothes too?", "My stomach hurts...", "REAL THUGS TURN AIM PAN TO THE MAX!!");
 				
 					/// @DnDAction : YoYo Games.Common.Execute_Script
 					/// @DnDVersion : 1.1
@@ -422,6 +423,27 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDArgument : "pitch" "random_range(.9,1.1)"
 			/// @DnDSaveInfo : "soundid" "sfx_reload"
 			audio_play_sound(sfx_reload, 0, 0, 1.0, undefined, random_range(.9,1.1));
+		
+			/// @DnDAction : YoYo Games.Random.Choose
+			/// @DnDVersion : 1
+			/// @DnDHash : 333E924D
+			/// @DnDInput : 13
+			/// @DnDParent : 02B908F3
+			/// @DnDArgument : "var" "blessage"
+			/// @DnDArgument : "option" ""I can fire more lasers... if you ask nicely.""
+			/// @DnDArgument : "option_1" ""Fodder.""
+			/// @DnDArgument : "option_2" ""You got anything to eat, buddy?""
+			/// @DnDArgument : "option_3" ""Zzz...""
+			/// @DnDArgument : "option_4" ""HEY! Ease up on the grip!""
+			/// @DnDArgument : "option_5" ""YO! Tighten your grip, will you?""
+			/// @DnDArgument : "option_6" ""Any chance you got a sister?""
+			/// @DnDArgument : "option_7" ""You make for a good sidekick!""
+			/// @DnDArgument : "option_8" ""Give me a sec...""
+			/// @DnDArgument : "option_9" ""What can I say? I'm just the best!""
+			/// @DnDArgument : "option_10" ""I think all the time, sometimes!""
+			/// @DnDArgument : "option_11" ""Hey, so... do I get clothes too?""
+			/// @DnDArgument : "option_12" ""You think the Empress messes with bald 3'1'' zorbulans who work retail?""
+			blessage = choose("I can fire more lasers... if you ask nicely.", "Fodder.", "You got anything to eat, buddy?", "Zzz...", "HEY! Ease up on the grip!", "YO! Tighten your grip, will you?", "Any chance you got a sister?", "You make for a good sidekick!", "Give me a sec...", "What can I say? I'm just the best!", "I think all the time, sometimes!", "Hey, so... do I get clothes too?", "You think the Empress messes with bald 3'1'' zorbulans who work retail?");
 		
 			/// @DnDAction : YoYo Games.Common.Execute_Script
 			/// @DnDVersion : 1.1

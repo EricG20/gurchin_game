@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"zbdftutorial",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":41.92789,
+  "exportDir":"",
+  "name":"zbdftutorial",
+  "parent":{
+    "name":"music",
+    "path":"folders/Sounds/music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"zbdftutorial.ogg",
+  "volume":1.0,
+}

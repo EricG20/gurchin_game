@@ -46,6 +46,8 @@
     {"$GMObjectProperty":"v2","%Name":"mount","filters":[],"listItems":[],"multiselect":false,"name":"mount","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"undefined","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"iframes","filters":[],"listItems":[],"multiselect":false,"name":"iframes","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"melee_cooldown","filters":[],"listItems":[],"multiselect":false,"name":"melee_cooldown","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"death_counter","filters":[],"listItems":[],"multiselect":false,"name":"death_counter","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"gon_level","filters":[],"listItems":[],"multiselect":false,"name":"gon_level","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

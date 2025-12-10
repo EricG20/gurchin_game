@@ -78,7 +78,7 @@
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 3AEB1A5B
-/// @DnDArgument : "code" "if event_data[? "event_type"] == "sequence event" // or you can check "sprite event"$(13_10){$(13_10)    switch (event_data[? "message"])$(13_10)    {$(13_10)		case "start_boss_0":$(13_10)			instance_create_layer(sethisx,sethisy,"Instances",o_player);$(13_10)			instance_create_layer(1408,1056,"Instances",o_B_gunclaw);$(13_10)			layer_sequence_destroy(cutscene)$(13_10)		case "grade":$(13_10)            instance_create_layer(x,y,"Instances",e_card,$(13_10)			{$(13_10)				sprite_index:blub$(13_10)				});$(13_10)				if lvlscor < scor{$(13_10)			ds_map_replace(level_data,selected_level,grade);$(13_10)			ds_map_replace(level_data,selected_level+"score",scor);$(13_10)			}$(13_10)        break;$(13_10)		case "fade_out_music":$(13_10)			if (pylon_wave_number%3 == 0){scr_fadeout_song(4000);$(13_10)				pylon_incr=-600}$(13_10)		break;$(13_10)		case "play_chill_music":$(13_10)			if (pylon_wave_number%3 == 0){$(13_10)				curr_song = choose(intermission_1, intermission_2, intermission_3, intermission_4);$(13_10)			$(13_10)			// im fat$(13_10)			audio_play_sound(curr_song, 0, 1, 1.0, undefined, 1.0);$(13_10)			}$(13_10)		break;$(13_10)		case "provide_da_points":$(13_10)			scr_grade_point_reward();$(13_10)		break;$(13_10)		$(13_10)    }$(13_10)}"
+/// @DnDArgument : "code" "if event_data[? "event_type"] == "sequence event" // or you can check "sprite event"$(13_10){$(13_10)    switch (event_data[? "message"])$(13_10)    {$(13_10)		case "start_boss_0":$(13_10)			instance_create_layer(sethisx,sethisy,"Instances",o_player);$(13_10)			instance_create_layer(1408,1056,"Instances",o_B_gunclaw);$(13_10)			layer_sequence_destroy(cutscene)$(13_10)		case "grade":$(13_10)            instance_create_layer(x,y,"Instances",e_card,$(13_10)			{$(13_10)				sprite_index:blub$(13_10)				});$(13_10)				if lvlscor < scor{$(13_10)			ds_map_replace(level_data,selected_level,grade);$(13_10)			ds_map_replace(level_data,selected_level+"score",scor);$(13_10)			}$(13_10)        break;$(13_10)		case "fade_out_music":$(13_10)			if (pylon_wave_number%3 == 0){scr_fadeout_song(4000);$(13_10)				pylon_incr=-600}$(13_10)			if (pylon_wave_number == 10){scr_fadeout_song(2000);$(13_10)				pylon_incr = -9999;$(13_10)			}$(13_10)		break;$(13_10)		case "play_chill_music":$(13_10)			if (pylon_wave_number == 10) scr_change_song(intermission_peace);$(13_10)			if (pylon_wave_number%3 == 0){$(13_10)				curr_song = choose(intermission_1, intermission_2, intermission_3, intermission_4);$(13_10)				if (pylon_wave_number == 9) curr_song = intermission_boss;$(13_10)				$(13_10)			// im fat$(13_10)			audio_play_sound(curr_song, 0, 1, 1.0, undefined, 1.0);$(13_10)			audio_sound_gain(curr_song, 1.0, 0);$(13_10)			}$(13_10)		break;$(13_10)		case "provide_da_points":$(13_10)			scr_grade_point_reward();$(13_10)			if (pylon_wave_number == 9) audio_play_sound(gurstonsfinalwarning, 0, false, 2.0, undefined, 1.0);$(13_10)		break;$(13_10)		case "tutorial_finished" :$(13_10)			global.targ_x = 576;$(13_10)			layer_sequence_destroy(teto);$(13_10)			scr_change_song(menu);$(13_10)		break;$(13_10)		$(13_10)    }$(13_10)}"
 if event_data[? "event_type"] == "sequence event" // or you can check "sprite event"
 {
     switch (event_data[? "message"])
@@ -100,17 +100,29 @@ if event_data[? "event_type"] == "sequence event" // or you can check "sprite ev
 		case "fade_out_music":
 			if (pylon_wave_number%3 == 0){scr_fadeout_song(4000);
 				pylon_incr=-600}
+			if (pylon_wave_number == 10){scr_fadeout_song(2000);
+				pylon_incr = -9999;
+			}
 		break;
 		case "play_chill_music":
+			if (pylon_wave_number == 10) scr_change_song(intermission_peace);
 			if (pylon_wave_number%3 == 0){
 				curr_song = choose(intermission_1, intermission_2, intermission_3, intermission_4);
-			
+				if (pylon_wave_number == 9) curr_song = intermission_boss;
+				
 			// im fat
 			audio_play_sound(curr_song, 0, 1, 1.0, undefined, 1.0);
+			audio_sound_gain(curr_song, 1.0, 0);
 			}
 		break;
 		case "provide_da_points":
 			scr_grade_point_reward();
+			if (pylon_wave_number == 9) audio_play_sound(gurstonsfinalwarning, 0, false, 2.0, undefined, 1.0);
+		break;
+		case "tutorial_finished" :
+			global.targ_x = 576;
+			layer_sequence_destroy(teto);
+			scr_change_song(menu);
 		break;
 		
     }

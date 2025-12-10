@@ -8,15 +8,18 @@ function scr_load_game() {	/// @DnDAction : YoYo Games.Common.Execute_Code
 	/// @DnDHash : 06DFE434
 	/// @DnDApplyTo : o_game
 	/// @DnDParent : 7E6F085C
-	/// @DnDArgument : "code" "/// @description Execute Code$(13_10)if(!file_exists(file_name))$(13_10)	exit$(13_10)ds_map_destroy(level_data);$(13_10)ds_map_destroy(setting_data);$(13_10)var data=ds_map_secure_load(file_name);$(13_10)setting_data=data;$(13_10)level_data=data;$(13_10)room_restart();"
+	/// @DnDArgument : "code" "/// @description Execute Code$(13_10)if(!file_exists(file_name))$(13_10)	exit$(13_10)//ds_map_destroy(level_data);$(13_10)ds_map_destroy(setting_data);$(13_10)ds_map_destroy(high_score_data);$(13_10)var data=ds_map_secure_load(file_name);$(13_10)//setting_data=data;$(13_10)level_data=data;$(13_10)high_score_data=data;$(13_10)//scor_vals = ds_map_find_value(data, "high_scores");$(13_10)room_restart();"
 	with(o_game) {
 	/// @description Execute Code
 	if(!file_exists(file_name))
 		exit
-	ds_map_destroy(level_data);
+	//ds_map_destroy(level_data);
 	ds_map_destroy(setting_data);
+	ds_map_destroy(high_score_data);
 	var data=ds_map_secure_load(file_name);
-	setting_data=data;
+	//setting_data=data;
 	level_data=data;
+	high_score_data=data;
+	//scor_vals = ds_map_find_value(data, "high_scores");
 	room_restart();
 	}}

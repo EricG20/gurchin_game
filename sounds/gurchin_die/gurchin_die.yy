@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"gurchin_die",
+  "audioGroupId":{
+    "name":"effect_audio",
+    "path":"audiogroups/effect_audio",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":1,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.6827211,
+  "exportDir":"",
+  "name":"gurchin_die",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":22050,
+  "soundFile":"gurchin_die.ogg",
+  "volume":1.0,
+}

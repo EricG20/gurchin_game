@@ -10,8 +10,8 @@
   "managed":true,
   "name":"o_enemy_blugunna",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"o_enemy","path":"objects/o_enemy/o_enemy.yy",},"propertyId":{"name":"cooldown","path":"objects/o_enemy/o_enemy.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"75",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"o_entity","path":"objects/o_entity/o_entity.yy",},"propertyId":{"name":"hp","path":"objects/o_entity/o_entity.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"3",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"o_enemy","path":"objects/o_enemy/o_enemy.yy",},"propertyId":{"name":"cooldown","path":"objects/o_enemy/o_enemy.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"200",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"o_entity","path":"objects/o_entity/o_entity.yy",},"propertyId":{"name":"hp","path":"objects/o_entity/o_entity.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"5",},
   ],
   "parent":{
     "name":"Objects",
@@ -37,6 +37,11 @@
   "properties":[
     {"$GMObjectProperty":"v2","%Name":"activated","filters":[],"listItems":[],"multiselect":false,"name":"activated","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"false","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"target","filters":[],"listItems":[],"multiselect":false,"name":"target","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"o_pylon","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"charging_laser","filters":[],"listItems":[],"multiselect":false,"name":"charging_laser","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+    {"$GMObjectProperty":"v2","%Name":"laser_value","filters":[],"listItems":[],"multiselect":false,"name":"laser_value","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"laser_fired","filters":[],"listItems":[],"multiselect":false,"name":"laser_fired","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+    {"$GMObjectProperty":"v2","%Name":"aim_x","filters":[],"listItems":[],"multiselect":false,"name":"aim_x","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"aim_y","filters":[],"listItems":[],"multiselect":false,"name":"aim_y","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

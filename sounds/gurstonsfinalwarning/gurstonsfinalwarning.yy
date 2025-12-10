@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"gurstonsfinalwarning",
+  "audioGroupId":{
+    "name":"effect_audio",
+    "path":"audiogroups/effect_audio",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":1,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":24.581724,
+  "exportDir":"",
+  "name":"gurstonsfinalwarning",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"gurstonsfinalwarning.ogg",
+  "volume":1.0,
+}

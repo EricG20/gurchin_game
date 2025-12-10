@@ -10,7 +10,7 @@
   "managed":true,
   "name":"o_enemy_jerk",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"o_entity","path":"objects/o_entity/o_entity.yy",},"propertyId":{"name":"hp","path":"objects/o_entity/o_entity.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"18",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"o_entity","path":"objects/o_entity/o_entity.yy",},"propertyId":{"name":"hp","path":"objects/o_entity/o_entity.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"21",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"o_enemy","path":"objects/o_enemy/o_enemy.yy",},"propertyId":{"name":"cooldown","path":"objects/o_enemy/o_enemy.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"180",},
   ],
   "parent":{

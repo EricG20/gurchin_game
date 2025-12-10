@@ -10,17 +10,3 @@
 flashAlpha = 0;
 flashColor = c_red;
 running_variance = random_range(0,3);
-
-/// @DnDAction : YoYo Games.Instances.Set_Instance_Var
-/// @DnDVersion : 1
-/// @DnDHash : 520E51E2
-/// @DnDInput : 3
-/// @DnDArgument : "value" "c_yellow"
-/// @DnDArgument : "value_1" "1.5"
-/// @DnDArgument : "value_2" "1.5"
-/// @DnDArgument : "instvar" "14"
-/// @DnDArgument : "instvar_1" "15"
-/// @DnDArgument : "instvar_2" "16"
-image_blend = c_yellow;
-image_xscale = 1.5;
-image_yscale = 1.5;

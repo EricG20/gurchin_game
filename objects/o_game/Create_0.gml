@@ -3,6 +3,15 @@
 /// @DnDHash : 3617FA59
 randomize();
 
+/// @DnDAction : YoYo Games.Common.Function_Call
+/// @DnDVersion : 1
+/// @DnDHash : 369609F9
+/// @DnDInput : 2
+/// @DnDArgument : "function" "game_set_speed"
+/// @DnDArgument : "arg" "30"
+/// @DnDArgument : "arg_1" "gamespeed_fps"
+game_set_speed(30, gamespeed_fps);
+
 /// @DnDAction : YoYo Games.Common.Set_Global
 /// @DnDVersion : 1
 /// @DnDHash : 75E9B451
@@ -28,8 +37,10 @@ global.reload_bonus = 1;
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 56DC358E
-/// @DnDArgument : "code" "audio_group_load(effect_audio);"
+/// @DnDArgument : "code" "audio_group_load(effect_audio);$(13_10)audio_listener_position(window_get_width()/2, window_get_height()/2, 0);$(13_10)audio_listener_orientation(0, 0, 1000, 0, -1 ,0);"
 audio_group_load(effect_audio);
+audio_listener_position(window_get_width()/2, window_get_height()/2, 0);
+audio_listener_orientation(0, 0, 1000, 0, -1 ,0);
 
 /// @DnDAction : YoYo Games.Common.Set_Global
 /// @DnDVersion : 1
@@ -58,25 +69,37 @@ file_name = "SaveData.sav";
 level_data = ds_map_create();
 score_level_data = ds_map_create();
 
+/// @DnDAction : YoYo Games.Data Structures.Create_List
+/// @DnDVersion : 1
+/// @DnDHash : 0A2D2041
+/// @DnDArgument : "var" "high_scores"
+high_scores = ds_list_create();
+
 /// @DnDAction : YoYo Games.Data Structures.Create_Map
 /// @DnDVersion : 1
 /// @DnDHash : 693FF82E
+/// @DnDInput : 2
 /// @DnDArgument : "var" "setting_data"
+/// @DnDArgument : "var_1" "high_score_data"
 setting_data = ds_map_create();
+high_score_data = ds_map_create();
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 4C12EF5F
-/// @DnDInput : 3
+/// @DnDInput : 4
 /// @DnDArgument : "expr" "false"
 /// @DnDArgument : "expr_1" "false"
 /// @DnDArgument : "expr_2" "false"
+/// @DnDArgument : "expr_3" "false"
 /// @DnDArgument : "var" "reward_one"
 /// @DnDArgument : "var_1" "reward_two"
 /// @DnDArgument : "var_2" "reward_three"
+/// @DnDArgument : "var_3" "reward_four"
 reward_one = false;
 reward_two = false;
 reward_three = false;
+reward_four = false;
 
 /// @DnDAction : YoYo Games.Common.Set_Global
 /// @DnDVersion : 1
@@ -99,7 +122,7 @@ script_execute(gradient_int);
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 6072CAF4
-/// @DnDArgument : "code" "/// @description Execute Code$(13_10)enum ps {$(13_10)	IDLE,$(13_10)	WALK,$(13_10)	AIR,$(13_10)	HIT,$(13_10)	WIN,$(13_10)	DIE$(13_10)	$(13_10)}$(13_10)$(13_10)enum es {$(13_10)	IDLE,$(13_10)	WALK,$(13_10)	AIR,$(13_10)	CHARGE,$(13_10)	ATTACK,$(13_10)	DEATH$(13_10)	$(13_10)}$(13_10)$(13_10)enum gm {$(13_10)	TEST,$(13_10)	LEVEL,$(13_10)	HUB,$(13_10)	SELECT,$(13_10)	GATE,$(13_10)	BOSS,$(13_10)	PYLON$(13_10)}$(13_10)$(13_10)enum gr {$(13_10)	S,$(13_10)	A,$(13_10)	B,$(13_10)	C,$(13_10)	DUNNO$(13_10)}$(13_10)$(13_10)state = gm.SELECT"
+/// @DnDArgument : "code" "/// @description Execute Code$(13_10)enum ps {$(13_10)	IDLE,$(13_10)	WALK,$(13_10)	AIR,$(13_10)	HIT,$(13_10)	WIN,$(13_10)	DIE$(13_10)	$(13_10)}$(13_10)$(13_10)enum es {$(13_10)	IDLE,$(13_10)	WALK,$(13_10)	AIR,$(13_10)	CHARGE,$(13_10)	ATTACK,$(13_10)	DEATH$(13_10)	$(13_10)}$(13_10)$(13_10)enum gm {$(13_10)	TEST,$(13_10)	LEVEL,$(13_10)	HUB,$(13_10)	SELECT,$(13_10)	GATE,$(13_10)	BOSS,$(13_10)	PYLON,$(13_10)	RESULTS$(13_10)}$(13_10)$(13_10)enum gr {$(13_10)	S,$(13_10)	A,$(13_10)	B,$(13_10)	C,$(13_10)	DUNNO$(13_10)}$(13_10)$(13_10)state = gm.SELECT"
 /// @description Execute Code
 enum ps {
 	IDLE,
@@ -128,7 +151,8 @@ enum gm {
 	SELECT,
 	GATE,
 	BOSS,
-	PYLON
+	PYLON,
+	RESULTS
 }
 
 enum gr {

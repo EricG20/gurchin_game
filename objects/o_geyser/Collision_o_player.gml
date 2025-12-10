@@ -3,20 +3,18 @@
 /// @DnDHash : 6003C790
 /// @DnDArgument : "var" "other.iframes"
 /// @DnDArgument : "op" "3"
-if(other.iframes <= 0)
-{
-	/// @DnDAction : YoYo Games.Common.Variable
+if(other.iframes <= 0){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 40CC8CAE
 	/// @DnDInput : 2
 	/// @DnDParent : 6003C790
 	/// @DnDArgument : "expr" "ps.HIT"
-	/// @DnDArgument : "expr_1" "-1"
+	/// @DnDArgument : "expr_1" "-2"
 	/// @DnDArgument : "expr_relative_1" "1"
 	/// @DnDArgument : "var" "other.state"
 	/// @DnDArgument : "var_1" "other.hp"
 	other.state = ps.HIT;
-	other.hp += -1;
+	other.hp += -2;
 
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
@@ -35,5 +33,4 @@ if(other.iframes <= 0)
 	/// @DnDArgument : "objectid" "e_explosion"
 	/// @DnDArgument : "layer" ""Effects""
 	/// @DnDSaveInfo : "objectid" "e_explosion"
-	instance_create_layer(x + 0, y + 0, "Effects", e_explosion);
-}
+	instance_create_layer(x + 0, y + 0, "Effects", e_explosion);}

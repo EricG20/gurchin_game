@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"ur_great",
+  "audioGroupId":{
+    "name":"effect_audio",
+    "path":"audiogroups/effect_audio",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":1,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":4.3942404,
+  "exportDir":"",
+  "name":"ur_great",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"ur_great.ogg",
+  "volume":1.0,
+}

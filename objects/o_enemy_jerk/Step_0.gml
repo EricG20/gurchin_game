@@ -175,6 +175,16 @@ var l5517DD1C_0 = state;switch(l5517DD1C_0){	/// @DnDAction : YoYo Games.Swit
 				/// @DnDSaveInfo : "script" "scr_screenshake"
 				script_execute(scr_screenshake, 0, 2);
 			
+				/// @DnDAction : YoYo Games.Audio.Play_Audio
+				/// @DnDVersion : 1.1
+				/// @DnDHash : 3B2A11F9
+				/// @DnDParent : 52453753
+				/// @DnDArgument : "soundid" "sfx_footstep"
+				/// @DnDArgument : "gain" ".8"
+				/// @DnDArgument : "pitch" "random_range(.3,.4)"
+				/// @DnDSaveInfo : "soundid" "sfx_footstep"
+				audio_play_sound(sfx_footstep, 0, 0, .8, undefined, random_range(.3,.4));
+			
 				/// @DnDAction : YoYo Games.Instances.Create_Instance
 				/// @DnDVersion : 1
 				/// @DnDHash : 356234D0
@@ -368,6 +378,17 @@ var l5517DD1C_0 = state;switch(l5517DD1C_0){	/// @DnDAction : YoYo Games.Swit
 			/// @DnDSaveInfo : "soundid" "sfx_smash"
 			audio_play_sound(sfx_smash, 0, 0, 1.0, undefined, 1.0);
 		
+			/// @DnDAction : YoYo Games.Common.Execute_Script
+			/// @DnDVersion : 1.1
+			/// @DnDHash : 073F8CAD
+			/// @DnDInput : 2
+			/// @DnDParent : 5E85BCFC
+			/// @DnDArgument : "script" "scr_screenshake"
+			/// @DnDArgument : "arg" "10"
+			/// @DnDArgument : "arg_1" "10"
+			/// @DnDSaveInfo : "script" "scr_screenshake"
+			script_execute(scr_screenshake, 10, 10);
+		
 			/// @DnDAction : YoYo Games.Instances.Create_Instance
 			/// @DnDVersion : 1
 			/// @DnDHash : 1974B788
@@ -510,14 +531,12 @@ var l5517DD1C_0 = state;switch(l5517DD1C_0){	/// @DnDAction : YoYo Games.Swit
 				/// @DnDVersion : 1
 				/// @DnDHash : 059AFFDB
 				/// @DnDParent : 50F6DDA7
-				/// @DnDArgument : "xpos" "irandom_range(-40,40)"
-				/// @DnDArgument : "xpos_relative" "1"
-				/// @DnDArgument : "ypos" "irandom_range(-60,0)"
-				/// @DnDArgument : "ypos_relative" "1"
+				/// @DnDArgument : "xpos" "irandom_range(bbox_left,bbox_right)"
+				/// @DnDArgument : "ypos" "irandom_range(bbox_bottom,bbox_top)"
 				/// @DnDArgument : "objectid" "e_enemy_walkah_shit"
 				/// @DnDArgument : "layer" ""Effects""
 				/// @DnDSaveInfo : "objectid" "e_enemy_walkah_shit"
-				instance_create_layer(x + irandom_range(-40,40), y + irandom_range(-60,0), "Effects", e_enemy_walkah_shit);
+				instance_create_layer(irandom_range(bbox_left,bbox_right), irandom_range(bbox_bottom,bbox_top), "Effects", e_enemy_walkah_shit);
 			
 				/// @DnDAction : YoYo Games.Instances.Destroy_Instance
 				/// @DnDVersion : 1

@@ -187,11 +187,11 @@ var l4ACEE4AF_0 = state;switch(l4ACEE4AF_0){	/// @DnDAction : YoYo Games.Swit
 			/// @DnDInput : 3
 			/// @DnDParent : 26B74FB8
 			/// @DnDArgument : "expr" "gun_to_be"
-			/// @DnDArgument : "expr_1" "700"
+			/// @DnDArgument : "expr_1" "500"
 			/// @DnDArgument : "expr_2" "ps.IDLE"
 			/// @DnDArgument : "var" "the_gun_to_be.weapon_index"
 			/// @DnDArgument : "var_1" "cooldown"
 			/// @DnDArgument : "var_2" "state"
 			the_gun_to_be.weapon_index = gun_to_be;
-			cooldown = 700;
+			cooldown = 500;
 			state = ps.IDLE;}	break;}

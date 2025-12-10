@@ -42,8 +42,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"s_dumbass",
-    "path":"sprites/s_dumbass/s_dumbass.yy",
+    "name":"s_fat_walker",
+    "path":"sprites/s_fat_walker/s_fat_walker.yy",
   },
   "spriteMaskId":null,
   "visible":true,

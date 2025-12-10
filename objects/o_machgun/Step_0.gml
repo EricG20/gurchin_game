@@ -222,7 +222,8 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDHash : 120390CF
 				/// @DnDParent : 3A9CC710
 				/// @DnDArgument : "var" "ammo"
-				if(ammo == 0){	/// @DnDAction : YoYo Games.Common.Variable
+				/// @DnDArgument : "op" "3"
+				if(ammo <= 0){	/// @DnDAction : YoYo Games.Common.Variable
 					/// @DnDVersion : 1
 					/// @DnDHash : 5A60A81A
 					/// @DnDInput : 2
@@ -299,9 +300,9 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDHash : 2E11666B
 			/// @DnDInput : 2
 			/// @DnDParent : 3CBDD2E5
-			/// @DnDArgument : "expr" "ammo_cap*global.ammo_bonus"
+			/// @DnDArgument : "expr" "floor(ammo_cap*global.ammo_bonus)"
 			/// @DnDArgument : "expr_1" "stance.CASUAL"
 			/// @DnDArgument : "var" "ammo"
 			/// @DnDArgument : "var_1" "anim"
-			ammo = ammo_cap*global.ammo_bonus;
+			ammo = floor(ammo_cap*global.ammo_bonus);
 			anim = stance.CASUAL;}}}

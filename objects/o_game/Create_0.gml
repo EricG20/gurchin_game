@@ -122,7 +122,7 @@ script_execute(gradient_int);
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 6072CAF4
-/// @DnDArgument : "code" "/// @description Execute Code$(13_10)enum ps {$(13_10)	IDLE,$(13_10)	WALK,$(13_10)	AIR,$(13_10)	HIT,$(13_10)	WIN,$(13_10)	DIE$(13_10)	$(13_10)}$(13_10)$(13_10)enum es {$(13_10)	IDLE,$(13_10)	WALK,$(13_10)	AIR,$(13_10)	CHARGE,$(13_10)	ATTACK,$(13_10)	DEATH$(13_10)	$(13_10)}$(13_10)$(13_10)enum gm {$(13_10)	TEST,$(13_10)	LEVEL,$(13_10)	HUB,$(13_10)	SELECT,$(13_10)	GATE,$(13_10)	BOSS,$(13_10)	PYLON,$(13_10)	RESULTS$(13_10)}$(13_10)$(13_10)enum gr {$(13_10)	S,$(13_10)	A,$(13_10)	B,$(13_10)	C,$(13_10)	DUNNO$(13_10)}$(13_10)$(13_10)state = gm.SELECT"
+/// @DnDArgument : "code" "/// @description Execute Code$(13_10)enum ps {$(13_10)	IDLE,$(13_10)	WALK,$(13_10)	AIR,$(13_10)	HIT,$(13_10)	WIN,$(13_10)	DIE$(13_10)	$(13_10)}$(13_10)$(13_10)enum es {$(13_10)	IDLE,$(13_10)	WALK,$(13_10)	AIR,$(13_10)	CHARGE,$(13_10)	ATTACK,$(13_10)	DEATH$(13_10)	$(13_10)}$(13_10)$(13_10)enum gm {$(13_10)	TEST,$(13_10)	LEVEL,$(13_10)	HUB,$(13_10)	SELECT,$(13_10)	GATE,$(13_10)	BOSS,$(13_10)	PYLON,$(13_10)	RESULTS,$(13_10)	TITLE$(13_10)}$(13_10)$(13_10)enum gr {$(13_10)	S,$(13_10)	A,$(13_10)	B,$(13_10)	C,$(13_10)	DUNNO$(13_10)}$(13_10)$(13_10)state = gm.TITLE"
 /// @description Execute Code
 enum ps {
 	IDLE,
@@ -152,7 +152,8 @@ enum gm {
 	GATE,
 	BOSS,
 	PYLON,
-	RESULTS
+	RESULTS,
+	TITLE
 }
 
 enum gr {
@@ -163,4 +164,4 @@ enum gr {
 	DUNNO
 }
 
-state = gm.SELECT
+state = gm.TITLE

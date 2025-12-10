@@ -127,9 +127,9 @@ if(room == ini){	/// @DnDAction : YoYo Games.Common.Execute_Script
 	/// @DnDVersion : 1
 	/// @DnDHash : 79B996F7
 	/// @DnDParent : 2A9786CF
-	/// @DnDArgument : "room" "map"
-	/// @DnDSaveInfo : "room" "map"
-	room_goto(map);}
+	/// @DnDArgument : "room" "title"
+	/// @DnDSaveInfo : "room" "title"
+	room_goto(title);}
 
 /// @DnDAction : YoYo Games.Switch.Switch
 /// @DnDVersion : 1
@@ -206,7 +206,7 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 		/// @DnDVersion : 1
 		/// @DnDHash : 403B5F5A
 		/// @DnDParent : 2051C63F
-		/// @DnDArgument : "code" "var _cam_x = o_camera.x;$(13_10)var _cam_y = o_camera.y;$(13_10)layer_x("Backgrounds_1", _cam_x * .99 + current_time*power(.01,1));$(13_10)layer_y("Backgrounds_1", _cam_y *.99);$(13_10)layer_x("Backgrounds_2", _cam_x * .90 + current_time*power(.04,1));$(13_10)layer_y("Backgrounds_2", _cam_y *.90);$(13_10)layer_x("Backgrounds_3", _cam_x * .85 + current_time*power(.09,1));$(13_10)layer_y("Backgrounds_3", _cam_y *.85);$(13_10)layer_x("Backgrounds_4", _cam_x * .80 + current_time*power(.1,1));$(13_10)layer_y("Backgrounds_4", _cam_y *.80);$(13_10)layer_x("Backgrounds_5", _cam_x * .75 + current_time*power(.15,1));$(13_10)layer_y("Backgrounds_5", _cam_y *.75);$(13_10)layer_x("Backgrounds_6", _cam_x * .70 + current_time*power(.2,1));$(13_10)layer_y("Backgrounds_6", _cam_y *.70);$(13_10)layer_x("Backgrounds_7", _cam_x * .65 + current_time*power(.3, 1));$(13_10)layer_y("Backgrounds_7", _cam_y *.65);"
+		/// @DnDArgument : "code" "var _cam_x = o_camera.x;$(13_10)var _cam_y = o_camera.y;$(13_10)layer_x("Backgrounds_1", _cam_x * .99 + current_time*power(.01,1));$(13_10)layer_y("Backgrounds_1", _cam_y *.99);$(13_10)layer_x("Backgrounds_2", _cam_x * .90 + current_time*power(.04,1));$(13_10)layer_y("Backgrounds_2", _cam_y *.90);$(13_10)layer_x("Backgrounds_3", _cam_x * .85 + current_time*power(.09,1));$(13_10)layer_y("Backgrounds_3", _cam_y *.85);$(13_10)layer_x("Backgrounds_4", _cam_x * .80 + current_time*power(.1,1));$(13_10)layer_y("Backgrounds_4", _cam_y *.80);$(13_10)layer_x("Backgrounds_5", _cam_x * .75 + current_time*power(.15,1));$(13_10)layer_y("Backgrounds_5", _cam_y *.75);$(13_10)layer_x("Backgrounds_6", _cam_x * .70 + current_time*power(.2,1));$(13_10)layer_y("Backgrounds_6", _cam_y *.70);$(13_10)layer_x("Backgrounds_7", _cam_x * .65 + current_time*power(.3, 1));$(13_10)layer_y("Backgrounds_7", _cam_y *.65);$(13_10)layer_x("ship_tiles", _cam_x * .3);$(13_10)layer_y("ship_tiles", _cam_y *.3);"
 		var _cam_x = o_camera.x;
 		var _cam_y = o_camera.y;
 		layer_x("Backgrounds_1", _cam_x * .99 + current_time*power(.01,1));
@@ -223,6 +223,8 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 		layer_y("Backgrounds_6", _cam_y *.70);
 		layer_x("Backgrounds_7", _cam_x * .65 + current_time*power(.3, 1));
 		layer_y("Backgrounds_7", _cam_y *.65);
+		layer_x("ship_tiles", _cam_x * .3);
+		layer_y("ship_tiles", _cam_y *.3);
 	
 		/// @DnDAction : YoYo Games.Common.If_Expression
 		/// @DnDVersion : 1

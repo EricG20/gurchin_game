@@ -1,11 +1,12 @@
 /// @DnDAction : YoYo Games.Drawing.Draw_Value_Transformed
 /// @DnDVersion : 1
 /// @DnDHash : 65A27F92
+/// @DnDDisabled : 1
 /// @DnDArgument : "x" "mouse_x"
 /// @DnDArgument : "y" "mouse_y"
 /// @DnDArgument : "caption" """"
 /// @DnDArgument : "text" "charge"
-draw_text_transformed(mouse_x, mouse_y, string("") + string(charge), 1, 1, 0);
+
 
 /// @DnDAction : YoYo Games.Switch.Switch
 /// @DnDVersion : 1

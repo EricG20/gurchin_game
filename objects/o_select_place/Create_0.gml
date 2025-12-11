@@ -5,14 +5,17 @@
 if(in_sequence){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 1543513D
-	/// @DnDInput : 2
+	/// @DnDInput : 3
 	/// @DnDParent : 48C5C2F7
 	/// @DnDArgument : "expr" "false"
 	/// @DnDArgument : "expr_1" ""BACK""
+	/// @DnDArgument : "expr_2" "map"
 	/// @DnDArgument : "var" "part_of_main_menu"
 	/// @DnDArgument : "var_1" "words"
+	/// @DnDArgument : "var_2" "sel_room"
 	part_of_main_menu = false;
-	words = "BACK";}
+	words = "BACK";
+	sel_room = map;}
 
 /// @DnDAction : YoYo Games.Common.Else
 /// @DnDVersion : 1

@@ -6,7 +6,49 @@
 /// @DnDArgument : "funcName" "process_pylon_kill"
 /// @DnDArgument : "arg" "bounty=50"
 /// @DnDArgument : "arg_1" "flub_rate=irandom_range(0,5)"
-function process_pylon_kill(bounty=50, flub_rate=irandom_range(0,5)) {	/// @DnDAction : YoYo Games.Common.Variable
+function process_pylon_kill(bounty=50, flub_rate=irandom_range(0,5)) {	/// @DnDAction : YoYo Games.Switch.Switch
+	/// @DnDVersion : 1
+	/// @DnDHash : 3BA68452
+	/// @DnDParent : 635359D0
+	/// @DnDArgument : "expr" "object_index"
+	var l3BA68452_0 = object_index;switch(l3BA68452_0){	/// @DnDAction : YoYo Games.Switch.Default
+		/// @DnDVersion : 1
+		/// @DnDHash : 78D0AD8E
+		/// @DnDParent : 3BA68452
+		default:	/// @DnDAction : YoYo Games.Random.Choose
+			/// @DnDVersion : 1
+			/// @DnDHash : 497856E2
+			/// @DnDInput : 5
+			/// @DnDParent : 78D0AD8E
+			/// @DnDArgument : "var" "death_sound"
+			/// @DnDArgument : "option" "death1"
+			/// @DnDArgument : "option_1" "death2"
+			/// @DnDArgument : "option_2" "death3"
+			/// @DnDArgument : "option_3" "death4"
+			/// @DnDArgument : "option_4" "death5"
+			death_sound = choose(death1, death2, death3, death4, death5);
+		
+			/// @DnDAction : YoYo Games.Audio.Play_Audio
+			/// @DnDVersion : 1.1
+			/// @DnDHash : 6F1A964D
+			/// @DnDParent : 78D0AD8E
+			/// @DnDArgument : "soundid" "death_sound"
+			/// @DnDArgument : "gain" ".4"
+			/// @DnDArgument : "pitch" "random_range(.7,1)"
+			audio_play_sound(death_sound, 0, 0, .4, undefined, random_range(.7,1));	break;
+	
+		/// @DnDAction : YoYo Games.Switch.Case
+		/// @DnDVersion : 1
+		/// @DnDHash : 6A404005
+		/// @DnDParent : 3BA68452
+		/// @DnDArgument : "const" "o_enemy_jerk"
+		case o_enemy_jerk:	/// @DnDAction : YoYo Games.Loops.Break
+			/// @DnDVersion : 1
+			/// @DnDHash : 62C7DB31
+			/// @DnDParent : 6A404005
+			break;	break;}
+
+	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 5EABA602
 	/// @DnDInput : 2

@@ -96,8 +96,8 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDParent : 3F4C6B2D
 			/// @DnDArgument : "var" "charge"
 			/// @DnDArgument : "op" "4"
-			/// @DnDArgument : "value" "120"
-			if(charge >= 120){	/// @DnDAction : YoYo Games.Common.If_Variable
+			/// @DnDArgument : "value" "120/clamp(global.reload_bonus-.5,1,3)"
+			if(charge >= 120/clamp(global.reload_bonus-.5,1,3)){	/// @DnDAction : YoYo Games.Common.If_Variable
 				/// @DnDVersion : 1
 				/// @DnDHash : 2A4B330F
 				/// @DnDParent : 3A9CC710

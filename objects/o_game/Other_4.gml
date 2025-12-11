@@ -8,8 +8,11 @@ white_out = false;
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 27BD0123
+/// @DnDInput : 2
 /// @DnDArgument : "var" "white_beans"
+/// @DnDArgument : "var_1" "targ_x_approacher"
 white_beans = 0;
+targ_x_approacher = 0;
 
 /// @DnDAction : YoYo Games.Drawing.Set_Alignment
 /// @DnDVersion : 1.1
@@ -39,12 +42,13 @@ var l61EB12DC_0 = state;switch(l61EB12DC_0){	/// @DnDAction : YoYo Games.Swit
 			case ship_room:	/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDVersion : 1
 				/// @DnDHash : 785C7666
-				/// @DnDInput : 15
+				/// @DnDInput : 18
 				/// @DnDParent : 559C0940
 				/// @DnDArgument : "expr_2" "3"
 				/// @DnDArgument : "expr_3" "1"
 				/// @DnDArgument : "expr_12" "false"
 				/// @DnDArgument : "expr_14" "true"
+				/// @DnDArgument : "expr_15" "20"
 				/// @DnDArgument : "var" "scor"
 				/// @DnDArgument : "var_1" "pylon_incr"
 				/// @DnDArgument : "var_2" "pylon_enemy_cap"
@@ -60,6 +64,9 @@ var l61EB12DC_0 = state;switch(l61EB12DC_0){	/// @DnDAction : YoYo Games.Swit
 				/// @DnDArgument : "var_12" "finish_counting"
 				/// @DnDArgument : "var_13" "pylon_enemies"
 				/// @DnDArgument : "var_14" "can_skip_wave"
+				/// @DnDArgument : "var_15" "pylon_enemy_goal"
+				/// @DnDArgument : "var_16" "display_score"
+				/// @DnDArgument : "var_17" "pylon_enemy_count"
 				scor = 0;
 				pylon_incr = 0;
 				pylon_enemy_cap = 3;
@@ -75,6 +82,9 @@ var l61EB12DC_0 = state;switch(l61EB12DC_0){	/// @DnDAction : YoYo Games.Swit
 				finish_counting = false;
 				pylon_enemies = 0;
 				can_skip_wave = true;
+				pylon_enemy_goal = 20;
+				display_score = 0;
+				pylon_enemy_count = 0;
 			
 				/// @DnDAction : YoYo Games.Instances.Create_Instance
 				/// @DnDVersion : 1

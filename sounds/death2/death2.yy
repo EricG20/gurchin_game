@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"death2",
+  "audioGroupId":{
+    "name":"effect_audio",
+    "path":"audiogroups/effect_audio",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":1,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":1.0769161,
+  "exportDir":"",
+  "name":"death2",
+  "parent":{
+    "name":"vurmin",
+    "path":"folders/Sounds/vurmin.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":22050,
+  "soundFile":"death2.ogg",
+  "volume":1.0,
+}

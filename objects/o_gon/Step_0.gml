@@ -362,28 +362,35 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 	x = o_player.x-2*o_player.facing;
 	y = o_player.y- 41+o_player.head_offset_y;
 
-	/// @DnDAction : YoYo Games.Mouse & Keyboard.If_Key_Pressed
+	/// @DnDAction : YoYo Games.Common.If_Variable
 	/// @DnDVersion : 1
-	/// @DnDHash : 380F6208
+	/// @DnDHash : 7828D4DB
 	/// @DnDParent : 7299994B
-	/// @DnDArgument : "key" "ord("R")"
-	var l380F6208_0;l380F6208_0 = keyboard_check_pressed(ord("R"));if (l380F6208_0){	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDArgument : "var" "anim"
+	/// @DnDArgument : "not" "1"
+	/// @DnDArgument : "value" "stance.RELOAD"
+	if(!(anim == stance.RELOAD)){	/// @DnDAction : YoYo Games.Mouse & Keyboard.If_Key_Pressed
 		/// @DnDVersion : 1
-		/// @DnDHash : 3B2F9D24
-		/// @DnDInput : 2
-		/// @DnDParent : 380F6208
-		/// @DnDArgument : "expr" "stance.RELOAD"
-		/// @DnDArgument : "expr_1" "180"
-		/// @DnDArgument : "var" "anim"
-		/// @DnDArgument : "var_1" "charge"
-		anim = stance.RELOAD;
-		charge = 180;
-	
-		/// @DnDAction : YoYo Games.Audio.Play_Audio
-		/// @DnDVersion : 1.1
-		/// @DnDHash : 24EBB153
-		/// @DnDParent : 380F6208
-		/// @DnDArgument : "soundid" "sfx_reload"
-		/// @DnDArgument : "pitch" "random_range(.9,1.1)"
-		/// @DnDSaveInfo : "soundid" "sfx_reload"
-		audio_play_sound(sfx_reload, 0, 0, 1.0, undefined, random_range(.9,1.1));}}
+		/// @DnDHash : 380F6208
+		/// @DnDParent : 7828D4DB
+		/// @DnDArgument : "key" "ord("R")"
+		var l380F6208_0;l380F6208_0 = keyboard_check_pressed(ord("R"));if (l380F6208_0){	/// @DnDAction : YoYo Games.Common.Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 3B2F9D24
+			/// @DnDInput : 2
+			/// @DnDParent : 380F6208
+			/// @DnDArgument : "expr" "stance.RELOAD"
+			/// @DnDArgument : "expr_1" "120/global.reload_bonus"
+			/// @DnDArgument : "var" "anim"
+			/// @DnDArgument : "var_1" "charge"
+			anim = stance.RELOAD;
+			charge = 120/global.reload_bonus;
+		
+			/// @DnDAction : YoYo Games.Audio.Play_Audio
+			/// @DnDVersion : 1.1
+			/// @DnDHash : 24EBB153
+			/// @DnDParent : 380F6208
+			/// @DnDArgument : "soundid" "sfx_reload"
+			/// @DnDArgument : "pitch" "random_range(.9,1.1)"
+			/// @DnDSaveInfo : "soundid" "sfx_reload"
+			audio_play_sound(sfx_reload, 0, 0, 1.0, undefined, random_range(.9,1.1));}}}

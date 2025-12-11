@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"brutedeath",
+  "audioGroupId":{
+    "name":"effect_audio",
+    "path":"audiogroups/effect_audio",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":1,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":3.615374,
+  "exportDir":"",
+  "name":"brutedeath",
+  "parent":{
+    "name":"vurmin",
+    "path":"folders/Sounds/vurmin.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":22050,
+  "soundFile":"brutedeath.ogg",
+  "volume":1.0,
+}

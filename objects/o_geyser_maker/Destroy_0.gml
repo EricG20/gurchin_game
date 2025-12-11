@@ -22,11 +22,17 @@ tozer.dir_speed = facing*7;
 /// @DnDSaveInfo : "script" "scr_makeexplosion"
 script_execute(scr_makeexplosion);
 
-/// @DnDAction : YoYo Games.Audio.Stop_Audio
+/// @DnDAction : YoYo Games.Audio.If_Audio_Playing
 /// @DnDVersion : 1
-/// @DnDHash : 76B981CB
-/// @DnDArgument : "soundid" "jit"
-audio_stop_sound(jit);
+/// @DnDHash : 730FF141
+/// @DnDArgument : "soundid" "sfx_whoosh"
+/// @DnDSaveInfo : "soundid" "sfx_whoosh"
+var l730FF141_0 = sfx_whoosh;if (audio_is_playing(l730FF141_0)){	/// @DnDAction : YoYo Games.Audio.Stop_Audio
+	/// @DnDVersion : 1
+	/// @DnDHash : 76B981CB
+	/// @DnDParent : 730FF141
+	/// @DnDArgument : "soundid" "jit"
+	audio_stop_sound(jit);}
 
 /// @DnDAction : YoYo Games.Audio.Play_Audio
 /// @DnDVersion : 1.1

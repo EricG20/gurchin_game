@@ -1,15 +1,15 @@
 /// @DnDAction : YoYo Games.Drawing.Draw_Value_Transformed
 /// @DnDVersion : 1
 /// @DnDHash : 2FA73494
-/// @DnDArgument : "x" "-string_length(data_mode)"
+/// @DnDArgument : "x" "-string_length(data_mode)*3"
 /// @DnDArgument : "x_relative" "1"
 /// @DnDArgument : "y" "-120"
 /// @DnDArgument : "y_relative" "1"
-/// @DnDArgument : "xscale" "1.5"
-/// @DnDArgument : "yscale" "1.5"
+/// @DnDArgument : "xscale" "2"
+/// @DnDArgument : "yscale" "2"
 /// @DnDArgument : "caption" """"
 /// @DnDArgument : "text" "data_mode"
-draw_text_transformed(x + -string_length(data_mode), y + -120, string("") + string(data_mode), 1.5, 1.5, 0);
+draw_text_transformed(x + -string_length(data_mode)*3, y + -120, string("") + string(data_mode), 2, 2, 0);
 
 /// @DnDAction : YoYo Games.Drawing.Draw_Value_Transformed
 /// @DnDVersion : 1
@@ -53,14 +53,12 @@ if(am_I_done){	/// @DnDAction : YoYo Games.Switch.Switch
 				/// @DnDVersion : 1
 				/// @DnDHash : 0454585F
 				/// @DnDParent : 096AB952
-				/// @DnDArgument : "x" "random_range(-50,50)*2"
-				/// @DnDArgument : "x_relative" "1"
-				/// @DnDArgument : "y" "random_range(-50,50)*2"
-				/// @DnDArgument : "y_relative" "1"
+				/// @DnDArgument : "x" "random_range(bbox_left, bbox_right)"
+				/// @DnDArgument : "y" "random_range(bbox_top, bbox_bottom)"
 				/// @DnDArgument : "type" "6"
 				/// @DnDArgument : "where" "1"
 				/// @DnDArgument : "color" "$FF00FFFF"
-				effect_create_above(6, x + random_range(-50,50)*2, y + random_range(-50,50)*2, 0, $FF00FFFF & $ffffff);
+				effect_create_above(6, random_range(bbox_left, bbox_right), random_range(bbox_top, bbox_bottom), 0, $FF00FFFF & $ffffff);
 			
 				/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDVersion : 1

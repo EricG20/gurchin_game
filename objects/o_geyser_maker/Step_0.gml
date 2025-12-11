@@ -22,9 +22,9 @@ if(floor(length) mod 5 == 0){	/// @DnDAction : YoYo Games.Audio.Play_Audio
 	/// @DnDArgument : "target" "jit"
 	/// @DnDArgument : "soundid" "sfx_whoosh"
 	/// @DnDArgument : "gain" ".3"
-	/// @DnDArgument : "pitch" "1.3- (length/30)"
+	/// @DnDArgument : "pitch" "1.6 - (length/40)"
 	/// @DnDSaveInfo : "soundid" "sfx_whoosh"
-	jit = audio_play_sound(sfx_whoosh, 0, 0, .3, undefined, 1.3- (length/30));
+	jit = audio_play_sound(sfx_whoosh, 0, 0, .3, undefined, 1.6 - (length/40));
 
 	/// @DnDAction : YoYo Games.Instances.Create_Instance
 	/// @DnDVersion : 1

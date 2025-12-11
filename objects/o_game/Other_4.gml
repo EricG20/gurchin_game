@@ -42,13 +42,22 @@ var l61EB12DC_0 = state;switch(l61EB12DC_0){	/// @DnDAction : YoYo Games.Swit
 			case ship_room:	/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDVersion : 1
 				/// @DnDHash : 785C7666
-				/// @DnDInput : 18
+				/// @DnDInput : 27
 				/// @DnDParent : 559C0940
 				/// @DnDArgument : "expr_2" "3"
 				/// @DnDArgument : "expr_3" "1"
 				/// @DnDArgument : "expr_12" "false"
 				/// @DnDArgument : "expr_14" "true"
 				/// @DnDArgument : "expr_15" "20"
+				/// @DnDArgument : "expr_18" "false"
+				/// @DnDArgument : "expr_19" "false"
+				/// @DnDArgument : "expr_20" "false"
+				/// @DnDArgument : "expr_21" "false"
+				/// @DnDArgument : "expr_22" "1"
+				/// @DnDArgument : "expr_23" "1"
+				/// @DnDArgument : "expr_24" "1"
+				/// @DnDArgument : "expr_25" "1"
+				/// @DnDArgument : "expr_26" "1"
 				/// @DnDArgument : "var" "scor"
 				/// @DnDArgument : "var_1" "pylon_incr"
 				/// @DnDArgument : "var_2" "pylon_enemy_cap"
@@ -67,6 +76,15 @@ var l61EB12DC_0 = state;switch(l61EB12DC_0){	/// @DnDAction : YoYo Games.Swit
 				/// @DnDArgument : "var_15" "pylon_enemy_goal"
 				/// @DnDArgument : "var_16" "display_score"
 				/// @DnDArgument : "var_17" "pylon_enemy_count"
+				/// @DnDArgument : "var_18" "reward_one"
+				/// @DnDArgument : "var_19" "reward_two"
+				/// @DnDArgument : "var_20" "reward_three"
+				/// @DnDArgument : "var_21" "reward_four"
+				/// @DnDArgument : "var_22" "global.ammo_bonus"
+				/// @DnDArgument : "var_23" "global.booster_bonus"
+				/// @DnDArgument : "var_24" "global.firerate_bonus"
+				/// @DnDArgument : "var_25" "global.reload_bonus"
+				/// @DnDArgument : "var_26" "global.movementspeed_bonus"
 				scor = 0;
 				pylon_incr = 0;
 				pylon_enemy_cap = 3;
@@ -85,6 +103,15 @@ var l61EB12DC_0 = state;switch(l61EB12DC_0){	/// @DnDAction : YoYo Games.Swit
 				pylon_enemy_goal = 20;
 				display_score = 0;
 				pylon_enemy_count = 0;
+				reward_one = false;
+				reward_two = false;
+				reward_three = false;
+				reward_four = false;
+				global.ammo_bonus = 1;
+				global.booster_bonus = 1;
+				global.firerate_bonus = 1;
+				global.reload_bonus = 1;
+				global.movementspeed_bonus = 1;
 			
 				/// @DnDAction : YoYo Games.Instances.Create_Instance
 				/// @DnDVersion : 1

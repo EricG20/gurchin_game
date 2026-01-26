@@ -54,4 +54,51 @@ function scr_change_song(new_song) {	/// @DnDAction : YoYo Games.Audio.If_Audi
 			/// @DnDParent : 32F753E0
 			/// @DnDArgument : "idx" "o_game.curr_song"
 			/// @DnDArgument : "offset" "29.79"
-			audio_sound_loop_start(o_game.curr_song, 29.79);	break;}}
+			audio_sound_loop_start(o_game.curr_song, 29.79);	break;
+	
+		/// @DnDAction : YoYo Games.Switch.Case
+		/// @DnDVersion : 1
+		/// @DnDHash : 170A9ABD
+		/// @DnDParent : 06F2F2D6
+		/// @DnDArgument : "const" "combat_4"
+		case combat_4:	/// @DnDAction : YoYo Games.Audio.Set_Audio_Loop_Start
+			/// @DnDVersion : 1
+			/// @DnDHash : 7E261EC1
+			/// @DnDParent : 170A9ABD
+			/// @DnDArgument : "idx" "o_game.curr_song"
+			/// @DnDArgument : "offset" "38.40"
+			audio_sound_loop_start(o_game.curr_song, 38.40);	break;
+	
+		/// @DnDAction : YoYo Games.Switch.Case
+		/// @DnDVersion : 1
+		/// @DnDHash : 378524E4
+		/// @DnDParent : 06F2F2D6
+		/// @DnDArgument : "const" "combat_gurchenis"
+		case combat_gurchenis:	/// @DnDAction : YoYo Games.Audio.Set_Audio_Loop_Start
+			/// @DnDVersion : 1
+			/// @DnDHash : 28CC9F4A
+			/// @DnDParent : 378524E4
+			/// @DnDArgument : "idx" "o_game.curr_song"
+			/// @DnDArgument : "offset" "9.94"
+			audio_sound_loop_start(o_game.curr_song, 9.94);
+		
+			/// @DnDAction : YoYo Games.Audio.Set_Audio_Loop_End
+			/// @DnDVersion : 1
+			/// @DnDHash : 00B8CC91
+			/// @DnDParent : 378524E4
+			/// @DnDArgument : "idx" "o_game.curr_song"
+			/// @DnDArgument : "offset" "111.91"
+			audio_sound_loop_end(o_game.curr_song, 111.91);	break;
+	
+		/// @DnDAction : YoYo Games.Switch.Case
+		/// @DnDVersion : 1
+		/// @DnDHash : 42B3034C
+		/// @DnDParent : 06F2F2D6
+		/// @DnDArgument : "const" "gurchenis_approaching"
+		case gurchenis_approaching:	/// @DnDAction : YoYo Games.Audio.Audio_Set_Volume
+			/// @DnDVersion : 1.1
+			/// @DnDHash : 5B937745
+			/// @DnDParent : 42B3034C
+			/// @DnDArgument : "sound" "o_game.curr_song"
+			/// @DnDArgument : "volume" "1.8"
+			audio_sound_gain(o_game.curr_song, 1.8, 0);	break;}}

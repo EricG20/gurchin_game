@@ -42,7 +42,7 @@ var l61EB12DC_0 = state;switch(l61EB12DC_0){	/// @DnDAction : YoYo Games.Swit
 			case ship_room:	/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDVersion : 1
 				/// @DnDHash : 785C7666
-				/// @DnDInput : 27
+				/// @DnDInput : 28
 				/// @DnDParent : 559C0940
 				/// @DnDArgument : "expr_2" "3"
 				/// @DnDArgument : "expr_3" "1"
@@ -58,6 +58,7 @@ var l61EB12DC_0 = state;switch(l61EB12DC_0){	/// @DnDAction : YoYo Games.Swit
 				/// @DnDArgument : "expr_24" "1"
 				/// @DnDArgument : "expr_25" "1"
 				/// @DnDArgument : "expr_26" "1"
+				/// @DnDArgument : "expr_27" "false"
 				/// @DnDArgument : "var" "scor"
 				/// @DnDArgument : "var_1" "pylon_incr"
 				/// @DnDArgument : "var_2" "pylon_enemy_cap"
@@ -82,9 +83,10 @@ var l61EB12DC_0 = state;switch(l61EB12DC_0){	/// @DnDAction : YoYo Games.Swit
 				/// @DnDArgument : "var_21" "reward_four"
 				/// @DnDArgument : "var_22" "global.ammo_bonus"
 				/// @DnDArgument : "var_23" "global.booster_bonus"
-				/// @DnDArgument : "var_24" "global.firerate_bonus"
-				/// @DnDArgument : "var_25" "global.reload_bonus"
+				/// @DnDArgument : "var_24" "global.flat_firerate_bonus"
+				/// @DnDArgument : "var_25" "global.flat_reload_bonus"
 				/// @DnDArgument : "var_26" "global.movementspeed_bonus"
+				/// @DnDArgument : "var_27" "boss_bool"
 				scor = 0;
 				pylon_incr = 0;
 				pylon_enemy_cap = 3;
@@ -109,9 +111,10 @@ var l61EB12DC_0 = state;switch(l61EB12DC_0){	/// @DnDAction : YoYo Games.Swit
 				reward_four = false;
 				global.ammo_bonus = 1;
 				global.booster_bonus = 1;
-				global.firerate_bonus = 1;
-				global.reload_bonus = 1;
+				global.flat_firerate_bonus = 1;
+				global.flat_reload_bonus = 1;
 				global.movementspeed_bonus = 1;
+				boss_bool = false;
 			
 				/// @DnDAction : YoYo Games.Instances.Create_Instance
 				/// @DnDVersion : 1
@@ -154,13 +157,23 @@ var l61EB12DC_0 = state;switch(l61EB12DC_0){	/// @DnDAction : YoYo Games.Swit
 				/// @DnDArgument : "option_3" "intermission_4"
 				curr_song = choose(intermission_1, intermission_2, intermission_3, intermission_4);
 			
+				/// @DnDAction : YoYo Games.Common.Execute_Script
+				/// @DnDVersion : 1.1
+				/// @DnDHash : 385D128A
+				/// @DnDParent : 559C0940
+				/// @DnDArgument : "script" "scr_change_song"
+				/// @DnDArgument : "arg" "curr_song"
+				/// @DnDSaveInfo : "script" "scr_change_song"
+				script_execute(scr_change_song, curr_song);
+			
 				/// @DnDAction : YoYo Games.Audio.Play_Audio
 				/// @DnDVersion : 1.1
 				/// @DnDHash : 59301C10
+				/// @DnDDisabled : 1
 				/// @DnDParent : 559C0940
 				/// @DnDArgument : "soundid" "curr_song"
 				/// @DnDArgument : "loop" "1"
-				audio_play_sound(curr_song, 0, 1, 1.0, undefined, 1.0);
+			
 			
 				/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDVersion : 1

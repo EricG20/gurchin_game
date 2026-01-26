@@ -37,6 +37,7 @@
   "properties":[
     {"$GMObjectProperty":"v2","%Name":"last_hp","filters":[],"listItems":[],"multiselect":false,"name":"last_hp","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"death_incr","filters":[],"listItems":[],"multiselect":false,"name":"death_incr","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"time_to_heal","filters":[],"listItems":[],"multiselect":false,"name":"time_to_heal","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

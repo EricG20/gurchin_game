@@ -3,6 +3,13 @@
 /// @DnDHash : 3617FA59
 randomize();
 
+/// @DnDAction : YoYo Games.Common.Execute_Code
+/// @DnDVersion : 1
+/// @DnDHash : 56A3F8A5
+/// @DnDDisabled : 1
+/// @DnDArgument : "code" "gpu_set_texfilter(true);"
+
+
 /// @DnDAction : YoYo Games.Common.Function_Call
 /// @DnDVersion : 1
 /// @DnDHash : 369609F9
@@ -15,24 +22,30 @@ game_set_speed(30, gamespeed_fps);
 /// @DnDAction : YoYo Games.Common.Set_Global
 /// @DnDVersion : 1
 /// @DnDHash : 75E9B451
-/// @DnDInput : 6
+/// @DnDInput : 8
 /// @DnDArgument : "value_1" "1"
 /// @DnDArgument : "value_2" "1"
 /// @DnDArgument : "value_3" "1"
 /// @DnDArgument : "value_4" "1"
 /// @DnDArgument : "value_5" "1"
+/// @DnDArgument : "value_6" "1"
+/// @DnDArgument : "value_7" "1"
 /// @DnDArgument : "var" "targ_x"
 /// @DnDArgument : "var_1" "firerate_bonus"
 /// @DnDArgument : "var_2" "ammo_bonus"
 /// @DnDArgument : "var_3" "booster_bonus"
 /// @DnDArgument : "var_4" "movementspeed_bonus"
 /// @DnDArgument : "var_5" "reload_bonus"
+/// @DnDArgument : "var_6" "flat_firerate_bonus"
+/// @DnDArgument : "var_7" "flat_reload_bonus"
 global.targ_x = 0;
 global.firerate_bonus = 1;
 global.ammo_bonus = 1;
 global.booster_bonus = 1;
 global.movementspeed_bonus = 1;
 global.reload_bonus = 1;
+global.flat_firerate_bonus = 1;
+global.flat_reload_bonus = 1;
 
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
@@ -45,13 +58,16 @@ audio_listener_orientation(0, 0, 1000, 0, -1 ,0);
 /// @DnDAction : YoYo Games.Common.Set_Global
 /// @DnDVersion : 1
 /// @DnDHash : 7F30CE0E
-/// @DnDInput : 2
+/// @DnDInput : 3
 /// @DnDArgument : "value" "1"
 /// @DnDArgument : "value_1" "1"
+/// @DnDArgument : "value_2" "true"
 /// @DnDArgument : "var" "game_speed"
 /// @DnDArgument : "var_1" "game_time"
+/// @DnDArgument : "var_2" "we_can_move"
 global.game_speed = 1;
 global.game_time = 1;
+global.we_can_move = true;
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1

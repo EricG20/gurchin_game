@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"gurchenis_spawn_laugh",
+  "audioGroupId":{
+    "name":"effect_audio",
+    "path":"audiogroups/effect_audio",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":1,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":10.528844,
+  "exportDir":"",
+  "name":"gurchenis_spawn_laugh",
+  "parent":{
+    "name":"gurchenis",
+    "path":"folders/Sounds/gurchenis.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"gurchenis_spawn_laugh.ogg",
+  "volume":1.0,
+}

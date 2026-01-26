@@ -22,6 +22,7 @@
   "height":29,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"881f00b4-cbd4-4fd0-80e1-9a6f83b3cd66","blendMode":1,"displayName":"default (2)","isLocked":false,"name":"881f00b4-cbd4-4fd0-80e1-9a6f83b3cd66","opacity":47.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"1017d805-8c99-4741-8968-74b8fef2320f","blendMode":0,"displayName":"default","isLocked":false,"name":"1017d805-8c99-4741-8968-74b8fef2320f","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"s_flub",

@@ -10,8 +10,8 @@
   "name":"o_pickup",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"weapons",
+    "path":"folders/Objects/weapons.yy",
   },
   "parentObjectId":{
     "name":"o_entity",
@@ -32,7 +32,7 @@
   "physicsStartAwake":true,
   "properties":[
     {"$GMObjectProperty":"v2","%Name":"floatinc","filters":[],"listItems":[],"multiselect":false,"name":"floatinc","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
-    {"$GMObjectProperty":"v2","%Name":"weapon_index","filters":[],"listItems":[],"multiselect":false,"name":"weapon_index","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"o_gon","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"weapon_index","filters":[],"listItems":[],"multiselect":false,"name":"weapon_index","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"o_gon","varType":4,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
@@ -41,6 +41,9 @@
     "name":"s_gunpickup",
     "path":"sprites/s_gunpickup/s_gunpickup.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"s_gunpickup",
+    "path":"sprites/s_gunpickup/s_gunpickup.yy",
+  },
   "visible":true,
 }

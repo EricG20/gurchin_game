@@ -19,28 +19,28 @@ var l29A2478F_0 = anim;switch(l29A2478F_0){	/// @DnDAction : YoYo Games.Switc
 		/// @DnDVersion : 1
 		/// @DnDHash : 6D87F405
 		/// @DnDParent : 1D403BFA
-		/// @DnDArgument : "x" "o_player.x+(kickbackx+shakex)"
-		/// @DnDArgument : "y" "o_player.y+(shakey+kickbacky)-41+(o_player.head_offset_y)/2"
-		/// @DnDArgument : "yscale" "o_player.facing"
-		/// @DnDArgument : "rot" "androtate*o_player.facing"
+		/// @DnDArgument : "x" "weilder.x+(kickbackx+shakex)"
+		/// @DnDArgument : "y" "weilder.y+(shakey+kickbacky)-41+(weilder.head_offset_y)/2"
+		/// @DnDArgument : "yscale" "weilder.facing"
+		/// @DnDArgument : "rot" "androtate*weilder.facing"
 		/// @DnDArgument : "rot_relative" "1"
 		/// @DnDArgument : "sprite" "sprite_index"
 		/// @DnDArgument : "frame" "image_index"
-		draw_sprite_ext(sprite_index, image_index, o_player.x+(kickbackx+shakex), o_player.y+(shakey+kickbacky)-41+(o_player.head_offset_y)/2, 1, o_player.facing, image_angle + androtate*o_player.facing, $FFFFFF & $ffffff, 1);
+		draw_sprite_ext(sprite_index, image_index, weilder.x+(kickbackx+shakex), weilder.y+(shakey+kickbacky)-41+(weilder.head_offset_y)/2, 1, weilder.facing, image_angle + androtate*weilder.facing, $FFFFFF & $ffffff, 1);
 	
 		/// @DnDAction : YoYo Games.Drawing.Draw_Sprite_Transformed
 		/// @DnDVersion : 1
 		/// @DnDHash : 2282F6BE
 		/// @DnDParent : 1D403BFA
-		/// @DnDArgument : "x" "o_player.x+(kickbackx+shakex)"
-		/// @DnDArgument : "y" "o_player.y+(shakey+kickbacky)-41+(o_player.head_offset_y)/2"
-		/// @DnDArgument : "yscale" "o_player.facing"
-		/// @DnDArgument : "rot" "androtate*o_player.facing"
+		/// @DnDArgument : "x" "weilder.x+(kickbackx+shakex)"
+		/// @DnDArgument : "y" "weilder.y+(shakey+kickbacky)-41+(weilder.head_offset_y)/2"
+		/// @DnDArgument : "yscale" "weilder.facing"
+		/// @DnDArgument : "rot" "androtate*weilder.facing"
 		/// @DnDArgument : "rot_relative" "1"
 		/// @DnDArgument : "sprite" "s_player_arms"
 		/// @DnDArgument : "frame" "image_index"
 		/// @DnDSaveInfo : "sprite" "s_player_arms"
-		draw_sprite_ext(s_player_arms, image_index, o_player.x+(kickbackx+shakex), o_player.y+(shakey+kickbacky)-41+(o_player.head_offset_y)/2, 1, o_player.facing, image_angle + androtate*o_player.facing, $FFFFFF & $ffffff, 1);	break;
+		draw_sprite_ext(s_player_arms, image_index, weilder.x+(kickbackx+shakex), weilder.y+(shakey+kickbacky)-41+(weilder.head_offset_y)/2, 1, weilder.facing, image_angle + androtate*weilder.facing, $FFFFFF & $ffffff, 1);	break;
 
 	/// @DnDAction : YoYo Games.Switch.Case
 	/// @DnDVersion : 1
@@ -63,16 +63,16 @@ var l29A2478F_0 = anim;switch(l29A2478F_0){	/// @DnDAction : YoYo Games.Switc
 		/// @DnDVersion : 1
 		/// @DnDHash : 07311AA6
 		/// @DnDParent : 0A3B8944
-		/// @DnDArgument : "x" "o_player.facing*kickbackx+shakex"
+		/// @DnDArgument : "x" "weilder.facing*kickbackx+shakex"
 		/// @DnDArgument : "x_relative" "1"
 		/// @DnDArgument : "y" "shakey+kickbacky"
 		/// @DnDArgument : "y_relative" "1"
-		/// @DnDArgument : "yscale" "o_player.facing"
-		/// @DnDArgument : "rot" "androtate*o_player.facing"
+		/// @DnDArgument : "yscale" "weilder.facing"
+		/// @DnDArgument : "rot" "androtate*weilder.facing"
 		/// @DnDArgument : "rot_relative" "1"
 		/// @DnDArgument : "sprite" "sprite_index"
 		/// @DnDArgument : "frame" "image_index"
-		draw_sprite_ext(sprite_index, image_index, x + o_player.facing*kickbackx+shakex, y + shakey+kickbacky, 1, o_player.facing, image_angle + androtate*o_player.facing, $FFFFFF & $ffffff, 1);	break;
+		draw_sprite_ext(sprite_index, image_index, x + weilder.facing*kickbackx+shakex, y + shakey+kickbacky, 1, weilder.facing, image_angle + androtate*weilder.facing, $FFFFFF & $ffffff, 1);	break;
 
 	/// @DnDAction : YoYo Games.Switch.Case
 	/// @DnDVersion : 1
@@ -99,15 +99,15 @@ var l29A2478F_0 = anim;switch(l29A2478F_0){	/// @DnDAction : YoYo Games.Switc
 		/// @DnDVersion : 1
 		/// @DnDHash : 225151B8
 		/// @DnDParent : 79ADA57F
-		/// @DnDArgument : "x" "o_player.facing*kickbackx+shakex"
+		/// @DnDArgument : "x" "weilder.facing*kickbackx+shakex"
 		/// @DnDArgument : "x_relative" "1"
 		/// @DnDArgument : "y" "shakey+kickbacky"
 		/// @DnDArgument : "y_relative" "1"
-		/// @DnDArgument : "yscale" "o_player.facing"
-		/// @DnDArgument : "rot" "androtate*o_player.facing"
+		/// @DnDArgument : "yscale" "weilder.facing"
+		/// @DnDArgument : "rot" "androtate*weilder.facing"
 		/// @DnDArgument : "rot_relative" "1"
 		/// @DnDArgument : "sprite" "sprite_index"
-		draw_sprite_ext(sprite_index, 0, x + o_player.facing*kickbackx+shakex, y + shakey+kickbacky, 1, o_player.facing, image_angle + androtate*o_player.facing, $FFFFFF & $ffffff, 1);
+		draw_sprite_ext(sprite_index, 0, x + weilder.facing*kickbackx+shakex, y + shakey+kickbacky, 1, weilder.facing, image_angle + androtate*weilder.facing, $FFFFFF & $ffffff, 1);
 	
 		/// @DnDAction : YoYo Games.Common.If_Variable
 		/// @DnDVersion : 1
@@ -144,28 +144,28 @@ var l29A2478F_0 = anim;switch(l29A2478F_0){	/// @DnDAction : YoYo Games.Switc
 		/// @DnDVersion : 1
 		/// @DnDHash : 08A3FCFE
 		/// @DnDParent : 2FA5C165
-		/// @DnDArgument : "x" "o_player.x+(kickbackx+shakex)"
-		/// @DnDArgument : "y" "o_player.y+(shakey+kickbacky)-41+(o_player.head_offset_y)/2"
-		/// @DnDArgument : "yscale" "o_player.facing"
-		/// @DnDArgument : "rot" "androtate*o_player.facing"
+		/// @DnDArgument : "x" "weilder.x+(kickbackx+shakex)"
+		/// @DnDArgument : "y" "weilder.y+(shakey+kickbacky)-41+(weilder.head_offset_y)/2"
+		/// @DnDArgument : "yscale" "weilder.facing"
+		/// @DnDArgument : "rot" "androtate*weilder.facing"
 		/// @DnDArgument : "rot_relative" "1"
 		/// @DnDArgument : "sprite" "sprite_index"
 		/// @DnDArgument : "frame" "image_index"
-		draw_sprite_ext(sprite_index, image_index, o_player.x+(kickbackx+shakex), o_player.y+(shakey+kickbacky)-41+(o_player.head_offset_y)/2, 1, o_player.facing, image_angle + androtate*o_player.facing, $FFFFFF & $ffffff, 1);
+		draw_sprite_ext(sprite_index, image_index, weilder.x+(kickbackx+shakex), weilder.y+(shakey+kickbacky)-41+(weilder.head_offset_y)/2, 1, weilder.facing, image_angle + androtate*weilder.facing, $FFFFFF & $ffffff, 1);
 	
 		/// @DnDAction : YoYo Games.Drawing.Draw_Sprite_Transformed
 		/// @DnDVersion : 1
 		/// @DnDHash : 0CADFC06
 		/// @DnDParent : 2FA5C165
-		/// @DnDArgument : "x" "o_player.x+(kickbackx+shakex)"
-		/// @DnDArgument : "y" "o_player.y+(shakey+kickbacky)-41+(o_player.head_offset_y)/2"
-		/// @DnDArgument : "yscale" "o_player.facing"
-		/// @DnDArgument : "rot" "androtate*o_player.facing"
+		/// @DnDArgument : "x" "weilder.x+(kickbackx+shakex)"
+		/// @DnDArgument : "y" "weilder.y+(shakey+kickbacky)-41+(weilder.head_offset_y)/2"
+		/// @DnDArgument : "yscale" "weilder.facing"
+		/// @DnDArgument : "rot" "androtate*weilder.facing"
 		/// @DnDArgument : "rot_relative" "1"
 		/// @DnDArgument : "sprite" "s_player_arms"
 		/// @DnDArgument : "frame" "image_index"
 		/// @DnDSaveInfo : "sprite" "s_player_arms"
-		draw_sprite_ext(s_player_arms, image_index, o_player.x+(kickbackx+shakex), o_player.y+(shakey+kickbacky)-41+(o_player.head_offset_y)/2, 1, o_player.facing, image_angle + androtate*o_player.facing, $FFFFFF & $ffffff, 1);
+		draw_sprite_ext(s_player_arms, image_index, weilder.x+(kickbackx+shakex), weilder.y+(shakey+kickbacky)-41+(weilder.head_offset_y)/2, 1, weilder.facing, image_angle + androtate*weilder.facing, $FFFFFF & $ffffff, 1);
 	
 		/// @DnDAction : YoYo Games.Common.Execute_Script
 		/// @DnDVersion : 1.1
@@ -173,8 +173,8 @@ var l29A2478F_0 = anim;switch(l29A2478F_0){	/// @DnDAction : YoYo Games.Switc
 		/// @DnDInput : 11
 		/// @DnDParent : 2FA5C165
 		/// @DnDArgument : "script" "draw_wheel_ext"
-		/// @DnDArgument : "arg" "mouse_x"
-		/// @DnDArgument : "arg_1" "mouse_y"
+		/// @DnDArgument : "arg" "o_cursor.x"
+		/// @DnDArgument : "arg_1" "o_cursor.y"
 		/// @DnDArgument : "arg_2" "40"
 		/// @DnDArgument : "arg_3" "30"
 		/// @DnDArgument : "arg_4" "c_lime"
@@ -185,4 +185,4 @@ var l29A2478F_0 = anim;switch(l29A2478F_0){	/// @DnDAction : YoYo Games.Switc
 		/// @DnDArgument : "arg_9" "false"
 		/// @DnDArgument : "arg_10" "1"
 		/// @DnDSaveInfo : "script" "draw_wheel_ext"
-		script_execute(draw_wheel_ext, mouse_x, mouse_y, 40, 30, c_lime, charge, 120/global.reload_bonus, 1, 90, false, 1);	break;}
+		script_execute(draw_wheel_ext, o_cursor.x, o_cursor.y, 40, 30, c_lime, charge, 120/global.reload_bonus, 1, 90, false, 1);	break;}

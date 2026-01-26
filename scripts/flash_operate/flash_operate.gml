@@ -13,8 +13,8 @@ function flash_operate() {	/// @DnDAction : YoYo Games.Drawing.Draw_Sprite_Tra
 	/// @DnDArgument : "yscale" "image_yscale"
 	/// @DnDArgument : "sprite" "sprite_index"
 	/// @DnDArgument : "frame" "image_index"
-	/// @DnDArgument : "col" "image_blend"
-	draw_sprite_ext(sprite_index, image_index, x + 0, y + 0, facing, image_yscale, 0, image_blend & $ffffff, 1);
+	/// @DnDArgument : "col" "display_color"
+	draw_sprite_ext(sprite_index, image_index, x + 0, y + 0, facing, image_yscale, 0, display_color & $ffffff, 1);
 
 	/// @DnDAction : YoYo Games.Common.If_Variable
 	/// @DnDVersion : 1

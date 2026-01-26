@@ -3,7 +3,9 @@
 /// @DnDHash : 76A29ED6
 /// @DnDArgument : "var" "anim"
 /// @DnDArgument : "value" "stance.SHOT"
-if(anim == stance.SHOT){	/// @DnDAction : YoYo Games.Common.Variable
+if(anim == stance.SHOT)
+{
+	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 323B1D9B
 	/// @DnDInput : 2
@@ -20,9 +22,10 @@ if(anim == stance.SHOT){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDHash : 02139A3B
 	/// @DnDInput : 2
 	/// @DnDParent : 76A29ED6
-	/// @DnDArgument : "value" "1"
-	/// @DnDArgument : "value_1" "1"
+	/// @DnDArgument : "value" "1+weilder.curr_weapon_level*.3"
+	/// @DnDArgument : "value_1" "1+weilder.curr_weapon_level*.3"
 	/// @DnDArgument : "instvar" "15"
 	/// @DnDArgument : "instvar_1" "16"
-	image_xscale = 1;
-	image_yscale = 1;}
+	image_xscale = 1+weilder.curr_weapon_level*.3;
+	image_yscale = 1+weilder.curr_weapon_level*.3;
+}

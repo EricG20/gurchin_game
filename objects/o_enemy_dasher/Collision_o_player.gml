@@ -13,6 +13,7 @@ if(state == es.ATTACK){	/// @DnDAction : YoYo Games.Common.If_Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 7C2D9537
 		/// @DnDInput : 4
+		/// @DnDDisabled : 1
 		/// @DnDParent : 66FB6C3F
 		/// @DnDArgument : "expr" "ps.HIT"
 		/// @DnDArgument : "expr_1" "hsp/1.4"
@@ -23,9 +24,23 @@ if(state == es.ATTACK){	/// @DnDAction : YoYo Games.Common.If_Variable
 		/// @DnDArgument : "var_1" "other.knockback_speed"
 		/// @DnDArgument : "var_2" "other.hp"
 		/// @DnDArgument : "var_3" "other.vsp"
-		other.state = ps.HIT;
-		other.knockback_speed = hsp/1.4;
-		other.hp += -1;
+	
+	
+		/// @DnDAction : YoYo Games.Common.Execute_Script
+		/// @DnDVersion : 1.1
+		/// @DnDHash : 650F2CEA
+		/// @DnDParent : 66FB6C3F
+		/// @DnDArgument : "script" "scr_damage_player"
+		/// @DnDArgument : "arg" "2"
+		/// @DnDSaveInfo : "script" "scr_damage_player"
+		script_execute(scr_damage_player, 2);
+	
+		/// @DnDAction : YoYo Games.Common.Variable
+		/// @DnDVersion : 1
+		/// @DnDHash : 28A2452C
+		/// @DnDParent : 66FB6C3F
+		/// @DnDArgument : "expr" "-9"
+		/// @DnDArgument : "var" "other.vsp"
 		other.vsp = -9;
 	
 		/// @DnDAction : YoYo Games.Instances.Create_Instance

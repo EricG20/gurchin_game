@@ -32,15 +32,15 @@ if(distance_to_object(o_player) < 100){	/// @DnDAction : YoYo Games.Switch.Swi
 			/// @DnDParent : 14DE8011
 			/// @DnDArgument : "var" "cooldown"
 			/// @DnDArgument : "op" "3"
-			if(cooldown <= 0){	/// @DnDAction : YoYo Games.Mouse & Keyboard.If_Key_Pressed
+			if(cooldown <= 0){	/// @DnDAction : YoYo Games.Common.If_Expression
 				/// @DnDVersion : 1
-				/// @DnDHash : 50413893
+				/// @DnDHash : 77AD4BD9
 				/// @DnDParent : 54BA7CE8
-				/// @DnDArgument : "key" "ord("E")"
-				var l50413893_0;l50413893_0 = keyboard_check_pressed(ord("E"));if (l50413893_0){	/// @DnDAction : YoYo Games.Common.If_Variable
+				/// @DnDArgument : "expr" "InputPressed(INPUT_VERB.ACCEPT)"
+				if(InputPressed(INPUT_VERB.ACCEPT)){	/// @DnDAction : YoYo Games.Common.If_Variable
 					/// @DnDVersion : 1
 					/// @DnDHash : 38CD74CB
-					/// @DnDParent : 50413893
+					/// @DnDParent : 77AD4BD9
 					/// @DnDArgument : "var" "o_game.flub"
 					/// @DnDArgument : "op" "4"
 					/// @DnDArgument : "value" "300"
@@ -145,18 +145,23 @@ var l4ACEE4AF_0 = state;switch(l4ACEE4AF_0){	/// @DnDAction : YoYo Games.Swit
 			/// @DnDParent : 26B74FB8
 			/// @DnDArgument : "var" "gun_to_be_num"
 			/// @DnDArgument : "op" "4"
-			/// @DnDArgument : "value" ".05"
-			if(gun_to_be_num >= .05){	/// @DnDAction : YoYo Games.Random.Choose
+			/// @DnDArgument : "value" ".03"
+			if(gun_to_be_num >= .03){	/// @DnDAction : YoYo Games.Random.Choose
 				/// @DnDVersion : 1
 				/// @DnDHash : 7959F18F
-				/// @DnDInput : 4
+				/// @DnDInput : 9
 				/// @DnDParent : 7A2EF430
 				/// @DnDArgument : "var" "gun_to_be"
 				/// @DnDArgument : "option" "o_gon"
 				/// @DnDArgument : "option_1" "o_machgun"
 				/// @DnDArgument : "option_2" "o_shottgun"
 				/// @DnDArgument : "option_3" "o_bat"
-				gun_to_be = choose(o_gon, o_machgun, o_shottgun, o_bat);}
+				/// @DnDArgument : "option_4" "o_bubbler"
+				/// @DnDArgument : "option_5" "o_deathshower"
+				/// @DnDArgument : "option_6" "o_machgun"
+				/// @DnDArgument : "option_7" "o_shottgun"
+				/// @DnDArgument : "option_8" "o_gon"
+				gun_to_be = choose(o_gon, o_machgun, o_shottgun, o_bat, o_bubbler, o_deathshower, o_machgun, o_shottgun, o_gon);}
 		
 			/// @DnDAction : YoYo Games.Common.Else
 			/// @DnDVersion : 1

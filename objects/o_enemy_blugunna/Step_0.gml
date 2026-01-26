@@ -103,7 +103,21 @@ if(activated){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDArgument : "expr" "-1*global.game_speed"
 	/// @DnDArgument : "expr_relative" "1"
 	/// @DnDArgument : "var" "cooldown"
-	cooldown += -1*global.game_speed;}
+	cooldown += -1*global.game_speed;
+
+	/// @DnDAction : YoYo Games.Common.If_Expression
+	/// @DnDVersion : 1
+	/// @DnDHash : 20BA97A0
+	/// @DnDParent : 2E544882
+	/// @DnDArgument : "expr" "gurchenis_buff"
+	if(gurchenis_buff){	/// @DnDAction : YoYo Games.Common.Variable
+		/// @DnDVersion : 1
+		/// @DnDHash : 4A0AB7DA
+		/// @DnDParent : 20BA97A0
+		/// @DnDArgument : "expr" "-.5*global.game_speed"
+		/// @DnDArgument : "expr_relative" "1"
+		/// @DnDArgument : "var" "cooldown"
+		cooldown += -.5*global.game_speed;}}
 
 /// @DnDAction : YoYo Games.Common.If_Expression
 /// @DnDVersion : 1
@@ -288,3 +302,15 @@ if(o_player.state == ps.DIE){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDArgument : "script" "face_pylon"
 	/// @DnDSaveInfo : "script" "face_pylon"
 	script_execute(face_pylon);}
+
+/// @DnDAction : YoYo Games.Common.If_Expression
+/// @DnDVersion : 1
+/// @DnDHash : 1E1F984B
+/// @DnDArgument : "expr" "gurchenis_buff"
+if(gurchenis_buff){	/// @DnDAction : YoYo Games.Common.Execute_Script
+	/// @DnDVersion : 1.1
+	/// @DnDHash : 69FD06F6
+	/// @DnDParent : 1E1F984B
+	/// @DnDArgument : "script" "scr_gurchenisaura"
+	/// @DnDSaveInfo : "script" "scr_gurchenisaura"
+	script_execute(scr_gurchenisaura);}

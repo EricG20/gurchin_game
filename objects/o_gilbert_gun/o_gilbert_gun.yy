@@ -12,8 +12,8 @@
   "name":"o_gilbert_gun",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"weapons",
+    "path":"folders/Objects/weapons.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -43,6 +43,7 @@
     {"$GMObjectProperty":"v2","%Name":"laser_out","filters":[],"listItems":[],"multiselect":false,"name":"laser_out","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
     {"$GMObjectProperty":"v2","%Name":"glorb_x","filters":[],"listItems":[],"multiselect":false,"name":"glorb_x","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"glorb_y","filters":[],"listItems":[],"multiselect":false,"name":"glorb_y","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"weilder","filters":[],"listItems":[],"multiselect":false,"name":"weilder","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"o_player","varType":4,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

@@ -44,6 +44,7 @@
     {"$GMObjectProperty":"v2","%Name":"wat_dis_do","filters":[],"listItems":[],"multiselect":false,"name":"wat_dis_do","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"play","varType":2,},
     {"$GMObjectProperty":"v2","%Name":"initial_x","filters":[],"listItems":[],"multiselect":false,"name":"initial_x","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"x","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"part_of_main_menu","filters":[],"listItems":[],"multiselect":false,"name":"part_of_main_menu","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
+    {"$GMObjectProperty":"v2","%Name":"display_color","filters":[],"listItems":[],"multiselect":false,"name":"display_color","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"c_white","varType":4,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

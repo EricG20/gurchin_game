@@ -17,4 +17,18 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDArgument : "var_2" "vsp"
 	other.hp += -1;
 	hsp = -facing*10;
-	vsp = -10;}
+	vsp = -10;
+
+	/// @DnDAction : YoYo Games.Common.If_Expression
+	/// @DnDVersion : 1
+	/// @DnDHash : 6BD3D52F
+	/// @DnDParent : 33D7F19A
+	/// @DnDArgument : "expr" "gurchenis_buff"
+	if(gurchenis_buff){	/// @DnDAction : YoYo Games.Common.Variable
+		/// @DnDVersion : 1
+		/// @DnDHash : 442D4070
+		/// @DnDParent : 6BD3D52F
+		/// @DnDArgument : "expr" "-2"
+		/// @DnDArgument : "expr_relative" "1"
+		/// @DnDArgument : "var" "other.hp"
+		other.hp += -2;}}

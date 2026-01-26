@@ -1,14 +1,13 @@
 /// @DnDAction : YoYo Games.Drawing.Draw_Value_Transformed
 /// @DnDVersion : 1
 /// @DnDHash : 68029DDC
-/// @DnDDisabled : 1
 /// @DnDArgument : "x" "20"
 /// @DnDArgument : "y" "800"
 /// @DnDArgument : "xscale" "2"
 /// @DnDArgument : "yscale" "2"
 /// @DnDArgument : "caption" ""game speed: ""
 /// @DnDArgument : "text" "global.game_speed"
-
+draw_text_transformed(20, 800, string("game speed: ") + string(global.game_speed), 2, 2, 0);
 
 /// @DnDAction : YoYo Games.Switch.Switch
 /// @DnDVersion : 1
@@ -190,10 +189,10 @@ var l03FDEC77_0 = state;switch(l03FDEC77_0){	/// @DnDAction : YoYo Games.Swit
 				/// @DnDVersion : 1
 				/// @DnDHash : 51947EDD
 				/// @DnDParent : 438D7741
-				/// @DnDArgument : "x" "1780"
+				/// @DnDArgument : "x" "1750"
 				/// @DnDArgument : "y" "680"
-				/// @DnDArgument : "caption" ""Hold -Q- to skip timer.""
-				draw_text(1780, 680, string("Hold -Q- to skip timer.") + "");
+				/// @DnDArgument : "caption" ""Hold -Q- to skip \n timer.""
+				draw_text(1750, 680, string("Hold -Q- to skip \n timer.") + "");
 			
 				/// @DnDAction : YoYo Games.Common.Execute_Script
 				/// @DnDVersion : 1.1
@@ -314,11 +313,11 @@ var l03FDEC77_0 = state;switch(l03FDEC77_0){	/// @DnDAction : YoYo Games.Swit
 			/// @DnDVersion : 1
 			/// @DnDHash : 64095742
 			/// @DnDParent : 1780CB78
-			/// @DnDArgument : "x" "80"
+			/// @DnDArgument : "x" "50"
 			/// @DnDArgument : "y" "390"
 			/// @DnDArgument : "caption" ""VURMIN LEFT: ""
 			/// @DnDArgument : "text" "pylon_enemy_goal-(pylon_enemies-pylon_enemy_count)"
-			draw_text_transformed(80, 390, string("VURMIN LEFT: ") + string(pylon_enemy_goal-(pylon_enemies-pylon_enemy_count)), 1, 1, 0);
+			draw_text_transformed(50, 390, string("VURMIN LEFT: ") + string(pylon_enemy_goal-(pylon_enemies-pylon_enemy_count)), 1, 1, 0);
 		
 			/// @DnDAction : YoYo Games.Drawing.Draw_Healthbar
 			/// @DnDVersion : 1
@@ -338,22 +337,22 @@ var l03FDEC77_0 = state;switch(l03FDEC77_0){	/// @DnDAction : YoYo Games.Swit
 		/// @DnDHash : 45C82BFB
 		/// @DnDParent : 08A52609
 		/// @DnDArgument : "x" "70"
-		/// @DnDArgument : "y" "190"
+		/// @DnDArgument : "y" "205"
 		/// @DnDArgument : "xscale" "2"
 		/// @DnDArgument : "yscale" "2"
 		/// @DnDArgument : "caption" """"
 		/// @DnDArgument : "text" "floor(display_flub)"
-		draw_text_transformed(70, 190, string("") + string(floor(display_flub)), 2, 2, 0);
+		draw_text_transformed(70, 205, string("") + string(floor(display_flub)), 2, 2, 0);
 	
 		/// @DnDAction : YoYo Games.Drawing.Draw_Sprite_Transformed
 		/// @DnDVersion : 1
 		/// @DnDHash : 3BE23969
 		/// @DnDParent : 08A52609
-		/// @DnDArgument : "x" "50"
-		/// @DnDArgument : "y" "200"
+		/// @DnDArgument : "x" "45"
+		/// @DnDArgument : "y" "230"
 		/// @DnDArgument : "sprite" "s_flub"
 		/// @DnDSaveInfo : "sprite" "s_flub"
-		draw_sprite_ext(s_flub, 0, 50, 200, 1, 1, 0, $FFFFFF & $ffffff, 1);
+		draw_sprite_ext(s_flub, 0, 45, 230, 1, 1, 0, $FFFFFF & $ffffff, 1);
 	
 		/// @DnDAction : YoYo Games.Common.If_Variable
 		/// @DnDVersion : 1

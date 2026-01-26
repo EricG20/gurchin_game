@@ -25,11 +25,11 @@ if(!(dis_text == "")){	/// @DnDAction : YoYo Games.Drawing.Draw_Value_Transfor
 	/// @DnDVersion : 1
 	/// @DnDHash : 303E1FAF
 	/// @DnDParent : 3FE96298
+	/// @DnDArgument : "x" "-string_width(dis_text)/2"
 	/// @DnDArgument : "x_relative" "1"
 	/// @DnDArgument : "y" "-30"
 	/// @DnDArgument : "y_relative" "1"
-	/// @DnDArgument : "xscale" "2"
-	/// @DnDArgument : "yscale" "clamp(2*alpher,0,2)"
+	/// @DnDArgument : "yscale" "clamp(1*alpher,0,1)"
 	/// @DnDArgument : "caption" """"
 	/// @DnDArgument : "text" "dis_text"
-	draw_text_transformed(x + 0, y + -30, string("") + string(dis_text), 2, clamp(2*alpher,0,2), 0);}
+	draw_text_transformed(x + -string_width(dis_text)/2, y + -30, string("") + string(dis_text), 1, clamp(1*alpher,0,1), 0);}

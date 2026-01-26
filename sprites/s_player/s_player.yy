@@ -28,8 +28,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"Player_Sprites",
-    "path":"folders/Sprites/Player_Sprites.yy",
+    "name":"Gurchin",
+    "path":"folders/Sprites/Player_Sprites/Gurchin.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

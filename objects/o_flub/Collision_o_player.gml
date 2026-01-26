@@ -1,15 +1,19 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 4B28A5A9
-/// @DnDInput : 2
+/// @DnDInput : 3
 /// @DnDArgument : "expr" "flubbington"
 /// @DnDArgument : "expr_relative" "1"
 /// @DnDArgument : "expr_1" "flubbington"
 /// @DnDArgument : "expr_relative_1" "1"
+/// @DnDArgument : "expr_2" "flubbington*10"
+/// @DnDArgument : "expr_relative_2" "1"
 /// @DnDArgument : "var" "o_game.flub"
 /// @DnDArgument : "var_1" "o_game.new_flub"
+/// @DnDArgument : "var_2" "o_game.combo_bar"
 o_game.flub += flubbington;
 o_game.new_flub += flubbington;
+o_game.combo_bar += flubbington*10;
 
 /// @DnDAction : YoYo Games.Audio.Play_Audio
 /// @DnDVersion : 1.1

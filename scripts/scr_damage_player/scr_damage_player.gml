@@ -50,7 +50,7 @@ function scr_damage_player(val, player=other) {	/// @DnDAction : YoYo Games.Co
 		/// @DnDArgument : "expr_relative_2" "1"
 		/// @DnDArgument : "expr_3" "-9"
 		/// @DnDArgument : "expr_4" "false"
-		/// @DnDArgument : "expr_5" "-200"
+		/// @DnDArgument : "expr_5" "-300"
 		/// @DnDArgument : "expr_relative_5" "1"
 		/// @DnDArgument : "expr_6" "val"
 		/// @DnDArgument : "expr_relative_6" "1"
@@ -66,7 +66,7 @@ function scr_damage_player(val, player=other) {	/// @DnDAction : YoYo Games.Co
 		player.hp += -val;
 		player.vsp = -9;
 		player.tick = false;
-		o_game.combo_bar += -200;
+		o_game.combo_bar += -300;
 		o_game.player_lost_health += val;
 	
 		/// @DnDAction : YoYo Games.Instances.Create_Instance

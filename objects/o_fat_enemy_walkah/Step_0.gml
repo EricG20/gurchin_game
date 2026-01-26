@@ -82,3 +82,15 @@ if(hp <= 0){	/// @DnDAction : YoYo Games.Instances.Destroy_Instance
 	/// @DnDHash : 423831B4
 	/// @DnDParent : 44B79C17
 	instance_destroy();}
+
+/// @DnDAction : YoYo Games.Common.If_Expression
+/// @DnDVersion : 1
+/// @DnDHash : 144CFDF3
+/// @DnDArgument : "expr" "gurchenis_buff"
+if(gurchenis_buff){	/// @DnDAction : YoYo Games.Common.Execute_Script
+	/// @DnDVersion : 1.1
+	/// @DnDHash : 17A43419
+	/// @DnDParent : 144CFDF3
+	/// @DnDArgument : "script" "scr_gurchenisaura"
+	/// @DnDSaveInfo : "script" "scr_gurchenisaura"
+	script_execute(scr_gurchenisaura);}

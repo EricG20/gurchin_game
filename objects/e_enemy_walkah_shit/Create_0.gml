@@ -31,12 +31,15 @@ bruh = irandom_range(0,4);
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 1C656A4F
-/// @DnDInput : 2
+/// @DnDInput : 3
 /// @DnDArgument : "expr" "hsp"
 /// @DnDArgument : "expr_relative" "1"
 /// @DnDArgument : "expr_1" "vsp*2"
 /// @DnDArgument : "expr_relative_1" "1"
+/// @DnDArgument : "expr_2" "1"
 /// @DnDArgument : "var" "x"
 /// @DnDArgument : "var_1" "y"
+/// @DnDArgument : "var_2" "scale"
 x += hsp;
 y += vsp*2;
+scale = 1;

@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"gurchenis_blowup",
+  "audioGroupId":{
+    "name":"effect_audio",
+    "path":"audiogroups/effect_audio",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":1,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":11.2259865,
+  "exportDir":"",
+  "name":"gurchenis_blowup",
+  "parent":{
+    "name":"gurchenis",
+    "path":"folders/Sounds/gurchenis.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":22050,
+  "soundFile":"gurchenis_blowup.ogg",
+  "volume":1.0,
+}

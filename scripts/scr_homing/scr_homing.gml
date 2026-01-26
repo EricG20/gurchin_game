@@ -18,16 +18,16 @@ function scr_homing(target, infl=.5, range=200) {	/// @DnDAction : YoYo Games.
 		/// @DnDVersion : 1
 		/// @DnDHash : 74469C10
 		/// @DnDParent : 69847EF5
-		/// @DnDArgument : "expr" "lengthdir_x(infl,point_direction(x,y,target.x,target.y))"
+		/// @DnDArgument : "expr" "lengthdir_x(infl,point_direction(x,y,(target.bbox_left+target.bbox_right)/2,(target.bbox_bottom+target.bbox_top)/2))"
 		/// @DnDArgument : "expr_relative" "1"
 		/// @DnDArgument : "var" "hsp"
-		hsp += lengthdir_x(infl,point_direction(x,y,target.x,target.y));
+		hsp += lengthdir_x(infl,point_direction(x,y,(target.bbox_left+target.bbox_right)/2,(target.bbox_bottom+target.bbox_top)/2));
 	
 		/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 48A58DCD
 		/// @DnDParent : 69847EF5
-		/// @DnDArgument : "expr" "lengthdir_y(infl, point_direction(x,y,target.x,target.y))"
+		/// @DnDArgument : "expr" "lengthdir_y(infl, point_direction(x,y,(target.bbox_left+target.bbox_right)/2,(target.bbox_bottom+target.bbox_top)/2))"
 		/// @DnDArgument : "expr_relative" "1"
 		/// @DnDArgument : "var" "vsp"
-		vsp += lengthdir_y(infl, point_direction(x,y,target.x,target.y));}}
+		vsp += lengthdir_y(infl, point_direction(x,y,(target.bbox_left+target.bbox_right)/2,(target.bbox_bottom+target.bbox_top)/2));}}

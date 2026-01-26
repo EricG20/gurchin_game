@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_adjust_projectile_params",
+  "isCompatibility":false,
+  "isDnD":true,
+  "name":"scr_adjust_projectile_params",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

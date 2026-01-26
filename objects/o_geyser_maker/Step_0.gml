@@ -35,19 +35,7 @@ if(floor(length) mod 5 == 0){	/// @DnDAction : YoYo Games.Audio.Play_Audio
 	/// @DnDArgument : "var" "gozer"
 	/// @DnDArgument : "objectid" "e_freedust"
 	/// @DnDSaveInfo : "objectid" "e_freedust"
-	gozer = instance_create_layer(x + 0, y + 0, "Instances", e_freedust);
-
-	/// @DnDAction : YoYo Games.Common.Variable
-	/// @DnDVersion : 1
-	/// @DnDHash : 16EC0650
-	/// @DnDInput : 2
-	/// @DnDParent : 1910F869
-	/// @DnDArgument : "expr" "facing*7"
-	/// @DnDArgument : "expr_1" "floor(length)-1"
-	/// @DnDArgument : "var" "gozer.dir_speed"
-	/// @DnDArgument : "var_1" "length"
-	gozer.dir_speed = facing*7;
-	length = floor(length)-1;}
+	gozer = instance_create_layer(x + 0, y + 0, "Instances", e_freedust);}
 
 /// @DnDAction : YoYo Games.Collisions.If_Object_At
 /// @DnDVersion : 1.1

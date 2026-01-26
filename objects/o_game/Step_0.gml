@@ -1,3 +1,16 @@
+/// @DnDAction : YoYo Games.Common.Execute_Code
+/// @DnDVersion : 1
+/// @DnDHash : 57F83290
+/// @DnDArgument : "code" "switch (state){$(13_10)	case gm.PYLON:$(13_10)		audio_listener_position(o_camera.x, o_camera.y, 0);$(13_10)	break;$(13_10)	default:$(13_10)		audio_listener_position(window_get_width()/2, window_get_height()/2, 0);$(13_10)		break;$(13_10)}"
+switch (state){
+	case gm.PYLON:
+		audio_listener_position(o_camera.x, o_camera.y, 0);
+	break;
+	default:
+		audio_listener_position(window_get_width()/2, window_get_height()/2, 0);
+		break;
+}
+
 /// @DnDAction : YoYo Games.Sequences.If_Sequence_Exists
 /// @DnDVersion : 1
 /// @DnDHash : 5CA5532F
@@ -147,89 +160,68 @@ var l511F3266_0 = state;switch(l511F3266_0){	/// @DnDAction : YoYo Games.Swit
 	/// @DnDHash : 600C1947
 	/// @DnDParent : 511F3266
 	/// @DnDArgument : "const" "gm.SELECT"
-	case gm.SELECT:	break;}
-
-/// @DnDAction : YoYo Games.Switch.Switch
-/// @DnDVersion : 1
-/// @DnDHash : 6539461D
-/// @DnDArgument : "expr" "room"
-var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switch.Case
-	/// @DnDVersion : 1
-	/// @DnDHash : 7F764A22
-	/// @DnDParent : 6539461D
-	/// @DnDArgument : "const" "lvl_0"
-	case lvl_0:	/// @DnDAction : YoYo Games.Common.Execute_Code
-		/// @DnDVersion : 1
-		/// @DnDHash : 5E67AD2D
-		/// @DnDParent : 7F764A22
-		/// @DnDArgument : "code" "var _cam_x = o_camera.x ;$(13_10)var _cam_y = o_camera.y ;$(13_10)layer_x("buildings2", _cam_x * 0.65);$(13_10)layer_y("buildings2", _cam_y *.99);// Change the background layer name to whatever you use in the room editor$(13_10)layer_x("buildings1", _cam_x * 0.8);$(13_10)layer_y("buildings1", _cam_y * 0.99);$(13_10)layer_x("sky", _cam_x);$(13_10)layer_y("sky", _cam_y);// Change the 0.25 and 0.5 values to change the speed of the effect"
-		var _cam_x = o_camera.x ;
-		var _cam_y = o_camera.y ;
-		layer_x("buildings2", _cam_x * 0.65);
-		layer_y("buildings2", _cam_y *.99);// Change the background layer name to whatever you use in the room editor
-		layer_x("buildings1", _cam_x * 0.8);
-		layer_y("buildings1", _cam_y * 0.99);
-		layer_x("sky", _cam_x);
-		layer_y("sky", _cam_y);// Change the 0.25 and 0.5 values to change the speed of the effect	break;
+	case gm.SELECT:	break;
 
 	/// @DnDAction : YoYo Games.Switch.Case
 	/// @DnDVersion : 1
-	/// @DnDHash : 38C6EAE4
-	/// @DnDParent : 6539461D
-	/// @DnDArgument : "const" "lvl_01"
-	case lvl_01:	/// @DnDAction : YoYo Games.Common.Execute_Code
+	/// @DnDHash : 535CEC9E
+	/// @DnDParent : 511F3266
+	/// @DnDArgument : "const" "gm.PYLON"
+	case gm.PYLON:	/// @DnDAction : YoYo Games.Switch.Switch
 		/// @DnDVersion : 1
-		/// @DnDHash : 25C24A51
-		/// @DnDParent : 38C6EAE4
-		/// @DnDArgument : "code" "var _cam_x = o_camera.x ;$(13_10)var _cam_y = o_camera.y ;$(13_10)layer_x("buildings2", _cam_x * 0.65);$(13_10)layer_y("buildings2", _cam_y *.99 -250);// Change the background layer name to whatever you use in the room editor$(13_10)layer_x("buildings1", _cam_x * 0.8);$(13_10)layer_y("buildings1", _cam_y * 0.99 - 280);$(13_10)layer_x("sky", _cam_x);$(13_10)layer_y("sky", _cam_y);// Change the 0.25 and 0.5 values to change the speed of the effect$(13_10)layer_x("clouds1", _cam_x);$(13_10)//layer_y("clouds1", _cam_y);$(13_10)layer_x("clouds2", _cam_x);$(13_10)//layer_y("clouds2", _cam_y)$(13_10)layer_x("clouds3", _cam_x);$(13_10)//layer_y("clouds3", _cam_y)"
-		var _cam_x = o_camera.x ;
-		var _cam_y = o_camera.y ;
-		layer_x("buildings2", _cam_x * 0.65);
-		layer_y("buildings2", _cam_y *.99 -250);// Change the background layer name to whatever you use in the room editor
-		layer_x("buildings1", _cam_x * 0.8);
-		layer_y("buildings1", _cam_y * 0.99 - 280);
-		layer_x("sky", _cam_x);
-		layer_y("sky", _cam_y);// Change the 0.25 and 0.5 values to change the speed of the effect
-		layer_x("clouds1", _cam_x);
-		//layer_y("clouds1", _cam_y);
-		layer_x("clouds2", _cam_x);
-		//layer_y("clouds2", _cam_y)
-		layer_x("clouds3", _cam_x);
-		//layer_y("clouds3", _cam_y)	break;
-
-	/// @DnDAction : YoYo Games.Switch.Case
-	/// @DnDVersion : 1
-	/// @DnDHash : 2051C63F
-	/// @DnDParent : 6539461D
-	/// @DnDArgument : "const" "ship_room"
-	case ship_room:	/// @DnDAction : YoYo Games.Common.Execute_Code
+		/// @DnDHash : 1F650537
+		/// @DnDParent : 535CEC9E
+		/// @DnDArgument : "expr" "room"
+		var l1F650537_0 = room;switch(l1F650537_0){	/// @DnDAction : YoYo Games.Switch.Case
+			/// @DnDVersion : 1
+			/// @DnDHash : 2051C63F
+			/// @DnDParent : 1F650537
+			/// @DnDArgument : "const" "ship_room"
+			case ship_room:	/// @DnDAction : YoYo Games.Common.Execute_Code
+				/// @DnDVersion : 1
+				/// @DnDHash : 403B5F5A
+				/// @DnDParent : 2051C63F
+				/// @DnDArgument : "code" "var _cam_x = o_camera.x;$(13_10)var _cam_y = o_camera.y;$(13_10)gurchenis_effect = layer_get_fx("gurchenis_background");$(13_10)gurchenis_effect_params = fx_get_parameters(gurchenis_effect);$(13_10)gurchenis_effect_params.g_PanoramaDirection = [(current_time*.0001)%1,abs(sin((current_time*.00002)%pi))];$(13_10)gurchenis_effect_params.g_PanoramaPerspective = sin((current_time*.0001)%pi)*.9+1.1;$(13_10)fx_set_parameters(gurchenis_effect, gurchenis_effect_params);$(13_10)layer_x("Backgrounds_1", _cam_x * .99 + current_time*power(.01,1));$(13_10)layer_y("Backgrounds_1", _cam_y *.99);$(13_10)layer_x("Backgrounds_2", _cam_x * .90 + current_time*power(.04,1));$(13_10)layer_y("Backgrounds_2", _cam_y *.90);$(13_10)layer_x("Backgrounds_3", _cam_x * .85 + current_time*power(.09,1));$(13_10)layer_y("Backgrounds_3", _cam_y *.85);$(13_10)layer_x("Backgrounds_4", _cam_x * .80 + current_time*power(.1,1));$(13_10)layer_y("Backgrounds_4", _cam_y *.80);$(13_10)layer_x("Backgrounds_5", _cam_x * .75 + current_time*power(.15,1));$(13_10)layer_y("Backgrounds_5", _cam_y *.75);$(13_10)layer_x("Backgrounds_6", _cam_x * .70 + current_time*power(.2,1));$(13_10)layer_y("Backgrounds_6", _cam_y *.70);$(13_10)layer_x("Backgrounds_7", _cam_x * .65 + current_time*power(.3, 1));$(13_10)layer_y("Backgrounds_7", _cam_y *.65);$(13_10)layer_x("ship_tiles", _cam_x * .3);$(13_10)layer_y("ship_tiles", _cam_y *.3);"
+				var _cam_x = o_camera.x;
+				var _cam_y = o_camera.y;
+				gurchenis_effect = layer_get_fx("gurchenis_background");
+				gurchenis_effect_params = fx_get_parameters(gurchenis_effect);
+				gurchenis_effect_params.g_PanoramaDirection = [(current_time*.0001)%1,abs(sin((current_time*.00002)%pi))];
+				gurchenis_effect_params.g_PanoramaPerspective = sin((current_time*.0001)%pi)*.9+1.1;
+				fx_set_parameters(gurchenis_effect, gurchenis_effect_params);
+				layer_x("Backgrounds_1", _cam_x * .99 + current_time*power(.01,1));
+				layer_y("Backgrounds_1", _cam_y *.99);
+				layer_x("Backgrounds_2", _cam_x * .90 + current_time*power(.04,1));
+				layer_y("Backgrounds_2", _cam_y *.90);
+				layer_x("Backgrounds_3", _cam_x * .85 + current_time*power(.09,1));
+				layer_y("Backgrounds_3", _cam_y *.85);
+				layer_x("Backgrounds_4", _cam_x * .80 + current_time*power(.1,1));
+				layer_y("Backgrounds_4", _cam_y *.80);
+				layer_x("Backgrounds_5", _cam_x * .75 + current_time*power(.15,1));
+				layer_y("Backgrounds_5", _cam_y *.75);
+				layer_x("Backgrounds_6", _cam_x * .70 + current_time*power(.2,1));
+				layer_y("Backgrounds_6", _cam_y *.70);
+				layer_x("Backgrounds_7", _cam_x * .65 + current_time*power(.3, 1));
+				layer_y("Backgrounds_7", _cam_y *.65);
+				layer_x("ship_tiles", _cam_x * .3);
+				layer_y("ship_tiles", _cam_y *.3);	break;}
+	
+		/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
-		/// @DnDHash : 403B5F5A
-		/// @DnDParent : 2051C63F
-		/// @DnDArgument : "code" "var _cam_x = o_camera.x;$(13_10)var _cam_y = o_camera.y;$(13_10)layer_x("Backgrounds_1", _cam_x * .99 + current_time*power(.01,1));$(13_10)layer_y("Backgrounds_1", _cam_y *.99);$(13_10)layer_x("Backgrounds_2", _cam_x * .90 + current_time*power(.04,1));$(13_10)layer_y("Backgrounds_2", _cam_y *.90);$(13_10)layer_x("Backgrounds_3", _cam_x * .85 + current_time*power(.09,1));$(13_10)layer_y("Backgrounds_3", _cam_y *.85);$(13_10)layer_x("Backgrounds_4", _cam_x * .80 + current_time*power(.1,1));$(13_10)layer_y("Backgrounds_4", _cam_y *.80);$(13_10)layer_x("Backgrounds_5", _cam_x * .75 + current_time*power(.15,1));$(13_10)layer_y("Backgrounds_5", _cam_y *.75);$(13_10)layer_x("Backgrounds_6", _cam_x * .70 + current_time*power(.2,1));$(13_10)layer_y("Backgrounds_6", _cam_y *.70);$(13_10)layer_x("Backgrounds_7", _cam_x * .65 + current_time*power(.3, 1));$(13_10)layer_y("Backgrounds_7", _cam_y *.65);$(13_10)layer_x("ship_tiles", _cam_x * .3);$(13_10)layer_y("ship_tiles", _cam_y *.3);"
-		var _cam_x = o_camera.x;
-		var _cam_y = o_camera.y;
-		layer_x("Backgrounds_1", _cam_x * .99 + current_time*power(.01,1));
-		layer_y("Backgrounds_1", _cam_y *.99);
-		layer_x("Backgrounds_2", _cam_x * .90 + current_time*power(.04,1));
-		layer_y("Backgrounds_2", _cam_y *.90);
-		layer_x("Backgrounds_3", _cam_x * .85 + current_time*power(.09,1));
-		layer_y("Backgrounds_3", _cam_y *.85);
-		layer_x("Backgrounds_4", _cam_x * .80 + current_time*power(.1,1));
-		layer_y("Backgrounds_4", _cam_y *.80);
-		layer_x("Backgrounds_5", _cam_x * .75 + current_time*power(.15,1));
-		layer_y("Backgrounds_5", _cam_y *.75);
-		layer_x("Backgrounds_6", _cam_x * .70 + current_time*power(.2,1));
-		layer_y("Backgrounds_6", _cam_y *.70);
-		layer_x("Backgrounds_7", _cam_x * .65 + current_time*power(.3, 1));
-		layer_y("Backgrounds_7", _cam_y *.65);
-		layer_x("ship_tiles", _cam_x * .3);
-		layer_y("ship_tiles", _cam_y *.3);
+		/// @DnDHash : 122D1B09
+		/// @DnDInput : 2
+		/// @DnDParent : 535CEC9E
+		/// @DnDArgument : "expr" "global.flat_firerate_bonus+combo_num/200"
+		/// @DnDArgument : "expr_1" "global.flat_reload_bonus+combo_num/150"
+		/// @DnDArgument : "var" "global.firerate_bonus"
+		/// @DnDArgument : "var_1" "global.reload_bonus"
+		global.firerate_bonus = global.flat_firerate_bonus+combo_num/200;
+		global.reload_bonus = global.flat_reload_bonus+combo_num/150;
 	
 		/// @DnDAction : YoYo Games.Common.If_Expression
 		/// @DnDVersion : 1
 		/// @DnDHash : 546D23C3
-		/// @DnDParent : 2051C63F
+		/// @DnDParent : 535CEC9E
 		/// @DnDArgument : "expr" "(scor >= 2000) && (reward_one == false)"
 		if((scor >= 2000) && (reward_one == false)){	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
@@ -241,10 +233,10 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 			/// @DnDArgument : "expr_2" "1.2"
 			/// @DnDArgument : "var" "reward_one"
 			/// @DnDArgument : "var_1" "global.ammo_bonus"
-			/// @DnDArgument : "var_2" "global.reload_bonus"
+			/// @DnDArgument : "var_2" "global.flat_reload_bonus"
 			reward_one = true;
 			global.ammo_bonus = 1.5;
-			global.reload_bonus = 1.2;
+			global.flat_reload_bonus = 1.2;
 		
 			/// @DnDAction : YoYo Games.Common.Execute_Script
 			/// @DnDVersion : 1.1
@@ -279,7 +271,7 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 		/// @DnDAction : YoYo Games.Common.If_Expression
 		/// @DnDVersion : 1
 		/// @DnDHash : 6C0EEB99
-		/// @DnDParent : 2051C63F
+		/// @DnDParent : 535CEC9E
 		/// @DnDArgument : "expr" "(scor >= 10000) && (reward_two == false)"
 		if((scor >= 10000) && (reward_two == false)){	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
@@ -290,11 +282,11 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 			/// @DnDArgument : "expr_1" "1.4"
 			/// @DnDArgument : "expr_2" "1.5"
 			/// @DnDArgument : "var" "reward_two"
-			/// @DnDArgument : "var_1" "global.firerate_bonus"
-			/// @DnDArgument : "var_2" "global.reload_bonus"
+			/// @DnDArgument : "var_1" "global.flat_firerate_bonus"
+			/// @DnDArgument : "var_2" "global.flat_reload_bonus"
 			reward_two = true;
-			global.firerate_bonus = 1.4;
-			global.reload_bonus = 1.5;
+			global.flat_firerate_bonus = 1.4;
+			global.flat_reload_bonus = 1.5;
 		
 			/// @DnDAction : YoYo Games.Common.Execute_Script
 			/// @DnDVersion : 1.1
@@ -329,7 +321,7 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 		/// @DnDAction : YoYo Games.Common.If_Expression
 		/// @DnDVersion : 1
 		/// @DnDHash : 6B05F170
-		/// @DnDParent : 2051C63F
+		/// @DnDParent : 535CEC9E
 		/// @DnDArgument : "expr" "(scor >= 20000) && (reward_three == false)"
 		if((scor >= 20000) && (reward_three == false)){	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
@@ -342,13 +334,13 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 			/// @DnDArgument : "expr_3" "2"
 			/// @DnDArgument : "expr_4" "1.3"
 			/// @DnDArgument : "var" "reward_three"
-			/// @DnDArgument : "var_1" "global.firerate_bonus"
-			/// @DnDArgument : "var_2" "global.reload_bonus"
+			/// @DnDArgument : "var_1" "global.flat_firerate_bonus"
+			/// @DnDArgument : "var_2" "global.flat_reload_bonus"
 			/// @DnDArgument : "var_3" "global.booster_bonus"
 			/// @DnDArgument : "var_4" "global.movementspeed_bonus"
 			reward_three = true;
-			global.firerate_bonus = 1.8;
-			global.reload_bonus = 1.8;
+			global.flat_firerate_bonus = 1.8;
+			global.flat_reload_bonus = 1.8;
 			global.booster_bonus = 2;
 			global.movementspeed_bonus = 1.3;
 		
@@ -385,7 +377,7 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 		/// @DnDAction : YoYo Games.Common.If_Expression
 		/// @DnDVersion : 1
 		/// @DnDHash : 2994CDE2
-		/// @DnDParent : 2051C63F
+		/// @DnDParent : 535CEC9E
 		/// @DnDArgument : "expr" "(scor >= 40000) && (reward_four == false)"
 		if((scor >= 40000) && (reward_four == false)){	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
@@ -402,8 +394,9 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 			/// @DnDArgument : "xpos" "1999"
 			/// @DnDArgument : "ypos" "922"
 			/// @DnDArgument : "objectid" "o_buff_gen"
+			/// @DnDArgument : "layer" ""Instances_Front""
 			/// @DnDSaveInfo : "objectid" "o_buff_gen"
-			instance_create_layer(1999, 922, "Instances", o_buff_gen);
+			instance_create_layer(1999, 922, "Instances_Front", o_buff_gen);
 		
 			/// @DnDAction : YoYo Games.Instances.Create_Instance
 			/// @DnDVersion : 1
@@ -435,10 +428,27 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 			/// @DnDArgument : "var" "level_notif.dis_text"
 			level_notif.dis_text = "Buff Generator Spawned!";}
 	
+		/// @DnDAction : YoYo Games.Common.If_Expression
+		/// @DnDVersion : 1
+		/// @DnDHash : 4947D94C
+		/// @DnDParent : 535CEC9E
+		/// @DnDArgument : "expr" "(scor >= 100000) && (boss_bool == false) && (pylon_wave_number <= 9) && (!in_wave) "
+		if((scor >= 100000) && (boss_bool == false) && (pylon_wave_number <= 9) && (!in_wave) ){	/// @DnDAction : YoYo Games.Common.Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 103210F0
+			/// @DnDInput : 2
+			/// @DnDParent : 4947D94C
+			/// @DnDArgument : "expr" "true"
+			/// @DnDArgument : "expr_1" "11"
+			/// @DnDArgument : "var" "boss_bool"
+			/// @DnDArgument : "var_1" "final_wave"
+			boss_bool = true;
+			final_wave = 11;}
+	
 		/// @DnDAction : YoYo Games.Common.If_Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 3FB7FCB9
-		/// @DnDParent : 2051C63F
+		/// @DnDParent : 535CEC9E
 		/// @DnDArgument : "var" "highest_combo"
 		/// @DnDArgument : "op" "1"
 		/// @DnDArgument : "value" "combo_num"
@@ -453,15 +463,15 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 		/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 43BBB354
-		/// @DnDParent : 2051C63F
-		/// @DnDArgument : "expr" "clamp(combo_bar-.9*global.game_speed,0,530)"
+		/// @DnDParent : 535CEC9E
+		/// @DnDArgument : "expr" "clamp(combo_bar-1.3*global.game_speed,0,530)"
 		/// @DnDArgument : "var" "combo_bar"
-		combo_bar = clamp(combo_bar-.9*global.game_speed,0,530);
+		combo_bar = clamp(combo_bar-1.3*global.game_speed,0,530);
 	
 		/// @DnDAction : YoYo Games.Common.If_Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 5308BE6A
-		/// @DnDParent : 2051C63F
+		/// @DnDParent : 535CEC9E
 		/// @DnDArgument : "var" "combo_bar"
 		/// @DnDArgument : "op" "3"
 		if(combo_bar <= 0){	/// @DnDAction : YoYo Games.Common.If_Variable
@@ -491,7 +501,7 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 		/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 0A6A1D46
-		/// @DnDParent : 2051C63F
+		/// @DnDParent : 535CEC9E
 		/// @DnDArgument : "expr" "1*global.game_speed"
 		/// @DnDArgument : "expr_relative" "1"
 		/// @DnDArgument : "var" "pylon_incr"
@@ -500,7 +510,7 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 		/// @DnDAction : YoYo Games.Switch.Switch
 		/// @DnDVersion : 1
 		/// @DnDHash : 7AD31033
-		/// @DnDParent : 2051C63F
+		/// @DnDParent : 535CEC9E
 		/// @DnDArgument : "expr" "in_wave"
 		var l7AD31033_0 = in_wave;switch(l7AD31033_0){	/// @DnDAction : YoYo Games.Switch.Case
 			/// @DnDVersion : 1
@@ -531,8 +541,8 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 						/// @DnDParent : 2AD51058
 						/// @DnDArgument : "var" "pylon_incr"
 						/// @DnDArgument : "op" "4"
-						/// @DnDArgument : "value" "120"
-						if(pylon_incr >= 120){	/// @DnDAction : YoYo Games.Common.Function_Call
+						/// @DnDArgument : "value" "120-(grade_tally_total*.7)-(combo_num*.3)"
+						if(pylon_incr >= 120-(grade_tally_total*.7)-(combo_num*.3)){	/// @DnDAction : YoYo Games.Common.Function_Call
 							/// @DnDVersion : 1
 							/// @DnDHash : 4243A1F3
 							/// @DnDInput : 2
@@ -583,7 +593,19 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 										/// @DnDParent : 43F179F1
 										/// @DnDArgument : "expr" "o_fat_enemy_walkah"
 										/// @DnDArgument : "var" "lubba"
-										lubba = o_fat_enemy_walkah;}	break;
+										lubba = o_fat_enemy_walkah;}
+								
+									/// @DnDAction : YoYo Games.Common.Else
+									/// @DnDVersion : 1
+									/// @DnDHash : 6D70437C
+									/// @DnDParent : 602F1A2F
+									else{	/// @DnDAction : YoYo Games.Common.Variable
+										/// @DnDVersion : 1
+										/// @DnDHash : 30F9C20E
+										/// @DnDParent : 6D70437C
+										/// @DnDArgument : "expr" "o_enemy_walkah"
+										/// @DnDArgument : "var" "lubba"
+										lubba = o_enemy_walkah;}	break;
 							
 								/// @DnDAction : YoYo Games.Switch.Case
 								/// @DnDVersion : 1
@@ -617,6 +639,23 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 									/// @DnDArgument : "option_2" ""walker_variant""
 									pylon_enemy_type = choose("big_and_pew", "walker_variant", "walker_variant");	break;
 							
+								/// @DnDAction : YoYo Games.Switch.Case
+								/// @DnDVersion : 1
+								/// @DnDHash : 7C60655D
+								/// @DnDParent : 0EF39BA4
+								/// @DnDArgument : "const" "10"
+								case 10:	/// @DnDAction : YoYo Games.Common.Variable
+									/// @DnDVersion : 1
+									/// @DnDHash : 46809E7F
+									/// @DnDInput : 2
+									/// @DnDParent : 7C60655D
+									/// @DnDArgument : "expr" ""o_boss_gurchenis""
+									/// @DnDArgument : "expr_1" "o_boss_gurchenis"
+									/// @DnDArgument : "var" "pylon_enemy_type"
+									/// @DnDArgument : "var_1" "lubba"
+									pylon_enemy_type = "o_boss_gurchenis";
+									lubba = o_boss_gurchenis;	break;
+							
 								/// @DnDAction : YoYo Games.Switch.Default
 								/// @DnDVersion : 1
 								/// @DnDHash : 7195844E
@@ -643,7 +682,16 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 								/// @DnDHash : 6B66B2BD
 								/// @DnDParent : 0A5F3ED5
 								/// @DnDArgument : "const" ""walker""
-								case "walker":	/// @DnDAction : YoYo Games.Loops.Break
+								case "walker":	/// @DnDAction : YoYo Games.Common.Variable
+									/// @DnDVersion : 1
+									/// @DnDHash : 79D9CADD
+									/// @DnDDisabled : 1
+									/// @DnDParent : 6B66B2BD
+									/// @DnDArgument : "expr" "o_enemy_walkah"
+									/// @DnDArgument : "var" "lubba"
+								
+								
+									/// @DnDAction : YoYo Games.Loops.Break
 									/// @DnDVersion : 1
 									/// @DnDHash : 5C6006F6
 									/// @DnDParent : 6B66B2BD
@@ -693,6 +741,25 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 							/// @DnDArgument : "objectid" "lubba"
 							jubba = instance_create_layer(bubba.x, bubba.y, "Instances", lubba);
 						
+							/// @DnDAction : YoYo Games.Common.If_Variable
+							/// @DnDVersion : 1
+							/// @DnDHash : 752870DF
+							/// @DnDParent : 12F82335
+							/// @DnDArgument : "var" "random_range(0,1)"
+							/// @DnDArgument : "op" "1"
+							/// @DnDArgument : "value" "(grade_tally_total*.1)/96"
+							if(random_range(0,1) < (grade_tally_total*.1)/96){	/// @DnDAction : YoYo Games.Common.Variable
+								/// @DnDVersion : 1
+								/// @DnDHash : 48466533
+								/// @DnDInput : 2
+								/// @DnDParent : 752870DF
+								/// @DnDArgument : "expr" "true"
+								/// @DnDArgument : "expr_1" "jubba.hp*3"
+								/// @DnDArgument : "var" "jubba.gurchenis_buff"
+								/// @DnDArgument : "var_1" "jubba.hp"
+								jubba.gurchenis_buff = true;
+								jubba.hp = jubba.hp*3;}
+						
 							/// @DnDAction : YoYo Games.Common.Variable
 							/// @DnDVersion : 1
 							/// @DnDHash : 2B515AFE
@@ -706,7 +773,7 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 							/// @DnDHash : 2FAE7756
 							/// @DnDInput : 3
 							/// @DnDParent : 12F82335
-							/// @DnDArgument : "expr" "random_range(0,150)"
+							/// @DnDArgument : "expr" "random_range(0,30)"
 							/// @DnDArgument : "expr_1" "1"
 							/// @DnDArgument : "expr_relative_1" "1"
 							/// @DnDArgument : "expr_2" "1"
@@ -714,7 +781,7 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 							/// @DnDArgument : "var" "pylon_incr"
 							/// @DnDArgument : "var_1" "pylon_enemies"
 							/// @DnDArgument : "var_2" "pylon_enemy_count"
-							pylon_incr = random_range(0,150);
+							pylon_incr = random_range(0,30);
 							pylon_enemies += 1;
 							pylon_enemy_count += 1;}}}
 			
@@ -739,7 +806,7 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 						/// @DnDArgument : "expr_1" "1"
 						/// @DnDArgument : "expr_relative_1" "1"
 						/// @DnDArgument : "expr_3" "false"
-						/// @DnDArgument : "expr_4" "3+pylon_wave_number"
+						/// @DnDArgument : "expr_4" "3+pylon_wave_number+floor(grade_tally_total/12)"
 						/// @DnDArgument : "expr_5" "floor(pylon_enemy_goal*1.4)"
 						/// @DnDArgument : "var" "pylon_enemies"
 						/// @DnDArgument : "var_1" "pylon_wave_number"
@@ -751,8 +818,34 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 						pylon_wave_number += 1;
 						pylon_incr = 0;
 						in_wave = false;
-						pylon_enemy_cap = 3+pylon_wave_number;
+						pylon_enemy_cap = 3+pylon_wave_number+floor(grade_tally_total/12);
 						pylon_enemy_goal = floor(pylon_enemy_goal*1.4);
+					
+						/// @DnDAction : YoYo Games.Common.If_Expression
+						/// @DnDVersion : 1
+						/// @DnDHash : 1303007D
+						/// @DnDParent : 7E05C193
+						/// @DnDArgument : "expr" "pylon_wave_number%break_wave==0"
+						if(pylon_wave_number%break_wave==0){	/// @DnDAction : YoYo Games.Common.Variable
+							/// @DnDVersion : 1
+							/// @DnDHash : 09FFA9A3
+							/// @DnDParent : 1303007D
+							/// @DnDArgument : "expr" "true"
+							/// @DnDArgument : "var" "o_pylon.time_to_heal"
+							o_pylon.time_to_heal = true;}
+					
+						/// @DnDAction : YoYo Games.Common.If_Expression
+						/// @DnDVersion : 1
+						/// @DnDHash : 37CAE68D
+						/// @DnDParent : 7E05C193
+						/// @DnDArgument : "expr" "pylon_wave_number%10==0"
+						if(pylon_wave_number%10==0){	/// @DnDAction : YoYo Games.Common.Variable
+							/// @DnDVersion : 1
+							/// @DnDHash : 2468014F
+							/// @DnDParent : 37CAE68D
+							/// @DnDArgument : "expr" "true"
+							/// @DnDArgument : "var" "o_pylon.time_to_heal"
+							o_pylon.time_to_heal = true;}
 					
 						/// @DnDAction : YoYo Games.Sequences.Sequence_Create
 						/// @DnDVersion : 1
@@ -764,7 +857,24 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 						/// @DnDArgument : "sequenceid" "wave_grade"
 						/// @DnDArgument : "layer" ""Effects_Below""
 						/// @DnDSaveInfo : "sequenceid" "wave_grade"
-						grading_time = layer_sequence_create("Effects_Below", 960, 540, wave_grade);}}	break;
+						grading_time = layer_sequence_create("Effects_Below", 960, 540, wave_grade);
+					
+						/// @DnDAction : YoYo Games.Common.If_Expression
+						/// @DnDVersion : 1
+						/// @DnDHash : 6E49EEBD
+						/// @DnDParent : 7E05C193
+						/// @DnDArgument : "expr" "boss_bool && pylon_wave_number == 10"
+						if(boss_bool && pylon_wave_number == 10){	/// @DnDAction : YoYo Games.Common.Variable
+							/// @DnDVersion : 1
+							/// @DnDHash : 0C42A5BC
+							/// @DnDInput : 2
+							/// @DnDParent : 6E49EEBD
+							/// @DnDArgument : "expr" "1"
+							/// @DnDArgument : "expr_1" "1"
+							/// @DnDArgument : "var" "pylon_enemy_cap"
+							/// @DnDArgument : "var_1" "pylon_enemy_goal"
+							pylon_enemy_cap = 1;
+							pylon_enemy_goal = 1;}}}	break;
 		
 			/// @DnDAction : YoYo Games.Switch.Case
 			/// @DnDVersion : 1
@@ -811,21 +921,40 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 							pylon_incr = 0;
 							boe.dis_text = "WAVE " + string(pylon_wave_number);
 						
+							/// @DnDAction : YoYo Games.Common.If_Variable
+							/// @DnDVersion : 1
+							/// @DnDHash : 653AFA76
+							/// @DnDParent : 51EA794D
+							/// @DnDArgument : "var" "pylon_wave_number"
+							/// @DnDArgument : "value" "10"
+							if(pylon_wave_number == 10){	/// @DnDAction : YoYo Games.Common.Variable
+								/// @DnDVersion : 1
+								/// @DnDHash : 5AE7948D
+								/// @DnDInput : 2
+								/// @DnDParent : 653AFA76
+								/// @DnDArgument : "expr" """"
+								/// @DnDArgument : "expr_1" "s_gurchenis_card"
+								/// @DnDArgument : "var" "boe.dis_text"
+								/// @DnDArgument : "var_1" "boe.sprite_index"
+								boe.dis_text = "";
+								boe.sprite_index = s_gurchenis_card;}
+						
 							/// @DnDAction : YoYo Games.Common.If_Expression
 							/// @DnDVersion : 1
 							/// @DnDHash : 50D3B97F
 							/// @DnDParent : 51EA794D
-							/// @DnDArgument : "expr" "(pylon_wave_number%3 == 0) || (pylon_wave_number == 1)"
-							if((pylon_wave_number%3 == 0) || (pylon_wave_number == 1)){	/// @DnDAction : YoYo Games.Random.Choose
+							/// @DnDArgument : "expr" "(pylon_wave_number%3 == 0) || (pylon_wave_number == 1) || (pylon_wave_number == 10 && boss_bool)"
+							if((pylon_wave_number%3 == 0) || (pylon_wave_number == 1) || (pylon_wave_number == 10 && boss_bool)){	/// @DnDAction : YoYo Games.Random.Choose
 								/// @DnDVersion : 1
 								/// @DnDHash : 1BF99901
-								/// @DnDInput : 3
+								/// @DnDInput : 4
 								/// @DnDParent : 50D3B97F
 								/// @DnDArgument : "var" "song_of_choice"
 								/// @DnDArgument : "option" "combat_1"
 								/// @DnDArgument : "option_1" "combat_2"
 								/// @DnDArgument : "option_2" "combat_3"
-								song_of_choice = choose(combat_1, combat_2, combat_3);
+								/// @DnDArgument : "option_3" "combat_4"
+								song_of_choice = choose(combat_1, combat_2, combat_3, combat_4);
 							
 								/// @DnDAction : YoYo Games.Common.If_Variable
 								/// @DnDVersion : 1
@@ -833,13 +962,65 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 								/// @DnDParent : 50D3B97F
 								/// @DnDArgument : "var" "pylon_wave_number"
 								/// @DnDArgument : "value" "9"
-								if(pylon_wave_number == 9){	/// @DnDAction : YoYo Games.Common.Variable
+								if(pylon_wave_number == 9){	/// @DnDAction : YoYo Games.Common.Execute_Script
+									/// @DnDVersion : 1.1
+									/// @DnDHash : 1B467690
+									/// @DnDParent : 6EF0522E
+									/// @DnDArgument : "script" "scr_white_flash"
+									/// @DnDArgument : "arg" "1"
+									/// @DnDSaveInfo : "script" "scr_white_flash"
+									script_execute(scr_white_flash, 1);
+								
+									/// @DnDAction : YoYo Games.Common.Variable
 									/// @DnDVersion : 1
 									/// @DnDHash : 4D98CB11
 									/// @DnDParent : 6EF0522E
 									/// @DnDArgument : "expr" "approachingboss_battlebeat"
 									/// @DnDArgument : "var" "song_of_choice"
-									song_of_choice = approachingboss_battlebeat;}
+									song_of_choice = approachingboss_battlebeat;
+								
+									/// @DnDAction : YoYo Games.Common.If_Expression
+									/// @DnDVersion : 1
+									/// @DnDHash : 05C8C02E
+									/// @DnDParent : 6EF0522E
+									/// @DnDArgument : "expr" "boss_bool"
+									if(boss_bool){	/// @DnDAction : YoYo Games.Layers.Layer_Set_Visible
+										/// @DnDVersion : 1
+										/// @DnDHash : 2FDAC8E1
+										/// @DnDParent : 05C8C02E
+										/// @DnDArgument : "visible" "1"
+										/// @DnDArgument : "layer" "layer_get_id("Effect_1")"
+										layer_set_visible(layer_get_id("Effect_1"), 1);
+									
+										/// @DnDAction : YoYo Games.Layers.Layer_Set_Visible
+										/// @DnDVersion : 1
+										/// @DnDHash : 5DE60395
+										/// @DnDParent : 05C8C02E
+										/// @DnDArgument : "visible" "1"
+										/// @DnDArgument : "layer" "layer_get_id("Effect_2")"
+										layer_set_visible(layer_get_id("Effect_2"), 1);
+									
+										/// @DnDAction : YoYo Games.Layers.Layer_Set_Visible
+										/// @DnDVersion : 1
+										/// @DnDHash : 08EA2A89
+										/// @DnDParent : 05C8C02E
+										/// @DnDArgument : "visible" "1"
+										/// @DnDArgument : "layer" "layer_get_id("Effect_4")"
+										layer_set_visible(layer_get_id("Effect_4"), 1);}}
+							
+								/// @DnDAction : YoYo Games.Common.If_Variable
+								/// @DnDVersion : 1
+								/// @DnDHash : 1BCB49D5
+								/// @DnDParent : 50D3B97F
+								/// @DnDArgument : "var" "pylon_wave_number"
+								/// @DnDArgument : "value" "10"
+								if(pylon_wave_number == 10){	/// @DnDAction : YoYo Games.Common.Variable
+									/// @DnDVersion : 1
+									/// @DnDHash : 43B0CBAD
+									/// @DnDParent : 1BCB49D5
+									/// @DnDArgument : "expr" "combat_gurchenis"
+									/// @DnDArgument : "var" "song_of_choice"
+									song_of_choice = combat_gurchenis;}
 							
 								/// @DnDAction : YoYo Games.Common.Execute_Script
 								/// @DnDVersion : 1.1
@@ -937,15 +1118,17 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 						/// @DnDAction : YoYo Games.Common.Variable
 						/// @DnDVersion : 1
 						/// @DnDHash : 59E49ED6
-						/// @DnDInput : 3
+						/// @DnDInput : 4
 						/// @DnDParent : 6CC35814
 						/// @DnDArgument : "expr_2" "true"
 						/// @DnDArgument : "var" "highest_combo"
 						/// @DnDArgument : "var_1" "pylon_lost_health"
 						/// @DnDArgument : "var_2" "can_skip_wave"
+						/// @DnDArgument : "var_3" "combo_bar"
 						highest_combo = 0;
 						pylon_lost_health = 0;
 						can_skip_wave = true;
+						combo_bar = 0;
 					
 						/// @DnDAction : YoYo Games.Common.If_Variable
 						/// @DnDVersion : 1
@@ -953,8 +1136,8 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 						/// @DnDParent : 6CC35814
 						/// @DnDArgument : "var" "pylon_wave_number"
 						/// @DnDArgument : "op" "4"
-						/// @DnDArgument : "value" "10"
-						if(pylon_wave_number >= 10){	/// @DnDAction : YoYo Games.Common.Variable
+						/// @DnDArgument : "value" "final_wave"
+						if(pylon_wave_number >= final_wave){	/// @DnDAction : YoYo Games.Common.Variable
 							/// @DnDVersion : 1
 							/// @DnDHash : 32ACE814
 							/// @DnDParent : 00042756
@@ -962,19 +1145,25 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 							/// @DnDArgument : "var" "white_out"
 							white_out = true;}}}	break;}
 	
-		/// @DnDAction : YoYo Games.Mouse & Keyboard.If_Key_Pressed
+		/// @DnDAction : YoYo Games.Common.If_Expression
 		/// @DnDVersion : 1
-		/// @DnDHash : 570AD201
-		/// @DnDParent : 2051C63F
-		/// @DnDArgument : "key" "vk_escape"
-		var l570AD201_0;l570AD201_0 = keyboard_check_pressed(vk_escape);if (l570AD201_0){	/// @DnDAction : YoYo Games.Common.Variable
+		/// @DnDHash : 658112AA
+		/// @DnDParent : 535CEC9E
+		/// @DnDArgument : "expr" "InputPressed(INPUT_VERB.PAUSE)"
+		if(InputPressed(INPUT_VERB.PAUSE)){	/// @DnDAction : YoYo Games.Mouse & Keyboard.If_Key_Pressed
+			/// @DnDVersion : 1
+			/// @DnDHash : 570AD201
+			/// @DnDDisabled : 1
+			/// @DnDParent : 658112AA
+			/// @DnDArgument : "key" "vk_escape"
+			/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 1F87DC1F
 			/// @DnDParent : 570AD201
 			/// @DnDArgument : "expr" "!paused"
 			/// @DnDArgument : "var" "paused"
 			paused = !paused;
-		
+			
 			/// @DnDAction : YoYo Games.Common.If_Expression
 			/// @DnDVersion : 1
 			/// @DnDHash : 56CE42C0
@@ -1008,7 +1197,7 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 				/// @DnDArgument : "layer" ""Effects""
 				/// @DnDSaveInfo : "sequenceid" "pause_settings"
 				binky = layer_sequence_create("Effects", o_camera.x, o_camera.y, pause_settings);}
-		
+			
 			/// @DnDAction : YoYo Games.Common.Else
 			/// @DnDVersion : 1
 			/// @DnDHash : 66AF7F7F
@@ -1041,7 +1230,7 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 		/// @DnDAction : YoYo Games.Common.If_Expression
 		/// @DnDVersion : 1
 		/// @DnDHash : 349AC88F
-		/// @DnDParent : 2051C63F
+		/// @DnDParent : 535CEC9E
 		/// @DnDArgument : "expr" "paused"
 		if(paused){	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
@@ -1064,7 +1253,7 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 		/// @DnDAction : YoYo Games.Common.If_Expression
 		/// @DnDVersion : 1
 		/// @DnDHash : 01F44390
-		/// @DnDParent : 2051C63F
+		/// @DnDParent : 535CEC9E
 		/// @DnDArgument : "expr" "paused"
 		/// @DnDArgument : "not" "1"
 		if(!(paused)){	/// @DnDAction : YoYo Games.Common.Variable
@@ -1073,7 +1262,97 @@ var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switc
 			/// @DnDParent : 01F44390
 			/// @DnDArgument : "expr" "scr_approach(pause_background_alpha,0,point_distance(0,pause_background_alpha,0,0)/1.5)"
 			/// @DnDArgument : "var" "pause_background_alpha"
-			pause_background_alpha = scr_approach(pause_background_alpha,0,point_distance(0,pause_background_alpha,0,0)/1.5);}	break;
+			pause_background_alpha = scr_approach(pause_background_alpha,0,point_distance(0,pause_background_alpha,0,0)/1.5);
+		
+			/// @DnDAction : YoYo Games.Common.If_Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 54BA593F
+			/// @DnDDisabled : 1
+			/// @DnDParent : 01F44390
+			/// @DnDArgument : "var" "global.game_speed"
+			/// @DnDArgument : "op" "4"
+			/// @DnDArgument : "value" "8"
+			/// @DnDAction : YoYo Games.Audio.Play_Audio
+			/// @DnDVersion : 1.1
+			/// @DnDHash : 68AE922D
+			/// @DnDDisabled : 1
+			/// @DnDParent : 54BA593F
+			/// @DnDArgument : "soundid" "sfx_pause_start"
+			/// @DnDArgument : "gain" ".3"
+			/// @DnDArgument : "pitch" "random_range(.9,1.2)"
+			/// @DnDSaveInfo : "soundid" "sfx_pause_start"
+			
+			
+			/// @DnDAction : YoYo Games.Common.Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 6CA92EE1
+			/// @DnDInput : 2
+			/// @DnDDisabled : 1
+			/// @DnDParent : 54BA593F
+			/// @DnDArgument : "expr_1" "true"
+			/// @DnDArgument : "var" "global.game_time"
+			/// @DnDArgument : "var_1" "paused"
+			
+			
+			/// @DnDAction : YoYo Games.Sequences.Sequence_Create
+			/// @DnDVersion : 1
+			/// @DnDHash : 620B853E
+			/// @DnDDisabled : 1
+			/// @DnDParent : 54BA593F
+			/// @DnDArgument : "xpos" "o_camera.x"
+			/// @DnDArgument : "ypos" "o_camera.y"
+			/// @DnDArgument : "var" "binky"
+			/// @DnDArgument : "sequenceid" "pause_settings"
+			/// @DnDArgument : "layer" ""Effects""
+			/// @DnDSaveInfo : "sequenceid" "pause_settings"}	break;}
+
+/// @DnDAction : YoYo Games.Switch.Switch
+/// @DnDVersion : 1
+/// @DnDHash : 6539461D
+/// @DnDArgument : "expr" "room"
+var l6539461D_0 = room;switch(l6539461D_0){	/// @DnDAction : YoYo Games.Switch.Case
+	/// @DnDVersion : 1
+	/// @DnDHash : 7F764A22
+	/// @DnDParent : 6539461D
+	/// @DnDArgument : "const" "lvl_0"
+	case lvl_0:	/// @DnDAction : YoYo Games.Common.Execute_Code
+		/// @DnDVersion : 1
+		/// @DnDHash : 5E67AD2D
+		/// @DnDParent : 7F764A22
+		/// @DnDArgument : "code" "var _cam_x = o_camera.x ;$(13_10)var _cam_y = o_camera.y ;$(13_10)layer_x("buildings2", _cam_x * 0.65);$(13_10)layer_y("buildings2", _cam_y *.99);// Change the background layer name to whatever you use in the room editor$(13_10)layer_x("buildings1", _cam_x * 0.8);$(13_10)layer_y("buildings1", _cam_y * 0.99);$(13_10)layer_x("sky", _cam_x);$(13_10)layer_y("sky", _cam_y);// Change the 0.25 and 0.5 values to change the speed of the effect"
+		var _cam_x = o_camera.x ;
+		var _cam_y = o_camera.y ;
+		layer_x("buildings2", _cam_x * 0.65);
+		layer_y("buildings2", _cam_y *.99);// Change the background layer name to whatever you use in the room editor
+		layer_x("buildings1", _cam_x * 0.8);
+		layer_y("buildings1", _cam_y * 0.99);
+		layer_x("sky", _cam_x);
+		layer_y("sky", _cam_y);// Change the 0.25 and 0.5 values to change the speed of the effect	break;
+
+	/// @DnDAction : YoYo Games.Switch.Case
+	/// @DnDVersion : 1
+	/// @DnDHash : 38C6EAE4
+	/// @DnDParent : 6539461D
+	/// @DnDArgument : "const" "lvl_01"
+	case lvl_01:	/// @DnDAction : YoYo Games.Common.Execute_Code
+		/// @DnDVersion : 1
+		/// @DnDHash : 25C24A51
+		/// @DnDParent : 38C6EAE4
+		/// @DnDArgument : "code" "var _cam_x = o_camera.x ;$(13_10)var _cam_y = o_camera.y ;$(13_10)layer_x("buildings2", _cam_x * 0.65);$(13_10)layer_y("buildings2", _cam_y *.99 -250);// Change the background layer name to whatever you use in the room editor$(13_10)layer_x("buildings1", _cam_x * 0.8);$(13_10)layer_y("buildings1", _cam_y * 0.99 - 280);$(13_10)layer_x("sky", _cam_x);$(13_10)layer_y("sky", _cam_y);// Change the 0.25 and 0.5 values to change the speed of the effect$(13_10)layer_x("clouds1", _cam_x);$(13_10)//layer_y("clouds1", _cam_y);$(13_10)layer_x("clouds2", _cam_x);$(13_10)//layer_y("clouds2", _cam_y)$(13_10)layer_x("clouds3", _cam_x);$(13_10)//layer_y("clouds3", _cam_y)"
+		var _cam_x = o_camera.x ;
+		var _cam_y = o_camera.y ;
+		layer_x("buildings2", _cam_x * 0.65);
+		layer_y("buildings2", _cam_y *.99 -250);// Change the background layer name to whatever you use in the room editor
+		layer_x("buildings1", _cam_x * 0.8);
+		layer_y("buildings1", _cam_y * 0.99 - 280);
+		layer_x("sky", _cam_x);
+		layer_y("sky", _cam_y);// Change the 0.25 and 0.5 values to change the speed of the effect
+		layer_x("clouds1", _cam_x);
+		//layer_y("clouds1", _cam_y);
+		layer_x("clouds2", _cam_x);
+		//layer_y("clouds2", _cam_y)
+		layer_x("clouds3", _cam_x);
+		//layer_y("clouds3", _cam_y)	break;
 
 	/// @DnDAction : YoYo Games.Switch.Case
 	/// @DnDVersion : 1

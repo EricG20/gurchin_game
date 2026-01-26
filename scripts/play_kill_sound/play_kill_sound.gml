@@ -3,7 +3,8 @@
 /// @DnDHash : 0831D6EF
 /// @DnDComment : // Script assets have changed for v2.3.0 see$(13_10)// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 /// @DnDArgument : "funcName" "play_kill_sound"
-function play_kill_sound() {	/// @DnDAction : YoYo Games.Random.Choose
+/// @DnDArgument : "arg" "gain=.9"
+function play_kill_sound(gain=.9) {	/// @DnDAction : YoYo Games.Random.Choose
 	/// @DnDVersion : 1
 	/// @DnDHash : 5252FFF0
 	/// @DnDInput : 5
@@ -21,6 +22,6 @@ function play_kill_sound() {	/// @DnDAction : YoYo Games.Random.Choose
 	/// @DnDHash : 0B8E07EC
 	/// @DnDParent : 0831D6EF
 	/// @DnDArgument : "soundid" "killsfx"
-	/// @DnDArgument : "gain" ".9"
+	/// @DnDArgument : "gain" "gain"
 	/// @DnDArgument : "pitch" "random_range(.8,1.2)"
-	audio_play_sound(killsfx, 0, 0, .9, undefined, random_range(.8,1.2));}
+	audio_play_sound(killsfx, 0, 0, gain, undefined, random_range(.8,1.2));}

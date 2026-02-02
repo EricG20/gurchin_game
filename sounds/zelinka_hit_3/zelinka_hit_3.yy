@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"zelinka_hit_3",
+  "audioGroupId":{
+    "name":"effect_audio",
+    "path":"audiogroups/effect_audio",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":1,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.57696146,
+  "exportDir":"",
+  "name":"zelinka_hit_3",
+  "parent":{
+    "name":"zelinka_v",
+    "path":"folders/Sounds/voices/zelinka_v.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":11025,
+  "soundFile":"zelinka_hit_3.ogg",
+  "volume":1.0,
+}

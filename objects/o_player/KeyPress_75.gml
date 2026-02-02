@@ -11,3 +11,12 @@
 /// @DnDDisabled : 1
 /// @DnDArgument : "expr" "5"
 /// @DnDArgument : "var" "global.flat_firerate_bonus"
+
+
+/// @DnDAction : YoYo Games.Common.Execute_Script
+/// @DnDVersion : 1.1
+/// @DnDHash : 1D359CCD
+/// @DnDDisabled : 1
+/// @DnDArgument : "script" "scr_change_character"
+/// @DnDArgument : "arg" ""Zelinka""
+/// @DnDSaveInfo : "script" "scr_change_character"

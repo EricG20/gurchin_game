@@ -20,7 +20,8 @@ function __InputConfigVerbs()
 		AIMUP,
 		AIMDOWN,
 		AIMLEFT,
-		AIMRIGHT
+		AIMRIGHT,
+		SKIP
     }
     
     enum INPUT_CLUSTER
@@ -44,7 +45,8 @@ function __InputConfigVerbs()
 		InputDefineVerb(INPUT_VERB.JUMP,	"jump",		   vk_space,            gp_face1);
         InputDefineVerb(INPUT_VERB.CANCEL,  "cancel",      vk_backspace,        gp_face2);
         InputDefineVerb(INPUT_VERB.ACTION,  "action",      vk_enter,            gp_face3);
-        InputDefineVerb(INPUT_VERB.SPECIAL, "special",     vk_shift,            gp_face4);
+        InputDefineVerb(INPUT_VERB.SPECIAL, "special",     "Q",					gp_shoulderl);
+		InputDefineVerb(INPUT_VERB.SKIP,	"skip",		   "F",					gp_select);
 		InputDefineVerb(INPUT_VERB.BOOST,	"boost",	   vk_shift,            gp_shoulderlb);
         InputDefineVerb(INPUT_VERB.PAUSE,   "pause",      [vk_escape, vk_backspace, vk_enter],           gp_start);
 		InputDefineVerb(INPUT_VERB.AIMUP,   "aimup",      [vk_up,    "W"],    -gp_axisrv);

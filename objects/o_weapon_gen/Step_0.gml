@@ -149,7 +149,7 @@ var l4ACEE4AF_0 = state;switch(l4ACEE4AF_0){	/// @DnDAction : YoYo Games.Swit
 			if(gun_to_be_num >= .03){	/// @DnDAction : YoYo Games.Random.Choose
 				/// @DnDVersion : 1
 				/// @DnDHash : 7959F18F
-				/// @DnDInput : 9
+				/// @DnDInput : 12
 				/// @DnDParent : 7A2EF430
 				/// @DnDArgument : "var" "gun_to_be"
 				/// @DnDArgument : "option" "o_gon"
@@ -161,7 +161,10 @@ var l4ACEE4AF_0 = state;switch(l4ACEE4AF_0){	/// @DnDAction : YoYo Games.Swit
 				/// @DnDArgument : "option_6" "o_machgun"
 				/// @DnDArgument : "option_7" "o_shottgun"
 				/// @DnDArgument : "option_8" "o_gon"
-				gun_to_be = choose(o_gon, o_machgun, o_shottgun, o_bat, o_bubbler, o_deathshower, o_machgun, o_shottgun, o_gon);}
+				/// @DnDArgument : "option_9" "o_goozi"
+				/// @DnDArgument : "option_10" "o_goozi"
+				/// @DnDArgument : "option_11" "o_xoopington"
+				gun_to_be = choose(o_gon, o_machgun, o_shottgun, o_bat, o_bubbler, o_deathshower, o_machgun, o_shottgun, o_gon, o_goozi, o_goozi, o_xoopington);}
 		
 			/// @DnDAction : YoYo Games.Common.Else
 			/// @DnDVersion : 1
@@ -174,6 +177,29 @@ var l4ACEE4AF_0 = state;switch(l4ACEE4AF_0){	/// @DnDAction : YoYo Games.Swit
 				/// @DnDArgument : "var" "gun_to_be"
 				/// @DnDArgument : "option" "o_gilbert_gun"
 				gun_to_be = choose(o_gilbert_gun);}
+		
+			/// @DnDAction : YoYo Games.Mouse & Keyboard.If_Key_Down
+			/// @DnDVersion : 1
+			/// @DnDHash : 423DB568
+			/// @DnDParent : 26B74FB8
+			/// @DnDArgument : "key" "ord("X")"
+			var l423DB568_0;l423DB568_0 = keyboard_check(ord("X"));if (l423DB568_0){	/// @DnDAction : YoYo Games.Mouse & Keyboard.If_Key_Down
+				/// @DnDVersion : 1
+				/// @DnDHash : 622BBC67
+				/// @DnDParent : 423DB568
+				/// @DnDArgument : "key" "ord("O")"
+				var l622BBC67_0;l622BBC67_0 = keyboard_check(ord("O"));if (l622BBC67_0){	/// @DnDAction : YoYo Games.Mouse & Keyboard.If_Key_Down
+					/// @DnDVersion : 1
+					/// @DnDHash : 0BE10CCF
+					/// @DnDParent : 622BBC67
+					/// @DnDArgument : "key" "ord("P")"
+					var l0BE10CCF_0;l0BE10CCF_0 = keyboard_check(ord("P"));if (l0BE10CCF_0){	/// @DnDAction : YoYo Games.Common.Variable
+						/// @DnDVersion : 1
+						/// @DnDHash : 3BDA86A7
+						/// @DnDParent : 0BE10CCF
+						/// @DnDArgument : "expr" "o_xoopington"
+						/// @DnDArgument : "var" "gun_to_be"
+						gun_to_be = o_xoopington;}}}
 		
 			/// @DnDAction : YoYo Games.Instances.Create_Instance
 			/// @DnDVersion : 1

@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"zelinka_die_2",
+  "audioGroupId":{
+    "name":"effect_audio",
+    "path":"audiogroups/effect_audio",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":4.682721,
+  "exportDir":"",
+  "name":"zelinka_die_2",
+  "parent":{
+    "name":"zelinka_v",
+    "path":"folders/Sounds/voices/zelinka_v.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":11025,
+  "soundFile":"zelinka_die_2.ogg",
+  "volume":1.0,
+}

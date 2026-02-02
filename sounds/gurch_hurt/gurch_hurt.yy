@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"gurch_hurt",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"gurchin_v",
+    "path":"folders/Sounds/voices/gurchin_v.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

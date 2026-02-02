@@ -10,9 +10,9 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDParent : 7299994B
 	/// @DnDArgument : "expr" "weilder.x-2*weilder.facing"
 	/// @DnDArgument : "expr_1" "weilder.y- 41+weilder.head_offset_y"
-	/// @DnDArgument : "expr_2" "kickbackx*.7"
-	/// @DnDArgument : "expr_3" "androtate*.5"
-	/// @DnDArgument : "expr_4" "kickbacky*.7"
+	/// @DnDArgument : "expr_2" "kickbackx*power(.7,global.game_speed)"
+	/// @DnDArgument : "expr_3" "androtate*power(.5,global.game_speed)"
+	/// @DnDArgument : "expr_4" "kickbacky*power(.7,global.game_speed)"
 	/// @DnDArgument : "expr_5" "-1*global.game_speed"
 	/// @DnDArgument : "expr_relative_5" "1"
 	/// @DnDArgument : "expr_6" "clamp(charge,0,120)"
@@ -25,9 +25,9 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDArgument : "var_6" "charge"
 	x = weilder.x-2*weilder.facing;
 	y = weilder.y- 41+weilder.head_offset_y;
-	kickbackx = kickbackx*.7;
-	androtate = androtate*.5;
-	kickbacky = kickbacky*.7;
+	kickbackx = kickbackx*power(.7,global.game_speed);
+	androtate = androtate*power(.5,global.game_speed);
+	kickbacky = kickbacky*power(.7,global.game_speed);
 	charge += -1*global.game_speed;
 	charge = clamp(charge,0,120);
 
@@ -281,18 +281,21 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDVersion : 1
 				/// @DnDHash : 134B6298
-				/// @DnDInput : 3
+				/// @DnDInput : 4
 				/// @DnDParent : 3A9CC710
-				/// @DnDArgument : "expr" "(mybb.hspeed)*-.2"
-				/// @DnDArgument : "expr_1" "(mybb.vspeed)*-.2"
+				/// @DnDArgument : "expr" "(mybb.hsp)*-.2"
+				/// @DnDArgument : "expr_1" "(mybb.vsp)*-.2"
 				/// @DnDArgument : "expr_2" "-1"
 				/// @DnDArgument : "expr_relative_2" "1"
+				/// @DnDArgument : "expr_3" "18"
 				/// @DnDArgument : "var" "kickbackx"
 				/// @DnDArgument : "var_1" "kickbacky"
 				/// @DnDArgument : "var_2" "ammo"
-				kickbackx = (mybb.hspeed)*-.2;
-				kickbacky = (mybb.vspeed)*-.2;
+				/// @DnDArgument : "var_3" "androtate"
+				kickbackx = (mybb.hsp)*-.2;
+				kickbacky = (mybb.vsp)*-.2;
 				ammo += -1;
+				androtate = 18;
 			
 				/// @DnDAction : YoYo Games.Instances.Create_Instance
 				/// @DnDVersion : 1

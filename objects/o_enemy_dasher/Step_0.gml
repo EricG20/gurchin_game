@@ -247,3 +247,15 @@ var l5F73EA2D_0 = state;switch(l5F73EA2D_0){	/// @DnDAction : YoYo Games.Swit
 			/// @DnDArgument : "var_1" "cooldown"
 			state = es.IDLE;
 			cooldown = 120;}	break;}
+
+/// @DnDAction : YoYo Games.Common.If_Expression
+/// @DnDVersion : 1
+/// @DnDHash : 0972C4E1
+/// @DnDArgument : "expr" "gurchenis_buff"
+if(gurchenis_buff){	/// @DnDAction : YoYo Games.Common.Execute_Script
+	/// @DnDVersion : 1.1
+	/// @DnDHash : 2E05D25C
+	/// @DnDParent : 0972C4E1
+	/// @DnDArgument : "script" "scr_gurchenisaura"
+	/// @DnDSaveInfo : "script" "scr_gurchenisaura"
+	script_execute(scr_gurchenisaura);}

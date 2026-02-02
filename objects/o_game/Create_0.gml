@@ -1,3 +1,9 @@
+/// @DnDAction : YoYo Games.Data Structures.Create_Map
+/// @DnDVersion : 1
+/// @DnDHash : 6572683D
+/// @DnDArgument : "var" "player_details"
+player_details = ds_map_create();
+
 /// @DnDAction : YoYo Games.Random.Randomize
 /// @DnDVersion : 1
 /// @DnDHash : 3617FA59

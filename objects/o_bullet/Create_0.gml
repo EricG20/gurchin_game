@@ -1,3 +1,9 @@
+/// @DnDAction : YoYo Games.Data Structures.Create_List
+/// @DnDVersion : 1
+/// @DnDHash : 0156F7DC
+/// @DnDArgument : "var" "collided_with"
+collided_with = ds_list_create();
+
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 14969B50

@@ -6,7 +6,7 @@
 function controlz() {	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 25F5EADC
-	/// @DnDInput : 13
+	/// @DnDInput : 14
 	/// @DnDParent : 222DF977
 	/// @DnDArgument : "expr" "false"
 	/// @DnDArgument : "expr_1" "false"
@@ -21,6 +21,7 @@ function controlz() {	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDArgument : "expr_10" "false"
 	/// @DnDArgument : "expr_11" "false"
 	/// @DnDArgument : "expr_12" "false"
+	/// @DnDArgument : "expr_13" "false"
 	/// @DnDArgument : "var" "left"
 	/// @DnDArgument : "var_1" "right"
 	/// @DnDArgument : "var_2" "jump"
@@ -34,6 +35,7 @@ function controlz() {	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDArgument : "var_10" "shoot"
 	/// @DnDArgument : "var_11" "shooting"
 	/// @DnDArgument : "var_12" "shoot_release"
+	/// @DnDArgument : "var_13" "special"
 	left = false;
 	right = false;
 	jump = false;
@@ -47,6 +49,7 @@ function controlz() {	/// @DnDAction : YoYo Games.Common.Variable
 	shoot = false;
 	shooting = false;
 	shoot_release = false;
+	special = false;
 
 	/// @DnDAction : YoYo Games.Common.If_Variable
 	/// @DnDVersion : 1
@@ -57,17 +60,20 @@ function controlz() {	/// @DnDAction : YoYo Games.Common.Variable
 	if(global.we_can_move == true){	/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 4EB47F3D
-		/// @DnDInput : 3
+		/// @DnDInput : 4
 		/// @DnDParent : 1186E466
 		/// @DnDArgument : "expr" "InputPressed(INPUT_VERB.SHOOT)"
 		/// @DnDArgument : "expr_1" "InputCheck(INPUT_VERB.SHOOT)"
 		/// @DnDArgument : "expr_2" "InputReleased(INPUT_VERB.SHOOT)"
+		/// @DnDArgument : "expr_3" "InputPressed(INPUT_VERB.SPECIAL)"
 		/// @DnDArgument : "var" "shoot"
 		/// @DnDArgument : "var_1" "shooting"
 		/// @DnDArgument : "var_2" "shoot_release"
+		/// @DnDArgument : "var_3" "special"
 		shoot = InputPressed(INPUT_VERB.SHOOT);
 		shooting = InputCheck(INPUT_VERB.SHOOT);
 		shoot_release = InputReleased(INPUT_VERB.SHOOT);
+		special = InputPressed(INPUT_VERB.SPECIAL);
 	
 		/// @DnDAction : YoYo Games.Common.If_Expression
 		/// @DnDVersion : 1

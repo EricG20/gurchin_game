@@ -52,6 +52,24 @@ var l15204216_0 = anim;switch(l15204216_0){	/// @DnDAction : YoYo Games.Switc
 				/// @DnDArgument : "var" "other.hp"
 				other.hp += -2*(image_xscale);
 			
+				/// @DnDAction : YoYo Games.Common.Execute_Script
+				/// @DnDVersion : 1.1
+				/// @DnDHash : 32F5395F
+				/// @DnDParent : 46DEE259
+				/// @DnDArgument : "script" "scr_damage_notifier"
+				/// @DnDArgument : "arg" "2*(image_xscale)"
+				/// @DnDSaveInfo : "script" "scr_damage_notifier"
+				script_execute(scr_damage_notifier, 2*(image_xscale));
+			
+				/// @DnDAction : YoYo Games.Common.Variable
+				/// @DnDVersion : 1
+				/// @DnDHash : 19CA3875
+				/// @DnDParent : 46DEE259
+				/// @DnDArgument : "expr" "2*(image_xscale)"
+				/// @DnDArgument : "expr_relative" "1"
+				/// @DnDArgument : "var" "weilder.special_meter"
+				weilder.special_meter += 2*(image_xscale);
+			
 				/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDVersion : 1
 				/// @DnDHash : 177433F2

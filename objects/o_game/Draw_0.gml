@@ -1,10 +1,3 @@
-/// @DnDAction : YoYo Games.Common.Variable
-/// @DnDVersion : 1
-/// @DnDHash : 6015B5E6
-/// @DnDArgument : "expr" "clamp(white_flash_value-.1*global.game_speed,0,3)"
-/// @DnDArgument : "var" "white_flash_value"
-white_flash_value = clamp(white_flash_value-.1*global.game_speed,0,3);
-
 /// @DnDAction : YoYo Games.Switch.Switch
 /// @DnDVersion : 1
 /// @DnDHash : 49655D8D
@@ -35,3 +28,10 @@ var l49655D8D_0 = room;switch(l49655D8D_0){	/// @DnDAction : YoYo Games.Switc
 		/// @DnDArgument : "sprite" "Layer_1"
 		/// @DnDSaveInfo : "sprite" "Layer_1"
 		draw_sprite_ext(Layer_1, 0, o_camera.x, o_camera.y, 1, 1, 0, $FFFFFF & $ffffff, pause_background_alpha);	break;}
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 6015B5E6
+/// @DnDArgument : "expr" "clamp(white_flash_value-.1*global.game_speed,0,3)"
+/// @DnDArgument : "var" "white_flash_value"
+white_flash_value = clamp(white_flash_value-.1*global.game_speed,0,3);

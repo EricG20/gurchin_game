@@ -21,7 +21,7 @@ function draw_wheel_part(argument0, argument1, argument2, argument3, argument4, 
 	var anglen = argument7
 	// alpha argument8
 
-	draw_wheel_ext(x,y,r,roff,color,anglen,360,lwid,sang,false,argument8)
+	draw_wheel_ext(xx,yy,r,roff,color,anglen,360,lwid,sang,false,argument8)
 
 
 }

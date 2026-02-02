@@ -156,21 +156,24 @@ var l5A590737_0 = o_game.state;switch(l5A590737_0){	/// @DnDAction : YoYo Gam
 /// @DnDInput : 3
 /// @DnDArgument : "script" "easy_cam_set_position"
 /// @DnDArgument : "arg" "id"
-/// @DnDArgument : "arg_1" "clamp(x+shakeh,base_width/2,room_width-base_width/2)"
-/// @DnDArgument : "arg_2" "clamp(y+shakev,base_height/2,room_height-base_height/2)"
+/// @DnDArgument : "arg_1" "clamp(x+sin(shakey)*shakeh,base_width/2,room_width-base_width/2)"
+/// @DnDArgument : "arg_2" "clamp(y+sin(shakey)*shakev,base_height/2,room_height-base_height/2)"
 /// @DnDSaveInfo : "script" "easy_cam_set_position"
-script_execute(easy_cam_set_position, id, clamp(x+shakeh,base_width/2,room_width-base_width/2), clamp(y+shakev,base_height/2,room_height-base_height/2));
+script_execute(easy_cam_set_position, id, clamp(x+sin(shakey)*shakeh,base_width/2,room_width-base_width/2), clamp(y+sin(shakey)*shakev,base_height/2,room_height-base_height/2));
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 65E16FF4
-/// @DnDInput : 2
-/// @DnDArgument : "expr" "shakeh*-.8"
-/// @DnDArgument : "expr_1" "shakev*-.8"
+/// @DnDInput : 3
+/// @DnDArgument : "expr" "shakeh*power(.8,global.game_speed)"
+/// @DnDArgument : "expr_1" "shakev*power(.8,global.game_speed)"
+/// @DnDArgument : "expr_2" "shakey*power(.8,global.game_speed)"
 /// @DnDArgument : "var" "shakeh"
 /// @DnDArgument : "var_1" "shakev"
-shakeh = shakeh*-.8;
-shakev = shakev*-.8;
+/// @DnDArgument : "var_2" "shakey"
+shakeh = shakeh*power(.8,global.game_speed);
+shakev = shakev*power(.8,global.game_speed);
+shakey = shakey*power(.8,global.game_speed);
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1

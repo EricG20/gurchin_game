@@ -325,8 +325,8 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDHash : 134B6298
 				/// @DnDInput : 4
 				/// @DnDParent : 3A9CC710
-				/// @DnDArgument : "expr" "(mybb.hspeed)*-.2"
-				/// @DnDArgument : "expr_1" "(mybb.vspeed)*-.2"
+				/// @DnDArgument : "expr" "(mybb.hsp)*-.2"
+				/// @DnDArgument : "expr_1" "(mybb.vsp)*-.2"
 				/// @DnDArgument : "expr_2" "-1"
 				/// @DnDArgument : "expr_relative_2" "1"
 				/// @DnDArgument : "expr_3" "1"
@@ -334,8 +334,8 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDArgument : "var_1" "kickbacky"
 				/// @DnDArgument : "var_2" "ammo"
 				/// @DnDArgument : "var_3" "charge"
-				kickbackx = (mybb.hspeed)*-.2;
-				kickbacky = (mybb.vspeed)*-.2;
+				kickbackx = (mybb.hsp)*-.2;
+				kickbacky = (mybb.vsp)*-.2;
 				ammo += -1;
 				charge = 1;
 			

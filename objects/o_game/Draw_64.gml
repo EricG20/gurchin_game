@@ -1,13 +1,14 @@
 /// @DnDAction : YoYo Games.Drawing.Draw_Value_Transformed
 /// @DnDVersion : 1
 /// @DnDHash : 68029DDC
+/// @DnDDisabled : 1
 /// @DnDArgument : "x" "20"
 /// @DnDArgument : "y" "800"
 /// @DnDArgument : "xscale" "2"
 /// @DnDArgument : "yscale" "2"
 /// @DnDArgument : "caption" ""game speed: ""
 /// @DnDArgument : "text" "global.game_speed"
-draw_text_transformed(20, 800, string("game speed: ") + string(global.game_speed), 2, 2, 0);
+
 
 /// @DnDAction : YoYo Games.Switch.Switch
 /// @DnDVersion : 1
@@ -191,8 +192,8 @@ var l03FDEC77_0 = state;switch(l03FDEC77_0){	/// @DnDAction : YoYo Games.Swit
 				/// @DnDParent : 438D7741
 				/// @DnDArgument : "x" "1750"
 				/// @DnDArgument : "y" "680"
-				/// @DnDArgument : "caption" ""Hold -Q- to skip \n timer.""
-				draw_text(1750, 680, string("Hold -Q- to skip \n timer.") + "");
+				/// @DnDArgument : "caption" ""Hold -" + InputVerbGetBindingName(INPUT_VERB.SKIP)+"- to skip \n timer.""
+				draw_text(1750, 680, string("Hold -" + InputVerbGetBindingName(INPUT_VERB.SKIP)+"- to skip \n timer.") + "");
 			
 				/// @DnDAction : YoYo Games.Common.Execute_Script
 				/// @DnDVersion : 1.1
@@ -214,19 +215,27 @@ var l03FDEC77_0 = state;switch(l03FDEC77_0){	/// @DnDAction : YoYo Games.Swit
 				/// @DnDSaveInfo : "script" "draw_wheel_ext"
 				script_execute(draw_wheel_ext, 1830, 760, 40, 10, c_white, skip_wave_value, 120, 1, 90, false, 1);
 			
-				/// @DnDAction : YoYo Games.Mouse & Keyboard.If_Key_Down
+				/// @DnDAction : YoYo Games.Common.If_Expression
 				/// @DnDVersion : 1
-				/// @DnDHash : 35E794E1
+				/// @DnDHash : 2B6FFCA3
 				/// @DnDParent : 438D7741
-				/// @DnDArgument : "key" "ord("Q")"
-				var l35E794E1_0;l35E794E1_0 = keyboard_check(ord("Q"));if (l35E794E1_0){	/// @DnDAction : YoYo Games.Common.Variable
+				/// @DnDArgument : "expr" "InputCheck(INPUT_VERB.SKIP)"
+				if(InputCheck(INPUT_VERB.SKIP)){	/// @DnDAction : YoYo Games.Common.Variable
 					/// @DnDVersion : 1
 					/// @DnDHash : 1B375C69
-					/// @DnDParent : 35E794E1
+					/// @DnDParent : 2B6FFCA3
 					/// @DnDArgument : "expr" "1*global.game_speed"
 					/// @DnDArgument : "expr_relative" "1"
 					/// @DnDArgument : "var" "skip_wave_value"
 					skip_wave_value += 1*global.game_speed;}
+			
+				/// @DnDAction : YoYo Games.Mouse & Keyboard.If_Key_Down
+				/// @DnDVersion : 1
+				/// @DnDHash : 35E794E1
+				/// @DnDDisabled : 1
+				/// @DnDParent : 438D7741
+				/// @DnDArgument : "key" "ord("Q")"
+			
 			
 				/// @DnDAction : YoYo Games.Common.Else
 				/// @DnDVersion : 1

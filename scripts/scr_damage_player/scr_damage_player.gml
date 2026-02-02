@@ -25,11 +25,24 @@ function scr_damage_player(val, player=other) {	/// @DnDAction : YoYo Games.Co
 		/// @DnDAction : YoYo Games.Audio.Play_Audio
 		/// @DnDVersion : 1.1
 		/// @DnDHash : 2DC83282
+		/// @DnDDisabled : 1
 		/// @DnDParent : 71FD2398
 		/// @DnDArgument : "soundid" "gurch_hurt"
 		/// @DnDArgument : "pitch" "1.0+random_range(0,.2)"
 		/// @DnDSaveInfo : "soundid" "gurch_hurt"
-		audio_play_sound(gurch_hurt, 0, 0, 1.0, undefined, 1.0+random_range(0,.2));
+	
+	
+		/// @DnDAction : YoYo Games.Common.Execute_Script
+		/// @DnDVersion : 1.1
+		/// @DnDHash : 24798C93
+		/// @DnDApplyTo : player
+		/// @DnDParent : 71FD2398
+		/// @DnDArgument : "script" "scr_zorb_voices"
+		/// @DnDArgument : "arg" ""hurt""
+		/// @DnDSaveInfo : "script" "scr_zorb_voices"
+		with(player) {
+			script_execute(scr_zorb_voices, "hurt");
+		}
 	
 		/// @DnDAction : YoYo Games.Common.Execute_Script
 		/// @DnDVersion : 1.1

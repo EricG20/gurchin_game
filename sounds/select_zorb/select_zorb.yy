@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"select_zorb",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":3,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":46.58823,
+  "exportDir":"",
+  "name":"select_zorb",
+  "parent":{
+    "name":"music",
+    "path":"folders/Sounds/music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"select_zorb.ogg",
+  "volume":1.0,
+}

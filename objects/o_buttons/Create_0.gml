@@ -83,7 +83,20 @@ var l74BC092B_0 = instance_number(object_index);switch(l74BC092B_0){	/// @DnD
 		/// @DnDArgument : "var_2" "is_clicked"
 		data_mode = "bright_flashes";
 		data_set = -1;
-		is_clicked = true;	break;}
+		is_clicked = true;	break;
+
+	/// @DnDAction : YoYo Games.Switch.Case
+	/// @DnDVersion : 1
+	/// @DnDHash : 1DC70744
+	/// @DnDParent : 74BC092B
+	/// @DnDArgument : "const" "6"
+	case 6:	/// @DnDAction : YoYo Games.Common.Variable
+		/// @DnDVersion : 1
+		/// @DnDHash : 0D33CD08
+		/// @DnDParent : 1DC70744
+		/// @DnDArgument : "expr" ""144_fps""
+		/// @DnDArgument : "var" "data_mode"
+		data_mode = "144_fps";	break;}
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1

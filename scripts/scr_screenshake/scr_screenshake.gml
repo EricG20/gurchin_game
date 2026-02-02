@@ -2,11 +2,12 @@
 /// @DnDVersion : 1
 /// @DnDHash : 1816CEA7
 /// @DnDComment : // Script assets have changed for v2.3.0 see$(13_10)// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-/// @DnDInput : 2
+/// @DnDInput : 3
 /// @DnDArgument : "funcName" "scr_screenshake"
 /// @DnDArgument : "arg" "h=random_range(0,5)"
 /// @DnDArgument : "arg_1" "v=random_range(0,5)"
-function scr_screenshake(h=random_range(0,5), v=random_range(0,5)) {	/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDArgument : "arg_2" "length=random_range(8,12)"
+function scr_screenshake(h=random_range(0,5), v=random_range(0,5), length=random_range(8,12)) {	/// @DnDAction : YoYo Games.Common.If_Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 4642D5AA
 	/// @DnDParent : 1816CEA7
@@ -21,12 +22,15 @@ function scr_screenshake(h=random_range(0,5), v=random_range(0,5)) {	/// @DnDA
 			/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 0FD8DE93
-			/// @DnDInput : 2
+			/// @DnDInput : 3
 			/// @DnDParent : 17193069
 			/// @DnDArgument : "expr" "h"
 			/// @DnDArgument : "expr_1" "v"
+			/// @DnDArgument : "expr_2" "length"
 			/// @DnDArgument : "var" "shakeh"
 			/// @DnDArgument : "var_1" "shakev"
+			/// @DnDArgument : "var_2" "shakey"
 			shakeh = h;
 			shakev = v;
+			shakey = length;
 		}}}

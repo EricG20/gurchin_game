@@ -142,7 +142,22 @@ if(is_clicked){	/// @DnDAction : YoYo Games.Switch.Switch
 			/// @DnDArgument : "function" "game_set_speed"
 			/// @DnDArgument : "arg" "120"
 			/// @DnDArgument : "arg_1" "gamespeed_fps"
-			game_set_speed(120, gamespeed_fps);	break;}}
+			game_set_speed(120, gamespeed_fps);	break;
+	
+		/// @DnDAction : YoYo Games.Switch.Case
+		/// @DnDVersion : 1
+		/// @DnDHash : 162639FF
+		/// @DnDParent : 53DDFB07
+		/// @DnDArgument : "const" ""144_fps""
+		case "144_fps":	/// @DnDAction : YoYo Games.Common.Function_Call
+			/// @DnDVersion : 1
+			/// @DnDHash : 2FE27AD6
+			/// @DnDInput : 2
+			/// @DnDParent : 162639FF
+			/// @DnDArgument : "function" "game_set_speed"
+			/// @DnDArgument : "arg" "144"
+			/// @DnDArgument : "arg_1" "gamespeed_fps"
+			game_set_speed(144, gamespeed_fps);	break;}}
 
 /// @DnDAction : YoYo Games.Switch.Switch
 /// @DnDVersion : 1

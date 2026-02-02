@@ -1,22 +1,25 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 5DBF59C7
-/// @DnDInput : 6
+/// @DnDInput : 7
 /// @DnDArgument : "expr_2" "-1"
 /// @DnDArgument : "expr_relative_2" "1"
 /// @DnDArgument : "expr_3" "clamp(melee_cooldown,0, 900)"
+/// @DnDArgument : "expr_6" "clamp(hp,0,max_hp)"
 /// @DnDArgument : "var" "head_offset_x"
 /// @DnDArgument : "var_1" "head_offset_y"
 /// @DnDArgument : "var_2" "melee_cooldown"
 /// @DnDArgument : "var_3" "melee_cooldown"
 /// @DnDArgument : "var_4" "walk_bob_height"
 /// @DnDArgument : "var_5" "ear_bobbing"
+/// @DnDArgument : "var_6" "hp"
 head_offset_x = 0;
 head_offset_y = 0;
 melee_cooldown += -1;
 melee_cooldown = clamp(melee_cooldown,0, 900);
 walk_bob_height = 0;
 ear_bobbing = 0;
+hp = clamp(hp,0,max_hp);
 
 /// @DnDAction : YoYo Games.Common.If_Undefined
 /// @DnDVersion : 1
@@ -137,13 +140,13 @@ if(mount == undefined){	/// @DnDAction : YoYo Games.Switch.Switch
 				/// @DnDInput : 4
 				/// @DnDParent : 439EA32C
 				/// @DnDArgument : "expr" "ps.IDLE"
-				/// @DnDArgument : "expr_1" "7"
+				/// @DnDArgument : "expr_1" "max_hp"
 				/// @DnDArgument : "var" "state"
 				/// @DnDArgument : "var_1" "hp"
 				/// @DnDArgument : "var_2" "iframes"
 				/// @DnDArgument : "var_3" "death_counter"
 				state = ps.IDLE;
-				hp = 7;
+				hp = max_hp;
 				iframes = 0;
 				death_counter = 0;
 			
@@ -163,9 +166,8 @@ if(mount == undefined){	/// @DnDAction : YoYo Games.Switch.Switch
 				/// @DnDHash : 2AF396EF
 				/// @DnDApplyTo : mygurn
 				/// @DnDParent : 439EA32C
-				/// @DnDArgument : "objind" "o_gon"
-				/// @DnDSaveInfo : "objind" "o_gon"
-				with(mygurn) instance_change(o_gon, true);
+				/// @DnDArgument : "objind" "other.default_gun"
+				with(mygurn) instance_change(other.default_gun, true);
 			
 				/// @DnDAction : YoYo Games.Data Structures.Map_Get_Value
 				/// @DnDVersion : 1
@@ -408,17 +410,17 @@ if(mount == undefined){	/// @DnDAction : YoYo Games.Switch.Switch
 			/// @DnDVersion : 1
 			/// @DnDHash : 21329A3C
 			/// @DnDParent : 77AB7D3F
-			/// @DnDArgument : "expr" "animcurve_channel_evaluate(walk_curve,((image_index)%4)/4)*(5)"
+			/// @DnDArgument : "expr" "animcurve_channel_evaluate(walk_curve,((image_index)%4)/4)*(walk_bobbing_strength)"
 			/// @DnDArgument : "var" "walk_bob_height"
-			walk_bob_height = animcurve_channel_evaluate(walk_curve,((image_index)%4)/4)*(5);
+			walk_bob_height = animcurve_channel_evaluate(walk_curve,((image_index)%4)/4)*(walk_bobbing_strength);
 		
 			/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 02311FDD
 			/// @DnDParent : 77AB7D3F
-			/// @DnDArgument : "expr" "animcurve_channel_evaluate(ear_bob_curve,((image_index+5)%4)/4)*(7)"
+			/// @DnDArgument : "expr" "animcurve_channel_evaluate(ear_bob_curve,((image_index+5)%4)/4)*(ear_bobbing_strength)"
 			/// @DnDArgument : "var" "ear_bobbing"
-			ear_bobbing = animcurve_channel_evaluate(ear_bob_curve,((image_index+5)%4)/4)*(7);
+			ear_bobbing = animcurve_channel_evaluate(ear_bob_curve,((image_index+5)%4)/4)*(ear_bobbing_strength);
 		
 			/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
@@ -893,13 +895,23 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.If_Variable
 			/// @DnDSaveInfo : "script" "play_kill_sound"
 			script_execute(play_kill_sound);
 		
+			/// @DnDAction : YoYo Games.Common.Execute_Script
+			/// @DnDVersion : 1.1
+			/// @DnDHash : 4CDE2FFE
+			/// @DnDParent : 6029DB85
+			/// @DnDArgument : "script" "scr_zorb_voices"
+			/// @DnDArgument : "arg" ""die""
+			/// @DnDSaveInfo : "script" "scr_zorb_voices"
+			script_execute(scr_zorb_voices, "die");
+		
 			/// @DnDAction : YoYo Games.Audio.Play_Audio
 			/// @DnDVersion : 1.1
 			/// @DnDHash : 0B217A28
+			/// @DnDDisabled : 1
 			/// @DnDParent : 6029DB85
 			/// @DnDArgument : "soundid" "gurchin_die"
 			/// @DnDSaveInfo : "soundid" "gurchin_die"
-			audio_play_sound(gurchin_die, 0, 0, 1.0, undefined, 1.0);
+		
 		
 			/// @DnDAction : YoYo Games.Audio.Play_Audio
 			/// @DnDVersion : 1.1

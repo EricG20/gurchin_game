@@ -80,6 +80,18 @@ if(distance_to_object(o_pylon) < 20){	/// @DnDAction : YoYo Games.Instances.De
 
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1
+/// @DnDHash : 5370A238
+/// @DnDArgument : "var" "distance_to_object(o_minion)"
+/// @DnDArgument : "op" "1"
+/// @DnDArgument : "value" "20"
+if(distance_to_object(o_minion) < 20){	/// @DnDAction : YoYo Games.Instances.Destroy_Instance
+	/// @DnDVersion : 1
+	/// @DnDHash : 529B92A1
+	/// @DnDParent : 5370A238
+	instance_destroy();}
+
+/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDVersion : 1
 /// @DnDHash : 35F9C5A7
 /// @DnDArgument : "var" "length"
 /// @DnDArgument : "op" "3"

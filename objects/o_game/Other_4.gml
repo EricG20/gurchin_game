@@ -42,7 +42,7 @@ var l61EB12DC_0 = state;switch(l61EB12DC_0){	/// @DnDAction : YoYo Games.Swit
 			case ship_room:	/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDVersion : 1
 				/// @DnDHash : 785C7666
-				/// @DnDInput : 28
+				/// @DnDInput : 29
 				/// @DnDParent : 559C0940
 				/// @DnDArgument : "expr_2" "3"
 				/// @DnDArgument : "expr_3" "1"
@@ -59,6 +59,7 @@ var l61EB12DC_0 = state;switch(l61EB12DC_0){	/// @DnDAction : YoYo Games.Swit
 				/// @DnDArgument : "expr_25" "1"
 				/// @DnDArgument : "expr_26" "1"
 				/// @DnDArgument : "expr_27" "false"
+				/// @DnDArgument : "expr_28" "10"
 				/// @DnDArgument : "var" "scor"
 				/// @DnDArgument : "var_1" "pylon_incr"
 				/// @DnDArgument : "var_2" "pylon_enemy_cap"
@@ -87,6 +88,7 @@ var l61EB12DC_0 = state;switch(l61EB12DC_0){	/// @DnDAction : YoYo Games.Swit
 				/// @DnDArgument : "var_25" "global.flat_reload_bonus"
 				/// @DnDArgument : "var_26" "global.movementspeed_bonus"
 				/// @DnDArgument : "var_27" "boss_bool"
+				/// @DnDArgument : "var_28" "final_wave"
 				scor = 0;
 				pylon_incr = 0;
 				pylon_enemy_cap = 3;
@@ -115,6 +117,7 @@ var l61EB12DC_0 = state;switch(l61EB12DC_0){	/// @DnDAction : YoYo Games.Swit
 				global.flat_reload_bonus = 1;
 				global.movementspeed_bonus = 1;
 				boss_bool = false;
+				final_wave = 10;
 			
 				/// @DnDAction : YoYo Games.Instances.Create_Instance
 				/// @DnDVersion : 1
@@ -141,9 +144,25 @@ var l61EB12DC_0 = state;switch(l61EB12DC_0){	/// @DnDAction : YoYo Games.Swit
 				/// @DnDParent : 559C0940
 				/// @DnDArgument : "xpos" "sethisx"
 				/// @DnDArgument : "ypos" "sethisy"
+				/// @DnDArgument : "var" "dude"
 				/// @DnDArgument : "objectid" "o_player"
 				/// @DnDSaveInfo : "objectid" "o_player"
-				instance_create_layer(sethisx, sethisy, "Instances", o_player);
+				dude = instance_create_layer(sethisx, sethisy, "Instances", o_player);
+			
+				/// @DnDAction : YoYo Games.Common.Execute_Script
+				/// @DnDVersion : 1.1
+				/// @DnDHash : 40FC5A5A
+				/// @DnDInput : 3
+				/// @DnDApplyTo : dude
+				/// @DnDParent : 559C0940
+				/// @DnDArgument : "script" "scr_change_character"
+				/// @DnDArgument : "arg" "ds_map_find_value(other.player_details, "player_char")"
+				/// @DnDArgument : "arg_1" "ds_map_find_value(other.player_details,"player_hair")"
+				/// @DnDArgument : "arg_2" "ds_map_find_value(other.player_details, "player_color")"
+				/// @DnDSaveInfo : "script" "scr_change_character"
+				with(dude) {
+					script_execute(scr_change_character, ds_map_find_value(other.player_details, "player_char"), ds_map_find_value(other.player_details,"player_hair"), ds_map_find_value(other.player_details, "player_color"));
+				}
 			
 				/// @DnDAction : YoYo Games.Random.Choose
 				/// @DnDVersion : 1

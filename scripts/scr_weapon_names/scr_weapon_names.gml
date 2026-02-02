@@ -58,6 +58,18 @@ function scr_weapon_names(wep_index) {	/// @DnDAction : YoYo Games.Switch.Swit
 	
 		/// @DnDAction : YoYo Games.Switch.Case
 		/// @DnDVersion : 1
+		/// @DnDHash : 12C9DB93
+		/// @DnDParent : 146EBC5E
+		/// @DnDArgument : "const" "o_goozi"
+		case o_goozi:	/// @DnDAction : YoYo Games.Common.Return
+			/// @DnDVersion : 1
+			/// @DnDHash : 189C2D98
+			/// @DnDParent : 12C9DB93
+			/// @DnDArgument : "value" ""ZHM-UZ1""
+			return "ZHM-UZ1";	break;
+	
+		/// @DnDAction : YoYo Games.Switch.Case
+		/// @DnDVersion : 1
 		/// @DnDHash : 197134D8
 		/// @DnDParent : 146EBC5E
 		/// @DnDArgument : "const" "o_gon"
@@ -102,4 +114,16 @@ function scr_weapon_names(wep_index) {	/// @DnDAction : YoYo Games.Switch.Swit
 			/// @DnDHash : 65C7FCF8
 			/// @DnDParent : 47C2CD0E
 			/// @DnDArgument : "value" ""Gilbert""
-			return "Gilbert";	break;}}
+			return "Gilbert";	break;
+	
+		/// @DnDAction : YoYo Games.Switch.Case
+		/// @DnDVersion : 1
+		/// @DnDHash : 50F5B592
+		/// @DnDParent : 146EBC5E
+		/// @DnDArgument : "const" "o_xoopington"
+		case o_xoopington:	/// @DnDAction : YoYo Games.Common.Return
+			/// @DnDVersion : 1
+			/// @DnDHash : 3065A980
+			/// @DnDParent : 50F5B592
+			/// @DnDArgument : "value" ""X00-P1NG-T0N""
+			return "X00-P1NG-T0N";	break;}}

@@ -73,9 +73,9 @@ weapon_levels = ds_map_create();
 /// @DnDVersion : 1
 /// @DnDHash : 04CA44E1
 /// @DnDArgument : "var" "weapon_levels"
-/// @DnDArgument : "key" "o_gon"
+/// @DnDArgument : "key" "default_gun"
 /// @DnDArgument : "value" "1"
-ds_map_replace(weapon_levels, o_gon, 1);
+ds_map_replace(weapon_levels, default_gun, 1);
 
 /// @DnDAction : YoYo Games.Instances.Instance_Get_Count
 /// @DnDVersion : 1

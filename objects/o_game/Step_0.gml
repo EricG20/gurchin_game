@@ -685,11 +685,10 @@ var l511F3266_0 = state;switch(l511F3266_0){	/// @DnDAction : YoYo Games.Swit
 								case "walker":	/// @DnDAction : YoYo Games.Common.Variable
 									/// @DnDVersion : 1
 									/// @DnDHash : 79D9CADD
-									/// @DnDDisabled : 1
 									/// @DnDParent : 6B66B2BD
 									/// @DnDArgument : "expr" "o_enemy_walkah"
 									/// @DnDArgument : "var" "lubba"
-								
+									lubba = o_enemy_walkah;
 								
 									/// @DnDAction : YoYo Games.Loops.Break
 									/// @DnDVersion : 1

@@ -131,6 +131,19 @@ if(activated){	/// @DnDAction : YoYo Games.Switch.Switch
 			/// @DnDArgument : "var" "hair_styles"
 			hair_styles_list_length = ds_list_size(hair_styles);
 		
+			/// @DnDAction : YoYo Games.Common.If_Expression
+			/// @DnDVersion : 1
+			/// @DnDHash : 56599993
+			/// @DnDParent : 2E943B7C
+			/// @DnDArgument : "expr" "InputPressed(INPUT_VERB.CANCEL)"
+			if(InputPressed(INPUT_VERB.CANCEL)){	/// @DnDAction : YoYo Games.Common.Variable
+				/// @DnDVersion : 1
+				/// @DnDHash : 2DA07F44
+				/// @DnDParent : 56599993
+				/// @DnDArgument : "expr" "select_state.CHARACTER"
+				/// @DnDArgument : "var" "state"
+				state = select_state.CHARACTER;}
+		
 			/// @DnDAction : YoYo Games.Common.If_Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 3E8258B6
@@ -218,6 +231,19 @@ if(activated){	/// @DnDAction : YoYo Games.Switch.Switch
 		/// @DnDParent : 09C19EE9
 		/// @DnDArgument : "const" "select_state.COLOR"
 		case select_state.COLOR:	/// @DnDAction : YoYo Games.Common.If_Expression
+			/// @DnDVersion : 1
+			/// @DnDHash : 227581A9
+			/// @DnDParent : 663ACBE1
+			/// @DnDArgument : "expr" "InputPressed(INPUT_VERB.CANCEL)"
+			if(InputPressed(INPUT_VERB.CANCEL)){	/// @DnDAction : YoYo Games.Common.Variable
+				/// @DnDVersion : 1
+				/// @DnDHash : 601E118F
+				/// @DnDParent : 227581A9
+				/// @DnDArgument : "expr" "select_state.HAIR"
+				/// @DnDArgument : "var" "state"
+				state = select_state.HAIR;}
+		
+			/// @DnDAction : YoYo Games.Common.If_Expression
 			/// @DnDVersion : 1
 			/// @DnDHash : 01E0AA61
 			/// @DnDParent : 663ACBE1

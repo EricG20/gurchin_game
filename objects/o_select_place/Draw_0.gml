@@ -30,12 +30,37 @@ draw_sprite_ext(sprite_index, image_index, x + 0, y + 0, image_xscale + 0, image
 var l0256D8CB_0 = instance_place(x + 0, y + 0, [o_cursor]);if ((l0256D8CB_0 > 0)){	/// @DnDAction : YoYo Games.Particles.Effect
 	/// @DnDVersion : 1
 	/// @DnDHash : 2AF7831C
+	/// @DnDDisabled : 1
 	/// @DnDParent : 0256D8CB
 	/// @DnDArgument : "x" "random_range(bbox_left, bbox_right)"
 	/// @DnDArgument : "y" "random_range(bbox_top,bbox_bottom)"
 	/// @DnDArgument : "type" "7"
 	/// @DnDArgument : "where" "1"
-	effect_create_above(7, random_range(bbox_left, bbox_right), random_range(bbox_top,bbox_bottom), 0, $FFFFFF & $ffffff);}
+
+
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 3ACAA2DF
+	/// @DnDParent : 0256D8CB
+	/// @DnDArgument : "expr" "clamp(u_hoverin_me+.2*global.game_speed,0,1)"
+	/// @DnDArgument : "var" "u_hoverin_me"
+	u_hoverin_me = clamp(u_hoverin_me+.2*global.game_speed,0,1);}
+
+/// @DnDAction : YoYo Games.Collisions.If_Object_At
+/// @DnDVersion : 1.1
+/// @DnDHash : 7B87503B
+/// @DnDArgument : "x_relative" "1"
+/// @DnDArgument : "y_relative" "1"
+/// @DnDArgument : "object" "o_cursor"
+/// @DnDArgument : "not" "1"
+/// @DnDSaveInfo : "object" "o_cursor"
+var l7B87503B_0 = instance_place(x + 0, y + 0, [o_cursor]);if (!(l7B87503B_0 > 0)){	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 44781EAC
+	/// @DnDParent : 7B87503B
+	/// @DnDArgument : "expr" "clamp(u_hoverin_me-.2*global.game_speed,0,1)"
+	/// @DnDArgument : "var" "u_hoverin_me"
+	u_hoverin_me = clamp(u_hoverin_me-.2*global.game_speed,0,1);}
 
 /// @DnDAction : YoYo Games.Common.Execute_Script
 /// @DnDVersion : 1.1
@@ -43,6 +68,21 @@ var l0256D8CB_0 = instance_place(x + 0, y + 0, [o_cursor]);if ((l0256D8CB_0 > 0
 /// @DnDArgument : "script" "flash_operate"
 /// @DnDSaveInfo : "script" "flash_operate"
 script_execute(flash_operate);
+
+/// @DnDAction : YoYo Games.Drawing.Draw_Sprite_Transformed
+/// @DnDVersion : 1
+/// @DnDHash : 2329707A
+/// @DnDArgument : "x_relative" "1"
+/// @DnDArgument : "y_relative" "1"
+/// @DnDArgument : "xscale" "0"
+/// @DnDArgument : "xscale_relative" "1"
+/// @DnDArgument : "yscale" "0"
+/// @DnDArgument : "yscale_relative" "1"
+/// @DnDArgument : "alpha" "u_hoverin_me"
+/// @DnDArgument : "sprite" "spr_button_hover"
+/// @DnDArgument : "frame" "image_index"
+/// @DnDSaveInfo : "sprite" "spr_button_hover"
+draw_sprite_ext(spr_button_hover, image_index, x + 0, y + 0, image_xscale + 0, image_yscale + 0, 0, $FFFFFF & $ffffff, u_hoverin_me);
 
 /// @DnDAction : YoYo Games.Drawing.Draw_Value
 /// @DnDVersion : 1

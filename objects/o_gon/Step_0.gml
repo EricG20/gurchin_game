@@ -238,15 +238,16 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 					/// @DnDAction : YoYo Games.Common.Execute_Script
 					/// @DnDVersion : 1.1
 					/// @DnDHash : 0580221C
-					/// @DnDInput : 4
+					/// @DnDInput : 5
 					/// @DnDParent : 0505C266
 					/// @DnDArgument : "script" "scr_adjust_projectile_params"
 					/// @DnDArgument : "arg" "mybb"
 					/// @DnDArgument : "arg_1" "bulletrotation"
 					/// @DnDArgument : "arg_2" "51+random_range(-3,3)"
-					/// @DnDArgument : "arg_3" "s_ironbullet"
+					/// @DnDArgument : "arg_3" "mybb.sprite_index"
+					/// @DnDArgument : "arg_4" "5"
 					/// @DnDSaveInfo : "script" "scr_adjust_projectile_params"
-					script_execute(scr_adjust_projectile_params, mybb, bulletrotation, 51+random_range(-3,3), s_ironbullet);
+					script_execute(scr_adjust_projectile_params, mybb, bulletrotation, 51+random_range(-3,3), mybb.sprite_index, 5);
 				
 					/// @DnDAction : YoYo Games.Instances.Create_Instance
 					/// @DnDVersion : 1

@@ -180,6 +180,13 @@ else{	/// @DnDAction : YoYo Games.Switch.Switch
 /// @DnDHash : 686C6CFD
 instance_destroy();
 
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 766F5A3F
+/// @DnDArgument : "expr" "max_level"
+/// @DnDArgument : "var" "other.max_gun_level"
+other.max_gun_level = max_level;
+
 /// @DnDAction : YoYo Games.Switch.Switch
 /// @DnDVersion : 1
 /// @DnDHash : 027574C5

@@ -1,2 +1,53 @@
-# gurchin_game
+# gurchin\_game
 
+
+
+to-do:
+
+* Fix tab freezing(done)
+* **Fix game getting progressively greener** (HOW DO I FIX THIS????!?!)
+* Add 144 fps mode(done)
+* Add special meter(done)
+* Add Gurchin's Turret Special(done)
+* Add Zelinka(done)
+* Add Zelinka's Bullet Storm Special(done)
+* Add a default weapon for Zelinka(done)
+* Make character select interface(done)
+* **Make room for selecting missions**
+* Add XOO-P1NG-TON (done)
+* Add weapon level indicator(wip)
+* Adjust UI to look not so ugly (wip)
+* \- This means making health, fuel, and special meter more readable
+* \- (this also meant reworking the weapon display menu but I got to that luckily
+* Add and complete dasher enemy
+* **Add New York Invasion Mission**
+* **Add Gurchenis Gauntlet Mission**
+* Add G'Molgda (and his default and his special)
+* Add Gurchin II
+* Add emote system (for signaling to other players context sensitive information like "I need help!" or "Great job!", should be unique lines per character)
+* (MAYBE) Adjust the Empresses design (maybe I made her too skinny)
+* **Add Multiplayer for gods sake**
+* **Fix scr\_afterimage**
+
+
+
+Multiplayer facilitating changes to be made:
+
+* Rework grade rewarding sequence to something more object oriented and changable with internal game speed(so pausing finally works)
+* Figure out if players should share combo meter between them or have it be individual (how will this be graded?)
+* Figure out if players share flub or not
+* Make picking up flub increase score
+
+
+
+Far off stuff:
+
+* **Add Takema (and her default and her special)**
+* **Add J0UL3S (and their default and their special)**
+* **Add Qwoth Invasion Mission**
+* **Add Zorbulan Monument Mission**
+* **Rework Bat to be more interesting**
+* **Add default weapon setting**
+* **Add different vendors that players can choose to go into a mission with to increase game depth**
+* **Add weapon shop so buying weapons to load into your default (and a way to buy these weapons, should you also have to unlock them before being allowed to buy them?)**
+* make the game like really good or something

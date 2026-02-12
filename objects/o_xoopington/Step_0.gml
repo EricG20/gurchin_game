@@ -454,14 +454,14 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 					/// @DnDParent : 1D477A33
 					/// @DnDArgument : "expr" "floor(ammo_cap*global.ammo_bonus)"
 					/// @DnDArgument : "expr_1" "stance.CASUAL"
-					/// @DnDArgument : "expr_2" "5*weilder.curr_weapon_level"
+					/// @DnDArgument : "expr_2" "3*weilder.curr_weapon_level"
 					/// @DnDArgument : "var" "ammo"
 					/// @DnDArgument : "var_1" "anim"
 					/// @DnDArgument : "var_2" "full_shot_tokens"
 					/// @DnDArgument : "var_3" "charge"
 					ammo = floor(ammo_cap*global.ammo_bonus);
 					anim = stance.CASUAL;
-					full_shot_tokens = 5*weilder.curr_weapon_level;
+					full_shot_tokens = 3*weilder.curr_weapon_level;
 					charge = 0;
 				
 					/// @DnDAction : YoYo Games.Common.Variable

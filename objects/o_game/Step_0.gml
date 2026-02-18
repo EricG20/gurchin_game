@@ -212,11 +212,11 @@ var l511F3266_0 = state;switch(l511F3266_0){	/// @DnDAction : YoYo Games.Swit
 		/// @DnDInput : 2
 		/// @DnDParent : 535CEC9E
 		/// @DnDArgument : "expr" "global.flat_firerate_bonus+combo_num/200"
-		/// @DnDArgument : "expr_1" "global.flat_reload_bonus+combo_num/150"
+		/// @DnDArgument : "expr_1" "global.flat_reload_bonus+combo_num/250"
 		/// @DnDArgument : "var" "global.firerate_bonus"
 		/// @DnDArgument : "var_1" "global.reload_bonus"
 		global.firerate_bonus = global.flat_firerate_bonus+combo_num/200;
-		global.reload_bonus = global.flat_reload_bonus+combo_num/150;
+		global.reload_bonus = global.flat_reload_bonus+combo_num/250;
 	
 		/// @DnDAction : YoYo Games.Common.If_Expression
 		/// @DnDVersion : 1

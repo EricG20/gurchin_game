@@ -21,7 +21,8 @@ function __InputConfigVerbs()
 		AIMDOWN,
 		AIMLEFT,
 		AIMRIGHT,
-		SKIP
+		SKIP,
+		SWAP
     }
     
     enum INPUT_CLUSTER
@@ -53,6 +54,8 @@ function __InputConfigVerbs()
         InputDefineVerb(INPUT_VERB.AIMDOWN, "aimdown",    [vk_down,  "S"],     gp_axisrv);
         InputDefineVerb(INPUT_VERB.AIMLEFT, "aimleft",    [vk_left,  "A"],    -gp_axisrh);
         InputDefineVerb(INPUT_VERB.AIMRIGHT,"aimright",   [vk_right, "D"],     gp_axisrh);
+		InputDefineVerb(INPUT_VERB.SWAP,	"swap",		   "G",					gp_face2);
+		
     }
     else //Flip A/B over on Switch
     {

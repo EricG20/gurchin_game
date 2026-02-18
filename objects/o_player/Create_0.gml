@@ -1,3 +1,16 @@
+/// @DnDAction : YoYo Games.Data Structures.Create_Stack
+/// @DnDVersion : 1
+/// @DnDHash : 710E7669
+/// @DnDDisabled : 1
+/// @DnDArgument : "var" "weapon_invo"
+
+
+/// @DnDAction : YoYo Games.Data Structures.Create_List
+/// @DnDVersion : 1
+/// @DnDHash : 314717AB
+/// @DnDArgument : "var" "weapon_invo"
+weapon_invo = ds_list_create();
+
 /// @DnDAction : YoYo Games.Common.Execute_Script
 /// @DnDVersion : 1.1
 /// @DnDHash : 42667F57
@@ -42,10 +55,10 @@ ear_bobbing = 0;
 /// @DnDArgument : "xpos_relative" "1"
 /// @DnDArgument : "ypos_relative" "1"
 /// @DnDArgument : "var" "mygurn"
-/// @DnDArgument : "objectid" "o_gon"
+/// @DnDArgument : "objectid" "o_emptyhanded"
 /// @DnDArgument : "layer" ""Instances_Front""
-/// @DnDSaveInfo : "objectid" "o_gon"
-mygurn = instance_create_layer(x + 0, y + 0, "Instances_Front", o_gon);
+/// @DnDSaveInfo : "objectid" "o_emptyhanded"
+mygurn = instance_create_layer(x + 0, y + 0, "Instances_Front", o_emptyhanded);
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
@@ -66,16 +79,25 @@ instance_create_layer(x + 0, y + 0, "Instances", o_camera);
 /// @DnDAction : YoYo Games.Data Structures.Create_Map
 /// @DnDVersion : 1
 /// @DnDHash : 13A26F19
+/// @DnDInput : 3
 /// @DnDArgument : "var" "weapon_levels"
+/// @DnDArgument : "var_1" "weapon_ammo"
+/// @DnDArgument : "var_2" "weapon_reload_info"
 weapon_levels = ds_map_create();
+weapon_ammo = ds_map_create();
+weapon_reload_info = ds_map_create();
 
 /// @DnDAction : YoYo Games.Data Structures.Map_Set_Value
 /// @DnDVersion : 1
 /// @DnDHash : 04CA44E1
+/// @DnDInput : 2
 /// @DnDArgument : "var" "weapon_levels"
 /// @DnDArgument : "key" "default_gun"
 /// @DnDArgument : "value" "1"
+/// @DnDArgument : "key_1" "o_emptyhanded"
+/// @DnDArgument : "value_1" "1"
 ds_map_replace(weapon_levels, default_gun, 1);
+ds_map_replace(weapon_levels, o_emptyhanded, 1);
 
 /// @DnDAction : YoYo Games.Instances.Instance_Get_Count
 /// @DnDVersion : 1
@@ -89,18 +111,19 @@ var player_num = instance_number(o_player);
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1
 /// @DnDHash : 7EE66E43
+/// @DnDDisabled : 1
 /// @DnDArgument : "var" "player_num"
 /// @DnDArgument : "value" "1"
-if(player_num == 1){	/// @DnDAction : YoYo Games.Common.Variable
-	/// @DnDVersion : 1
-	/// @DnDHash : 47C4C9FD
-	/// @DnDComment : afro-bun hairstyle
-	/// @DnDInput : 3
-	/// @DnDDisabled : 1
-	/// @DnDParent : 7EE66E43
-	/// @DnDArgument : "expr" "s_player_afro_bun"
-	/// @DnDArgument : "expr_1" "s_player_afro_bun_bangs"
-	/// @DnDArgument : "expr_2" "c_purple"
-	/// @DnDArgument : "var" "hair_sprite"
-	/// @DnDArgument : "var_1" "bangs_sprite"
-	/// @DnDArgument : "var_2" "suit_color"}
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 47C4C9FD
+/// @DnDComment : afro-bun hairstyle
+/// @DnDInput : 3
+/// @DnDDisabled : 1
+/// @DnDParent : 7EE66E43
+/// @DnDArgument : "expr" "s_player_afro_bun"
+/// @DnDArgument : "expr_1" "s_player_afro_bun_bangs"
+/// @DnDArgument : "expr_2" "c_purple"
+/// @DnDArgument : "var" "hair_sprite"
+/// @DnDArgument : "var_1" "bangs_sprite"
+/// @DnDArgument : "var_2" "suit_color"

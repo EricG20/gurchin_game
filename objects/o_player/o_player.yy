@@ -84,6 +84,7 @@
     {"$GMObjectProperty":"v2","%Name":"hair_weight","filters":[],"listItems":[],"multiselect":false,"name":"hair_weight","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1.5","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"default_gun","filters":[],"listItems":[],"multiselect":false,"name":"default_gun","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"o_gon","varType":4,},
     {"$GMObjectProperty":"v2","%Name":"max_gun_level","filters":[],"listItems":[],"multiselect":false,"name":"max_gun_level","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"5","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"weapon_invo_cap","filters":[],"listItems":[],"multiselect":false,"name":"weapon_invo_cap","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

@@ -6,8 +6,8 @@
   "name":"o_emptyhanded",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"weapons",
+    "path":"folders/Objects/weapons.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -23,11 +23,17 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v2","%Name":"ammo","filters":[],"listItems":[],"multiselect":false,"name":"ammo","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"anim","filters":[],"listItems":[],"multiselect":false,"name":"anim","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"stance.CASUAL","varType":4,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"s_empty_sprite_for_bald",
+    "path":"sprites/s_empty_sprite_for_bald/s_empty_sprite_for_bald.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

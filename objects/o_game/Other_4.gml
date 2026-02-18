@@ -119,6 +119,23 @@ var l61EB12DC_0 = state;switch(l61EB12DC_0){	/// @DnDAction : YoYo Games.Swit
 				boss_bool = false;
 				final_wave = 10;
 			
+				/// @DnDAction : YoYo Games.Instances.If_Instance_Exists
+				/// @DnDVersion : 1
+				/// @DnDHash : 7C81F75E
+				/// @DnDParent : 559C0940
+				/// @DnDArgument : "obj" "o_player"
+				/// @DnDSaveInfo : "obj" "o_player"
+				var l7C81F75E_0 = false;l7C81F75E_0 = instance_exists(o_player);if(l7C81F75E_0){	/// @DnDAction : YoYo Games.Instances.Set_Instance_Var
+					/// @DnDVersion : 1
+					/// @DnDHash : 3AF6FEBD
+					/// @DnDApplyTo : o_player
+					/// @DnDParent : 7C81F75E
+					/// @DnDArgument : "value" "false"
+					/// @DnDArgument : "instvar" "7"
+					with(o_player) {
+					persistent = false;
+					}}
+			
 				/// @DnDAction : YoYo Games.Instances.Create_Instance
 				/// @DnDVersion : 1
 				/// @DnDHash : 5BF05470
@@ -137,32 +154,6 @@ var l61EB12DC_0 = state;switch(l61EB12DC_0){	/// @DnDAction : YoYo Games.Swit
 				/// @DnDArgument : "expr" "Layer_1"
 				/// @DnDArgument : "var" "cardh.sprite_index"
 				cardh.sprite_index = Layer_1;
-			
-				/// @DnDAction : YoYo Games.Instances.Create_Instance
-				/// @DnDVersion : 1
-				/// @DnDHash : 06372EF1
-				/// @DnDParent : 559C0940
-				/// @DnDArgument : "xpos" "sethisx"
-				/// @DnDArgument : "ypos" "sethisy"
-				/// @DnDArgument : "var" "dude"
-				/// @DnDArgument : "objectid" "o_player"
-				/// @DnDSaveInfo : "objectid" "o_player"
-				dude = instance_create_layer(sethisx, sethisy, "Instances", o_player);
-			
-				/// @DnDAction : YoYo Games.Common.Execute_Script
-				/// @DnDVersion : 1.1
-				/// @DnDHash : 40FC5A5A
-				/// @DnDInput : 3
-				/// @DnDApplyTo : dude
-				/// @DnDParent : 559C0940
-				/// @DnDArgument : "script" "scr_change_character"
-				/// @DnDArgument : "arg" "ds_map_find_value(other.player_details, "player_char")"
-				/// @DnDArgument : "arg_1" "ds_map_find_value(other.player_details,"player_hair")"
-				/// @DnDArgument : "arg_2" "ds_map_find_value(other.player_details, "player_color")"
-				/// @DnDSaveInfo : "script" "scr_change_character"
-				with(dude) {
-					script_execute(scr_change_character, ds_map_find_value(other.player_details, "player_char"), ds_map_find_value(other.player_details,"player_hair"), ds_map_find_value(other.player_details, "player_color"));
-				}
 			
 				/// @DnDAction : YoYo Games.Random.Choose
 				/// @DnDVersion : 1
@@ -308,7 +299,33 @@ var l61EB12DC_0 = state;switch(l61EB12DC_0){	/// @DnDAction : YoYo Games.Swit
 				/// @DnDArgument : "var" "respawn_x"
 				/// @DnDArgument : "var_1" "respawn_y"
 				respawn_x = sethisx;
-				respawn_y = sethisy;	break;}	break;
+				respawn_y = sethisy;	break;}
+	
+		/// @DnDAction : YoYo Games.Instances.Create_Instance
+		/// @DnDVersion : 1
+		/// @DnDHash : 404972C0
+		/// @DnDParent : 268C1193
+		/// @DnDArgument : "xpos" "sethisx"
+		/// @DnDArgument : "ypos" "sethisy"
+		/// @DnDArgument : "var" "dude"
+		/// @DnDArgument : "objectid" "o_player"
+		/// @DnDSaveInfo : "objectid" "o_player"
+		dude = instance_create_layer(sethisx, sethisy, "Instances", o_player);
+	
+		/// @DnDAction : YoYo Games.Common.Execute_Script
+		/// @DnDVersion : 1.1
+		/// @DnDHash : 0229EE47
+		/// @DnDInput : 3
+		/// @DnDApplyTo : dude
+		/// @DnDParent : 268C1193
+		/// @DnDArgument : "script" "scr_change_character"
+		/// @DnDArgument : "arg" "ds_map_find_value(other.player_details, "player_char")"
+		/// @DnDArgument : "arg_1" "ds_map_find_value(other.player_details,"player_hair")"
+		/// @DnDArgument : "arg_2" "ds_map_find_value(other.player_details, "player_color")"
+		/// @DnDSaveInfo : "script" "scr_change_character"
+		with(dude) {
+			script_execute(scr_change_character, ds_map_find_value(other.player_details, "player_char"), ds_map_find_value(other.player_details,"player_hair"), ds_map_find_value(other.player_details, "player_color"));
+		}	break;
 
 	/// @DnDAction : YoYo Games.Switch.Case
 	/// @DnDVersion : 1

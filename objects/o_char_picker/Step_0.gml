@@ -139,10 +139,28 @@ if(activated){	/// @DnDAction : YoYo Games.Switch.Switch
 			if(InputPressed(INPUT_VERB.CANCEL)){	/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDVersion : 1
 				/// @DnDHash : 2DA07F44
+				/// @DnDInput : 2
 				/// @DnDParent : 56599993
 				/// @DnDArgument : "expr" "select_state.CHARACTER"
 				/// @DnDArgument : "var" "state"
-				state = select_state.CHARACTER;}
+				/// @DnDArgument : "var_1" "hair_style_in_question"
+				state = select_state.CHARACTER;
+				hair_style_in_question = 0;
+			
+				/// @DnDAction : YoYo Games.Data Structures.DS_Clear
+				/// @DnDVersion : 1
+				/// @DnDHash : 51CA4F40
+				/// @DnDParent : 56599993
+				/// @DnDArgument : "var" "hair_styles"
+				ds_list_clear(hair_styles);
+			
+				/// @DnDAction : YoYo Games.Data Structures.List_Add
+				/// @DnDVersion : 1
+				/// @DnDHash : 2D9D7FF7
+				/// @DnDParent : 56599993
+				/// @DnDArgument : "var" "hair_styles"
+				/// @DnDArgument : "value" ""default""
+				ds_list_add(hair_styles, "default");}
 		
 			/// @DnDAction : YoYo Games.Common.If_Variable
 			/// @DnDVersion : 1

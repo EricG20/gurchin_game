@@ -21,6 +21,54 @@ walk_bob_height = 0;
 ear_bobbing = 0;
 hp = clamp(hp,0,max_hp);
 
+/// @DnDAction : YoYo Games.Data Structures.List_Count
+/// @DnDVersion : 1
+/// @DnDHash : 54D13B90
+/// @DnDArgument : "assignee" "weapon_iteration_num"
+/// @DnDArgument : "assignee_temp" "1"
+/// @DnDArgument : "var" "weapon_invo"
+var weapon_iteration_num = ds_list_size(weapon_invo);
+
+/// @DnDAction : YoYo Games.Loops.For_Loop
+/// @DnDVersion : 1
+/// @DnDHash : 58E44ECC
+/// @DnDArgument : "cond" "i < weapon_iteration_num"
+for(i = 0; i < weapon_iteration_num; i += 1) {	/// @DnDAction : YoYo Games.Data Structures.List_Get_At
+	/// @DnDVersion : 1
+	/// @DnDHash : 1A2F4646
+	/// @DnDParent : 58E44ECC
+	/// @DnDArgument : "assignee" "weapon_iteration"
+	/// @DnDArgument : "assignee_temp" "1"
+	/// @DnDArgument : "var" "weapon_invo"
+	/// @DnDArgument : "index" "i"
+	var weapon_iteration = ds_list_find_value(weapon_invo, i);
+
+	/// @DnDAction : YoYo Games.Data Structures.Map_Get_Value
+	/// @DnDVersion : 1
+	/// @DnDHash : 08084D46
+	/// @DnDParent : 58E44ECC
+	/// @DnDArgument : "assignee" "is_this_weapon_reloading"
+	/// @DnDArgument : "assignee_temp" "1"
+	/// @DnDArgument : "var" "weapon_reload_info"
+	/// @DnDArgument : "key" "weapon_iteration"
+	var is_this_weapon_reloading = ds_map_find_value(weapon_reload_info, weapon_iteration);
+
+	/// @DnDAction : YoYo Games.Common.If_Undefined
+	/// @DnDVersion : 1
+	/// @DnDHash : 58365525
+	/// @DnDComment : BRO THE WEAPON IS RELOADING!
+	/// @DnDParent : 58E44ECC
+	/// @DnDArgument : "var" "is_this_weapon_reloading"
+	/// @DnDArgument : "not" "1"
+	if(is_this_weapon_reloading != undefined){	/// @DnDAction : YoYo Games.Data Structures.Map_Set_Value
+		/// @DnDVersion : 1
+		/// @DnDHash : 4858E78F
+		/// @DnDParent : 58365525
+		/// @DnDArgument : "var" "weapon_reload_info"
+		/// @DnDArgument : "key" "weapon_iteration"
+		/// @DnDArgument : "value" "clamp(is_this_weapon_reloading - (.5)*global.game_speed, 0, 9999)"
+		ds_map_replace(weapon_reload_info, weapon_iteration, clamp(is_this_weapon_reloading - (.5)*global.game_speed, 0, 9999));}}
+
 /// @DnDAction : YoYo Games.Common.If_Undefined
 /// @DnDVersion : 1
 /// @DnDHash : 1DD67932

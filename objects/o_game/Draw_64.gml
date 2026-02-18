@@ -22,34 +22,10 @@ var l03FDEC77_0 = state;switch(l03FDEC77_0){	/// @DnDAction : YoYo Games.Swit
 	case gm.LEVEL:	/// @DnDAction : YoYo Games.Drawing.Set_Font
 		/// @DnDVersion : 1
 		/// @DnDHash : 2C4580BD
+		/// @DnDDisabled : 1
 		/// @DnDParent : 255F2C7D
 		/// @DnDArgument : "font" "Font1"
-		/// @DnDSaveInfo : "font" "Font1"
-		draw_set_font(Font1);
-	
-		/// @DnDAction : YoYo Games.Drawing.Draw_Value_Transformed
-		/// @DnDVersion : 1
-		/// @DnDHash : 23214C71
-		/// @DnDParent : 255F2C7D
-		/// @DnDArgument : "x" "60"
-		/// @DnDArgument : "y" "150"
-		/// @DnDArgument : "xscale" "2"
-		/// @DnDArgument : "yscale" "2"
-		/// @DnDArgument : "caption" """"
-		/// @DnDArgument : "text" "floor(display_score)"
-		draw_text_transformed(60, 150, string("") + string(floor(display_score)), 2, 2, 0);
-	
-		/// @DnDAction : YoYo Games.Drawing.Draw_Value_Transformed
-		/// @DnDVersion : 1
-		/// @DnDHash : 17DD5291
-		/// @DnDParent : 255F2C7D
-		/// @DnDArgument : "x" "60"
-		/// @DnDArgument : "y" "300"
-		/// @DnDArgument : "xscale" "3"
-		/// @DnDArgument : "yscale" "3"
-		/// @DnDArgument : "caption" ""WAVE ""
-		/// @DnDArgument : "text" "pylon_wave_number"
-		draw_text_transformed(60, 300, string("WAVE ") + string(pylon_wave_number), 3, 3, 0);	break;
+		/// @DnDSaveInfo : "font" "Font1"	break;
 
 	/// @DnDAction : YoYo Games.Switch.Case
 	/// @DnDVersion : 1
@@ -128,7 +104,31 @@ var l03FDEC77_0 = state;switch(l03FDEC77_0){	/// @DnDAction : YoYo Games.Swit
 	/// @DnDHash : 08A52609
 	/// @DnDParent : 03FDEC77
 	/// @DnDArgument : "const" "gm.PYLON"
-	case gm.PYLON:	/// @DnDAction : YoYo Games.Common.If_Variable
+	case gm.PYLON:	/// @DnDAction : YoYo Games.Drawing.Draw_Value_Transformed
+		/// @DnDVersion : 1
+		/// @DnDHash : 23214C71
+		/// @DnDParent : 08A52609
+		/// @DnDArgument : "x" "60"
+		/// @DnDArgument : "y" "150"
+		/// @DnDArgument : "xscale" "2"
+		/// @DnDArgument : "yscale" "2"
+		/// @DnDArgument : "caption" """"
+		/// @DnDArgument : "text" "floor(display_score)"
+		draw_text_transformed(60, 150, string("") + string(floor(display_score)), 2, 2, 0);
+	
+		/// @DnDAction : YoYo Games.Drawing.Draw_Value_Transformed
+		/// @DnDVersion : 1
+		/// @DnDHash : 17DD5291
+		/// @DnDParent : 08A52609
+		/// @DnDArgument : "x" "60"
+		/// @DnDArgument : "y" "300"
+		/// @DnDArgument : "xscale" "3"
+		/// @DnDArgument : "yscale" "3"
+		/// @DnDArgument : "caption" ""WAVE ""
+		/// @DnDArgument : "text" "pylon_wave_number"
+		draw_text_transformed(60, 300, string("WAVE ") + string(pylon_wave_number), 3, 3, 0);
+	
+		/// @DnDAction : YoYo Games.Common.If_Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 3A5C9965
 		/// @DnDParent : 08A52609

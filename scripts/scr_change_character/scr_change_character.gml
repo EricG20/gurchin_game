@@ -104,11 +104,12 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDAction : YoYo Games.Instances.Change_Instance
 			/// @DnDVersion : 1
 			/// @DnDHash : 78C6DEDE
+			/// @DnDDisabled : 1
 			/// @DnDApplyTo : mygurn
 			/// @DnDParent : 39FEBF4E
 			/// @DnDArgument : "objind" "o_goozi"
 			/// @DnDSaveInfo : "objind" "o_goozi"
-			with(mygurn) instance_change(o_goozi, true);
+		
 		
 			/// @DnDAction : YoYo Games.Data Structures.Map_Set_Value
 			/// @DnDVersion : 1
@@ -188,4 +189,21 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 	/// @DnDParent : 7A41EDD0
 	/// @DnDArgument : "expr" "color_of_suit"
 	/// @DnDArgument : "var" "suit_color"
-	suit_color = color_of_suit;}
+	suit_color = color_of_suit;
+
+	/// @DnDAction : YoYo Games.Data Structures.Stack_Push
+	/// @DnDVersion : 1
+	/// @DnDHash : 09F9B7E0
+	/// @DnDDisabled : 1
+	/// @DnDParent : 7A41EDD0
+	/// @DnDArgument : "var" "weapon_invo"
+	/// @DnDArgument : "value" "default_gun"
+
+
+	/// @DnDAction : YoYo Games.Data Structures.List_Add
+	/// @DnDVersion : 1
+	/// @DnDHash : 121CA9B7
+	/// @DnDParent : 7A41EDD0
+	/// @DnDArgument : "var" "weapon_invo"
+	/// @DnDArgument : "value" "default_gun"
+	ds_list_add(weapon_invo, default_gun);}

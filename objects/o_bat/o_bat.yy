@@ -41,6 +41,8 @@
     {"$GMObjectProperty":"v2","%Name":"anim","filters":[],"listItems":[],"multiselect":false,"name":"anim","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"stance.CASUAL","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"numbah","filters":[],"listItems":[],"multiselect":false,"name":"numbah","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"weilder","filters":[],"listItems":[],"multiselect":false,"name":"weilder","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"o_player","varType":4,},
+    {"$GMObjectProperty":"v2","%Name":"ammo","filters":[],"listItems":[],"multiselect":false,"name":"ammo","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"ammo_cap","filters":[],"listItems":[],"multiselect":false,"name":"ammo_cap","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

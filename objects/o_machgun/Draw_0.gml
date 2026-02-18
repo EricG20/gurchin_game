@@ -14,9 +14,7 @@
 /// @DnDArgument : "var" "weilder.curr_weapon_level"
 /// @DnDArgument : "op" "4"
 /// @DnDArgument : "value" "3"
-if(weilder.curr_weapon_level >= 3)
-{
-	/// @DnDAction : YoYo Games.Common.Variable
+if(weilder.curr_weapon_level >= 3){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 28599AE1
 	/// @DnDParent : 4E071DCC
@@ -35,23 +33,18 @@ if(weilder.curr_weapon_level >= 3)
 	/// @DnDArgument : "rot_relative" "1"
 	/// @DnDArgument : "sprite" "armed_sprite"
 	/// @DnDArgument : "col" "$FF666666"
-	draw_sprite_ext(armed_sprite, 0, weilder.x+(kickbackx+shakex), weilder.y+(shakey+kickbacky)-49+(weilder.head_offset_y)/2, 1, weilder.facing, image_angle + androtate*weilder.facing, $FF666666 & $ffffff, 1);
-}
+	draw_sprite_ext(armed_sprite, 0, weilder.x+(kickbackx+shakex), weilder.y+(shakey+kickbacky)-49+(weilder.head_offset_y)/2, 1, weilder.facing, image_angle + androtate*weilder.facing, $FF666666 & $ffffff, 1);}
 
 /// @DnDAction : YoYo Games.Switch.Switch
 /// @DnDVersion : 1
 /// @DnDHash : 29A2478F
 /// @DnDArgument : "expr" "anim"
-var l29A2478F_0 = anim;
-switch(l29A2478F_0)
-{
-	/// @DnDAction : YoYo Games.Switch.Case
+var l29A2478F_0 = anim;switch(l29A2478F_0){	/// @DnDAction : YoYo Games.Switch.Case
 	/// @DnDVersion : 1
 	/// @DnDHash : 1D403BFA
 	/// @DnDParent : 29A2478F
 	/// @DnDArgument : "const" "stance.CASUAL"
-	case stance.CASUAL:
-	/// @DnDAction : YoYo Games.Common.Variable
+	case stance.CASUAL:	/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 355549E6
 		/// @DnDParent : 1D403BFA
@@ -70,16 +63,14 @@ switch(l29A2478F_0)
 		/// @DnDArgument : "rot_relative" "1"
 		/// @DnDArgument : "sprite" "armed_sprite"
 		/// @DnDArgument : "frame" "image_index"
-		draw_sprite_ext(armed_sprite, image_index, weilder.x+(kickbackx+shakex), weilder.y+(shakey+kickbacky)-41+(weilder.head_offset_y)/2, 1, weilder.facing, image_angle + androtate*weilder.facing, $FFFFFF & $ffffff, 1);
-	break;
+		draw_sprite_ext(armed_sprite, image_index, weilder.x+(kickbackx+shakex), weilder.y+(shakey+kickbacky)-41+(weilder.head_offset_y)/2, 1, weilder.facing, image_angle + androtate*weilder.facing, $FFFFFF & $ffffff, 1);	break;
 
 	/// @DnDAction : YoYo Games.Switch.Case
 	/// @DnDVersion : 1
 	/// @DnDHash : 0A3B8944
 	/// @DnDParent : 29A2478F
 	/// @DnDArgument : "const" "stance.SHOT"
-	case stance.SHOT:
-	/// @DnDAction : YoYo Games.Common.Variable
+	case stance.SHOT:	/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 2519F1D4
 		/// @DnDInput : 2
@@ -104,16 +95,14 @@ switch(l29A2478F_0)
 		/// @DnDArgument : "rot_relative" "1"
 		/// @DnDArgument : "sprite" "armed_sprite"
 		/// @DnDArgument : "frame" "image_index"
-		draw_sprite_ext(armed_sprite, image_index, x + weilder.facing*kickbackx+shakex, y + shakey+kickbacky, 1, weilder.facing, image_angle + androtate*weilder.facing, $FFFFFF & $ffffff, 1);
-	break;
+		draw_sprite_ext(armed_sprite, image_index, x + weilder.facing*kickbackx+shakex, y + shakey+kickbacky, 1, weilder.facing, image_angle + androtate*weilder.facing, $FFFFFF & $ffffff, 1);	break;
 
 	/// @DnDAction : YoYo Games.Switch.Case
 	/// @DnDVersion : 1
 	/// @DnDHash : 79ADA57F
 	/// @DnDParent : 29A2478F
 	/// @DnDArgument : "const" "stance.GUARDING"
-	case stance.GUARDING:
-	/// @DnDAction : YoYo Games.Common.Variable
+	case stance.GUARDING:	/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 0C731A18
 		/// @DnDInput : 3
@@ -149,9 +138,7 @@ switch(l29A2478F_0)
 		/// @DnDParent : 79ADA57F
 		/// @DnDArgument : "var" "numbah"
 		/// @DnDArgument : "op" "3"
-		if(numbah <= 0)
-{
-	/// @DnDAction : YoYo Games.Common.Variable
+		if(numbah <= 0){	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 280703AE
 			/// @DnDInput : 2
@@ -161,17 +148,14 @@ switch(l29A2478F_0)
 			/// @DnDArgument : "var" "anim"
 			/// @DnDArgument : "var_1" "sprite_index"
 			anim = stance.CASUAL;
-			sprite_index = s_piztol;
-}
-	break;
+			sprite_index = s_piztol;}	break;
 
 	/// @DnDAction : YoYo Games.Switch.Case
 	/// @DnDVersion : 1
 	/// @DnDHash : 309F228F
 	/// @DnDParent : 29A2478F
 	/// @DnDArgument : "const" "stance.RELOAD"
-	case stance.RELOAD:
-	/// @DnDAction : YoYo Games.Common.Variable
+	case stance.RELOAD:	/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 6CA8A538
 		/// @DnDParent : 309F228F
@@ -210,6 +194,4 @@ switch(l29A2478F_0)
 		/// @DnDArgument : "arg_9" "false"
 		/// @DnDArgument : "arg_10" "1"
 		/// @DnDSaveInfo : "script" "draw_wheel_ext"
-		script_execute(draw_wheel_ext, o_cursor.x, o_cursor.y, 40, 30, c_lime, charge, 180/global.reload_bonus, 1, 90, false, 1);
-	break;
-}
+		script_execute(draw_wheel_ext, o_cursor.x, o_cursor.y, 40, 30, c_lime, charge, 180/global.reload_bonus, 1, 90, false, 1);	break;}

@@ -2,16 +2,12 @@
 /// @DnDVersion : 1
 /// @DnDHash : 29A2478F
 /// @DnDArgument : "expr" "anim"
-var l29A2478F_0 = anim;
-switch(l29A2478F_0)
-{
-	/// @DnDAction : YoYo Games.Switch.Case
+var l29A2478F_0 = anim;switch(l29A2478F_0){	/// @DnDAction : YoYo Games.Switch.Case
 	/// @DnDVersion : 1
 	/// @DnDHash : 1D403BFA
 	/// @DnDParent : 29A2478F
 	/// @DnDArgument : "const" "stance.CASUAL"
-	case stance.CASUAL:
-	/// @DnDAction : YoYo Games.Common.Variable
+	case stance.CASUAL:	/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 355549E6
 		/// @DnDParent : 1D403BFA
@@ -31,16 +27,14 @@ switch(l29A2478F_0)
 		/// @DnDArgument : "sprite" "s_shotgun_w_hands"
 		/// @DnDArgument : "frame" "image_index"
 		/// @DnDSaveInfo : "sprite" "s_shotgun_w_hands"
-		draw_sprite_ext(s_shotgun_w_hands, image_index, weilder.x+(kickbackx+shakex), weilder.y+(shakey+kickbacky)-41+(weilder.head_offset_y)/2, 1, weilder.facing, image_angle + androtate*weilder.facing, $FFFFFF & $ffffff, 1);
-	break;
+		draw_sprite_ext(s_shotgun_w_hands, image_index, weilder.x+(kickbackx+shakex), weilder.y+(shakey+kickbacky)-41+(weilder.head_offset_y)/2, 1, weilder.facing, image_angle + androtate*weilder.facing, $FFFFFF & $ffffff, 1);	break;
 
 	/// @DnDAction : YoYo Games.Switch.Case
 	/// @DnDVersion : 1
 	/// @DnDHash : 0A3B8944
 	/// @DnDParent : 29A2478F
 	/// @DnDArgument : "const" "stance.SHOT"
-	case stance.SHOT:
-	/// @DnDAction : YoYo Games.Common.Variable
+	case stance.SHOT:	/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 2519F1D4
 		/// @DnDInput : 2
@@ -65,16 +59,14 @@ switch(l29A2478F_0)
 		/// @DnDArgument : "rot_relative" "1"
 		/// @DnDArgument : "sprite" "sprite_index"
 		/// @DnDArgument : "frame" "image_index"
-		draw_sprite_ext(sprite_index, image_index, x + weilder.facing*kickbackx+shakex, y + shakey+kickbacky, 1, weilder.facing, image_angle + androtate*weilder.facing, $FFFFFF & $ffffff, 1);
-	break;
+		draw_sprite_ext(sprite_index, image_index, x + weilder.facing*kickbackx+shakex, y + shakey+kickbacky, 1, weilder.facing, image_angle + androtate*weilder.facing, $FFFFFF & $ffffff, 1);	break;
 
 	/// @DnDAction : YoYo Games.Switch.Case
 	/// @DnDVersion : 1
 	/// @DnDHash : 79ADA57F
 	/// @DnDParent : 29A2478F
 	/// @DnDArgument : "const" "stance.GUARDING"
-	case stance.GUARDING:
-	/// @DnDAction : YoYo Games.Common.Variable
+	case stance.GUARDING:	/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 0C731A18
 		/// @DnDInput : 3
@@ -110,9 +102,7 @@ switch(l29A2478F_0)
 		/// @DnDParent : 79ADA57F
 		/// @DnDArgument : "var" "numbah"
 		/// @DnDArgument : "op" "3"
-		if(numbah <= 0)
-{
-	/// @DnDAction : YoYo Games.Common.Variable
+		if(numbah <= 0){	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 280703AE
 			/// @DnDInput : 2
@@ -122,17 +112,14 @@ switch(l29A2478F_0)
 			/// @DnDArgument : "var" "anim"
 			/// @DnDArgument : "var_1" "sprite_index"
 			anim = stance.CASUAL;
-			sprite_index = s_piztol;
-}
-	break;
+			sprite_index = s_piztol;}	break;
 
 	/// @DnDAction : YoYo Games.Switch.Case
 	/// @DnDVersion : 1
 	/// @DnDHash : 2FA5C165
 	/// @DnDParent : 29A2478F
 	/// @DnDArgument : "const" "stance.RELOAD"
-	case stance.RELOAD:
-	/// @DnDAction : YoYo Games.Common.Variable
+	case stance.RELOAD:	/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 73E6FFB0
 		/// @DnDParent : 2FA5C165
@@ -177,8 +164,8 @@ switch(l29A2478F_0)
 		/// @DnDInput : 11
 		/// @DnDParent : 2FA5C165
 		/// @DnDArgument : "script" "draw_wheel_ext"
-		/// @DnDArgument : "arg" "o_cursor.x"
-		/// @DnDArgument : "arg_1" "o_cursor.y"
+		/// @DnDArgument : "arg" "weilder.reticle.x"
+		/// @DnDArgument : "arg_1" "weilder.reticle.y"
 		/// @DnDArgument : "arg_2" "40"
 		/// @DnDArgument : "arg_3" "30"
 		/// @DnDArgument : "arg_4" "c_lime"
@@ -189,6 +176,4 @@ switch(l29A2478F_0)
 		/// @DnDArgument : "arg_9" "false"
 		/// @DnDArgument : "arg_10" "1"
 		/// @DnDSaveInfo : "script" "draw_wheel_ext"
-		script_execute(draw_wheel_ext, o_cursor.x, o_cursor.y, 40, 30, c_lime, charge, 120, 1, 90, false, 1);
-	break;
-}
+		script_execute(draw_wheel_ext, weilder.reticle.x, weilder.reticle.y, 40, 30, c_lime, charge, 120, 1, 90, false, 1);	break;}

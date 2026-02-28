@@ -35,8 +35,8 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 3780D062
 	/// @DnDParent : 7299994B
-	/// @DnDArgument : "angle" "point_direction(x,y,o_cursor.x,o_cursor.y)"
-	image_angle = point_direction(x,y,o_cursor.x,o_cursor.y);
+	/// @DnDArgument : "angle" "point_direction(x,y,weilder.reticle.x,weilder.reticle.y)"
+	image_angle = point_direction(x,y,weilder.reticle.x,weilder.reticle.y);
 
 	/// @DnDAction : YoYo Games.Common.If_Variable
 	/// @DnDVersion : 1
@@ -163,8 +163,8 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 					/// @DnDHash : 7CF4E90F
 					/// @DnDParent : 05D3A6F9
 					/// @DnDArgument : "var" "bulletrotation"
-					/// @DnDArgument : "value" "point_direction(x,y,o_cursor.x,o_cursor.y)+random_range(-8,8)"
-					var bulletrotation = point_direction(x,y,o_cursor.x,o_cursor.y)+random_range(-8,8);
+					/// @DnDArgument : "value" "point_direction(x,y,weilder.reticle.x,weilder.reticle.y)+random_range(-8,8)"
+					var bulletrotation = point_direction(x,y,weilder.reticle.x,weilder.reticle.y)+random_range(-8,8);
 				
 					/// @DnDAction : YoYo Games.Instances.Set_Instance_Var
 					/// @DnDVersion : 1
@@ -265,8 +265,8 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 						/// @DnDHash : 0449FDFF
 						/// @DnDParent : 712198C2
 						/// @DnDArgument : "var" "targg"
-						/// @DnDArgument : "value" "instance_nearest(o_cursor.x,y+o_cursor.y, o_enemy)"
-						var targg = instance_nearest(o_cursor.x,y+o_cursor.y, o_enemy);
+						/// @DnDArgument : "value" "instance_nearest(weilder.reticle.x,y+weilder.reticle.y, o_enemy)"
+						var targg = instance_nearest(weilder.reticle.x,y+weilder.reticle.y, o_enemy);
 					
 						/// @DnDAction : YoYo Games.Common.If_Variable
 						/// @DnDVersion : 1
@@ -307,8 +307,8 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDHash : 59382E9B
 				/// @DnDApplyTo : frash
 				/// @DnDParent : 3A9CC710
-				/// @DnDArgument : "angle" "point_direction(x,y,o_cursor.x,o_cursor.y)"
-				with(frash) image_angle = point_direction(x,y,o_cursor.x,o_cursor.y);
+				/// @DnDArgument : "angle" "point_direction(x,y,weilder.reticle.x,weilder.reticle.y)"
+				with(frash) image_angle = point_direction(x,y,weilder.reticle.x,weilder.reticle.y);
 			
 				/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDVersion : 1

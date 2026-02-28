@@ -1,3 +1,10 @@
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 0FA83F9B
+/// @DnDArgument : "expr" "id"
+/// @DnDArgument : "var" "mygurn.weilder"
+mygurn.weilder = id;
+
 /// @DnDAction : YoYo Games.Switch.Switch
 /// @DnDVersion : 1
 /// @DnDHash : 7DB897A8

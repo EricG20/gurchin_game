@@ -181,7 +181,39 @@ var l3DD1719F_0 = grade;switch(l3DD1719F_0){	/// @DnDAction : YoYo Games.Swit
 /// @DnDVersion : 1
 /// @DnDHash : 22AEB4DA
 /// @DnDArgument : "expr" "words"
-var l22AEB4DA_0 = words;switch(l22AEB4DA_0){	/// @DnDAction : YoYo Games.Switch.Case
+var l22AEB4DA_0 = words;switch(l22AEB4DA_0){	/// @DnDAction : YoYo Games.Switch.Default
+	/// @DnDVersion : 1
+	/// @DnDHash : 023B387D
+	/// @DnDParent : 22AEB4DA
+	default:	/// @DnDAction : YoYo Games.Drawing.Set_Alignment
+		/// @DnDVersion : 1.1
+		/// @DnDHash : 2DD55C9A
+		/// @DnDParent : 023B387D
+		/// @DnDArgument : "halign" "fa_center"
+		/// @DnDArgument : "valign" "fa_middle"
+		draw_set_halign(fa_center);
+		draw_set_valign(fa_middle);
+	
+		/// @DnDAction : YoYo Games.Drawing.Draw_Value_Transformed
+		/// @DnDVersion : 1
+		/// @DnDHash : 6D5C367C
+		/// @DnDParent : 023B387D
+		/// @DnDArgument : "x_relative" "1"
+		/// @DnDArgument : "y_relative" "1"
+		/// @DnDArgument : "xscale" "2"
+		/// @DnDArgument : "yscale" "2"
+		/// @DnDArgument : "caption" """"
+		/// @DnDArgument : "text" "words"
+		draw_text_transformed(x + 0, y + 0, string("") + string(words), 2, 2, 0);
+	
+		/// @DnDAction : YoYo Games.Drawing.Set_Alignment
+		/// @DnDVersion : 1.1
+		/// @DnDHash : 35E48605
+		/// @DnDParent : 023B387D
+		draw_set_halign(fa_left);
+		draw_set_valign(fa_top);	break;
+
+	/// @DnDAction : YoYo Games.Switch.Case
 	/// @DnDVersion : 1
 	/// @DnDHash : 32BB4A47
 	/// @DnDParent : 22AEB4DA
@@ -236,21 +268,7 @@ var l22AEB4DA_0 = words;switch(l22AEB4DA_0){	/// @DnDAction : YoYo Games.Swit
 		/// @DnDHash : 2D489536
 		/// @DnDParent : 5B3B48E6
 		/// @DnDArgument : "expr" "o_game.state"
-		var l2D489536_0 = o_game.state;switch(l2D489536_0){	/// @DnDAction : YoYo Games.Switch.Default
-			/// @DnDVersion : 1
-			/// @DnDHash : 023B387D
-			/// @DnDParent : 2D489536
-			default:	/// @DnDAction : YoYo Games.Drawing.Draw_Sprite_Transformed
-				/// @DnDVersion : 1
-				/// @DnDHash : 032F1926
-				/// @DnDParent : 023B387D
-				/// @DnDArgument : "x_relative" "1"
-				/// @DnDArgument : "y_relative" "1"
-				/// @DnDArgument : "sprite" "quit_button"
-				/// @DnDSaveInfo : "sprite" "quit_button"
-				draw_sprite_ext(quit_button, 0, x + 0, y + 0, 1, 1, 0, $FFFFFF & $ffffff, 1);	break;
-		
-			/// @DnDAction : YoYo Games.Switch.Case
+		var l2D489536_0 = o_game.state;switch(l2D489536_0){	/// @DnDAction : YoYo Games.Switch.Case
 			/// @DnDVersion : 1
 			/// @DnDHash : 454C695E
 			/// @DnDParent : 2D489536

@@ -12,16 +12,16 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"31217b55-45cd-4d73-853c-60bb576a4369","name":"31217b55-45cd-4d73-853c-60bb576a4369","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"v1","%Name":"830f1abb-20ba-478e-93a1-c800bd05bd05","name":"830f1abb-20ba-478e-93a1-c800bd05bd05","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"v1","%Name":"91dfb99b-a5c5-40e1-b664-71d686750d61","name":"91dfb99b-a5c5-40e1-b664-71d686750d61","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"f0c311ab-f4eb-4283-b2c7-d181a841359a","name":"f0c311ab-f4eb-4283-b2c7-d181a841359a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"8ba6fa79-22b5-4221-abc4-836491e76227","name":"8ba6fa79-22b5-4221-abc4-836491e76227","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"96c0885a-09dc-4513-9fc0-57048a08dd80","name":"96c0885a-09dc-4513-9fc0-57048a08dd80","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":145,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"74f5c0b4-e2e0-4e7c-9f75-516c0f97e5cc","blendMode":0,"displayName":"default","isLocked":false,"name":"74f5c0b4-e2e0-4e7c-9f75-516c0f97e5cc","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"5db273ce-385e-44aa-b971-04e1a8c27b05","blendMode":0,"displayName":"default","isLocked":false,"name":"5db273ce-385e-44aa-b971-04e1a8c27b05","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"s_zelinka_bangs",
   "nineSlice":null,
@@ -71,14 +71,14 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"31217b55-45cd-4d73-853c-60bb576a4369","path":"sprites/s_zelinka_bangs/s_zelinka_bangs.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"fcc205b3-c0ce-4711-b3e5-f0069ad82388","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f0c311ab-f4eb-4283-b2c7-d181a841359a","path":"sprites/s_zelinka_bangs/s_zelinka_bangs.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"4a8a3980-7bfa-4d77-a7ce-97cf8a6eb915","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"830f1abb-20ba-478e-93a1-c800bd05bd05","path":"sprites/s_zelinka_bangs/s_zelinka_bangs.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"10b8e1ec-5ed7-4e9f-a8ef-45c51cb9d362","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8ba6fa79-22b5-4221-abc4-836491e76227","path":"sprites/s_zelinka_bangs/s_zelinka_bangs.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"4059f24e-2c39-464d-ba2f-e26ed9ddf27e","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"91dfb99b-a5c5-40e1-b664-71d686750d61","path":"sprites/s_zelinka_bangs/s_zelinka_bangs.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"990788cb-1721-4236-85fd-4a0b52e30b26","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"96c0885a-09dc-4513-9fc0-57048a08dd80","path":"sprites/s_zelinka_bangs/s_zelinka_bangs.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"8f91818e-fed6-4d38-85ac-9baca25c67fb","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

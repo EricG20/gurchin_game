@@ -19,13 +19,13 @@ function player_controlz() {	/// @DnDAction : YoYo Games.Common.If_Expression
 			/// @DnDHash : 6EDE2FAD
 			/// @DnDInput : 2
 			/// @DnDParent : 64D7FCA8
-			/// @DnDArgument : "expr" "InputValue(INPUT_VERB.LEFT)*-.5*global.game_speed"
+			/// @DnDArgument : "expr" "left*-.5*global.game_speed"
 			/// @DnDArgument : "expr_relative" "1"
-			/// @DnDArgument : "expr_1" "clamp(hsp,InputValue(INPUT_VERB.LEFT)*-walk_speed*global.movementspeed_bonus,walk_speed*global.movementspeed_bonus)"
+			/// @DnDArgument : "expr_1" "clamp(hsp,left*-walk_speed*global.movementspeed_bonus,walk_speed*global.movementspeed_bonus)"
 			/// @DnDArgument : "var" "hsp"
 			/// @DnDArgument : "var_1" "hsp"
-			hsp += InputValue(INPUT_VERB.LEFT)*-.5*global.game_speed;
-			hsp = clamp(hsp,InputValue(INPUT_VERB.LEFT)*-walk_speed*global.movementspeed_bonus,walk_speed*global.movementspeed_bonus);
+			hsp += left*-.5*global.game_speed;
+			hsp = clamp(hsp,left*-walk_speed*global.movementspeed_bonus,walk_speed*global.movementspeed_bonus);
 		
 			/// @DnDAction : YoYo Games.Collisions.If_Object_At
 			/// @DnDVersion : 1.1
@@ -80,13 +80,13 @@ function player_controlz() {	/// @DnDAction : YoYo Games.Common.If_Expression
 			/// @DnDHash : 3A6FF6AF
 			/// @DnDInput : 2
 			/// @DnDParent : 7862B48D
-			/// @DnDArgument : "expr" "InputValue(INPUT_VERB.RIGHT)*.5*global.game_speed"
+			/// @DnDArgument : "expr" "right*.5*global.game_speed"
 			/// @DnDArgument : "expr_relative" "1"
-			/// @DnDArgument : "expr_1" "clamp(hsp,-walk_speed*global.movementspeed_bonus,InputValue(INPUT_VERB.RIGHT)*walk_speed*global.movementspeed_bonus)"
+			/// @DnDArgument : "expr_1" "clamp(hsp,-walk_speed*global.movementspeed_bonus,right*walk_speed*global.movementspeed_bonus)"
 			/// @DnDArgument : "var" "hsp"
 			/// @DnDArgument : "var_1" "hsp"
-			hsp += InputValue(INPUT_VERB.RIGHT)*.5*global.game_speed;
-			hsp = clamp(hsp,-walk_speed*global.movementspeed_bonus,InputValue(INPUT_VERB.RIGHT)*walk_speed*global.movementspeed_bonus);
+			hsp += right*.5*global.game_speed;
+			hsp = clamp(hsp,-walk_speed*global.movementspeed_bonus,right*walk_speed*global.movementspeed_bonus);
 		
 			/// @DnDAction : YoYo Games.Collisions.If_Object_At
 			/// @DnDVersion : 1.1
@@ -555,12 +555,12 @@ function player_controlz() {	/// @DnDAction : YoYo Games.Common.If_Expression
 			/// @DnDHash : 7D146FB4
 			/// @DnDInput : 2
 			/// @DnDParent : 4C75F46E
-			/// @DnDArgument : "expr" "lengthdir_x(1, InputDirection(0, INPUT_CLUSTER.NAVIGATION))"
-			/// @DnDArgument : "expr_1" "lengthdir_y(1, InputDirection(0, INPUT_CLUSTER.NAVIGATION))"
+			/// @DnDArgument : "expr" "lengthdir_x(1, nav)"
+			/// @DnDArgument : "expr_1" "lengthdir_y(1, nav)"
 			/// @DnDArgument : "var" "boostxdir"
 			/// @DnDArgument : "var_1" "boostydir"
-			boostxdir = lengthdir_x(1, InputDirection(0, INPUT_CLUSTER.NAVIGATION));
-			boostydir = lengthdir_y(1, InputDirection(0, INPUT_CLUSTER.NAVIGATION));
+			boostxdir = lengthdir_x(1, nav);
+			boostydir = lengthdir_y(1, nav);
 		
 			/// @DnDAction : YoYo Games.Common.If_Expression
 			/// @DnDVersion : 1

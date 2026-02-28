@@ -19,6 +19,14 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 		/// @DnDArgument : "const" ""Zelinka""
 		case "Zelinka":	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
+			/// @DnDHash : 14F88D1D
+			/// @DnDParent : 39FEBF4E
+			/// @DnDArgument : "expr" "s_zelinka_ponder_eyes"
+			/// @DnDArgument : "var" "ponder_eyes_sprite"
+			ponder_eyes_sprite = s_zelinka_ponder_eyes;
+		
+			/// @DnDAction : YoYo Games.Common.Variable
+			/// @DnDVersion : 1
 			/// @DnDHash : 1B2F2B1C
 			/// @DnDInput : 26
 			/// @DnDParent : 39FEBF4E
@@ -186,10 +194,14 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 2B9320FD
+	/// @DnDInput : 2
 	/// @DnDParent : 7A41EDD0
 	/// @DnDArgument : "expr" "color_of_suit"
+	/// @DnDArgument : "expr_1" "hair"
 	/// @DnDArgument : "var" "suit_color"
+	/// @DnDArgument : "var_1" "haircut"
 	suit_color = color_of_suit;
+	haircut = hair;
 
 	/// @DnDAction : YoYo Games.Data Structures.Stack_Push
 	/// @DnDVersion : 1

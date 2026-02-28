@@ -155,8 +155,8 @@ var l29A2478F_0 = anim;switch(l29A2478F_0){	/// @DnDAction : YoYo Games.Switc
 		/// @DnDInput : 11
 		/// @DnDParent : 309F228F
 		/// @DnDArgument : "script" "draw_wheel_ext"
-		/// @DnDArgument : "arg" "o_cursor.x"
-		/// @DnDArgument : "arg_1" "o_cursor.y"
+		/// @DnDArgument : "arg" "weilder.reticle.x"
+		/// @DnDArgument : "arg_1" "weilder.reticle.y"
 		/// @DnDArgument : "arg_2" "40"
 		/// @DnDArgument : "arg_3" "30"
 		/// @DnDArgument : "arg_4" "c_lime"
@@ -167,4 +167,4 @@ var l29A2478F_0 = anim;switch(l29A2478F_0){	/// @DnDAction : YoYo Games.Switc
 		/// @DnDArgument : "arg_9" "false"
 		/// @DnDArgument : "arg_10" "1"
 		/// @DnDSaveInfo : "script" "draw_wheel_ext"
-		script_execute(draw_wheel_ext, o_cursor.x, o_cursor.y, 40, 30, c_lime, charge, 180/global.reload_bonus, 1, 90, false, 1);	break;}
+		script_execute(draw_wheel_ext, weilder.reticle.x, weilder.reticle.y, 40, 30, c_lime, charge, 180/global.reload_bonus, 1, 90, false, 1);	break;}

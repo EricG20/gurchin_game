@@ -8,13 +8,13 @@
 /// @DnDArgument : "arg_1" "y_offset=0"
 /// @DnDArgument : "arg_2" "h_offset=10"
 /// @DnDArgument : "arg_3" "collision_target=o_enemy"
-/// @DnDArgument : "arg_4" "target_x=o_cursor.x"
-/// @DnDArgument : "arg_5" "target_y=o_cursor.y"
+/// @DnDArgument : "arg_4" "target_x=weilder.reticle.x"
+/// @DnDArgument : "arg_5" "target_y=weilder.reticle.y"
 /// @DnDArgument : "arg_6" "color_one=c_orange"
 /// @DnDArgument : "arg_7" "color_two=c_yellow"
 /// @DnDArgument : "arg_8" "color_three=c_white"
 /// @DnDArgument : "arg_9" "damage=1"
-function scr_laser(x_offset=0, y_offset=0, h_offset=10, collision_target=o_enemy, target_x=o_cursor.x, target_y=o_cursor.y, color_one=c_orange, color_two=c_yellow, color_three=c_white, damage=1) {	/// @DnDAction : YoYo Games.Common.Execute_Code
+function scr_laser(x_offset=0, y_offset=0, h_offset=10, collision_target=o_enemy, target_x=weilder.reticle.x, target_y=weilder.reticle.y, color_one=c_orange, color_two=c_yellow, color_three=c_white, damage=1) {	/// @DnDAction : YoYo Games.Common.Execute_Code
 	/// @DnDVersion : 1
 	/// @DnDHash : 55B0531F
 	/// @DnDParent : 467D13D6

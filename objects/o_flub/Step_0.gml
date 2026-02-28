@@ -1,24 +1,31 @@
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 46CA62DA
+/// @DnDArgument : "expr" "instance_nearest(x,y,o_player)"
+/// @DnDArgument : "var" "joe"
+joe = instance_nearest(x,y,o_player);
+
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1
 /// @DnDHash : 0DA55EA6
-/// @DnDArgument : "var" "distance_to_object(o_player)"
+/// @DnDArgument : "var" "distance_to_object(joe)"
 /// @DnDArgument : "op" "1"
 /// @DnDArgument : "value" "200+o_game.combo_num"
-if(distance_to_object(o_player) < 200+o_game.combo_num){	/// @DnDAction : YoYo Games.Common.Variable
+if(distance_to_object(joe) < 200+o_game.combo_num){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 5263A784
 	/// @DnDParent : 0DA55EA6
-	/// @DnDArgument : "expr" "scr_approach(x,o_player.x, speed_buildup*global.game_speed)"
+	/// @DnDArgument : "expr" "scr_approach(x,joe.x, speed_buildup*global.game_speed)"
 	/// @DnDArgument : "var" "x"
-	x = scr_approach(x,o_player.x, speed_buildup*global.game_speed);
+	x = scr_approach(x,joe.x, speed_buildup*global.game_speed);
 
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 68F36708
 	/// @DnDParent : 0DA55EA6
-	/// @DnDArgument : "expr" "scr_approach(y,o_player.y-30, speed_buildup*global.game_speed)"
+	/// @DnDArgument : "expr" "scr_approach(y,joe.y-30, speed_buildup*global.game_speed)"
 	/// @DnDArgument : "var" "y"
-	y = scr_approach(y,o_player.y-30, speed_buildup*global.game_speed);
+	y = scr_approach(y,joe.y-30, speed_buildup*global.game_speed);
 
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1

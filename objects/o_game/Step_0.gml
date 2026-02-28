@@ -571,41 +571,22 @@ var l511F3266_0 = state;switch(l511F3266_0){	/// @DnDAction : YoYo Games.Swit
 								/// @DnDHash : 602F1A2F
 								/// @DnDParent : 0EF39BA4
 								/// @DnDArgument : "const" "1"
-								case 1:	/// @DnDAction : YoYo Games.Random.Get_Random_Number
+								case 1:	/// @DnDAction : YoYo Games.Random.Choose
 									/// @DnDVersion : 1
-									/// @DnDHash : 3D44CC28
+									/// @DnDHash : 13B138B7
+									/// @DnDInput : 9
 									/// @DnDParent : 602F1A2F
-									/// @DnDArgument : "var" "jitt"
-									/// @DnDArgument : "var_temp" "1"
-									/// @DnDArgument : "max" "3"
-									var jitt = (random_range(0, 3));
-								
-									/// @DnDAction : YoYo Games.Common.If_Variable
-									/// @DnDVersion : 1
-									/// @DnDHash : 43F179F1
-									/// @DnDParent : 602F1A2F
-									/// @DnDArgument : "var" "jitt"
-									/// @DnDArgument : "op" "4"
-									/// @DnDArgument : "value" "2.7"
-									if(jitt >= 2.7){	/// @DnDAction : YoYo Games.Common.Variable
-										/// @DnDVersion : 1
-										/// @DnDHash : 4056894C
-										/// @DnDParent : 43F179F1
-										/// @DnDArgument : "expr" "o_fat_enemy_walkah"
-										/// @DnDArgument : "var" "lubba"
-										lubba = o_fat_enemy_walkah;}
-								
-									/// @DnDAction : YoYo Games.Common.Else
-									/// @DnDVersion : 1
-									/// @DnDHash : 6D70437C
-									/// @DnDParent : 602F1A2F
-									else{	/// @DnDAction : YoYo Games.Common.Variable
-										/// @DnDVersion : 1
-										/// @DnDHash : 30F9C20E
-										/// @DnDParent : 6D70437C
-										/// @DnDArgument : "expr" "o_enemy_walkah"
-										/// @DnDArgument : "var" "lubba"
-										lubba = o_enemy_walkah;}	break;
+									/// @DnDArgument : "var" "pylon_enemy_type"
+									/// @DnDArgument : "option" ""walker""
+									/// @DnDArgument : "option_1" ""walker""
+									/// @DnDArgument : "option_2" ""walker_but_fat""
+									/// @DnDArgument : "option_3" ""walker""
+									/// @DnDArgument : "option_4" ""walker""
+									/// @DnDArgument : "option_5" ""walker""
+									/// @DnDArgument : "option_6" ""walker""
+									/// @DnDArgument : "option_7" ""walker""
+									/// @DnDArgument : "option_8" ""walker""
+									pylon_enemy_type = choose("walker", "walker", "walker_but_fat", "walker", "walker", "walker", "walker", "walker", "walker");	break;
 							
 								/// @DnDAction : YoYo Games.Switch.Case
 								/// @DnDVersion : 1
@@ -711,6 +692,19 @@ var l511F3266_0 = state;switch(l511F3266_0){	/// @DnDAction : YoYo Games.Swit
 									/// @DnDArgument : "option_1" "o_enemy_runna"
 									/// @DnDArgument : "option_2" "o_enemy_runna"
 									lubba = choose(o_fat_enemy_walkah, o_enemy_runna, o_enemy_runna);	break;
+							
+								/// @DnDAction : YoYo Games.Switch.Case
+								/// @DnDVersion : 1
+								/// @DnDHash : 6CAF28E3
+								/// @DnDParent : 0A5F3ED5
+								/// @DnDArgument : "const" ""walker_but_fat""
+								case "walker_but_fat":	/// @DnDAction : YoYo Games.Random.Choose
+									/// @DnDVersion : 1
+									/// @DnDHash : 7BB2AEA4
+									/// @DnDParent : 6CAF28E3
+									/// @DnDArgument : "var" "lubba"
+									/// @DnDArgument : "option" "o_fat_enemy_walkah"
+									lubba = choose(o_fat_enemy_walkah);	break;
 							
 								/// @DnDAction : YoYo Games.Switch.Case
 								/// @DnDVersion : 1

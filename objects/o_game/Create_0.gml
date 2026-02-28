@@ -144,12 +144,13 @@ script_execute(gradient_int);
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 6072CAF4
-/// @DnDArgument : "code" "/// @description Execute Code$(13_10)enum ps {$(13_10)	IDLE,$(13_10)	WALK,$(13_10)	AIR,$(13_10)	HIT,$(13_10)	WIN,$(13_10)	DIE$(13_10)	$(13_10)}$(13_10)$(13_10)enum es {$(13_10)	IDLE,$(13_10)	WALK,$(13_10)	AIR,$(13_10)	CHARGE,$(13_10)	ATTACK,$(13_10)	DEATH$(13_10)	$(13_10)}$(13_10)$(13_10)enum gm {$(13_10)	TEST,$(13_10)	LEVEL,$(13_10)	HUB,$(13_10)	SELECT,$(13_10)	GATE,$(13_10)	BOSS,$(13_10)	PYLON,$(13_10)	RESULTS,$(13_10)	TITLE$(13_10)}$(13_10)$(13_10)enum gr {$(13_10)	S,$(13_10)	A,$(13_10)	B,$(13_10)	C,$(13_10)	DUNNO$(13_10)}$(13_10)$(13_10)state = gm.TITLE"
+/// @DnDArgument : "code" "/// @description Execute Code$(13_10)enum ps {$(13_10)	IDLE,$(13_10)	WALK,$(13_10)	AIR,$(13_10)	THINK,$(13_10)	HIT,$(13_10)	WIN,$(13_10)	DIE$(13_10)	$(13_10)}$(13_10)$(13_10)enum es {$(13_10)	IDLE,$(13_10)	WALK,$(13_10)	AIR,$(13_10)	CHARGE,$(13_10)	ATTACK,$(13_10)	KNOCKBACK,$(13_10)	DEATH$(13_10)	$(13_10)}$(13_10)$(13_10)enum gm {$(13_10)	TEST,$(13_10)	LEVEL,$(13_10)	HUB,$(13_10)	SELECT,$(13_10)	GATE,$(13_10)	BOSS,$(13_10)	PYLON,$(13_10)	RESULTS,$(13_10)	TITLE$(13_10)}$(13_10)$(13_10)enum gr {$(13_10)	S,$(13_10)	A,$(13_10)	B,$(13_10)	C,$(13_10)	DUNNO$(13_10)}$(13_10)$(13_10)enum cr {$(13_10)	LOCAL,$(13_10)	NET$(13_10)}$(13_10)$(13_10)state = gm.TITLE$(13_10)$(13_10)global.input_keys = [$(13_10)    "left",$(13_10)    "right",$(13_10)    "jump",$(13_10)    "boost_start",$(13_10)    "boost",$(13_10)    "up",$(13_10)    "down",$(13_10)    "reload",$(13_10)    "melee",$(13_10)    "jump_release",$(13_10)    "shoot",$(13_10)    "shooting",$(13_10)    "shoot_release",$(13_10)    "special",$(13_10)    "swap",$(13_10)    "accept",$(13_10)    "cancel",$(13_10)    "up_tap",$(13_10)    "down_tap",$(13_10)	"nav",$(13_10)	"tick"$(13_10)];$(13_10)"
 /// @description Execute Code
 enum ps {
 	IDLE,
 	WALK,
 	AIR,
+	THINK,
 	HIT,
 	WIN,
 	DIE
@@ -162,6 +163,7 @@ enum es {
 	AIR,
 	CHARGE,
 	ATTACK,
+	KNOCKBACK,
 	DEATH
 	
 }
@@ -186,4 +188,33 @@ enum gr {
 	DUNNO
 }
 
+enum cr {
+	LOCAL,
+	NET
+}
+
 state = gm.TITLE
+
+global.input_keys = [
+    "left",
+    "right",
+    "jump",
+    "boost_start",
+    "boost",
+    "up",
+    "down",
+    "reload",
+    "melee",
+    "jump_release",
+    "shoot",
+    "shooting",
+    "shoot_release",
+    "special",
+    "swap",
+    "accept",
+    "cancel",
+    "up_tap",
+    "down_tap",
+	"nav",
+	"tick"
+];

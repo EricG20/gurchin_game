@@ -134,6 +134,18 @@ var l61EB12DC_0 = state;switch(l61EB12DC_0){	/// @DnDAction : YoYo Games.Swit
 					/// @DnDArgument : "instvar" "7"
 					with(o_player) {
 					persistent = false;
+					}
+				
+					/// @DnDAction : YoYo Games.Common.Variable
+					/// @DnDVersion : 1
+					/// @DnDHash : 7CBB6624
+					/// @DnDApplyTo : o_player
+					/// @DnDParent : 7C81F75E
+					/// @DnDArgument : "expr" "false"
+					/// @DnDArgument : "var" "mygurn.persistent"
+					with(o_player) {
+					mygurn.persistent = false;
+					
 					}}
 			
 				/// @DnDAction : YoYo Games.Instances.Create_Instance

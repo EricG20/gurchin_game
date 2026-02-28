@@ -41,8 +41,8 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 3780D062
 	/// @DnDParent : 7299994B
-	/// @DnDArgument : "angle" "point_direction(x,y, o_cursor.x, o_cursor.y)"
-	image_angle = point_direction(x,y, o_cursor.x, o_cursor.y);
+	/// @DnDArgument : "angle" "point_direction(x,y, weilder.reticle.x, weilder.reticle.y)"
+	image_angle = point_direction(x,y, weilder.reticle.x, weilder.reticle.y);
 
 	/// @DnDAction : YoYo Games.Common.If_Variable
 	/// @DnDVersion : 1
@@ -102,8 +102,8 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 						/// @DnDHash : 7CF4E90F
 						/// @DnDParent : 05D3A6F9
 						/// @DnDArgument : "var" "bulletrotation"
-						/// @DnDArgument : "value" "point_direction(x,y,o_cursor.x,o_cursor.y)+random_range(-3,3)"
-						var bulletrotation = point_direction(x,y,o_cursor.x,o_cursor.y)+random_range(-3,3);
+						/// @DnDArgument : "value" "point_direction(x,y,weilder.reticle.x,weilder.reticle.y)+random_range(-3,3)"
+						var bulletrotation = point_direction(x,y,weilder.reticle.x,weilder.reticle.y)+random_range(-3,3);
 					
 						/// @DnDAction : YoYo Games.Instances.Set_Instance_Var
 						/// @DnDVersion : 1
@@ -161,8 +161,8 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 					/// @DnDHash : 59382E9B
 					/// @DnDApplyTo : frash
 					/// @DnDParent : 55E08394
-					/// @DnDArgument : "angle" "point_direction(x,y,o_cursor.x,o_cursor.y)"
-					with(frash) image_angle = point_direction(x,y,o_cursor.x,o_cursor.y);}
+					/// @DnDArgument : "angle" "point_direction(x,y,other.weilder.reticle.x,other.weilder.reticle.y)"
+					with(frash) image_angle = point_direction(x,y,other.weilder.reticle.x,other.weilder.reticle.y);}
 			
 				/// @DnDAction : YoYo Games.Common.If_Variable
 				/// @DnDVersion : 1
@@ -199,8 +199,8 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 					/// @DnDHash : 75387632
 					/// @DnDParent : 0505C266
 					/// @DnDArgument : "var" "bulletrotation"
-					/// @DnDArgument : "value" "point_direction(x,y,o_cursor.x,o_cursor.y)+random_range(-3,3)"
-					var bulletrotation = point_direction(x,y,o_cursor.x,o_cursor.y)+random_range(-3,3);
+					/// @DnDArgument : "value" "point_direction(x,y,weilder.reticle.x,weilder.reticle.y)+random_range(-3,3)"
+					var bulletrotation = point_direction(x,y,weilder.reticle.x,weilder.reticle.y)+random_range(-3,3);
 				
 					/// @DnDAction : YoYo Games.Common.Execute_Script
 					/// @DnDVersion : 1.1
@@ -266,8 +266,8 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 					/// @DnDHash : 452C1F4F
 					/// @DnDApplyTo : frash
 					/// @DnDParent : 0505C266
-					/// @DnDArgument : "angle" "point_direction(x,y,o_cursor.x,o_cursor.y)"
-					with(frash) image_angle = point_direction(x,y,o_cursor.x,o_cursor.y);}
+					/// @DnDArgument : "angle" "point_direction(x,y,other.weilder.reticle.x,other.weilder.reticle.y)"
+					with(frash) image_angle = point_direction(x,y,other.weilder.reticle.x,other.weilder.reticle.y);}
 			
 				/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDVersion : 1

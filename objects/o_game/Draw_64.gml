@@ -402,11 +402,11 @@ var l03FDEC77_0 = state;switch(l03FDEC77_0){	/// @DnDAction : YoYo Games.Swit
 				/// @DnDHash : 2D2C4627
 				/// @DnDInput : 2
 				/// @DnDParent : 57D319FA
-				/// @DnDArgument : "expr" "gm.LEVEL"
+				/// @DnDArgument : "expr" "gm.RESULTS"
 				/// @DnDArgument : "expr_1" "false"
 				/// @DnDArgument : "var" "o_game.state"
 				/// @DnDArgument : "var_1" "o_game.in_wave"
-				o_game.state = gm.LEVEL;
+				o_game.state = gm.RESULTS;
 				o_game.in_wave = false;
 			
 				/// @DnDAction : YoYo Games.Rooms.Go_To_Room

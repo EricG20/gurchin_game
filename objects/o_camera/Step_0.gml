@@ -10,17 +10,17 @@ var l5A590737_0 = o_game.state;switch(l5A590737_0){	/// @DnDAction : YoYo Gam
 		/// @DnDVersion : 1
 		/// @DnDHash : 58D0803D
 		/// @DnDParent : 50E88747
-		/// @DnDArgument : "expr" "o_player.x-(o_player.x-o_cursor.x)*panning_strength"
+		/// @DnDArgument : "expr" "the_boss.x-(o_player.x-o_cursor.x)*panning_strength"
 		/// @DnDArgument : "var" "x"
-		x = o_player.x-(o_player.x-o_cursor.x)*panning_strength;
+		x = the_boss.x-(o_player.x-o_cursor.x)*panning_strength;
 	
 		/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 06CF1C63
 		/// @DnDParent : 50E88747
-		/// @DnDArgument : "expr" "o_player.y-(o_player.y-o_cursor.y)*panning_strength"
+		/// @DnDArgument : "expr" "the_boss.y-(o_player.y-o_cursor.y)*panning_strength"
 		/// @DnDArgument : "var" "y"
-		y = o_player.y-(o_player.y-o_cursor.y)*panning_strength;	break;
+		y = the_boss.y-(o_player.y-o_cursor.y)*panning_strength;	break;
 
 	/// @DnDAction : YoYo Games.Switch.Case
 	/// @DnDVersion : 1
@@ -33,11 +33,11 @@ var l5A590737_0 = o_game.state;switch(l5A590737_0){	/// @DnDAction : YoYo Gam
 		/// @DnDInput : 2
 		/// @DnDParent : 119627A6
 		/// @DnDArgument : "var" "enem_x"
-		/// @DnDArgument : "value" "o_player.x"
+		/// @DnDArgument : "value" "the_boss.x"
 		/// @DnDArgument : "var_1" "enem_y"
-		/// @DnDArgument : "value_1" "o_player.y"
-		var enem_x = o_player.x;
-		var enem_y = o_player.y;
+		/// @DnDArgument : "value_1" "the_boss.y"
+		var enem_x = the_boss.x;
+		var enem_y = the_boss.y;
 	
 		/// @DnDAction : YoYo Games.Switch.Switch
 		/// @DnDVersion : 1
@@ -71,17 +71,17 @@ var l5A590737_0 = o_game.state;switch(l5A590737_0){	/// @DnDAction : YoYo Gam
 		/// @DnDVersion : 1
 		/// @DnDHash : 62FAE93B
 		/// @DnDParent : 119627A6
-		/// @DnDArgument : "expr" "(o_player.x + enem_x)/2"
+		/// @DnDArgument : "expr" "(the_boss.x + enem_x)/2"
 		/// @DnDArgument : "var" "x"
-		x = (o_player.x + enem_x)/2;
+		x = (the_boss.x + enem_x)/2;
 	
 		/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 57A815F5
 		/// @DnDParent : 119627A6
-		/// @DnDArgument : "expr" "(o_player.y + enem_y)/2"
+		/// @DnDArgument : "expr" "(the_boss.y + enem_y)/2"
 		/// @DnDArgument : "var" "y"
-		y = (o_player.y + enem_y)/2;
+		y = (the_boss.y + enem_y)/2;
 	
 		/// @DnDAction : YoYo Games.Instances.If_Instance_Exists
 		/// @DnDVersion : 1

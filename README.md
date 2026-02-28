@@ -13,9 +13,10 @@ to-do:
 * Add Zelinka's Bullet Storm Special(done)
 * Add a default weapon for Zelinka(done)
 * Make character select interface(done)
-* **Make room for selecting missions**
+* **Make room for selecting missions (wip, mission selection code complete)**
+* Make weapon inventory mechanic(done)
 * Add XOO-P1NG-TON (done)
-* Add weapon level indicator(wip)
+* Add weapon level indicator(done)
 * Adjust UI to look not so ugly (wip)
 * \- This means making health, fuel, and special meter more readable
 * \- (this also meant reworking the weapon display menu but I got to that luckily
@@ -26,7 +27,7 @@ to-do:
 * Add Gurchin II
 * Add emote system (for signaling to other players context sensitive information like "I need help!" or "Great job!", should be unique lines per character)
 * (MAYBE) Adjust the Empresses design (maybe I made her too skinny)
-* **Add Multiplayer for gods sake**
+* **Add Multiplayer for gods sake (wip)**
 * **Fix scr\_afterimage**
 
 

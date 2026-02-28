@@ -757,7 +757,99 @@ if(mount == undefined){	/// @DnDAction : YoYo Games.Switch.Switch
 				/// @DnDArgument : "var" "o_game.state"
 				/// @DnDArgument : "var_1" "room"
 				o_game.state = gm.SELECT;
-				room = map;}	break;}
+				room = map;}	break;
+	
+		/// @DnDAction : YoYo Games.Switch.Case
+		/// @DnDVersion : 1
+		/// @DnDHash : 4FF7BE74
+		/// @DnDParent : 33FA4604
+		/// @DnDArgument : "const" "ps.THINK"
+		case ps.THINK:	/// @DnDAction : YoYo Games.Common.If_Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 22D7E985
+			/// @DnDParent : 4FF7BE74
+			/// @DnDArgument : "var" "state"
+			/// @DnDArgument : "value" "ps.AIR"
+			if(state == ps.AIR){	/// @DnDAction : YoYo Games.Common.Execute_Script
+				/// @DnDVersion : 1.1
+				/// @DnDHash : 5885DE31
+				/// @DnDParent : 22D7E985
+				/// @DnDArgument : "script" "check_ground"
+				/// @DnDSaveInfo : "script" "check_ground"
+				script_execute(check_ground);
+			
+				/// @DnDAction : YoYo Games.Common.If_Expression
+				/// @DnDVersion : 1
+				/// @DnDHash : 3B700195
+				/// @DnDParent : 22D7E985
+				/// @DnDArgument : "expr" "on_ground"
+				if(on_ground){	/// @DnDAction : YoYo Games.Common.Variable
+					/// @DnDVersion : 1
+					/// @DnDHash : 2C77BA5F
+					/// @DnDParent : 3B700195
+					/// @DnDArgument : "expr" "-.3"
+					/// @DnDArgument : "var" "squashstretch"
+					squashstretch = -.3;
+				
+					/// @DnDAction : YoYo Games.Audio.Play_Audio
+					/// @DnDVersion : 1.1
+					/// @DnDHash : 0C538C54
+					/// @DnDParent : 3B700195
+					/// @DnDArgument : "soundid" "sfx_land"
+					/// @DnDArgument : "gain" "1.9"
+					/// @DnDArgument : "pitch" "random_range(.8,1.2)"
+					/// @DnDSaveInfo : "soundid" "sfx_land"
+					audio_play_sound(sfx_land, 0, 0, 1.9, undefined, random_range(.8,1.2));
+				
+					/// @DnDAction : YoYo Games.Loops.Repeat
+					/// @DnDVersion : 1
+					/// @DnDHash : 73971ABF
+					/// @DnDParent : 3B700195
+					/// @DnDArgument : "times" "8"
+					repeat(8){	/// @DnDAction : YoYo Games.Instances.Create_Instance
+						/// @DnDVersion : 1
+						/// @DnDHash : 52E509F9
+						/// @DnDParent : 73971ABF
+						/// @DnDArgument : "xpos_relative" "1"
+						/// @DnDArgument : "ypos_relative" "1"
+						/// @DnDArgument : "var" "joe"
+						/// @DnDArgument : "var_temp" "1"
+						/// @DnDArgument : "objectid" "e_freedust"
+						/// @DnDArgument : "layer" ""Effects""
+						/// @DnDSaveInfo : "objectid" "e_freedust"
+						var joe = instance_create_layer(x + 0, y + 0, "Effects", e_freedust);
+					
+						/// @DnDAction : YoYo Games.Common.Variable
+						/// @DnDVersion : 1
+						/// @DnDHash : 6987B052
+						/// @DnDParent : 73971ABF
+						/// @DnDArgument : "expr" "random_range(-2,2)"
+						/// @DnDArgument : "var" "joe.hspeed"
+						joe.hspeed = random_range(-2,2);}}}
+		
+			/// @DnDAction : YoYo Games.Common.Execute_Script
+			/// @DnDVersion : 1.1
+			/// @DnDHash : 11806C3C
+			/// @DnDParent : 4FF7BE74
+			/// @DnDArgument : "script" "check_ground"
+			/// @DnDSaveInfo : "script" "check_ground"
+			script_execute(check_ground);
+		
+			/// @DnDAction : YoYo Games.Common.Execute_Script
+			/// @DnDVersion : 1.1
+			/// @DnDHash : 298586A4
+			/// @DnDParent : 4FF7BE74
+			/// @DnDArgument : "script" "controlz"
+			/// @DnDSaveInfo : "script" "controlz"
+			script_execute(controlz);
+		
+			/// @DnDAction : YoYo Games.Common.Execute_Script
+			/// @DnDVersion : 1.1
+			/// @DnDHash : 5ED28C5B
+			/// @DnDParent : 4FF7BE74
+			/// @DnDArgument : "script" "movement_stuff"
+			/// @DnDSaveInfo : "script" "movement_stuff"
+			script_execute(movement_stuff);	break;}
 
 	/// @DnDAction : YoYo Games.Common.Execute_Script
 	/// @DnDVersion : 1.1
@@ -988,10 +1080,10 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.If_Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 2C7F0ABF
 	/// @DnDParent : 47ED6D9E
-	/// @DnDArgument : "var" "o_cursor.x"
+	/// @DnDArgument : "var" "reticle.x"
 	/// @DnDArgument : "op" "2"
 	/// @DnDArgument : "value" "x"
-	if(o_cursor.x > x){	/// @DnDAction : YoYo Games.Common.Variable
+	if(reticle.x > x){	/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 472B47F9
 		/// @DnDParent : 2C7F0ABF
@@ -1003,10 +1095,10 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.If_Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 1003172F
 	/// @DnDParent : 47ED6D9E
-	/// @DnDArgument : "var" "o_cursor.x"
+	/// @DnDArgument : "var" "reticle.x"
 	/// @DnDArgument : "op" "1"
 	/// @DnDArgument : "value" "x"
-	if(o_cursor.x < x){	/// @DnDAction : YoYo Games.Common.Variable
+	if(reticle.x < x){	/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 699A35A7
 		/// @DnDParent : 1003172F
@@ -1059,4 +1151,29 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.If_Variable
 				/// @DnDParent : 3C921A76
 				/// @DnDArgument : "function" "instance_deactivate_object"
 				/// @DnDArgument : "arg" "mygurn"
-				instance_deactivate_object(mygurn);}}}}
+				instance_deactivate_object(mygurn);}}}
+
+	/// @DnDAction : YoYo Games.Common.If_Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 2C6D4611
+	/// @DnDParent : 47ED6D9E
+	/// @DnDArgument : "var" "control_type"
+	/// @DnDArgument : "value" "cr.LOCAL"
+	if(control_type == cr.LOCAL){	/// @DnDAction : YoYo Games.Common.Execute_Code
+		/// @DnDVersion : 1
+		/// @DnDHash : 7C839B1C
+		/// @DnDParent : 2C6D4611
+		/// @DnDArgument : "code" "// How many seconds between packets?$(13_10)var send_interval = 0.3; // 30 times per second$(13_10)$(13_10)send_timer += delta_time / 1000000;$(13_10)$(13_10)if (send_timer >= send_interval) {$(13_10)    send_timer -= send_interval;$(13_10)$(13_10)    send_movement_packet(socket, x, y);$(13_10)	send_input_packet(socket, inputs);$(13_10)	send_velocity_packet(socket, hsp, vsp);$(13_10)	send_aim_packet(socket, reticle.x, reticle.y);$(13_10)}$(13_10)"
+		// How many seconds between packets?
+		var send_interval = 0.3; // 30 times per second
+		
+		send_timer += delta_time / 1000000;
+		
+		if (send_timer >= send_interval) {
+		    send_timer -= send_interval;
+		
+		    send_movement_packet(socket, x, y);
+			send_input_packet(socket, inputs);
+			send_velocity_packet(socket, hsp, vsp);
+			send_aim_packet(socket, reticle.x, reticle.y);
+		}}}

@@ -507,6 +507,32 @@ var l511F3266_0 = state;switch(l511F3266_0){	/// @DnDAction : YoYo Games.Swit
 		/// @DnDArgument : "var" "pylon_incr"
 		pylon_incr += 1*global.game_speed;
 	
+		/// @DnDAction : YoYo Games.Common.If_Expression
+		/// @DnDVersion : 1
+		/// @DnDHash : 75249F04
+		/// @DnDParent : 535CEC9E
+		/// @DnDArgument : "expr" "instance_exists(o_net_client) || instance_exists(o_net_host)"
+		if(instance_exists(o_net_client) || instance_exists(o_net_host)){	/// @DnDAction : YoYo Games.Common.Execute_Code
+			/// @DnDVersion : 1
+			/// @DnDHash : 37EC0FB1
+			/// @DnDParent : 75249F04
+			/// @DnDArgument : "code" "// How many seconds between packets?$(13_10)var send_interval = 0.3; // 30 times per second$(13_10)$(13_10)send_timer += delta_time / 1000000;$(13_10)$(13_10)if (send_timer >= send_interval) {$(13_10)    send_timer -= send_interval;$(13_10)$(13_10)    send_game_packet(local_player.socket);$(13_10)	if (instance_exists(o_enemy)){$(13_10)	with (o_enemy){$(13_10)		send_enemyfix_packet(other.local_player.socket, self);$(13_10)		}$(13_10)	}$(13_10)}$(13_10)"
+			// How many seconds between packets?
+			var send_interval = 0.3; // 30 times per second
+			
+			send_timer += delta_time / 1000000;
+			
+			if (send_timer >= send_interval) {
+			    send_timer -= send_interval;
+			
+			    send_game_packet(local_player.socket);
+				if (instance_exists(o_enemy)){
+				with (o_enemy){
+					send_enemyfix_packet(other.local_player.socket, self);
+					}
+				}
+			}}
+	
 		/// @DnDAction : YoYo Games.Switch.Switch
 		/// @DnDVersion : 1
 		/// @DnDHash : 7AD31033
@@ -726,59 +752,87 @@ var l511F3266_0 = state;switch(l511F3266_0){	/// @DnDAction : YoYo Games.Swit
 									/// @DnDArgument : "option_6" "o_enemy_dasher"
 									lubba = choose(o_enemy_jerk, o_enemy_blugunna, o_enemy_blugunna, o_enemy_blugunna, o_enemy_blugunna, o_enemy_dasher, o_enemy_dasher);	break;}
 						
-							/// @DnDAction : YoYo Games.Instances.Create_Instance
+							/// @DnDAction : YoYo Games.Common.If_Expression
 							/// @DnDVersion : 1
-							/// @DnDHash : 527662F9
+							/// @DnDHash : 69A3F062
 							/// @DnDParent : 12F82335
-							/// @DnDArgument : "xpos" "bubba.x"
-							/// @DnDArgument : "ypos" "bubba.y"
-							/// @DnDArgument : "var" "jubba"
-							/// @DnDArgument : "objectid" "lubba"
-							jubba = instance_create_layer(bubba.x, bubba.y, "Instances", lubba);
-						
-							/// @DnDAction : YoYo Games.Common.If_Variable
-							/// @DnDVersion : 1
-							/// @DnDHash : 752870DF
-							/// @DnDParent : 12F82335
-							/// @DnDArgument : "var" "random_range(0,1)"
-							/// @DnDArgument : "op" "1"
-							/// @DnDArgument : "value" "(grade_tally_total*.1)/96"
-							if(random_range(0,1) < (grade_tally_total*.1)/96){	/// @DnDAction : YoYo Games.Common.Variable
+							/// @DnDArgument : "expr" "hosting"
+							if(hosting){	/// @DnDAction : YoYo Games.Instances.Create_Instance
 								/// @DnDVersion : 1
-								/// @DnDHash : 48466533
+								/// @DnDHash : 527662F9
+								/// @DnDParent : 69A3F062
+								/// @DnDArgument : "xpos" "bubba.x"
+								/// @DnDArgument : "ypos" "bubba.y"
+								/// @DnDArgument : "var" "jubba"
+								/// @DnDArgument : "objectid" "lubba"
+								jubba = instance_create_layer(bubba.x, bubba.y, "Instances", lubba);
+							
+								/// @DnDAction : YoYo Games.Common.If_Variable
+								/// @DnDVersion : 1
+								/// @DnDHash : 752870DF
+								/// @DnDParent : 69A3F062
+								/// @DnDArgument : "var" "random_range(0,1)"
+								/// @DnDArgument : "op" "1"
+								/// @DnDArgument : "value" "(grade_tally_total*.1)/96"
+								if(random_range(0,1) < (grade_tally_total*.1)/96){	/// @DnDAction : YoYo Games.Common.Variable
+									/// @DnDVersion : 1
+									/// @DnDHash : 48466533
+									/// @DnDInput : 2
+									/// @DnDParent : 752870DF
+									/// @DnDArgument : "expr" "true"
+									/// @DnDArgument : "expr_1" "jubba.hp*3"
+									/// @DnDArgument : "var" "jubba.gurchenis_buff"
+									/// @DnDArgument : "var_1" "jubba.hp"
+									jubba.gurchenis_buff = true;
+									jubba.hp = jubba.hp*3;}
+							
+								/// @DnDAction : YoYo Games.Common.Variable
+								/// @DnDVersion : 1
+								/// @DnDHash : 37C85942
+								/// @DnDParent : 69A3F062
+								/// @DnDArgument : "expr" "1"
+								/// @DnDArgument : "expr_relative" "1"
+								/// @DnDArgument : "var" "enemies_spawned"
+								enemies_spawned += 1;
+							
+								/// @DnDAction : YoYo Games.Common.Variable
+								/// @DnDVersion : 1
+								/// @DnDHash : 2B515AFE
 								/// @DnDInput : 2
-								/// @DnDParent : 752870DF
-								/// @DnDArgument : "expr" "true"
-								/// @DnDArgument : "expr_1" "jubba.hp*3"
-								/// @DnDArgument : "var" "jubba.gurchenis_buff"
-								/// @DnDArgument : "var_1" "jubba.hp"
-								jubba.gurchenis_buff = true;
-								jubba.hp = jubba.hp*3;}
-						
-							/// @DnDAction : YoYo Games.Common.Variable
-							/// @DnDVersion : 1
-							/// @DnDHash : 2B515AFE
-							/// @DnDParent : 12F82335
-							/// @DnDArgument : "expr" "bubba.init_facing"
-							/// @DnDArgument : "var" "jubba.facing"
-							jubba.facing = bubba.init_facing;
-						
-							/// @DnDAction : YoYo Games.Common.Variable
-							/// @DnDVersion : 1
-							/// @DnDHash : 2FAE7756
-							/// @DnDInput : 3
-							/// @DnDParent : 12F82335
-							/// @DnDArgument : "expr" "random_range(0,30)"
-							/// @DnDArgument : "expr_1" "1"
-							/// @DnDArgument : "expr_relative_1" "1"
-							/// @DnDArgument : "expr_2" "1"
-							/// @DnDArgument : "expr_relative_2" "1"
-							/// @DnDArgument : "var" "pylon_incr"
-							/// @DnDArgument : "var_1" "pylon_enemies"
-							/// @DnDArgument : "var_2" "pylon_enemy_count"
-							pylon_incr = random_range(0,30);
-							pylon_enemies += 1;
-							pylon_enemy_count += 1;}}}
+								/// @DnDParent : 69A3F062
+								/// @DnDArgument : "expr" "bubba.init_facing"
+								/// @DnDArgument : "expr_1" "enemies_spawned"
+								/// @DnDArgument : "var" "jubba.facing"
+								/// @DnDArgument : "var_1" "jubba.enemy_num"
+								jubba.facing = bubba.init_facing;
+								jubba.enemy_num = enemies_spawned;
+							
+								/// @DnDAction : YoYo Games.Common.Variable
+								/// @DnDVersion : 1
+								/// @DnDHash : 2FAE7756
+								/// @DnDInput : 3
+								/// @DnDParent : 69A3F062
+								/// @DnDArgument : "expr" "random_range(0,30)"
+								/// @DnDArgument : "expr_1" "1"
+								/// @DnDArgument : "expr_relative_1" "1"
+								/// @DnDArgument : "expr_2" "1"
+								/// @DnDArgument : "expr_relative_2" "1"
+								/// @DnDArgument : "var" "pylon_incr"
+								/// @DnDArgument : "var_1" "pylon_enemies"
+								/// @DnDArgument : "var_2" "pylon_enemy_count"
+								pylon_incr = random_range(0,30);
+								pylon_enemies += 1;
+								pylon_enemy_count += 1;
+							
+								/// @DnDAction : YoYo Games.Common.Function_Call
+								/// @DnDVersion : 1
+								/// @DnDHash : 689A0433
+								/// @DnDInput : 2
+								/// @DnDParent : 69A3F062
+								/// @DnDArgument : "function" "send_enemyspawn_packet"
+								/// @DnDArgument : "arg" "local_player.socket"
+								/// @DnDArgument : "arg_1" "jubba"
+								send_enemyspawn_packet(local_player.socket, jubba);}}}}
 			
 				/// @DnDAction : YoYo Games.Common.If_Variable
 				/// @DnDVersion : 1

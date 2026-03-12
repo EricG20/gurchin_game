@@ -90,12 +90,13 @@ if(activated){	/// @DnDAction : YoYo Games.Switch.Switch
 					case "Gurchin":	/// @DnDAction : YoYo Games.Data Structures.List_Add
 						/// @DnDVersion : 1
 						/// @DnDHash : 13868C75
-						/// @DnDInput : 2
+						/// @DnDInput : 3
 						/// @DnDParent : 3F5D0054
 						/// @DnDArgument : "var" "hair_styles"
 						/// @DnDArgument : "value" ""afro_bun""
 						/// @DnDArgument : "value_1" ""bald""
-						ds_list_add(hair_styles, "afro_bun", "bald");	break;
+						/// @DnDArgument : "value_2" ""cap_and_dreads""
+						ds_list_add(hair_styles, "afro_bun", "bald", "cap_and_dreads");	break;
 				
 					/// @DnDAction : YoYo Games.Switch.Case
 					/// @DnDVersion : 1
@@ -105,10 +106,12 @@ if(activated){	/// @DnDAction : YoYo Games.Switch.Switch
 					case "Zelinka":	/// @DnDAction : YoYo Games.Data Structures.List_Add
 						/// @DnDVersion : 1
 						/// @DnDHash : 010D6077
+						/// @DnDInput : 2
 						/// @DnDParent : 33E384B7
 						/// @DnDArgument : "var" "hair_styles"
 						/// @DnDArgument : "value" ""afro""
-						ds_list_add(hair_styles, "afro");	break;}
+						/// @DnDArgument : "value_1" ""cap_and_dreads""
+						ds_list_add(hair_styles, "afro", "cap_and_dreads");	break;}
 			
 				/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDVersion : 1

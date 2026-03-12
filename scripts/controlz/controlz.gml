@@ -327,7 +327,7 @@ function controlz() {	/// @DnDAction : YoYo Games.Switch.Switch
 					/// @DnDVersion : 1
 					/// @DnDHash : 1D13F562
 					/// @DnDParent : 55B8D499
-					/// @DnDArgument : "code" "/// @description Execute Code$(13_10)$(13_10)var keys = variable_struct_get_names(inputs);$(13_10)$(13_10)for (var i = 0; i < array_length(keys); i++) {$(13_10)    var key = keys[i];$(13_10)$(13_10)    inputs[$ key] = variable_instance_get(id, key);$(13_10)}$(13_10)$(13_10)$(13_10)show_debug_message("---- CLIENT INPUTS BEFORE SEND ----");$(13_10)$(13_10)var keys = variable_struct_get_names(inputs);$(13_10)$(13_10)for (var i = 0; i < array_length(keys); i++) {$(13_10)    var key = keys[i];$(13_10)    var val = inputs[$ key];$(13_10)    show_debug_message(key + " = " + string(val));$(13_10)}$(13_10)$(13_10)show_debug_message("-----------------------------------");$(13_10)$(13_10)send_input_packet(socket, inputs);$(13_10)//send_movement_packet(socket, x, y);$(13_10)send_velocity_packet(socket, hsp, vsp);$(13_10)send_aim_packet(socket, reticle.x, reticle.y);"
+					/// @DnDArgument : "code" "/// @description Execute Code$(13_10)$(13_10)var keys = variable_struct_get_names(inputs);$(13_10)$(13_10)for (var i = 0; i < array_length(keys); i++) {$(13_10)    var key = keys[i];$(13_10)$(13_10)    inputs[$ key] = variable_instance_get(id, key);$(13_10)}$(13_10)$(13_10)$(13_10)//show_debug_message("---- CLIENT INPUTS BEFORE SEND ----");$(13_10)$(13_10)//var _keys = variable_struct_get_names(inputs);$(13_10)$(13_10)//for (var i = 0; i < array_length(_keys); i++) {$(13_10)//    var _key = _keys[i];$(13_10)//    var val = inputs[$ _key];$(13_10)//    show_debug_message(_key + " = " + string(val));$(13_10)//}$(13_10)$(13_10)//show_debug_message("-----------------------------------");$(13_10)$(13_10)send_input_packet(socket, inputs);$(13_10)//send_movement_packet(socket, x, y);$(13_10)send_velocity_packet(socket, hsp, vsp);$(13_10)send_aim_packet(socket, reticle.x, reticle.y, nav);"
 					/// @description Execute Code
 					
 					var keys = variable_struct_get_names(inputs);
@@ -339,22 +339,22 @@ function controlz() {	/// @DnDAction : YoYo Games.Switch.Switch
 					}
 					
 					
-					show_debug_message("---- CLIENT INPUTS BEFORE SEND ----");
+					//show_debug_message("---- CLIENT INPUTS BEFORE SEND ----");
 					
-					var keys = variable_struct_get_names(inputs);
+					//var _keys = variable_struct_get_names(inputs);
 					
-					for (var i = 0; i < array_length(keys); i++) {
-					    var key = keys[i];
-					    var val = inputs[$ key];
-					    show_debug_message(key + " = " + string(val));
-					}
+					//for (var i = 0; i < array_length(_keys); i++) {
+					//    var _key = _keys[i];
+					//    var val = inputs[$ _key];
+					//    show_debug_message(_key + " = " + string(val));
+					//}
 					
-					show_debug_message("-----------------------------------");
+					//show_debug_message("-----------------------------------");
 					
 					send_input_packet(socket, inputs);
 					//send_movement_packet(socket, x, y);
 					send_velocity_packet(socket, hsp, vsp);
-					send_aim_packet(socket, reticle.x, reticle.y);}}	break;
+					send_aim_packet(socket, reticle.x, reticle.y, nav);}}	break;
 	
 		/// @DnDAction : YoYo Games.Switch.Case
 		/// @DnDVersion : 1
@@ -365,6 +365,7 @@ function controlz() {	/// @DnDAction : YoYo Games.Switch.Switch
 			/// @DnDVersion : 1
 			/// @DnDHash : 3E231D43
 			/// @DnDInput : 7
+			/// @DnDDisabled : 1
 			/// @DnDParent : 07610ECB
 			/// @DnDArgument : "expr" "false"
 			/// @DnDArgument : "expr_1" "false"
@@ -380,13 +381,7 @@ function controlz() {	/// @DnDAction : YoYo Games.Switch.Switch
 			/// @DnDArgument : "var_4" "cancel"
 			/// @DnDArgument : "var_5" "up_tap"
 			/// @DnDArgument : "var_6" "down_tap"
-			jump_release = false;
-			shoot_release = false;
-			swap = false;
-			accept = false;
-			cancel = false;
-			up_tap = false;
-			down_tap = false;
+		
 		
 			/// @DnDAction : YoYo Games.Common.Execute_Code
 			/// @DnDVersion : 1

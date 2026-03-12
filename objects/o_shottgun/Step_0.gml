@@ -307,8 +307,8 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDHash : 59382E9B
 				/// @DnDApplyTo : frash
 				/// @DnDParent : 3A9CC710
-				/// @DnDArgument : "angle" "point_direction(x,y,weilder.reticle.x,weilder.reticle.y)"
-				with(frash) image_angle = point_direction(x,y,weilder.reticle.x,weilder.reticle.y);
+				/// @DnDArgument : "angle" "point_direction(x,y,other.weilder.reticle.x,other.weilder.reticle.y)"
+				with(frash) image_angle = point_direction(x,y,other.weilder.reticle.x,other.weilder.reticle.y);
 			
 				/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDVersion : 1

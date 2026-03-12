@@ -101,7 +101,25 @@ if(mount == undefined){	/// @DnDAction : YoYo Games.Switch.Switch
 			/// @DnDParent : 59359FA0
 			/// @DnDArgument : "expr" "squashstretch*power(.93,global.game_speed)"
 			/// @DnDArgument : "var" "squashstretch"
-			squashstretch = squashstretch*power(.93,global.game_speed);	break;}
+			squashstretch = squashstretch*power(.93,global.game_speed);
+		
+			/// @DnDAction : YoYo Games.Common.If_Expression
+			/// @DnDVersion : 1
+			/// @DnDHash : 07EEE275
+			/// @DnDParent : 59359FA0
+			/// @DnDArgument : "expr" "on_ground"
+			if(on_ground){	/// @DnDAction : YoYo Games.Common.If_Expression
+				/// @DnDVersion : 1
+				/// @DnDHash : 654B0CED
+				/// @DnDParent : 07EEE275
+				/// @DnDArgument : "expr" "down"
+				if(down){	/// @DnDAction : YoYo Games.Common.Variable
+					/// @DnDVersion : 1
+					/// @DnDHash : 37E1FAFB
+					/// @DnDParent : 654B0CED
+					/// @DnDArgument : "expr" "lerp(squashstretch, -.5, .1*global.game_speed)"
+					/// @DnDArgument : "var" "squashstretch"
+					squashstretch = lerp(squashstretch, -.5, .1*global.game_speed);}}	break;}
 
 	/// @DnDAction : YoYo Games.Switch.Switch
 	/// @DnDVersion : 1
@@ -1163,7 +1181,7 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.If_Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 7C839B1C
 		/// @DnDParent : 2C6D4611
-		/// @DnDArgument : "code" "// How many seconds between packets?$(13_10)var send_interval = 0.3; // 30 times per second$(13_10)$(13_10)send_timer += delta_time / 1000000;$(13_10)$(13_10)if (send_timer >= send_interval) {$(13_10)    send_timer -= send_interval;$(13_10)$(13_10)    send_movement_packet(socket, x, y);$(13_10)	send_input_packet(socket, inputs);$(13_10)	send_velocity_packet(socket, hsp, vsp);$(13_10)	send_aim_packet(socket, reticle.x, reticle.y);$(13_10)}$(13_10)"
+		/// @DnDArgument : "code" "// How many seconds between packets?$(13_10)var send_interval = 0.3; // 30 times per second$(13_10)$(13_10)send_timer += delta_time / 1000000;$(13_10)$(13_10)if (send_timer >= send_interval) {$(13_10)    send_timer -= send_interval;$(13_10)$(13_10)    send_movement_packet(socket, x, y);$(13_10)	fix_ammo_count(socket);$(13_10)	//send_input_packet(socket, inputs);$(13_10)	//send_velocity_packet(socket, hsp, vsp);$(13_10)	//send_aim_packet(socket, reticle.x, reticle.y, nav);$(13_10)}$(13_10)"
 		// How many seconds between packets?
 		var send_interval = 0.3; // 30 times per second
 		
@@ -1173,7 +1191,8 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.If_Variable
 		    send_timer -= send_interval;
 		
 		    send_movement_packet(socket, x, y);
-			send_input_packet(socket, inputs);
-			send_velocity_packet(socket, hsp, vsp);
-			send_aim_packet(socket, reticle.x, reticle.y);
+			fix_ammo_count(socket);
+			//send_input_packet(socket, inputs);
+			//send_velocity_packet(socket, hsp, vsp);
+			//send_aim_packet(socket, reticle.x, reticle.y, nav);
 		}}}

@@ -189,7 +189,50 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDArgument : "var_2" "hair_weight"
 			bangs_sprite = s_player_afro_bangs;
 			hair_sprite = s_player_hair;
-			hair_weight = 1.5;	break;}
+			hair_weight = 1.5;	break;
+	
+		/// @DnDAction : YoYo Games.Switch.Case
+		/// @DnDVersion : 1
+		/// @DnDHash : 6C208E31
+		/// @DnDParent : 5B88D4CF
+		/// @DnDArgument : "const" ""cap_and_dreads""
+		case "cap_and_dreads":	/// @DnDAction : YoYo Games.Common.Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 11DEB827
+			/// @DnDInput : 3
+			/// @DnDParent : 6C208E31
+			/// @DnDArgument : "expr" "s_gurchin_hat"
+			/// @DnDArgument : "expr_1" "s_empty_sprite_for_bald"
+			/// @DnDArgument : "expr_2" ".2"
+			/// @DnDArgument : "var" "bangs_sprite"
+			/// @DnDArgument : "var_1" "hair_sprite"
+			/// @DnDArgument : "var_2" "hair_weight"
+			bangs_sprite = s_gurchin_hat;
+			hair_sprite = s_empty_sprite_for_bald;
+			hair_weight = .2;
+		
+			/// @DnDAction : YoYo Games.Instances.Create_Instance
+			/// @DnDVersion : 1
+			/// @DnDHash : 51227968
+			/// @DnDParent : 6C208E31
+			/// @DnDArgument : "xpos_relative" "1"
+			/// @DnDArgument : "ypos_relative" "1"
+			/// @DnDArgument : "var" "rah"
+			/// @DnDArgument : "objectid" "e_dreads"
+			/// @DnDSaveInfo : "objectid" "e_dreads"
+			rah = instance_create_layer(x + 0, y + 0, "Instances", e_dreads);
+		
+			/// @DnDAction : YoYo Games.Common.Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 3AB36994
+			/// @DnDInput : 2
+			/// @DnDParent : 6C208E31
+			/// @DnDArgument : "expr" "id"
+			/// @DnDArgument : "expr_1" "depth+1"
+			/// @DnDArgument : "var" "rah.master"
+			/// @DnDArgument : "var_1" "rah.depth"
+			rah.master = id;
+			rah.depth = depth+1;	break;}
 
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1

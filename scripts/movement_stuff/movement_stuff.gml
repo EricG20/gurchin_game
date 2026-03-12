@@ -145,13 +145,40 @@ function movement_stuff() {	/// @DnDAction : YoYo Games.Common.If_Variable
 						/// @DnDParent : 22B09505
 						/// @DnDArgument : "expr" "right"
 						/// @DnDArgument : "not" "1"
-						if(!(right)){	/// @DnDAction : YoYo Games.Common.Variable
+						if(!(right)){	/// @DnDAction : YoYo Games.Switch.Switch
 							/// @DnDVersion : 1
-							/// @DnDHash : 3B3C64F9
+							/// @DnDHash : 275230E0
 							/// @DnDParent : 4C17F234
-							/// @DnDArgument : "expr" "hsp* power(0.6, global.game_speed)"
-							/// @DnDArgument : "var" "hsp"
-							hsp = hsp* power(0.6, global.game_speed);}}}	break;
+							/// @DnDArgument : "expr" "character_index"
+							var l275230E0_0 = character_index;switch(l275230E0_0){	/// @DnDAction : YoYo Games.Switch.Default
+								/// @DnDVersion : 1
+								/// @DnDHash : 6985857A
+								/// @DnDParent : 275230E0
+								default:	/// @DnDAction : YoYo Games.Common.Variable
+									/// @DnDVersion : 1
+									/// @DnDHash : 3B3C64F9
+									/// @DnDParent : 6985857A
+									/// @DnDArgument : "expr" "hsp* power(0.6, global.game_speed)"
+									/// @DnDArgument : "var" "hsp"
+									hsp = hsp* power(0.6, global.game_speed);	break;
+							
+								/// @DnDAction : YoYo Games.Switch.Case
+								/// @DnDVersion : 1
+								/// @DnDHash : 20A95EC1
+								/// @DnDParent : 275230E0
+								/// @DnDArgument : "const" ""Zelinka""
+								case "Zelinka":	/// @DnDAction : YoYo Games.Common.If_Expression
+									/// @DnDVersion : 1
+									/// @DnDHash : 1DBE8492
+									/// @DnDParent : 20A95EC1
+									/// @DnDArgument : "expr" "on_ground"
+									if(on_ground){	/// @DnDAction : YoYo Games.Common.Variable
+										/// @DnDVersion : 1
+										/// @DnDHash : 4300517C
+										/// @DnDParent : 1DBE8492
+										/// @DnDArgument : "expr" "hsp* power(0.7, global.game_speed)"
+										/// @DnDArgument : "var" "hsp"
+										hsp = hsp* power(0.7, global.game_speed);}	break;}}}}	break;
 		
 			/// @DnDAction : YoYo Games.Switch.Case
 			/// @DnDVersion : 1

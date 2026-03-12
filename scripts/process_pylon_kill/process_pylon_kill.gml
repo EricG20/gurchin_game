@@ -141,39 +141,68 @@ function process_pylon_kill(bounty=50, flub_rate=irandom_range(0,5)) {	/// @Dn
 				/// @DnDSaveInfo : "soundid" "sfx_combo"
 				audio_play_sound(sfx_combo, 0, 0, 1.0, undefined, .8+(o_game.combo_num/15)*.2);}}}
 
-	/// @DnDAction : YoYo Games.Loops.Repeat
+	/// @DnDAction : YoYo Games.Common.If_Expression
 	/// @DnDVersion : 1
-	/// @DnDHash : 4A460D4E
+	/// @DnDHash : 76CFF421
 	/// @DnDParent : 635359D0
-	/// @DnDArgument : "times" "flub_rate"
-	repeat(flub_rate){	/// @DnDAction : YoYo Games.Instances.Create_Instance
+	/// @DnDArgument : "expr" "o_game.hosting"
+	if(o_game.hosting){	/// @DnDAction : YoYo Games.Loops.Repeat
 		/// @DnDVersion : 1
-		/// @DnDHash : 0B266708
-		/// @DnDParent : 4A460D4E
-		/// @DnDArgument : "xpos_relative" "1"
-		/// @DnDArgument : "ypos_relative" "1"
-		/// @DnDArgument : "objectid" "o_flub"
-		/// @DnDArgument : "layer" ""Instances_Front""
-		/// @DnDSaveInfo : "objectid" "o_flub"
-		instance_create_layer(x + 0, y + 0, "Instances_Front", o_flub);
-	
-		/// @DnDAction : YoYo Games.Common.If_Expression
-		/// @DnDVersion : 1
-		/// @DnDHash : 3F2CE88A
-		/// @DnDParent : 4A460D4E
-		/// @DnDArgument : "expr" "gurchenis_buff"
-		if(gurchenis_buff){	/// @DnDAction : YoYo Games.Loops.Repeat
+		/// @DnDHash : 4A460D4E
+		/// @DnDParent : 76CFF421
+		/// @DnDArgument : "times" "flub_rate"
+		repeat(flub_rate){	/// @DnDAction : YoYo Games.Instances.Create_Instance
 			/// @DnDVersion : 1
-			/// @DnDHash : 693B1750
-			/// @DnDParent : 3F2CE88A
-			/// @DnDArgument : "times" "2"
-			repeat(2){	/// @DnDAction : YoYo Games.Instances.Create_Instance
+			/// @DnDHash : 0B266708
+			/// @DnDParent : 4A460D4E
+			/// @DnDArgument : "xpos_relative" "1"
+			/// @DnDArgument : "ypos_relative" "1"
+			/// @DnDArgument : "var" "bro"
+			/// @DnDArgument : "var_temp" "1"
+			/// @DnDArgument : "objectid" "o_flub"
+			/// @DnDArgument : "layer" ""Instances_Front""
+			/// @DnDSaveInfo : "objectid" "o_flub"
+			var bro = instance_create_layer(x + 0, y + 0, "Instances_Front", o_flub);
+		
+			/// @DnDAction : YoYo Games.Common.Function_Call
+			/// @DnDVersion : 1
+			/// @DnDHash : 397E1E6F
+			/// @DnDInput : 2
+			/// @DnDParent : 4A460D4E
+			/// @DnDArgument : "function" "send_flub_packet"
+			/// @DnDArgument : "arg" "o_game.local_player.socket"
+			/// @DnDArgument : "arg_1" "bro"
+			send_flub_packet(o_game.local_player.socket, bro);
+		
+			/// @DnDAction : YoYo Games.Common.If_Expression
+			/// @DnDVersion : 1
+			/// @DnDHash : 3F2CE88A
+			/// @DnDParent : 4A460D4E
+			/// @DnDArgument : "expr" "gurchenis_buff"
+			if(gurchenis_buff){	/// @DnDAction : YoYo Games.Loops.Repeat
 				/// @DnDVersion : 1
-				/// @DnDHash : 21D951A5
-				/// @DnDParent : 693B1750
-				/// @DnDArgument : "xpos_relative" "1"
-				/// @DnDArgument : "ypos_relative" "1"
-				/// @DnDArgument : "objectid" "o_flub"
-				/// @DnDArgument : "layer" ""Instances_Front""
-				/// @DnDSaveInfo : "objectid" "o_flub"
-				instance_create_layer(x + 0, y + 0, "Instances_Front", o_flub);}}}}
+				/// @DnDHash : 693B1750
+				/// @DnDParent : 3F2CE88A
+				/// @DnDArgument : "times" "2"
+				repeat(2){	/// @DnDAction : YoYo Games.Instances.Create_Instance
+					/// @DnDVersion : 1
+					/// @DnDHash : 21D951A5
+					/// @DnDParent : 693B1750
+					/// @DnDArgument : "xpos_relative" "1"
+					/// @DnDArgument : "ypos_relative" "1"
+					/// @DnDArgument : "var" "bro"
+					/// @DnDArgument : "var_temp" "1"
+					/// @DnDArgument : "objectid" "o_flub"
+					/// @DnDArgument : "layer" ""Instances_Front""
+					/// @DnDSaveInfo : "objectid" "o_flub"
+					var bro = instance_create_layer(x + 0, y + 0, "Instances_Front", o_flub);
+				
+					/// @DnDAction : YoYo Games.Common.Function_Call
+					/// @DnDVersion : 1
+					/// @DnDHash : 36920373
+					/// @DnDInput : 2
+					/// @DnDParent : 693B1750
+					/// @DnDArgument : "function" "send_flub_packet"
+					/// @DnDArgument : "arg" "o_game.local_player.socket"
+					/// @DnDArgument : "arg_1" "bro"
+					send_flub_packet(o_game.local_player.socket, bro);}}}}}

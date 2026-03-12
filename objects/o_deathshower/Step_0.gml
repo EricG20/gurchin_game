@@ -235,8 +235,8 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 						/// @DnDHash : 14548824
 						/// @DnDApplyTo : frash
 						/// @DnDParent : 133B697C
-						/// @DnDArgument : "angle" "point_direction(x,y,o_cursor.x,o_cursor.y)"
-						with(frash) image_angle = point_direction(x,y,o_cursor.x,o_cursor.y);}}
+						/// @DnDArgument : "angle" "point_direction(x,y,other.weilder.reticle.x,other.weilder.reticle.y)"
+						with(frash) image_angle = point_direction(x,y,other.weilder.reticle.x,other.weilder.reticle.y);}}
 			
 				/// @DnDAction : YoYo Games.Loops.Repeat
 				/// @DnDVersion : 1
@@ -320,8 +320,8 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 					/// @DnDHash : 214492C3
 					/// @DnDApplyTo : frash
 					/// @DnDParent : 1F64EBF0
-					/// @DnDArgument : "angle" "point_direction(x,y,weilder.reticle.x,weilder.reticle.y)"
-					with(frash) image_angle = point_direction(x,y,weilder.reticle.x,weilder.reticle.y);}
+					/// @DnDArgument : "angle" "point_direction(x,y,other.weilder.reticle.x,other.weilder.reticle.y)"
+					with(frash) image_angle = point_direction(x,y,other.weilder.reticle.x,other.weilder.reticle.y);}
 			
 				/// @DnDAction : YoYo Games.Instances.Create_Instance
 				/// @DnDVersion : 1

@@ -201,28 +201,51 @@ var l4ACEE4AF_0 = state;switch(l4ACEE4AF_0){	/// @DnDAction : YoYo Games.Swit
 						/// @DnDArgument : "var" "gun_to_be"
 						gun_to_be = o_xoopington;}}}
 		
-			/// @DnDAction : YoYo Games.Instances.Create_Instance
+			/// @DnDAction : YoYo Games.Common.If_Expression
 			/// @DnDVersion : 1
-			/// @DnDHash : 12F15EBC
+			/// @DnDHash : 3F0DBF24
 			/// @DnDParent : 26B74FB8
-			/// @DnDArgument : "xpos_relative" "1"
-			/// @DnDArgument : "ypos_relative" "1"
-			/// @DnDArgument : "var" "the_gun_to_be"
-			/// @DnDArgument : "objectid" "o_pickup"
-			/// @DnDSaveInfo : "objectid" "o_pickup"
-			the_gun_to_be = instance_create_layer(x + 0, y + 0, "Instances", o_pickup);
+			/// @DnDArgument : "expr" "o_game.hosting"
+			if(o_game.hosting){	/// @DnDAction : YoYo Games.Instances.Create_Instance
+				/// @DnDVersion : 1
+				/// @DnDHash : 12F15EBC
+				/// @DnDParent : 3F0DBF24
+				/// @DnDArgument : "xpos_relative" "1"
+				/// @DnDArgument : "ypos_relative" "1"
+				/// @DnDArgument : "var" "the_gun_to_be"
+				/// @DnDArgument : "objectid" "o_pickup"
+				/// @DnDSaveInfo : "objectid" "o_pickup"
+				the_gun_to_be = instance_create_layer(x + 0, y + 0, "Instances", o_pickup);
+			
+				/// @DnDAction : YoYo Games.Common.Variable
+				/// @DnDVersion : 1
+				/// @DnDHash : 14E7680C
+				/// @DnDInput : 3
+				/// @DnDParent : 3F0DBF24
+				/// @DnDArgument : "expr" "gun_to_be"
+				/// @DnDArgument : "expr_1" "500"
+				/// @DnDArgument : "expr_2" "ps.IDLE"
+				/// @DnDArgument : "var" "the_gun_to_be.weapon_index"
+				/// @DnDArgument : "var_1" "cooldown"
+				/// @DnDArgument : "var_2" "state"
+				the_gun_to_be.weapon_index = gun_to_be;
+				cooldown = 500;
+				state = ps.IDLE;}
 		
-			/// @DnDAction : YoYo Games.Common.Variable
+			/// @DnDAction : YoYo Games.Common.If_Expression
 			/// @DnDVersion : 1
-			/// @DnDHash : 14E7680C
-			/// @DnDInput : 3
+			/// @DnDHash : 3FAFCEC3
 			/// @DnDParent : 26B74FB8
-			/// @DnDArgument : "expr" "gun_to_be"
-			/// @DnDArgument : "expr_1" "500"
-			/// @DnDArgument : "expr_2" "ps.IDLE"
-			/// @DnDArgument : "var" "the_gun_to_be.weapon_index"
-			/// @DnDArgument : "var_1" "cooldown"
-			/// @DnDArgument : "var_2" "state"
-			the_gun_to_be.weapon_index = gun_to_be;
-			cooldown = 500;
-			state = ps.IDLE;}	break;}
+			/// @DnDArgument : "expr" "o_game.hosting"
+			/// @DnDArgument : "not" "1"
+			if(!(o_game.hosting)){	/// @DnDAction : YoYo Games.Common.Variable
+				/// @DnDVersion : 1
+				/// @DnDHash : 254D8FCD
+				/// @DnDInput : 2
+				/// @DnDParent : 3FAFCEC3
+				/// @DnDArgument : "expr" "500"
+				/// @DnDArgument : "expr_1" "ps.IDLE"
+				/// @DnDArgument : "var" "cooldown"
+				/// @DnDArgument : "var_1" "state"
+				cooldown = 500;
+				state = ps.IDLE;}}	break;}

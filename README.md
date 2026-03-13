@@ -2,6 +2,24 @@
 
 
 
+##### What is this game dude:
+
+
+
+Zorbulon Pylon Defense Force is a wave based Arcade shooter developed in 2 and a half weeks in for CISC 3367 (Game Design and Development).
+
+The focus for 4900 is to expand the games scope, providing more weapons, enemies, and adding online multiplayer functionality.
+
+
+
+Weapons: 9/10
+
+Enemies: 6/10
+
+Multiplayer: idk about like 92% done and then its time for testing
+
+
+
 to-do:
 
 * Fix tab freezing(done)

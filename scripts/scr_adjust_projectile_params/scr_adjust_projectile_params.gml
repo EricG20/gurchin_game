@@ -38,19 +38,4 @@ function scr_adjust_projectile_params(projectile, proj_angle, proj_speed, proj_s
 	projectile.sender = weilder;
 	projectile.damage = proj_damage;
 	weilder.bullets_shot += 1;
-	projectile.bullet_number = weilder.bullets_shot;
-
-	/// @DnDAction : YoYo Games.Common.If_Expression
-	/// @DnDVersion : 1
-	/// @DnDHash : 0734D605
-	/// @DnDParent : 3B0A9FBE
-	/// @DnDArgument : "expr" "weilder.control_type == cr.LOCAL"
-	if(weilder.control_type == cr.LOCAL){	/// @DnDAction : YoYo Games.Common.Function_Call
-		/// @DnDVersion : 1
-		/// @DnDHash : 583AD44D
-		/// @DnDInput : 2
-		/// @DnDParent : 0734D605
-		/// @DnDArgument : "function" "send_bullet_packet"
-		/// @DnDArgument : "arg" "weilder.socket"
-		/// @DnDArgument : "arg_1" "projectile"
-		send_bullet_packet(weilder.socket, projectile);}}
+	projectile.bullet_number = weilder.bullets_shot;}

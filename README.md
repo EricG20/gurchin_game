@@ -20,6 +20,10 @@ Multiplayer: idk about like 92% done and then its time for testing
 
 
 
+Test Build (Last Updated 2/2/2026): https://vulkinx.itch.io/zorb-pylon-defence-force-testing
+
+
+
 to-do:
 
 * Fix tab freezing(done)
@@ -70,3 +74,20 @@ Far off stuff:
 * **Add different vendors that players can choose to go into a mission with to increase game depth**
 * **Add weapon shop so buying weapons to load into your default (and a way to buy these weapons, should you also have to unlock them before being allowed to buy them?)**
 * make the game like really good or something
+
+
+
+
+
+Extensions/Frameworks/API's Used:
+
+Easy Cam (https://marketplace.gamemaker.io/assets/8832/easy-cam)
+
+Input V10 (https://codeberg.org/offalynne/Input)
+
+Verlet Integration (https://github.com/sareklambert/gms-verlet-integration)
+
+Circular Bars (https://marketplace.gamemaker.io/assets/5369/circular-bars-for-gms2)
+
+
+

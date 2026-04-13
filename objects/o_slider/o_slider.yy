@@ -11,8 +11,8 @@
   "name":"o_slider",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"function_objects",
+    "path":"folders/Objects/function_objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

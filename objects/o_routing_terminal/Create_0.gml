@@ -39,3 +39,28 @@ ds_map_replace(mission_details, "classic_thumbnail", s_mini_player);
 ds_map_replace(mission_details, "classic_title", "Grivna-Prime Assault!");
 ds_map_replace(mission_details, "classic_desc", "Vurmin are attacking the ship housing our Glorbulous Empress, and are heading straight for the Core Pylon!");
 ds_map_replace(mission_details, "classic_room", ship_room);
+
+/// @DnDAction : YoYo Games.Instances.Create_Instance
+/// @DnDVersion : 1
+/// @DnDHash : 5949AAB6
+/// @DnDArgument : "xpos" "960"
+/// @DnDArgument : "ypos" "980"
+/// @DnDArgument : "var" "ready_button"
+/// @DnDArgument : "objectid" "o_select_place"
+/// @DnDArgument : "layer" ""Instances_Front""
+/// @DnDSaveInfo : "objectid" "o_select_place"
+ready_button = instance_create_layer(960, 980, "Instances_Front", o_select_place);
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 72D52DEB
+/// @DnDArgument : "expr" ""READY""
+/// @DnDArgument : "var" "ready_button.words"
+ready_button.words = "READY";
+
+/// @DnDAction : YoYo Games.Common.Function_Call
+/// @DnDVersion : 1
+/// @DnDHash : 05A0630E
+/// @DnDArgument : "function" "instance_deactivate_object"
+/// @DnDArgument : "arg" "ready_button"
+instance_deactivate_object(ready_button);

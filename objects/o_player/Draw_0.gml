@@ -3,15 +3,44 @@
 /// @DnDHash : 686AF8DF
 image_speed = 1;
 
+/// @DnDAction : YoYo Games.Drawing.Set_Alignment
+/// @DnDVersion : 1.1
+/// @DnDHash : 2B1F6971
+/// @DnDArgument : "halign" "fa_center"
+draw_set_halign(fa_center);
+draw_set_valign(fa_top);
+
+/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDVersion : 1
+/// @DnDHash : 1B45A8C1
+/// @DnDArgument : "var" "control_type"
+/// @DnDArgument : "value" "cr.NET"
+if(control_type == cr.NET){	/// @DnDAction : YoYo Games.Drawing.Draw_Value
+	/// @DnDVersion : 1
+	/// @DnDHash : 79B005FD
+	/// @DnDParent : 1B45A8C1
+	/// @DnDArgument : "x_relative" "1"
+	/// @DnDArgument : "y" "-200"
+	/// @DnDArgument : "y_relative" "1"
+	/// @DnDArgument : "caption" ""Player ""
+	/// @DnDArgument : "var" "player_id+1"
+	draw_text(x + 0, y + -200, string("Player ") + string(player_id+1));}
+
+/// @DnDAction : YoYo Games.Drawing.Set_Alignment
+/// @DnDVersion : 1.1
+/// @DnDHash : 13115AE2
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+
 /// @DnDAction : YoYo Games.Drawing.Draw_Value
 /// @DnDVersion : 1
-/// @DnDHash : 79B005FD
+/// @DnDHash : 44A5774C
 /// @DnDArgument : "x_relative" "1"
-/// @DnDArgument : "y" "-200"
+/// @DnDArgument : "y" "-240"
 /// @DnDArgument : "y_relative" "1"
-/// @DnDArgument : "caption" ""Sock: ""
-/// @DnDArgument : "var" "socket"
-draw_text(x + 0, y + -200, string("Sock: ") + string(socket));
+/// @DnDArgument : "caption" ""ID: ""
+/// @DnDArgument : "var" "player_id"
+draw_text(x + 0, y + -240, string("ID: ") + string(player_id));
 
 /// @DnDAction : YoYo Games.Common.If_Expression
 /// @DnDVersion : 1
@@ -20,13 +49,13 @@ draw_text(x + 0, y + -200, string("Sock: ") + string(socket));
 if(persistent){	/// @DnDAction : YoYo Games.Drawing.Draw_Sprite
 	/// @DnDVersion : 1
 	/// @DnDHash : 13CFE906
+	/// @DnDDisabled : 1
 	/// @DnDParent : 55294857
 	/// @DnDArgument : "x_relative" "1"
 	/// @DnDArgument : "y" "-90"
 	/// @DnDArgument : "y_relative" "1"
 	/// @DnDArgument : "sprite" "s_mini_player"
-	/// @DnDSaveInfo : "sprite" "s_mini_player"
-	draw_sprite(s_mini_player, 0, x + 0, y + -90);}
+	/// @DnDSaveInfo : "sprite" "s_mini_player"}
 
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1

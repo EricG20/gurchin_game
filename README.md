@@ -35,7 +35,8 @@ to-do:
 * Add Zelinka's Bullet Storm Special(done)
 * Add a default weapon for Zelinka(done)
 * Make character select interface(done)
-* **Make room for selecting missions (wip, mission selection code complete)**
+* **Make room for selecting missions (done)**
+* Make a ready up status before room transition into mission (done)
 * Make weapon inventory mechanic(done)
 * Add XOO-P1NG-TON (done)
 * Add weapon level indicator(done)
@@ -49,7 +50,8 @@ to-do:
 * Add Gurchin II
 * Add emote system (for signaling to other players context sensitive information like "I need help!" or "Great job!", should be unique lines per character)
 * (MAYBE) Adjust the Empresses design (maybe I made her too skinny)
-* **Add Multiplayer for gods sake (wip)**
+* **Add Multiplayer for gods sake (just about done)**
+* **Get Node.js matchmaking server onto a public IP address**
 * **Fix scr\_afterimage**
 
 
@@ -58,7 +60,7 @@ Multiplayer facilitating changes to be made:
 
 * Rework grade rewarding sequence to something more object oriented and changable with internal game speed(so pausing finally works)
 * Figure out if players should share combo meter between them or have it be individual (how will this be graded?)
-* Figure out if players share flub or not
+* Figure out if players share flub or not (yes they do)
 * Make picking up flub increase score
 
 
@@ -88,6 +90,4 @@ Input V10 (https://codeberg.org/offalynne/Input)
 Verlet Integration (https://github.com/sareklambert/gms-verlet-integration)
 
 Circular Bars (https://marketplace.gamemaker.io/assets/5369/circular-bars-for-gms2)
-
-
 

@@ -1,3 +1,21 @@
+/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDVersion : 1
+/// @DnDHash : 207804D0
+/// @DnDDisabled : 1
+/// @DnDArgument : "var" "sender"
+/// @DnDArgument : "not" "1"
+/// @DnDArgument : "value" "-1"
+/// @DnDAction : YoYo Games.Drawing.Draw_Value
+/// @DnDVersion : 1
+/// @DnDHash : 1644468E
+/// @DnDDisabled : 1
+/// @DnDParent : 207804D0
+/// @DnDArgument : "x_relative" "1"
+/// @DnDArgument : "y" "-30"
+/// @DnDArgument : "y_relative" "1"
+/// @DnDArgument : "caption" ""sender_id: ""
+/// @DnDArgument : "var" "sender.player_id"
+
 /// @DnDAction : YoYo Games.Drawing.Draw_Sprite_Transformed
 /// @DnDVersion : 1
 /// @DnDHash : 359D0FFE

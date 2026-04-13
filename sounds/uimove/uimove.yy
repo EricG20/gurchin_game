@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"uimove",
+  "audioGroupId":{
+    "name":"effect_audio",
+    "path":"audiogroups/effect_audio",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":1,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.43750566,
+  "exportDir":"",
+  "name":"uimove",
+  "parent":{
+    "name":"ui",
+    "path":"folders/Sounds/ui.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"uimove.ogg",
+  "volume":1.0,
+}

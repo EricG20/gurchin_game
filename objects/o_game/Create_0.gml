@@ -1,3 +1,9 @@
+/// @DnDAction : YoYo Games.Common.Execute_Code
+/// @DnDVersion : 1
+/// @DnDHash : 2349CA0A
+/// @DnDArgument : "code" "global.players = array_create(5, -1);$(13_10)"
+global.players = array_create(5, -1);
+
 /// @DnDAction : YoYo Games.Data Structures.Create_Map
 /// @DnDVersion : 1
 /// @DnDHash : 6572683D

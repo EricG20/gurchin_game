@@ -340,4 +340,96 @@ var l1F7F3E66_0 = instance_place(x + 0, y + 0, [o_cursor]);if ((l1F7F3E66_0 > 0
 				/// @DnDArgument : "ypos_relative" "1"
 				/// @DnDArgument : "objectid" "o_net_client"
 				/// @DnDSaveInfo : "objectid" "o_net_client"
-				instance_create_layer(x + 0, y + 0, "Instances", o_net_client);	break;}}}
+				instance_create_layer(x + 0, y + 0, "Instances", o_net_client);	break;
+		
+			/// @DnDAction : YoYo Games.Switch.Case
+			/// @DnDVersion : 1
+			/// @DnDHash : 77BDFF15
+			/// @DnDParent : 27D54EF4
+			/// @DnDArgument : "const" ""READY""
+			case "READY":	/// @DnDAction : YoYo Games.Common.Variable
+				/// @DnDVersion : 1
+				/// @DnDHash : 199AEBE2
+				/// @DnDParent : 77BDFF15
+				/// @DnDArgument : "expr" "!o_game.local_player.ready"
+				/// @DnDArgument : "var" "o_game.local_player.ready"
+				o_game.local_player.ready = !o_game.local_player.ready;
+			
+				/// @DnDAction : YoYo Games.Common.Apply_To
+				/// @DnDVersion : 1
+				/// @DnDHash : 5FB31754
+				/// @DnDApplyTo : o_game.local_player
+				/// @DnDParent : 77BDFF15
+				with(o_game.local_player) {
+					/// @DnDAction : YoYo Games.Common.If_Expression
+					/// @DnDVersion : 1
+					/// @DnDHash : 1C4D0D9F
+					/// @DnDParent : 5FB31754
+					/// @DnDArgument : "expr" "is_host"
+					if(is_host){	/// @DnDAction : YoYo Games.Instances.If_Instance_Exists
+						/// @DnDVersion : 1
+						/// @DnDHash : 62EDA707
+						/// @DnDParent : 1C4D0D9F
+						/// @DnDArgument : "obj" "o_net_host"
+						/// @DnDSaveInfo : "obj" "o_net_host"
+						var l62EDA707_0 = false;l62EDA707_0 = instance_exists(o_net_host);if(l62EDA707_0){	/// @DnDAction : YoYo Games.Loops.For_Loop
+							/// @DnDVersion : 1
+							/// @DnDHash : 20DCBD03
+							/// @DnDParent : 62EDA707
+							/// @DnDArgument : "cond" "i < ds_list_size(o_net_host.socket_list)"
+							for(i = 0; i < ds_list_size(o_net_host.socket_list); i += 1) {	/// @DnDAction : YoYo Games.Common.Function_Call
+								/// @DnDVersion : 1
+								/// @DnDHash : 24F2B95E
+								/// @DnDParent : 20DCBD03
+								/// @DnDArgument : "function" "player_ready_status"
+								/// @DnDArgument : "arg" "ds_list_find_value(o_net_host.socket_list, i)"
+								player_ready_status(ds_list_find_value(o_net_host.socket_list, i));}}}
+				
+					/// @DnDAction : YoYo Games.Common.Else
+					/// @DnDVersion : 1
+					/// @DnDHash : 0DF5BAC1
+					/// @DnDParent : 5FB31754
+					else{	/// @DnDAction : YoYo Games.Common.Function_Call
+						/// @DnDVersion : 1
+						/// @DnDHash : 120FA8EE
+						/// @DnDParent : 0DF5BAC1
+						/// @DnDArgument : "function" "player_ready_status"
+						/// @DnDArgument : "arg" "socket"
+						player_ready_status(socket);}
+				}	break;
+		
+			/// @DnDAction : YoYo Games.Switch.Case
+			/// @DnDVersion : 1
+			/// @DnDHash : 01EA1636
+			/// @DnDParent : 27D54EF4
+			/// @DnDArgument : "const" ""DISCONNECT""
+			case "DISCONNECT":	/// @DnDAction : YoYo Games.Instances.If_Instance_Exists
+				/// @DnDVersion : 1
+				/// @DnDHash : 0628AE58
+				/// @DnDParent : 01EA1636
+				/// @DnDArgument : "obj" "o_net_client"
+				/// @DnDSaveInfo : "obj" "o_net_client"
+				var l0628AE58_0 = false;l0628AE58_0 = instance_exists(o_net_client);if(l0628AE58_0){	/// @DnDAction : YoYo Games.Instances.Destroy_Instance
+					/// @DnDVersion : 1
+					/// @DnDHash : 0E652AC8
+					/// @DnDApplyTo : o_net_client
+					/// @DnDParent : 0628AE58
+					with(o_net_client) instance_destroy();}	break;
+		
+			/// @DnDAction : YoYo Games.Switch.Case
+			/// @DnDVersion : 1
+			/// @DnDHash : 2BA3502D
+			/// @DnDParent : 27D54EF4
+			/// @DnDArgument : "const" ""STOP HOSTING""
+			case "STOP HOSTING":	/// @DnDAction : YoYo Games.Instances.If_Instance_Exists
+				/// @DnDVersion : 1
+				/// @DnDHash : 5C8B6B39
+				/// @DnDParent : 2BA3502D
+				/// @DnDArgument : "obj" "o_net_host"
+				/// @DnDSaveInfo : "obj" "o_net_host"
+				var l5C8B6B39_0 = false;l5C8B6B39_0 = instance_exists(o_net_host);if(l5C8B6B39_0){	/// @DnDAction : YoYo Games.Instances.Destroy_Instance
+					/// @DnDVersion : 1
+					/// @DnDHash : 7257B15B
+					/// @DnDApplyTo : o_net_host
+					/// @DnDParent : 5C8B6B39
+					with(o_net_host) instance_destroy();}	break;}}}

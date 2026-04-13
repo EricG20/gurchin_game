@@ -6,7 +6,7 @@
 /// @DnDArgument : "expr_2" "random_range(0,6)"
 /// @DnDArgument : "var" "flashAlpha"
 /// @DnDArgument : "var_1" "flashColor"
-/// @DnDArgument : "var_2" "running_variance"
+/// @DnDArgument : "var_2" "variance"
 flashAlpha = 0;
 flashColor = c_red;
-running_variance = random_range(0,6);
+variance = random_range(0,6);

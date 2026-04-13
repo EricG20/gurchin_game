@@ -28,13 +28,13 @@ if(on_ground){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDHash : 36BC9442
 	/// @DnDInput : 2
 	/// @DnDParent : 2A5A8999
-	/// @DnDArgument : "expr" "facing*(3+running_variance)*(.1 * global.game_speed)"
+	/// @DnDArgument : "expr" "facing*(3+variance)*(.1 * global.game_speed)"
 	/// @DnDArgument : "expr_relative" "1"
-	/// @DnDArgument : "expr_1" "clamp(hsp, -(3+running_variance), 3+running_variance)"
+	/// @DnDArgument : "expr_1" "clamp(hsp, -(3+variance), 3+variance)"
 	/// @DnDArgument : "var" "hsp"
 	/// @DnDArgument : "var_1" "hsp"
-	hsp += facing*(3+running_variance)*(.1 * global.game_speed);
-	hsp = clamp(hsp, -(3+running_variance), 3+running_variance);}
+	hsp += facing*(3+variance)*(.1 * global.game_speed);
+	hsp = clamp(hsp, -(3+variance), 3+variance);}
 
 /// @DnDAction : YoYo Games.Collisions.If_Object_At
 /// @DnDVersion : 1.1

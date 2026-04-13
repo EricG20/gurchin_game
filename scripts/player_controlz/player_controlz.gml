@@ -816,10 +816,10 @@ function player_controlz() {	/// @DnDAction : YoYo Games.Common.If_Expression
 				/// @DnDArgument : "ypos_relative" "1"
 				/// @DnDArgument : "var" "billy"
 				/// @DnDArgument : "var_temp" "1"
-				/// @DnDArgument : "objectid" "e_kick_up"
+				/// @DnDArgument : "objectid" "o_kick_up"
 				/// @DnDArgument : "layer" ""Instances_Front""
-				/// @DnDSaveInfo : "objectid" "e_kick_up"
-				var billy = instance_create_layer(x + 0, y + 0, "Instances_Front", e_kick_up);
+				/// @DnDSaveInfo : "objectid" "o_kick_up"
+				var billy = instance_create_layer(x + 0, y + 0, "Instances_Front", o_kick_up);
 			
 				/// @DnDAction : YoYo Games.Audio.Play_Audio
 				/// @DnDVersion : 1.1
@@ -833,10 +833,14 @@ function player_controlz() {	/// @DnDAction : YoYo Games.Common.If_Expression
 				/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDVersion : 1
 				/// @DnDHash : 3C53750A
+				/// @DnDInput : 2
 				/// @DnDParent : 36F626D2
 				/// @DnDArgument : "expr" "facing"
+				/// @DnDArgument : "expr_1" "id"
 				/// @DnDArgument : "var" "billy.facing"
-				billy.facing = facing;}}}
+				/// @DnDArgument : "var_1" "billy.sender"
+				billy.facing = facing;
+				billy.sender = id;}}}
 
 	/// @DnDAction : YoYo Games.Common.If_Expression
 	/// @DnDVersion : 1

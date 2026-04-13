@@ -100,9 +100,10 @@ mygurn.weilder = id;
 /// @DnDHash : 02E89345
 /// @DnDArgument : "xpos_relative" "1"
 /// @DnDArgument : "ypos_relative" "1"
+/// @DnDArgument : "var" "my_cam"
 /// @DnDArgument : "objectid" "o_camera"
 /// @DnDSaveInfo : "objectid" "o_camera"
-instance_create_layer(x + 0, y + 0, "Instances", o_camera);
+my_cam = instance_create_layer(x + 0, y + 0, "Instances", o_camera);
 
 /// @DnDAction : YoYo Games.Data Structures.Create_Map
 /// @DnDVersion : 1

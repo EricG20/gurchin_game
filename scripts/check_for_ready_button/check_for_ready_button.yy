@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"check_for_ready_button",
+  "isCompatibility":false,
+  "isDnD":true,
+  "name":"check_for_ready_button",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -327,7 +327,7 @@ function controlz() {	/// @DnDAction : YoYo Games.Switch.Switch
 					/// @DnDVersion : 1
 					/// @DnDHash : 1D13F562
 					/// @DnDParent : 55B8D499
-					/// @DnDArgument : "code" "/// @description Execute Code$(13_10)$(13_10)var keys = variable_struct_get_names(inputs);$(13_10)$(13_10)for (var i = 0; i < array_length(keys); i++) {$(13_10)    var key = keys[i];$(13_10)$(13_10)    inputs[$ key] = variable_instance_get(id, key);$(13_10)}$(13_10)$(13_10)$(13_10)//show_debug_message("---- CLIENT INPUTS BEFORE SEND ----");$(13_10)$(13_10)//var _keys = variable_struct_get_names(inputs);$(13_10)$(13_10)//for (var i = 0; i < array_length(_keys); i++) {$(13_10)//    var _key = _keys[i];$(13_10)//    var val = inputs[$ _key];$(13_10)//    show_debug_message(_key + " = " + string(val));$(13_10)//}$(13_10)$(13_10)//show_debug_message("-----------------------------------");$(13_10)$(13_10)send_input_packet(socket, inputs);$(13_10)//send_movement_packet(socket, x, y);$(13_10)send_velocity_packet(socket, hsp, vsp);$(13_10)send_aim_packet(socket, reticle.x, reticle.y, nav);"
+					/// @DnDArgument : "code" "/// @description Execute Code$(13_10)$(13_10)var keys = variable_struct_get_names(inputs);$(13_10)$(13_10)for (var i = 0; i < array_length(keys); i++) {$(13_10)    var key = keys[i];$(13_10)$(13_10)    inputs[$ key] = variable_instance_get(id, key);$(13_10)}$(13_10)$(13_10)$(13_10)//show_debug_message("---- CLIENT INPUTS BEFORE SEND ----");$(13_10)$(13_10)//var _keys = variable_struct_get_names(inputs);$(13_10)$(13_10)//for (var i = 0; i < array_length(_keys); i++) {$(13_10)//    var _key = _keys[i];$(13_10)//    var val = inputs[$ _key];$(13_10)//    show_debug_message(_key + " = " + string(val));$(13_10)//}$(13_10)$(13_10)//show_debug_message("-----------------------------------");$(13_10)$(13_10)	if (instance_exists(o_net_host)){$(13_10)		for (var i = 0; i < ds_list_size(o_net_host.socket_list); i++;){$(13_10)			send_input_packet(ds_list_find_value(o_net_host.socket_list, i), inputs);$(13_10)			//send_movement_packet(socket, x, y);$(13_10)			send_velocity_packet(ds_list_find_value(o_net_host.socket_list, i), hsp, vsp);$(13_10)			send_aim_packet(ds_list_find_value(o_net_host.socket_list, i), reticle.x, reticle.y, nav);$(13_10)		}$(13_10)	}$(13_10)	else{$(13_10)send_input_packet(socket, inputs);$(13_10)//send_movement_packet(socket, x, y);$(13_10)send_velocity_packet(socket, hsp, vsp);$(13_10)send_aim_packet(socket, reticle.x, reticle.y, nav);$(13_10)	}"
 					/// @description Execute Code
 					
 					var keys = variable_struct_get_names(inputs);
@@ -351,10 +351,20 @@ function controlz() {	/// @DnDAction : YoYo Games.Switch.Switch
 					
 					//show_debug_message("-----------------------------------");
 					
+						if (instance_exists(o_net_host)){
+							for (var i = 0; i < ds_list_size(o_net_host.socket_list); i++;){
+								send_input_packet(ds_list_find_value(o_net_host.socket_list, i), inputs);
+								//send_movement_packet(socket, x, y);
+								send_velocity_packet(ds_list_find_value(o_net_host.socket_list, i), hsp, vsp);
+								send_aim_packet(ds_list_find_value(o_net_host.socket_list, i), reticle.x, reticle.y, nav);
+							}
+						}
+						else{
 					send_input_packet(socket, inputs);
 					//send_movement_packet(socket, x, y);
 					send_velocity_packet(socket, hsp, vsp);
-					send_aim_packet(socket, reticle.x, reticle.y, nav);}}	break;
+					send_aim_packet(socket, reticle.x, reticle.y, nav);
+						}}}	break;
 	
 		/// @DnDAction : YoYo Games.Switch.Case
 		/// @DnDVersion : 1
@@ -387,7 +397,7 @@ function controlz() {	/// @DnDAction : YoYo Games.Switch.Switch
 			/// @DnDVersion : 1
 			/// @DnDHash : 6F9D2C98
 			/// @DnDParent : 07610ECB
-			/// @DnDArgument : "code" "/// @description Execute Code$(13_10)var keys = variable_struct_get_names(inputs);$(13_10)$(13_10)for (var i = 0; i < array_length(keys); i++) {$(13_10)    var key = keys[i];$(13_10)    var val = inputs[$ key];$(13_10)$(13_10)    variable_instance_set(id, key, val);$(13_10)}$(13_10)"
+			/// @DnDArgument : "code" "/// @description Execute Code$(13_10)var keys = variable_struct_get_names(inputs);$(13_10)$(13_10)for (var i = 0; i < array_length(keys); i++) {$(13_10)    var key = keys[i];$(13_10)    var val = inputs[$ key];$(13_10)$(13_10)    variable_instance_set(id, key, val);$(13_10)}$(13_10)if (instance_exists(o_net_host)){$(13_10)	for (var i = 0; i < ds_list_size(o_net_host.socket_list); i++;){$(13_10)		if (ds_list_find_value(o_net_host.socket_list, i) != socket){$(13_10)			send_input_packet(ds_list_find_value(o_net_host.socket_list, i), inputs);$(13_10)			send_velocity_packet(ds_list_find_value(o_net_host.socket_list, i), hsp, vsp);$(13_10)			send_aim_packet(ds_list_find_value(o_net_host.socket_list, i), reticle.x, reticle.y, nav);$(13_10)		}$(13_10)	}$(13_10)}"
 			/// @description Execute Code
 			var keys = variable_struct_get_names(inputs);
 			
@@ -396,4 +406,13 @@ function controlz() {	/// @DnDAction : YoYo Games.Switch.Switch
 			    var val = inputs[$ key];
 			
 			    variable_instance_set(id, key, val);
+			}
+			if (instance_exists(o_net_host)){
+				for (var i = 0; i < ds_list_size(o_net_host.socket_list); i++;){
+					if (ds_list_find_value(o_net_host.socket_list, i) != socket){
+						send_input_packet(ds_list_find_value(o_net_host.socket_list, i), inputs);
+						send_velocity_packet(ds_list_find_value(o_net_host.socket_list, i), hsp, vsp);
+						send_aim_packet(ds_list_find_value(o_net_host.socket_list, i), reticle.x, reticle.y, nav);
+					}
+				}
 			}	break;}}

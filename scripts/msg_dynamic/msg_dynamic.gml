@@ -45,6 +45,10 @@ function msg_dynamic() {
 		x_loc += glorb_x;
 		y_loc += glorb_y;
 	}
+	if (object_index == o_player) {
+		x_loc = x+head_offset_x;
+		y_loc = y+head_height-120;
+	}
 	//get arrow offset
 	var arrow_xm = sprite_get_width(arrow_sprite)/2 - sprite_get_xoffset(arrow_sprite);
 	//top left corner

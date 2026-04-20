@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"gurch_babble_5",
+  "audioGroupId":{
+    "name":"effect_audio",
+    "path":"audiogroups/effect_audio",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.17789115,
+  "exportDir":"",
+  "name":"gurch_babble_5",
+  "parent":{
+    "name":"gurchin_v",
+    "path":"folders/Sounds/voices/gurchin_v.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"gurch_babble_5.ogg",
+  "volume":1.0,
+}

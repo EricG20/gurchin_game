@@ -3,7 +3,15 @@
 /// @DnDHash : 363FC2CB
 /// @DnDComment : // Script assets have changed for v2.3.0 see$(13_10)// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 /// @DnDArgument : "funcName" "player_controlz"
-function player_controlz() {	/// @DnDAction : YoYo Games.Common.If_Expression
+function player_controlz() {	/// @DnDAction : YoYo Games.Common.Execute_Script
+	/// @DnDVersion : 1.1
+	/// @DnDHash : 5AD26DAB
+	/// @DnDParent : 363FC2CB
+	/// @DnDArgument : "script" "scr_emote_controls"
+	/// @DnDSaveInfo : "script" "scr_emote_controls"
+	script_execute(scr_emote_controls);
+
+	/// @DnDAction : YoYo Games.Common.If_Expression
 	/// @DnDVersion : 1
 	/// @DnDHash : 5EC131F0
 	/// @DnDParent : 363FC2CB

@@ -16,7 +16,7 @@ function controlz() {	/// @DnDAction : YoYo Games.Switch.Switch
 		case cr.LOCAL:	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 25F5EADC
-			/// @DnDInput : 20
+			/// @DnDInput : 21
 			/// @DnDParent : 22FACA17
 			/// @DnDArgument : "expr" "false"
 			/// @DnDArgument : "expr_1" "false"
@@ -37,6 +37,7 @@ function controlz() {	/// @DnDAction : YoYo Games.Switch.Switch
 			/// @DnDArgument : "expr_16" "false"
 			/// @DnDArgument : "expr_17" "false"
 			/// @DnDArgument : "expr_18" "false"
+			/// @DnDArgument : "expr_20" "false"
 			/// @DnDArgument : "var" "left"
 			/// @DnDArgument : "var_1" "right"
 			/// @DnDArgument : "var_2" "jump"
@@ -57,6 +58,7 @@ function controlz() {	/// @DnDAction : YoYo Games.Switch.Switch
 			/// @DnDArgument : "var_17" "up_tap"
 			/// @DnDArgument : "var_18" "down_tap"
 			/// @DnDArgument : "var_19" "nav"
+			/// @DnDArgument : "var_20" "communicate"
 			left = false;
 			right = false;
 			jump = false;
@@ -77,6 +79,7 @@ function controlz() {	/// @DnDAction : YoYo Games.Switch.Switch
 			up_tap = false;
 			down_tap = false;
 			nav = 0;
+			communicate = false;
 		
 			/// @DnDAction : YoYo Games.Common.If_Variable
 			/// @DnDVersion : 1
@@ -87,7 +90,7 @@ function controlz() {	/// @DnDAction : YoYo Games.Switch.Switch
 			if(global.we_can_move == true){	/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDVersion : 1
 				/// @DnDHash : 4EB47F3D
-				/// @DnDInput : 10
+				/// @DnDInput : 11
 				/// @DnDParent : 1186E466
 				/// @DnDArgument : "expr" "InputPressed(INPUT_VERB.SHOOT)"
 				/// @DnDArgument : "expr_1" "InputCheck(INPUT_VERB.SHOOT)"
@@ -99,6 +102,7 @@ function controlz() {	/// @DnDAction : YoYo Games.Switch.Switch
 				/// @DnDArgument : "expr_7" "InputPressed(INPUT_VERB.UP)"
 				/// @DnDArgument : "expr_8" "InputPressed(INPUT_VERB.DOWN)"
 				/// @DnDArgument : "expr_9" "InputDirection(0, INPUT_CLUSTER.NAVIGATION)"
+				/// @DnDArgument : "expr_10" "InputPressed(INPUT_VERB.COMMUNICATE)"
 				/// @DnDArgument : "var" "shoot"
 				/// @DnDArgument : "var_1" "shooting"
 				/// @DnDArgument : "var_2" "shoot_release"
@@ -109,6 +113,7 @@ function controlz() {	/// @DnDAction : YoYo Games.Switch.Switch
 				/// @DnDArgument : "var_7" "up_tap"
 				/// @DnDArgument : "var_8" "down_tap"
 				/// @DnDArgument : "var_9" "nav"
+				/// @DnDArgument : "var_10" "communicate"
 				shoot = InputPressed(INPUT_VERB.SHOOT);
 				shooting = InputCheck(INPUT_VERB.SHOOT);
 				shoot_release = InputReleased(INPUT_VERB.SHOOT);
@@ -119,6 +124,7 @@ function controlz() {	/// @DnDAction : YoYo Games.Switch.Switch
 				up_tap = InputPressed(INPUT_VERB.UP);
 				down_tap = InputPressed(INPUT_VERB.DOWN);
 				nav = InputDirection(0, INPUT_CLUSTER.NAVIGATION);
+				communicate = InputPressed(INPUT_VERB.COMMUNICATE);
 			
 				/// @DnDAction : YoYo Games.Common.If_Expression
 				/// @DnDVersion : 1

@@ -48,7 +48,7 @@ to-do:
 * **Add Gurchenis Gauntlet Mission**
 * Add G'Molgda (and his default and his special)
 * Add Gurchin II
-* Add emote system (for signaling to other players context sensitive information like "I need help!" or "Great job!", should be unique lines per character)
+* Add emote system (for signaling to other players context sensitive information like "I need help!" or "Great job!", should be unique lines per character) (done)
 * (MAYBE) Adjust the Empresses design (maybe I made her too skinny)
 * **Add Multiplayer for gods sake (just about done)**
 * **Get Node.js matchmaking server onto a public IP address**

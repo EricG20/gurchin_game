@@ -1,8 +1,9 @@
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 5E4C0E46
-/// @DnDArgument : "code" "client_socket = network_create_socket(network_socket_tcp);$(13_10)join_code = "";$(13_10)connecting = false;$(13_10)"
+/// @DnDArgument : "code" "client_socket = network_create_socket(network_socket_tcp);$(13_10)keyboard_string = "";$(13_10)join_code = "";$(13_10)connecting = false;$(13_10)"
 client_socket = network_create_socket(network_socket_tcp);
+keyboard_string = "";
 join_code = "";
 connecting = false;
 

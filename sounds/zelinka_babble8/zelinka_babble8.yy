@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"zelinka_babble8",
+  "audioGroupId":{
+    "name":"effect_audio",
+    "path":"audiogroups/effect_audio",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.33653063,
+  "exportDir":"",
+  "name":"zelinka_babble8",
+  "parent":{
+    "name":"zelinka_v",
+    "path":"folders/Sounds/voices/zelinka_v.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"zelinka_babble8.ogg",
+  "volume":1.0,
+}

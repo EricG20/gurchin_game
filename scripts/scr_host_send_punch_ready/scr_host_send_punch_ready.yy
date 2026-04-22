@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_host_send_punch_ready",
+  "isCompatibility":false,
+  "isDnD":true,
+  "name":"scr_host_send_punch_ready",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

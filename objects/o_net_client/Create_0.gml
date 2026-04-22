@@ -1,7 +1,10 @@
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 5E4C0E46
-/// @DnDArgument : "code" "client_socket = network_create_socket(network_socket_tcp);$(13_10)keyboard_string = "";$(13_10)join_code = "";$(13_10)connecting = false;$(13_10)"
+/// @DnDArgument : "code" "global.last_seq_from_host = -1;$(13_10)global.mm_url = "http://localhost:3000";$(13_10)$(13_10)client_socket = network_create_socket(network_socket_tcp);$(13_10)keyboard_string = "";$(13_10)join_code = "";$(13_10)connecting = false;$(13_10)"
+global.last_seq_from_host = -1;
+global.mm_url = "http://localhost:3000";
+
 client_socket = network_create_socket(network_socket_tcp);
 keyboard_string = "";
 join_code = "";

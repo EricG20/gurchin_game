@@ -663,6 +663,8 @@
     {"id":{"name":"scr_grade","path":"scripts/scr_grade/scr_grade.yy",},},
     {"id":{"name":"scr_gurchenisaura","path":"scripts/scr_gurchenisaura/scr_gurchenisaura.yy",},},
     {"id":{"name":"scr_homing","path":"scripts/scr_homing/scr_homing.yy",},},
+    {"id":{"name":"scr_host_create_lobby","path":"scripts/scr_host_create_lobby/scr_host_create_lobby.yy",},},
+    {"id":{"name":"scr_host_send_punch_ready","path":"scripts/scr_host_send_punch_ready/scr_host_send_punch_ready.yy",},},
     {"id":{"name":"scr_laser","path":"scripts/scr_laser/scr_laser.yy",},},
     {"id":{"name":"scr_load_game","path":"scripts/scr_load_game/scr_load_game.yy",},},
     {"id":{"name":"scr_make_zorb_say","path":"scripts/scr_make_zorb_say/scr_make_zorb_say.yy",},},

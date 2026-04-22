@@ -470,6 +470,8 @@
     {"name":"scr_grade_point_reward","order":11,"path":"scripts/scr_grade_point_reward/scr_grade_point_reward.yy",},
     {"name":"scr_gurchenisaura","order":17,"path":"scripts/scr_gurchenisaura/scr_gurchenisaura.yy",},
     {"name":"scr_homing","order":12,"path":"scripts/scr_homing/scr_homing.yy",},
+    {"name":"scr_host_create_lobby","order":37,"path":"scripts/scr_host_create_lobby/scr_host_create_lobby.yy",},
+    {"name":"scr_host_send_punch_ready","order":38,"path":"scripts/scr_host_send_punch_ready/scr_host_send_punch_ready.yy",},
     {"name":"scr_laser","order":6,"path":"scripts/scr_laser/scr_laser.yy",},
     {"name":"scr_make_zorb_say","order":36,"path":"scripts/scr_make_zorb_say/scr_make_zorb_say.yy",},
     {"name":"scr_save_settings","order":2,"path":"scripts/scr_save_settings/scr_save_settings.yy",},

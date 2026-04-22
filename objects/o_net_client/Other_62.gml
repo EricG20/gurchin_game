@@ -1,20 +1,76 @@
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 01077E44
-/// @DnDArgument : "code" "/// @description Execute Code$(13_10)if (connecting) {$(13_10)    var result = json_decode(async_load[? "result"]);$(13_10)$(13_10)    if (!result[? "ok"]) {$(13_10)        show_message("Invalid code!");$(13_10)        connecting = false;$(13_10)		join_code = "";$(13_10)        return;$(13_10)    }$(13_10)$(13_10)    var hostIp = result[? "hostIp"];$(13_10)    var port   = result[? "port"];$(13_10)$(13_10)    network_connect(client_socket, hostIp, port);$(13_10)}$(13_10)"
-/// @description Execute Code
-if (connecting) {
-    var result = json_decode(async_load[? "result"]);
+/// @DnDArgument : "code" "/// Async - HTTP$(13_10)$(13_10)$(13_10)var url    = async_load[? "url"];$(13_10)var status = async_load[? "status"];$(13_10)$(13_10)show_debug_message("CLIENT HTTP EVENT: " + string(url));$(13_10)// GameMaker success = 0, NOT 200$(13_10)if (status != 0) exit;$(13_10)$(13_10)$(13_10)// -----------------------------$(13_10)// 1. Handle /resolve/<code>$(13_10)// -----------------------------$(13_10)if (string_pos("/resolve/", url) > 0) {$(13_10)$(13_10)    var result = json_parse(async_load[? "result"]);$(13_10)$(13_10)    if (!result.ok) {$(13_10)        show_message("Invalid code!");$(13_10)        connecting = false;$(13_10)        join_code = "";$(13_10)        return;$(13_10)    }$(13_10)$(13_10)    // Code is valid → begin NAT punch sequence$(13_10)    scr_client_begin_nat_punch();$(13_10)    return;$(13_10)}$(13_10)$(13_10)$(13_10)// -----------------------------$(13_10)// 2. Handle /stun$(13_10)// -----------------------------$(13_10)if (string_pos("/stun", url) > 0) {$(13_10)$(13_10)    var result = json_parse(async_load[? "result"]);$(13_10)$(13_10)    global.client_public_ip   = result.publicIP;$(13_10)    global.client_public_port = result.publicPort;$(13_10)$(13_10)    // Now request punch info$(13_10)    scr_client_request_punch();$(13_10)    return;$(13_10)	$(13_10)	show_debug_message("CLIENT STUN HANDLER ENTERED");$(13_10)$(13_10)}$(13_10)$(13_10)$(13_10)// -----------------------------$(13_10)// 3. Handle /punch/<code>$(13_10)// -----------------------------$(13_10)if (string_pos("/punch/", url) > 0) {$(13_10)	$(13_10)    var result = json_parse(async_load[? "result"]);$(13_10)$(13_10)    if (!result.ok) {$(13_10)        show_message("Punch failed!");$(13_10)        connecting = false;$(13_10)        return;$(13_10)    }$(13_10)	$(13_10)    global.host_public_ip   = result.hostPublicIP;$(13_10)    global.host_public_port = result.hostPublicPort;$(13_10)	show_debug_message("CLIENT PUNCH HANDLER ENTERED");$(13_10)	show_debug_message("CLIENT RECEIVED HOST IP: " + string(result.hostPublicIP));$(13_10)$(13_10)    // Start hole punching$(13_10)    scr_client_start_punch();$(13_10)    return;$(13_10)}$(13_10)"
+/// Async - HTTP
 
-    if (!result[? "ok"]) {
+
+var url    = async_load[? "url"];
+var status = async_load[? "status"];
+
+show_debug_message("CLIENT HTTP EVENT: " + string(url));
+// GameMaker success = 0, NOT 200
+if (status != 0) exit;
+
+
+// -----------------------------
+// 1. Handle /resolve/<code>
+// -----------------------------
+if (string_pos("/resolve/", url) > 0) {
+
+    var result = json_parse(async_load[? "result"]);
+
+    if (!result.ok) {
         show_message("Invalid code!");
         connecting = false;
-		join_code = "";
+        join_code = "";
         return;
     }
 
-    var hostIp = result[? "hostIp"];
-    var port   = result[? "port"];
+    // Code is valid → begin NAT punch sequence
+    scr_client_begin_nat_punch();
+    return;
+}
 
-    network_connect(client_socket, hostIp, port);
+
+// -----------------------------
+// 2. Handle /stun
+// -----------------------------
+if (string_pos("/stun", url) > 0) {
+
+    var result = json_parse(async_load[? "result"]);
+
+    global.client_public_ip   = result.publicIP;
+    global.client_public_port = result.publicPort;
+
+    // Now request punch info
+    scr_client_request_punch();
+    return;
+	
+	show_debug_message("CLIENT STUN HANDLER ENTERED");
+
+}
+
+
+// -----------------------------
+// 3. Handle /punch/<code>
+// -----------------------------
+if (string_pos("/punch/", url) > 0) {
+	
+    var result = json_parse(async_load[? "result"]);
+
+    if (!result.ok) {
+        show_message("Punch failed!");
+        connecting = false;
+        return;
+    }
+	
+    global.host_public_ip   = result.hostPublicIP;
+    global.host_public_port = result.hostPublicPort;
+	show_debug_message("CLIENT PUNCH HANDLER ENTERED");
+	show_debug_message("CLIENT RECEIVED HOST IP: " + string(result.hostPublicIP));
+
+    // Start hole punching
+    scr_client_start_punch();
+    return;
 }

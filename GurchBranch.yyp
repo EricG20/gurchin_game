@@ -280,6 +280,7 @@
     {"id":{"name":"obj_explosion","path":"objects/obj_explosion/obj_explosion.yy",},},
     {"id":{"name":"obj_muffel","path":"objects/obj_muffel/obj_muffel.yy",},},
     {"id":{"name":"obj_target","path":"objects/obj_target/obj_target.yy",},},
+    {"id":{"name":"Object122","path":"objects/Object122/Object122.yy",},},
     {"id":{"name":"Object73","path":"objects/Object73/Object73.yy",},},
     {"id":{"name":"oDecoration","path":"objects/oDecoration/oDecoration.yy",},},
     {"id":{"name":"oDecoration2","path":"objects/oDecoration2/oDecoration2.yy",},},

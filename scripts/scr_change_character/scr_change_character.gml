@@ -7,7 +7,9 @@
 /// @DnDArgument : "arg" "name"
 /// @DnDArgument : "arg_1" "hair"
 /// @DnDArgument : "arg_2" "color_of_suit"
-function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : YoYo Games.Data Structures.Create_List
+function scr_change_character(name, hair, color_of_suit) 
+{
+	/// @DnDAction : YoYo Games.Data Structures.Create_List
 	/// @DnDVersion : 1
 	/// @DnDHash : 47F1E677
 	/// @DnDInput : 6
@@ -78,12 +80,16 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 	/// @DnDHash : 76B8B3D3
 	/// @DnDParent : 7A41EDD0
 	/// @DnDArgument : "expr" "name"
-	var l76B8B3D3_0 = name;switch(l76B8B3D3_0){	/// @DnDAction : YoYo Games.Switch.Case
+	var l76B8B3D3_0 = name;
+switch(l76B8B3D3_0)
+{
+	/// @DnDAction : YoYo Games.Switch.Case
 		/// @DnDVersion : 1
 		/// @DnDHash : 39FEBF4E
 		/// @DnDParent : 76B8B3D3
 		/// @DnDArgument : "const" ""Zelinka""
-		case "Zelinka":	/// @DnDAction : YoYo Games.Common.Variable
+		case "Zelinka":
+	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 14F88D1D
 			/// @DnDParent : 39FEBF4E
@@ -329,14 +335,16 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDArgument : "var" "talking_mouths"
 			/// @DnDArgument : "value" "s_zelinka_mouth_a"
 			/// @DnDArgument : "value_1" "s_zelinka_mouth_g"
-			/// @DnDArgument : "value_2" "s_zelinka_mouth_o"	break;
+			/// @DnDArgument : "value_2" "s_zelinka_mouth_o"
+	break;
 	
 		/// @DnDAction : YoYo Games.Switch.Case
 		/// @DnDVersion : 1
 		/// @DnDHash : 5277A3DC
 		/// @DnDParent : 76B8B3D3
 		/// @DnDArgument : "const" ""Gurchin""
-		case "Gurchin":	/// @DnDAction : YoYo Games.Data Structures.List_Add
+		case "Gurchin":
+	/// @DnDAction : YoYo Games.Data Structures.List_Add
 			/// @DnDVersion : 1
 			/// @DnDHash : 5737ED1F
 			/// @DnDInput : 3
@@ -459,14 +467,16 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDArgument : "value_1" "s_gurchin_mouth_i"
 			/// @DnDArgument : "value_2" "s_gurchin_mouth_o"
 			/// @DnDArgument : "value_3" "s_gurchin_mouth_e"
-			ds_list_add(talking_mouths, s_gurchin_mouth_a, s_gurchin_mouth_i, s_gurchin_mouth_o, s_gurchin_mouth_e);	break;
+			ds_list_add(talking_mouths, s_gurchin_mouth_a, s_gurchin_mouth_i, s_gurchin_mouth_o, s_gurchin_mouth_e);
+	break;
 	
 		/// @DnDAction : YoYo Games.Switch.Case
 		/// @DnDVersion : 1
 		/// @DnDHash : 38B718F0
 		/// @DnDParent : 76B8B3D3
 		/// @DnDArgument : "const" ""Robot""
-		case "Robot":	/// @DnDAction : YoYo Games.Common.Variable
+		case "Robot":
+	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 4885AD93
 			/// @DnDParent : 38B718F0
@@ -546,7 +556,7 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			eye_height = -67-5;
 			hair_height = -11-39;
 			walk_lift_magnitude = 2.2;
-			character_index = "Zelinka";
+			character_index = "Robot";
 			max_hp = 5;
 			walk_speed = 6.7;
 			jumpheight = 13;
@@ -556,7 +566,7 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			head_offset_x = 2;
 			special_meter_cap = 300;
 			knockback_sprite = s_zelinka_knockback;
-			default_gun = o_goozi;
+			default_gun = o_xoopington;
 		
 			/// @DnDAction : YoYo Games.Instances.Change_Instance
 			/// @DnDVersion : 1
@@ -587,9 +597,9 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDParent : 38B718F0
 			/// @DnDArgument : "var" "good_job_lines"
 			/// @DnDArgument : "value" ""Love it.""
-			/// @DnDArgument : "value_1" ""Ooooo, knew you were good!""
-			/// @DnDArgument : "value_2" ""You are so cute for that.""
-			ds_list_add(good_job_lines, "Love it.", "Ooooo, knew you were good!", "You are so cute for that.");
+			/// @DnDArgument : "value_1" ""oooo cutttieee""
+			/// @DnDArgument : "value_2" ""heh~ maybe you're not half bad after all, what do you say me and you find some get a oil can and a beer respectively after this is all over""
+			ds_list_add(good_job_lines, "Love it.", "oooo cutttieee", "heh~ maybe you're not half bad after all, what do you say me and you find some get a oil can and a beer respectively after this is all over");
 		
 			/// @DnDAction : YoYo Games.Data Structures.List_Add
 			/// @DnDVersion : 1
@@ -604,46 +614,40 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDAction : YoYo Games.Data Structures.List_Add
 			/// @DnDVersion : 1
 			/// @DnDHash : 01E8A76E
-			/// @DnDInput : 3
+			/// @DnDInput : 2
 			/// @DnDParent : 38B718F0
 			/// @DnDArgument : "var" "i_need_help_lines"
-			/// @DnDArgument : "value" ""Can a girl get some help?""
-			/// @DnDArgument : "value_1" ""I could definitely use some help!""
-			/// @DnDArgument : "value_2" ""HELP!""
-			ds_list_add(i_need_help_lines, "Can a girl get some help?", "I could definitely use some help!", "HELP!");
+			/// @DnDArgument : "value" ""help""
+			/// @DnDArgument : "value_1" ""BROTHER HELP ME STOP FARMING AND HELP""
+			ds_list_add(i_need_help_lines, "help", "BROTHER HELP ME STOP FARMING AND HELP");
 		
 			/// @DnDAction : YoYo Games.Data Structures.List_Add
 			/// @DnDVersion : 1
 			/// @DnDHash : 619510B4
-			/// @DnDInput : 3
+			/// @DnDInput : 2
 			/// @DnDParent : 38B718F0
 			/// @DnDArgument : "var" "gloat_lines"
-			/// @DnDArgument : "value" ""No one can keep up with me!""
-			/// @DnDArgument : "value_1" ""Eeeee!~ I'm on fire!""
-			/// @DnDArgument : "value_2" ""Look! At! Meee!""
-			ds_list_add(gloat_lines, "No one can keep up with me!", "Eeeee!~ I'm on fire!", "Look! At! Meee!");
+			/// @DnDArgument : "value" ""holy shit im goated""
+			/// @DnDArgument : "value_1" ""someone get a camera i just hit a clip""
+			ds_list_add(gloat_lines, "holy shit im goated", "someone get a camera i just hit a clip");
 		
 			/// @DnDAction : YoYo Games.Data Structures.List_Add
 			/// @DnDVersion : 1
 			/// @DnDHash : 4D159DB9
-			/// @DnDInput : 3
+			/// @DnDInput : 2
 			/// @DnDParent : 38B718F0
 			/// @DnDArgument : "var" "i_want_that_lines"
-			/// @DnDArgument : "value" ""OMG, can I have that?""
-			/// @DnDArgument : "value_1" ""Don't you think I deserve that?""
-			/// @DnDArgument : "value_2" ""I can have that if you don't want it. By the way, you don't want it.""
-			ds_list_add(i_want_that_lines, "OMG, can I have that?", "Don't you think I deserve that?", "I can have that if you don't want it. By the way, you don't want it.");
+			/// @DnDArgument : "value" ""bitch get your dirty ass fingers off my shit and hand it over""
+			/// @DnDArgument : "value_1" ""MINE""
+			ds_list_add(i_want_that_lines, "bitch get your dirty ass fingers off my shit and hand it over", "MINE");
 		
 			/// @DnDAction : YoYo Games.Data Structures.List_Add
 			/// @DnDVersion : 1
 			/// @DnDHash : 14E36FAF
-			/// @DnDInput : 3
 			/// @DnDParent : 38B718F0
 			/// @DnDArgument : "var" "hi_lines"
-			/// @DnDArgument : "value" ""Hi!""
-			/// @DnDArgument : "value_1" ""Hiiiii~!""
-			/// @DnDArgument : "value_2" ""Hey!""
-			ds_list_add(hi_lines, "Hi!", "Hiiiii~!", "Hey!");
+			/// @DnDArgument : "value" ""Hiiiii~""
+			ds_list_add(hi_lines, "Hiiiii~");
 		
 			/// @DnDAction : YoYo Games.Data Structures.List_Add
 			/// @DnDVersion : 1
@@ -708,19 +712,25 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDArgument : "value" "s_zelinka_mouth_a"
 			/// @DnDArgument : "value_1" "s_zelinka_mouth_g"
 			/// @DnDArgument : "value_2" "s_zelinka_mouth_o"
-			ds_list_add(talking_mouths, s_zelinka_mouth_a, s_zelinka_mouth_g, s_zelinka_mouth_o);	break;}
+			ds_list_add(talking_mouths, s_zelinka_mouth_a, s_zelinka_mouth_g, s_zelinka_mouth_o);
+	break;
+}
 
 	/// @DnDAction : YoYo Games.Switch.Switch
 	/// @DnDVersion : 1
 	/// @DnDHash : 5B88D4CF
 	/// @DnDParent : 7A41EDD0
 	/// @DnDArgument : "expr" "hair"
-	var l5B88D4CF_0 = hair;switch(l5B88D4CF_0){	/// @DnDAction : YoYo Games.Switch.Case
+	var l5B88D4CF_0 = hair;
+switch(l5B88D4CF_0)
+{
+	/// @DnDAction : YoYo Games.Switch.Case
 		/// @DnDVersion : 1
 		/// @DnDHash : 32161951
 		/// @DnDParent : 5B88D4CF
 		/// @DnDArgument : "const" ""afro_bun""
-		case "afro_bun":	/// @DnDAction : YoYo Games.Common.Variable
+		case "afro_bun":
+	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 40DF0DFB
 			/// @DnDInput : 2
@@ -730,14 +740,16 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDArgument : "var" "bangs_sprite"
 			/// @DnDArgument : "var_1" "hair_sprite"
 			bangs_sprite = s_player_afro_bun_bangs;
-			hair_sprite = s_player_afro_bun;	break;
+			hair_sprite = s_player_afro_bun;
+	break;
 	
 		/// @DnDAction : YoYo Games.Switch.Case
 		/// @DnDVersion : 1
 		/// @DnDHash : 13691236
 		/// @DnDParent : 5B88D4CF
 		/// @DnDArgument : "const" ""bald""
-		case "bald":	/// @DnDAction : YoYo Games.Common.Variable
+		case "bald":
+	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 67D04AE6
 			/// @DnDInput : 2
@@ -747,14 +759,16 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDArgument : "var" "bangs_sprite"
 			/// @DnDArgument : "var_1" "hair_sprite"
 			bangs_sprite = s_empty_sprite_for_bald;
-			hair_sprite = s_empty_sprite_for_bald;	break;
+			hair_sprite = s_empty_sprite_for_bald;
+	break;
 	
 		/// @DnDAction : YoYo Games.Switch.Case
 		/// @DnDVersion : 1
 		/// @DnDHash : 359C18A3
 		/// @DnDParent : 5B88D4CF
 		/// @DnDArgument : "const" ""afro""
-		case "afro":	/// @DnDAction : YoYo Games.Common.Variable
+		case "afro":
+	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 56407484
 			/// @DnDInput : 3
@@ -767,14 +781,16 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDArgument : "var_2" "hair_weight"
 			bangs_sprite = s_player_afro_bangs;
 			hair_sprite = s_player_hair;
-			hair_weight = 1.5;	break;
+			hair_weight = 1.5;
+	break;
 	
 		/// @DnDAction : YoYo Games.Switch.Case
 		/// @DnDVersion : 1
 		/// @DnDHash : 6C208E31
 		/// @DnDParent : 5B88D4CF
 		/// @DnDArgument : "const" ""cap_and_dreads""
-		case "cap_and_dreads":	/// @DnDAction : YoYo Games.Common.Variable
+		case "cap_and_dreads":
+	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 11DEB827
 			/// @DnDInput : 3
@@ -810,7 +826,9 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDArgument : "var" "rah.master"
 			/// @DnDArgument : "var_1" "rah.depth"
 			rah.master = id;
-			rah.depth = depth+1;	break;}
+			rah.depth = depth+1;
+	break;
+}
 
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
@@ -864,4 +882,5 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 	ds_map_replace(vocabulary, I_NEED_HELP, i_need_help_lines);
 	ds_map_replace(vocabulary, GLOAT, gloat_lines);
 	ds_map_replace(vocabulary, I_WANT_THAT, i_want_that_lines);
-	ds_map_replace(vocabulary, HI, hi_lines);}
+	ds_map_replace(vocabulary, HI, hi_lines);
+}

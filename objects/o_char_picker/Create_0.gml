@@ -14,7 +14,7 @@ colors = ds_list_create();
 /// @DnDArgument : "var" "char_list"
 /// @DnDArgument : "value" ""Gurchin""
 /// @DnDArgument : "value_1" ""Zelinka""
-ds_list_add(char_list, "Gurchin", "Zelinka");
+ds_list_add(char_list, "Gurchin", "Zelinka", "Robot");
 
 /// @DnDAction : YoYo Games.Data Structures.Create_List
 /// @DnDVersion : 1

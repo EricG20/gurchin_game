@@ -261,6 +261,7 @@
     {"id":{"name":"o_pylon","path":"objects/o_pylon/o_pylon.yy",},},
     {"id":{"name":"o_red_vermin_explosion","path":"objects/o_red_vermin_explosion/o_red_vermin_explosion.yy",},},
     {"id":{"name":"o_reticle","path":"objects/o_reticle/o_reticle.yy",},},
+    {"id":{"name":"o_robot_special_wheel","path":"objects/o_robot_special_wheel/o_robot_special_wheel.yy",},},
     {"id":{"name":"o_routing_terminal","path":"objects/o_routing_terminal/o_routing_terminal.yy",},},
     {"id":{"name":"o_select_place","path":"objects/o_select_place/o_select_place.yy",},},
     {"id":{"name":"o_shottgun","path":"objects/o_shottgun/o_shottgun.yy",},},

@@ -90,6 +90,7 @@ gwah = -1;
 this_expression = "";
 
 // Robot Personal Upgrades
+permanent_firerate_bonus = 1;
 firerate_bonus = 1;
 ammo_bonus = 1;
 booster_bonus = 1;
@@ -97,6 +98,10 @@ movementspeed_bonus = 1;
 reload_bonus = 1;
 booster_recharge_bonus = 1;
 robot_upgrade_level = 0;
+
+upgrade_offhand_reload = false;
+upgrade_switch_firerate = false;
+switch_firerate_timer = 0;
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1

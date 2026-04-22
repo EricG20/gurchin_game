@@ -316,6 +316,22 @@ if ((l02F902ED_0 > 0))
 		/// @DnDArgument : "objind" "other.weapon_swap_target"
 		with(mygurn) instance_change(other.weapon_swap_target, true);
 	
+		/// @DnDAction : YoYo Games.Common.If_Expression
+		/// @DnDVersion : 1
+		/// @DnDHash : 6E7F8A9B
+		/// @DnDParent : 534387FD
+		/// @DnDArgument : "expr" "upgrade_switch_firerate"
+		if(upgrade_switch_firerate)
+{
+	/// @DnDAction : YoYo Games.Common.Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 7F8A9B0C
+			/// @DnDParent : 6E7F8A9B
+			/// @DnDArgument : "expr" "120"
+			/// @DnDArgument : "var" "switch_firerate_timer"
+			switch_firerate_timer = 120;
+}
+	
 		/// @DnDAction : YoYo Games.Data Structures.Map_Get_Value
 		/// @DnDVersion : 1
 		/// @DnDHash : 1FC4BDC8

@@ -68,8 +68,14 @@ if(InputReleased(INPUT_VERB.SPECIAL, o_game.local_player.player_id))
 	// Apply bonus to local player
 	with(o_game.local_player) {
 	    switch(chosen_ability) {
+	        case "Off-hand Reload Up": 
+	            upgrade_offhand_reload = true;
+	        break;
+	        case "Switch Fire Rate Boost": 
+	            upgrade_switch_firerate = true;
+	        break;
 	        case "Fire Rate Up": 
-	            firerate_bonus += .15;
+	            permanent_firerate_bonus += .15;
 	        break;
 	        case "Reload Speed Up": 
 	            reload_bonus += .15;

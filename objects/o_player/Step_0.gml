@@ -1,11 +1,13 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 5DBF59C7
-/// @DnDInput : 7
+/// @DnDInput : 9
 /// @DnDArgument : "expr_2" "-1"
 /// @DnDArgument : "expr_relative_2" "1"
 /// @DnDArgument : "expr_3" "clamp(melee_cooldown,0, 900)"
 /// @DnDArgument : "expr_6" "clamp(hp,0,max_hp)"
+/// @DnDArgument : "expr_7" "max(0, switch_firerate_timer - 1 * global.game_speed)"
+/// @DnDArgument : "expr_8" "permanent_firerate_bonus * (switch_firerate_timer > 0 ? 1.5 : 1.0)"
 /// @DnDArgument : "var" "head_offset_x"
 /// @DnDArgument : "var_1" "head_offset_y"
 /// @DnDArgument : "var_2" "melee_cooldown"
@@ -13,6 +15,8 @@
 /// @DnDArgument : "var_4" "walk_bob_height"
 /// @DnDArgument : "var_5" "ear_bobbing"
 /// @DnDArgument : "var_6" "hp"
+/// @DnDArgument : "var_7" "switch_firerate_timer"
+/// @DnDArgument : "var_8" "firerate_bonus"
 head_offset_x = 0;
 head_offset_y = 0;
 melee_cooldown += -1;
@@ -20,6 +24,9 @@ melee_cooldown = clamp(melee_cooldown,0, 900);
 walk_bob_height = 0;
 ear_bobbing = 0;
 hp = clamp(hp,0,max_hp);
+
+switch_firerate_timer = max(0, switch_firerate_timer - 1 * global.game_speed);
+firerate_bonus = permanent_firerate_bonus * (switch_firerate_timer > 0 ? 1.5 : 1.0);
 
 /// @DnDAction : YoYo Games.Data Structures.List_Count
 /// @DnDVersion : 1
@@ -69,8 +76,8 @@ for(i = 0; i < weapon_iteration_num; i += 1) {
 		/// @DnDParent : 58365525
 		/// @DnDArgument : "var" "weapon_reload_info"
 		/// @DnDArgument : "key" "weapon_iteration"
-		/// @DnDArgument : "value" "clamp(is_this_weapon_reloading - (.5)*global.game_speed, 0, 9999)"
-		ds_map_replace(weapon_reload_info, weapon_iteration, clamp(is_this_weapon_reloading - (.5)*global.game_speed, 0, 9999));
+		/// @DnDArgument : "value" "clamp(is_this_weapon_reloading - (upgrade_offhand_reload ? 2.0 : .5)*global.game_speed, 0, 9999)"
+		ds_map_replace(weapon_reload_info, weapon_iteration, clamp(is_this_weapon_reloading - (upgrade_offhand_reload ? 2.0 : .5)*global.game_speed, 0, 9999));
 }
 }
 

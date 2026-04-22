@@ -319,9 +319,9 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDVersion : 1
 				/// @DnDHash : 2373F2A7
 				/// @DnDParent : 3A9CC710
-				/// @DnDArgument : "expr" "10/global.firerate_bonus*weilder.firerate_bonus"
+				/// @DnDArgument : "expr" "10 / (global.firerate_bonus * weilder.firerate_bonus)"
 				/// @DnDArgument : "var" "charge"
-				charge = 10/global.firerate_bonus*weilder.firerate_bonus;
+				charge = 10 / (global.firerate_bonus * weilder.firerate_bonus);
 			
 				/// @DnDAction : YoYo Games.Common.If_Variable
 				/// @DnDVersion : 1

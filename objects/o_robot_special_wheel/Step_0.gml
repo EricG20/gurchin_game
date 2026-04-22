@@ -32,14 +32,17 @@ var slice_angle = 360/n;
 /// @DnDArgument : "var" "hover_index"
 /// @DnDArgument : "not" "1"
 /// @DnDArgument : "value" "floor(angle/slice_angle)"
-if(!(hover_index == floor(angle/slice_angle))){	/// @DnDAction : YoYo Games.Audio.Play_Audio
+if(!(hover_index == floor(angle/slice_angle)))
+{
+	/// @DnDAction : YoYo Games.Audio.Play_Audio
 	/// @DnDVersion : 1.1
 	/// @DnDHash : 2870B705
 	/// @DnDParent : 7683C441
 	/// @DnDArgument : "soundid" "uimove"
 	/// @DnDArgument : "pitch" "1.1"
 	/// @DnDSaveInfo : "soundid" "uimove"
-	audio_play_sound(uimove, 0, 0, 1.0, undefined, 1.1);}
+	audio_play_sound(uimove, 0, 0, 1.0, undefined, 1.1);
+}
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
@@ -52,14 +55,25 @@ hover_index = floor(angle/slice_angle);
 /// @DnDVersion : 1
 /// @DnDHash : 9A0B1C2D
 /// @DnDArgument : "expr" "InputReleased(INPUT_VERB.SPECIAL, o_game.local_player.player_id)"
-if(InputReleased(INPUT_VERB.SPECIAL, o_game.local_player.player_id)){	/// @DnDAction : YoYo Games.Common.Execute_Code
+if(InputReleased(INPUT_VERB.SPECIAL, o_game.local_player.player_id))
+{
+	/// @DnDAction : YoYo Games.Common.Execute_Code
 	/// @DnDVersion : 1
 	/// @DnDHash : 0B1C2D3E
 	/// @DnDParent : 9A0B1C2D
-	/// @DnDArgument : "code" "show_debug_message("you picked!!!: " + string(hover_index));$(13_10)$(13_10)// do some cool fucking awesome shit over here"
-	show_debug_message("you picked!!!: " + string(hover_index));
+	/// @DnDArgument : "code" "var chosen_ability = selected_options[hover_index];$(13_10)show_debug_message("Robot Special Chose Option: " + string(hover_index) + " (" + chosen_ability + ")");$(13_10)$(13_10)// Perform action based on chosen_ability$(13_10)switch(chosen_ability) {$(13_10)    case "Shield": $(13_10)        // Implementation here$(13_10)    break;$(13_10)    case "Overdrive": $(13_10)        // Implementation here$(13_10)    break;$(13_10)    // ... etc$(13_10)}"
+	var chosen_ability = selected_options[hover_index];
+	show_debug_message("Robot Special Chose Option: " + string(hover_index) + " (" + chosen_ability + ")");
 	
-	// do some cool fucking awesome shit over here
+	// do some shit
+	switch(chosen_ability) {
+	    case "Shield": 
+	        // fix
+	    break;
+	    case "Overdrive": 
+	        // f
+	    break;
+	}
 
 	/// @DnDAction : YoYo Games.Audio.Play_Audio
 	/// @DnDVersion : 1.1
@@ -75,4 +89,5 @@ if(InputReleased(INPUT_VERB.SPECIAL, o_game.local_player.player_id)){	/// @DnD
 	/// @DnDVersion : 1
 	/// @DnDHash : 2D3E4F5A
 	/// @DnDParent : 9A0B1C2D
-	instance_destroy();}
+	instance_destroy();
+}

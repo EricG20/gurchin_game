@@ -76,6 +76,4 @@ function scr_specials() {	/// @DnDAction : YoYo Games.Switch.Switch
 			/// @DnDArgument : "var_temp" "1"
 			/// @DnDArgument : "objectid" "o_robot_special_wheel"
 			/// @DnDSaveInfo : "objectid" "o_robot_special_wheel"
-			var wheel = instance_create_layer(x, y, "Instances", o_robot_special_wheel, {
-				summoner: id
-			});	break;}}
+			var wheel = instance_create_layer(x, y, "Effects", o_robot_special_wheel);	break;}}

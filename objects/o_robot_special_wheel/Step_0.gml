@@ -61,18 +61,31 @@ if(InputReleased(INPUT_VERB.SPECIAL, o_game.local_player.player_id))
 	/// @DnDVersion : 1
 	/// @DnDHash : 0B1C2D3E
 	/// @DnDParent : 9A0B1C2D
-	/// @DnDArgument : "code" "var chosen_ability = selected_options[hover_index];$(13_10)show_debug_message("Robot Special Chose Option: " + string(hover_index) + " (" + chosen_ability + ")");$(13_10)$(13_10)// Perform action based on chosen_ability$(13_10)switch(chosen_ability) {$(13_10)    case "Shield": $(13_10)        // Implementation here$(13_10)    break;$(13_10)    case "Overdrive": $(13_10)        // Implementation here$(13_10)    break;$(13_10)    // ... etc$(13_10)}"
+	/// @DnDArgument : "code" "var chosen_ability = selected_options[hover_index];$(13_10)show_debug_message("Robot Special Chose Option: " + chosen_ability);$(13_10)$(13_10)// Apply bonus to local player$(13_10)with(o_game.local_player) {$(13_10)    switch(chosen_ability) {$(13_10)        case "Fire Rate Up": $(13_10)            firerate_bonus += .15;$(13_10)        break;$(13_10)        case "Reload Speed Up": $(13_10)            reload_bonus += .15;$(13_10)        break;$(13_10)        case "Movement Speed Up": $(13_10)            movementspeed_bonus += .15;$(13_10)        break;$(13_10)        case "Dash Recharge Up": $(13_10)            booster_recharge_bonus += .5;$(13_10)        break;$(13_10)        case "Ammo Up": $(13_10)            ammo_bonus += .5;$(13_10)        break;$(13_10)    }$(13_10)    // Increment local upgrade level$(13_10)    robot_upgrade_level += 1;$(13_10)}"
 	var chosen_ability = selected_options[hover_index];
-	show_debug_message("Robot Special Chose Option: " + string(hover_index) + " (" + chosen_ability + ")");
+	show_debug_message("Robot Special Chose Option: " + chosen_ability);
 	
-	// do some shit
-	switch(chosen_ability) {
-	    case "Shield": 
-	        // fix
-	    break;
-	    case "Overdrive": 
-	        // f
-	    break;
+	// Apply bonus to local player
+	with(o_game.local_player) {
+	    switch(chosen_ability) {
+	        case "Fire Rate Up": 
+	            firerate_bonus += .15;
+	        break;
+	        case "Reload Speed Up": 
+	            reload_bonus += .15;
+	        break;
+	        case "Movement Speed Up": 
+	            movementspeed_bonus += .15;
+	        break;
+	        case "Dash Recharge Up": 
+	            booster_recharge_bonus += .5;
+	        break;
+	        case "Ammo Up": 
+	            ammo_bonus += .5;
+	        break;
+	    }
+	    // Increment local upgrade level
+	    robot_upgrade_level += 1;
 	}
 
 	/// @DnDAction : YoYo Games.Audio.Play_Audio

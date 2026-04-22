@@ -11,6 +11,6 @@ instance_create_layer(x + 0, y + 0, "Effects", e_flash);
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 2DA97D24
-/// @DnDArgument : "expr" "(36*weilder.curr_weapon_level)*global.ammo_bonus"
+/// @DnDArgument : "expr" "(36*weilder.curr_weapon_level)*global.ammo_bonus*weilder.ammo_bonus"
 /// @DnDArgument : "var" "ammo"
-ammo = (36*weilder.curr_weapon_level)*global.ammo_bonus;
+ammo = (36*weilder.curr_weapon_level)*global.ammo_bonus*weilder.ammo_bonus;

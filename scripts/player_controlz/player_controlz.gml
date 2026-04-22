@@ -35,11 +35,11 @@ function player_controlz()
 			/// @DnDParent : 64D7FCA8
 			/// @DnDArgument : "expr" "left*-.5*global.game_speed"
 			/// @DnDArgument : "expr_relative" "1"
-			/// @DnDArgument : "expr_1" "clamp(hsp,left*-walk_speed*global.movementspeed_bonus,walk_speed*global.movementspeed_bonus)"
+			/// @DnDArgument : "expr_1" "clamp(hsp,left*-walk_speed*global.movementspeed_bonus*movementspeed_bonus,walk_speed*global.movementspeed_bonus*movementspeed_bonus)"
 			/// @DnDArgument : "var" "hsp"
 			/// @DnDArgument : "var_1" "hsp"
 			hsp += left*-.5*global.game_speed;
-			hsp = clamp(hsp,left*-walk_speed*global.movementspeed_bonus,walk_speed*global.movementspeed_bonus);
+			hsp = clamp(hsp,left*-walk_speed*global.movementspeed_bonus*movementspeed_bonus,walk_speed*global.movementspeed_bonus*movementspeed_bonus);
 		
 			/// @DnDAction : YoYo Games.Collisions.If_Object_At
 			/// @DnDVersion : 1.1
@@ -109,11 +109,11 @@ if ((l660980BB_0 > 0))
 			/// @DnDParent : 7862B48D
 			/// @DnDArgument : "expr" "right*.5*global.game_speed"
 			/// @DnDArgument : "expr_relative" "1"
-			/// @DnDArgument : "expr_1" "clamp(hsp,-walk_speed*global.movementspeed_bonus,right*walk_speed*global.movementspeed_bonus)"
+			/// @DnDArgument : "expr_1" "clamp(hsp,-walk_speed*global.movementspeed_bonus*movementspeed_bonus,right*walk_speed*global.movementspeed_bonus*movementspeed_bonus)"
 			/// @DnDArgument : "var" "hsp"
 			/// @DnDArgument : "var_1" "hsp"
 			hsp += right*.5*global.game_speed;
-			hsp = clamp(hsp,-walk_speed*global.movementspeed_bonus,right*walk_speed*global.movementspeed_bonus);
+			hsp = clamp(hsp,-walk_speed*global.movementspeed_bonus*movementspeed_bonus,right*walk_speed*global.movementspeed_bonus*movementspeed_bonus);
 		
 			/// @DnDAction : YoYo Games.Collisions.If_Object_At
 			/// @DnDVersion : 1.1
@@ -920,11 +920,11 @@ if ((l02F902ED_0 > 0))
 				/// @DnDInput : 2
 				/// @DnDParent : 36F626D2
 				/// @DnDArgument : "expr" "-4"
-				/// @DnDArgument : "expr_1" "140*global.firerate_bonus"
+				/// @DnDArgument : "expr_1" "140*global.firerate_bonus*firerate_bonus"
 				/// @DnDArgument : "var" "vsp"
 				/// @DnDArgument : "var_1" "melee_cooldown"
 				vsp = -4;
-				melee_cooldown = 140*global.firerate_bonus;
+				melee_cooldown = 140*global.firerate_bonus*firerate_bonus;
 			
 				/// @DnDAction : YoYo Games.Instances.Create_Instance
 				/// @DnDVersion : 1

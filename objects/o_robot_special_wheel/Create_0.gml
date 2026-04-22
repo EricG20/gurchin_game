@@ -12,19 +12,18 @@ y = o_game.local_player.reticle.y;
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 12345678
-/// @DnDArgument : "code" "// Ability pool$(13_10)var ability_pool = [$(13_10)    "Shield",$(13_10)    "Overdrive",$(13_10)    "Teleport",$(13_10)    "Repair",$(13_10)    "Nuke",$(13_10)    "Invisibility"$(13_10)];$(13_10)$(13_10)// Shuffle and pick 2$(13_10)var shuffled = array_shuffle(ability_pool);$(13_10)selected_options = [shuffled[0], shuffled[1]];$(13_10)$(13_10)show_debug_message("Robot Special Options: " + string(selected_options));"
-// Ability pool
-var ability_pool = [
-    "Shield",
-    "Overdrive",
-    "Teleport",
-    "Repair",
-    "Nuke",
-    "Invisibility"
+/// @DnDArgument : "code" "// Pre-selected upgrade sequence$(13_10)var upgrade_tree = [$(13_10)    ["Fire Rate Up", "Reload Speed Up"],$(13_10)    ["Movement Speed Up", "Dash Recharge Up"]$(13_10)];$(13_10)$(13_10)if (o_game.local_player.robot_upgrade_level < array_length(upgrade_tree)) {$(13_10)    selected_options = upgrade_tree[o_game.local_player.robot_upgrade_level];$(13_10)} else {$(13_10)    // Fallback options once tree is exhausted$(13_10)    selected_options = ["Ammo Up", "Fire Rate Up"];$(13_10)}$(13_10)$(13_10)show_debug_message("Robot Special Options (Level " + string(o_game.local_player.robot_upgrade_level) + "): " + string(selected_options));"
+// Pre-selected upgrade sequence
+var upgrade_tree = [
+    ["Fire Rate Up", "Reload Speed Up"],
+    ["Movement Speed Up", "Dash Recharge Up"]
 ];
 
-// Shuffle and pick 2
-var shuffled = array_shuffle(ability_pool);
-selected_options = [shuffled[0], shuffled[1]];
+if (o_game.local_player.robot_upgrade_level < array_length(upgrade_tree)) {
+    selected_options = upgrade_tree[o_game.local_player.robot_upgrade_level];
+} else {
+    // Fallback options once tree is exhausted
+    selected_options = ["Ammo Up", "Fire Rate Up"];
+}
 
-show_debug_message("Robot Special Options: " + string(selected_options));
+show_debug_message("Robot Special Options (Level " + string(o_game.local_player.robot_upgrade_level) + "): " + string(selected_options));

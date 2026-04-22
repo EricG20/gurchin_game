@@ -65,9 +65,9 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 3EBD9619
 			/// @DnDParent : 120390CF
-			/// @DnDArgument : "expr" "120/global.reload_bonus"
+			/// @DnDArgument : "expr" "120/global.reload_bonus*weilder.reload_bonus"
 			/// @DnDArgument : "var" "charge"
-			charge = 120/global.reload_bonus;
+			charge = 120/global.reload_bonus*weilder.reload_bonus;
 		
 			/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
@@ -379,11 +379,11 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDHash : 630C2FAD
 			/// @DnDInput : 2
 			/// @DnDParent : 12FBD3EC
-			/// @DnDArgument : "expr" "floor(ammo_cap*global.ammo_bonus)"
+			/// @DnDArgument : "expr" "floor(ammo_cap*global.ammo_bonus*weilder.ammo_bonus)"
 			/// @DnDArgument : "expr_1" "stance.CASUAL"
 			/// @DnDArgument : "var" "ammo"
 			/// @DnDArgument : "var_1" "anim"
-			ammo = floor(ammo_cap*global.ammo_bonus);
+			ammo = floor(ammo_cap*global.ammo_bonus*weilder.ammo_bonus);
 			anim = stance.CASUAL;}}
 
 	/// @DnDAction : YoYo Games.Common.Variable
@@ -409,11 +409,11 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDInput : 2
 		/// @DnDParent : 2AE8C655
 		/// @DnDArgument : "expr" "stance.RELOAD"
-		/// @DnDArgument : "expr_1" "180/global.reload_bonus"
+		/// @DnDArgument : "expr_1" "180/global.reload_bonus*weilder.reload_bonus"
 		/// @DnDArgument : "var" "anim"
 		/// @DnDArgument : "var_1" "charge"
 		anim = stance.RELOAD;
-		charge = 180/global.reload_bonus;
+		charge = 180/global.reload_bonus*weilder.reload_bonus;
 	
 		/// @DnDAction : YoYo Games.Audio.Play_Audio
 		/// @DnDVersion : 1.1

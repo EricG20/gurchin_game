@@ -58,6 +58,7 @@ global.movementspeed_bonus = 1;
 global.reload_bonus = 1;
 global.flat_firerate_bonus = 1;
 global.flat_reload_bonus = 1;
+global.booster_recharge_bonus = 1;
 
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1

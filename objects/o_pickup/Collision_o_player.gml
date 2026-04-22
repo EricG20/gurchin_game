@@ -345,9 +345,9 @@ var l027574C5_0 = weapon_index;switch(l027574C5_0){	/// @DnDAction : YoYo Gam
 		/// @DnDVersion : 1
 		/// @DnDHash : 46E69B74
 		/// @DnDParent : 2D205C1F
-		/// @DnDArgument : "expr" "floor(other.mygurn.ammo_cap*global.ammo_bonus)"
+		/// @DnDArgument : "expr" "floor(other.mygurn.ammo_cap*global.ammo_bonus*other.ammo_bonus)"
 		/// @DnDArgument : "var" "other.mygurn.ammo"
-		other.mygurn.ammo = floor(other.mygurn.ammo_cap*global.ammo_bonus);	break;
+		other.mygurn.ammo = floor(other.mygurn.ammo_cap*global.ammo_bonus*other.ammo_bonus);	break;
 
 	/// @DnDAction : YoYo Games.Switch.Case
 	/// @DnDVersion : 1

@@ -418,7 +418,7 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDHash : 630C2FAD
 			/// @DnDInput : 4
 			/// @DnDParent : 12FBD3EC
-			/// @DnDArgument : "expr" "floor(ammo_cap*global.ammo_bonus)"
+			/// @DnDArgument : "expr" "floor(ammo_cap*global.ammo_bonus*weilder.ammo_bonus)"
 			/// @DnDArgument : "expr_1" "stance.CASUAL"
 			/// @DnDArgument : "expr_2" "300"
 			/// @DnDArgument : "expr_3" "false"
@@ -426,7 +426,7 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDArgument : "var_1" "anim"
 			/// @DnDArgument : "var_2" "charge"
 			/// @DnDArgument : "var_3" "awesome_lockout"
-			ammo = floor(ammo_cap*global.ammo_bonus);
+			ammo = floor(ammo_cap*global.ammo_bonus*weilder.ammo_bonus);
 			anim = stance.CASUAL;
 			charge = 300;
 			awesome_lockout = false;}
@@ -446,20 +446,20 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDVersion : 1
 				/// @DnDHash : 1D477A33
 				/// @DnDParent : 4322CF5B
-				/// @DnDArgument : "expr" "(charge <= reload_frame+(awesome_reload_width*global.reload_bonus)) && (charge >=reload_frame-(awesome_reload_width*global.reload_bonus))"
-				if((charge <= reload_frame+(awesome_reload_width*global.reload_bonus)) && (charge >=reload_frame-(awesome_reload_width*global.reload_bonus))){	/// @DnDAction : YoYo Games.Common.Variable
+				/// @DnDArgument : "expr" "(charge <= reload_frame+(awesome_reload_width*global.reload_bonus*weilder.reload_bonus)) && (charge >=reload_frame-(awesome_reload_width*global.reload_bonus*weilder.reload_bonus))"
+				if((charge <= reload_frame+(awesome_reload_width*global.reload_bonus*weilder.reload_bonus)) && (charge >=reload_frame-(awesome_reload_width*global.reload_bonus*weilder.reload_bonus))){	/// @DnDAction : YoYo Games.Common.Variable
 					/// @DnDVersion : 1
 					/// @DnDHash : 50383241
 					/// @DnDInput : 4
 					/// @DnDParent : 1D477A33
-					/// @DnDArgument : "expr" "floor(ammo_cap*global.ammo_bonus)"
+					/// @DnDArgument : "expr" "floor(ammo_cap*global.ammo_bonus*weilder.ammo_bonus)"
 					/// @DnDArgument : "expr_1" "stance.CASUAL"
 					/// @DnDArgument : "expr_2" "3*weilder.curr_weapon_level"
 					/// @DnDArgument : "var" "ammo"
 					/// @DnDArgument : "var_1" "anim"
 					/// @DnDArgument : "var_2" "full_shot_tokens"
 					/// @DnDArgument : "var_3" "charge"
-					ammo = floor(ammo_cap*global.ammo_bonus);
+					ammo = floor(ammo_cap*global.ammo_bonus*weilder.ammo_bonus);
 					anim = stance.CASUAL;
 					full_shot_tokens = 3*weilder.curr_weapon_level;
 					charge = 0;

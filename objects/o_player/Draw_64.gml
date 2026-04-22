@@ -291,7 +291,7 @@ if(control_type == cr.LOCAL){	/// @DnDAction : YoYo Games.Switch.Switch
 					/// @DnDArgument : "x" "40+wep_display_width"
 					/// @DnDArgument : "y" "980"
 					/// @DnDArgument : "caption" """"
-					/// @DnDArgument : "text" "string(mygurn.ammo) + "/" + string(floor(mygurn.ammo_cap*global.ammo_bonus))"
+					/// @DnDArgument : "text" "string(mygurn.ammo) + "/" + string(floor(mygurn.ammo_cap*global.ammo_bonus*ammo_bonus))"
 				
 				
 					/// @DnDAction : YoYo Games.Common.Execute_Script
@@ -302,7 +302,7 @@ if(control_type == cr.LOCAL){	/// @DnDAction : YoYo Games.Switch.Switch
 					/// @DnDArgument : "script" "draw_text_colour_outline"
 					/// @DnDArgument : "arg" "40+wep_display_width"
 					/// @DnDArgument : "arg_1" "980"
-					/// @DnDArgument : "arg_2" "string(mygurn.ammo) + "/" + string(floor(mygurn.ammo_cap*global.ammo_bonus))"
+					/// @DnDArgument : "arg_2" "string(mygurn.ammo) + "/" + string(floor(mygurn.ammo_cap*global.ammo_bonus*ammo_bonus))"
 					/// @DnDArgument : "arg_3" "c_white"
 					/// @DnDArgument : "arg_4" "c_white"
 					/// @DnDArgument : "arg_5" "1"
@@ -315,7 +315,7 @@ if(control_type == cr.LOCAL){	/// @DnDAction : YoYo Games.Switch.Switch
 					/// @DnDArgument : "arg_12" "1"
 					/// @DnDArgument : "arg_13" "0"
 					/// @DnDSaveInfo : "script" "draw_text_colour_outline"
-					script_execute(draw_text_colour_outline, 40+wep_display_width, 980, string(mygurn.ammo) + "/" + string(floor(mygurn.ammo_cap*global.ammo_bonus)), c_white, c_white, 1, c_black, c_black, 1, 1, 4, 1, 1, 0);
+					script_execute(draw_text_colour_outline, 40+wep_display_width, 980, string(mygurn.ammo) + "/" + string(floor(mygurn.ammo_cap*global.ammo_bonus*ammo_bonus)), c_white, c_white, 1, c_black, c_black, 1, 1, 4, 1, 1, 0);
 				
 					/// @DnDAction : YoYo Games.Drawing.Draw_Value_Transformed
 					/// @DnDVersion : 1
@@ -325,7 +325,7 @@ if(control_type == cr.LOCAL){	/// @DnDAction : YoYo Games.Switch.Switch
 					/// @DnDArgument : "x" "160 +wep_display_width"
 					/// @DnDArgument : "y" "960"
 					/// @DnDArgument : "caption" ""Fire Rate: ""
-					/// @DnDArgument : "text" "global.firerate_bonus"
+					/// @DnDArgument : "text" "global.firerate_bonus*firerate_bonus"
 				
 				
 					/// @DnDAction : YoYo Games.Common.Execute_Script
@@ -336,7 +336,7 @@ if(control_type == cr.LOCAL){	/// @DnDAction : YoYo Games.Switch.Switch
 					/// @DnDArgument : "script" "draw_text_colour_outline"
 					/// @DnDArgument : "arg" "160 +wep_display_width"
 					/// @DnDArgument : "arg_1" "920"
-					/// @DnDArgument : "arg_2" ""Fire Rate: " + string(global.firerate_bonus)"
+					/// @DnDArgument : "arg_2" ""Fire Rate: " + string(global.firerate_bonus*firerate_bonus)"
 					/// @DnDArgument : "arg_3" "c_white"
 					/// @DnDArgument : "arg_4" "c_orangish"
 					/// @DnDArgument : "arg_5" "1"
@@ -349,7 +349,7 @@ if(control_type == cr.LOCAL){	/// @DnDAction : YoYo Games.Switch.Switch
 					/// @DnDArgument : "arg_12" "1"
 					/// @DnDArgument : "arg_13" "0"
 					/// @DnDSaveInfo : "script" "draw_text_colour_outline"
-					script_execute(draw_text_colour_outline, 160 +wep_display_width, 920, "Fire Rate: " + string(global.firerate_bonus), c_white, c_orangish, 1, c_black, c_red, 1, 1, 4, 1, 1, 0);
+					script_execute(draw_text_colour_outline, 160 +wep_display_width, 920, "Fire Rate: " + string(global.firerate_bonus*firerate_bonus), c_white, c_orangish, 1, c_black, c_red, 1, 1, 4, 1, 1, 0);
 				
 					/// @DnDAction : YoYo Games.Drawing.Draw_Value_Transformed
 					/// @DnDVersion : 1
@@ -370,7 +370,7 @@ if(control_type == cr.LOCAL){	/// @DnDAction : YoYo Games.Switch.Switch
 					/// @DnDArgument : "script" "draw_text_colour_outline"
 					/// @DnDArgument : "arg" "140 +wep_display_width"
 					/// @DnDArgument : "arg_1" "950"
-					/// @DnDArgument : "arg_2" ""Reload Speed: " + string(global.reload_bonus)"
+					/// @DnDArgument : "arg_2" ""Reload Speed: " + string(global.reload_bonus*reload_bonus)"
 					/// @DnDArgument : "arg_3" "c_white"
 					/// @DnDArgument : "arg_4" "c_teal"
 					/// @DnDArgument : "arg_5" "1"
@@ -383,4 +383,4 @@ if(control_type == cr.LOCAL){	/// @DnDAction : YoYo Games.Switch.Switch
 					/// @DnDArgument : "arg_12" "1"
 					/// @DnDArgument : "arg_13" "0"
 					/// @DnDSaveInfo : "script" "draw_text_colour_outline"
-					script_execute(draw_text_colour_outline, 140 +wep_display_width, 950, "Reload Speed: " + string(global.reload_bonus), c_white, c_teal, 1, c_black, c_blue, 1, 1, 4, 1, 1, 0);}}	break;}}
+					script_execute(draw_text_colour_outline, 140 +wep_display_width, 950, "Reload Speed: " + string(global.reload_bonus*reload_bonus), c_white, c_teal, 1, c_black, c_blue, 1, 1, 4, 1, 1, 0);}}	break;}}

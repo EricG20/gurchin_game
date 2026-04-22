@@ -89,6 +89,15 @@ hair_offset_y = 0;
 gwah = -1;
 this_expression = "";
 
+// Robot Personal Upgrades
+firerate_bonus = 1;
+ammo_bonus = 1;
+booster_bonus = 1;
+movementspeed_bonus = 1;
+reload_bonus = 1;
+booster_recharge_bonus = 1;
+robot_upgrade_level = 0;
+
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 5A7CC706

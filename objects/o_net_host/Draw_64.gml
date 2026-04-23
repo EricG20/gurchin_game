@@ -58,70 +58,55 @@ if(!(global.join_code == -1)){	/// @DnDAction : YoYo Games.Drawing.Set_Alignme
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);}
 
-/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDAction : YoYo Games.Common.Else
 /// @DnDVersion : 1
-/// @DnDHash : 3DD77ECF
-/// @DnDArgument : "var" "global.join_code"
-/// @DnDArgument : "value" "-1"
-if(global.join_code == -1){	/// @DnDAction : YoYo Games.Drawing.Set_Alignment
+/// @DnDHash : 48C9957E
+else{	/// @DnDAction : YoYo Games.Drawing.Set_Alignment
 	/// @DnDVersion : 1.1
-	/// @DnDHash : 046C9F60
-	/// @DnDParent : 3DD77ECF
+	/// @DnDHash : 3A3EAABC
+	/// @DnDParent : 48C9957E
 	/// @DnDArgument : "halign" "fa_center"
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_top);
 
 	/// @DnDAction : YoYo Games.Drawing.Set_Font
 	/// @DnDVersion : 1
-	/// @DnDHash : 66F191D7
-	/// @DnDParent : 3DD77ECF
+	/// @DnDHash : 30C0C25F
+	/// @DnDParent : 48C9957E
 	/// @DnDArgument : "font" "imagine"
 	/// @DnDSaveInfo : "font" "imagine"
 	draw_set_font(imagine);
 
-	/// @DnDAction : YoYo Games.Common.If_Variable
-	/// @DnDVersion : 1
-	/// @DnDHash : 4D7FAC97
-	/// @DnDParent : 3DD77ECF
-	/// @DnDArgument : "var" "current_time%100"
-	if(current_time%100 == 0){	/// @DnDAction : YoYo Games.Common.Variable
-		/// @DnDVersion : 1
-		/// @DnDHash : 65B9A3EE
-		/// @DnDParent : 4D7FAC97
-		/// @DnDArgument : "expr" "(dots + 1)%4"
-		/// @DnDArgument : "var" "dots"
-		dots = (dots + 1)%4;}
-
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
-	/// @DnDHash : 3B61D9FE
-	/// @DnDParent : 3DD77ECF
+	/// @DnDHash : 19A8F877
+	/// @DnDParent : 48C9957E
 	/// @DnDArgument : "expr" ""Waiting for code""
 	/// @DnDArgument : "var" "waiting_string"
 	waiting_string = "Waiting for code";
 
-	/// @DnDAction : YoYo Games.Loops.For_Loop
+	/// @DnDAction : YoYo Games.Common.If_Variable
 	/// @DnDVersion : 1
-	/// @DnDHash : 1697F034
-	/// @DnDParent : 3DD77ECF
-	/// @DnDArgument : "cond" "i < dots"
-	for(i = 0; i < dots; i += 1) {	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDHash : 0F26CBCA
+	/// @DnDParent : 48C9957E
+	/// @DnDArgument : "var" "current_time%10"
+	if(current_time%10 == 0){	/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
-		/// @DnDHash : 3CB4FF97
-		/// @DnDParent : 1697F034
-		/// @DnDArgument : "expr" "waiting_string+".""
-		/// @DnDArgument : "var" "waiting_string"
-		waiting_string = waiting_string+".";}
+		/// @DnDHash : 6C8EAE07
+		/// @DnDParent : 0F26CBCA
+		/// @DnDArgument : "expr" "(dots+1)%4"
+		/// @DnDArgument : "var" "dots"
+		dots = (dots+1)%4;}
 
 	/// @DnDAction : YoYo Games.Common.Execute_Script
 	/// @DnDVersion : 1.1
-	/// @DnDHash : 5AAB4D47
+	/// @DnDHash : 647454FF
 	/// @DnDInput : 14
-	/// @DnDParent : 3DD77ECF
+	/// @DnDParent : 48C9957E
 	/// @DnDArgument : "script" "draw_text_colour_outline"
 	/// @DnDArgument : "arg" "960"
 	/// @DnDArgument : "arg_1" "y"
-	/// @DnDArgument : "arg_2" "waiting_string"
+	/// @DnDArgument : "arg_2" "global.join_code"
 	/// @DnDArgument : "arg_3" "c_gray"
 	/// @DnDArgument : "arg_4" "c_black"
 	/// @DnDArgument : "arg_5" "1"
@@ -134,19 +119,19 @@ if(global.join_code == -1){	/// @DnDAction : YoYo Games.Drawing.Set_Alignment
 	/// @DnDArgument : "arg_12" "2"
 	/// @DnDArgument : "arg_13" "0"
 	/// @DnDSaveInfo : "script" "draw_text_colour_outline"
-	script_execute(draw_text_colour_outline, 960, y, waiting_string, c_gray, c_black, 1, c_white, c_white, 1, 2, 6, 2, 2, 0);
+	script_execute(draw_text_colour_outline, 960, y, global.join_code, c_gray, c_black, 1, c_white, c_white, 1, 2, 6, 2, 2, 0);
 
 	/// @DnDAction : YoYo Games.Drawing.Set_Font
 	/// @DnDVersion : 1
-	/// @DnDHash : 2D12DA09
-	/// @DnDParent : 3DD77ECF
+	/// @DnDHash : 6B032192
+	/// @DnDParent : 48C9957E
 	/// @DnDArgument : "font" "fontTbyDefault"
 	/// @DnDSaveInfo : "font" "fontTbyDefault"
 	draw_set_font(fontTbyDefault);
 
 	/// @DnDAction : YoYo Games.Drawing.Set_Alignment
 	/// @DnDVersion : 1.1
-	/// @DnDHash : 7BD1DA96
-	/// @DnDParent : 3DD77ECF
+	/// @DnDHash : 59ED6143
+	/// @DnDParent : 48C9957E
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);}

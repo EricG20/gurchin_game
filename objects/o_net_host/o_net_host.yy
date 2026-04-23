@@ -40,6 +40,7 @@
     {"$GMObjectProperty":"v2","%Name":"reserved_spot","filters":[],"listItems":[],"multiselect":false,"name":"reserved_spot","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
     {"$GMObjectProperty":"v2","%Name":"server_port","filters":[],"listItems":[],"multiselect":false,"name":"server_port","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"6510","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"seq","filters":[],"listItems":[],"multiselect":false,"name":"seq","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
+    {"$GMObjectProperty":"v2","%Name":"dots","filters":[],"listItems":[],"multiselect":false,"name":"dots","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

@@ -1,7 +1,6 @@
 /// @DnDAction : YoYo Games.Common.Function
 /// @DnDVersion : 1
 /// @DnDHash : 4828C3CF
-/// @DnDComment : // Script assets have changed for v2.3.0 see$(13_10)// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 /// @DnDArgument : "funcName" "scr_specials"
 function scr_specials() {	/// @DnDAction : YoYo Games.Switch.Switch
 	/// @DnDVersion : 1
@@ -45,7 +44,7 @@ function scr_specials() {	/// @DnDAction : YoYo Games.Switch.Switch
 		/// @DnDHash : 2E756A15
 		/// @DnDParent : 42076BBB
 		/// @DnDArgument : "const" ""Zelinka""
-		case "Zelinka":	/// @DnDAction : YoYo Games.Instances.Create_Instance
+		case "Zelinka":	/// @DnDAction : YoYo Games.Instances.Create_Instance
 			/// @DnDVersion : 1
 			/// @DnDHash : 6F5420CD
 			/// @DnDParent : 2E756A15
@@ -53,7 +52,7 @@ function scr_specials() {	/// @DnDAction : YoYo Games.Switch.Switch
 			/// @DnDArgument : "objectid" "o_bullet_storm"
 			/// @DnDSaveInfo : "objectid" "o_bullet_storm"
 			instance_create_layer(o_cursor.x, 0, "Instances", o_bullet_storm);
-		
+
 			/// @DnDAction : YoYo Games.Audio.Play_Audio
 			/// @DnDVersion : 1.1
 			/// @DnDHash : 7DDAD27C
@@ -62,4 +61,19 @@ function scr_specials() {	/// @DnDAction : YoYo Games.Switch.Switch
 			/// @DnDArgument : "gain" "2"
 			/// @DnDArgument : "pitch" ".7"
 			/// @DnDSaveInfo : "soundid" "sfx_lightning"
-			audio_play_sound(sfx_lightning, 0, 0, 2, undefined, .7);	break;}}
+			audio_play_sound(sfx_lightning, 0, 0, 2, undefined, .7);	break;
+
+		/// @DnDAction : YoYo Games.Switch.Case
+		/// @DnDVersion : 1
+		/// @DnDHash : 609C369E
+		/// @DnDParent : 42076BBB
+		/// @DnDArgument : "const" ""Robot""
+		case "Robot":	/// @DnDAction : YoYo Games.Instances.Create_Instance
+			/// @DnDVersion : 1
+			/// @DnDHash : 407F6372
+			/// @DnDParent : 609C369E
+			/// @DnDArgument : "var" "wheel"
+			/// @DnDArgument : "var_temp" "1"
+			/// @DnDArgument : "objectid" "o_robot_special_wheel"
+			/// @DnDSaveInfo : "objectid" "o_robot_special_wheel"
+			var wheel = instance_create_layer(x, y, "Effects", o_robot_special_wheel);	break;}}

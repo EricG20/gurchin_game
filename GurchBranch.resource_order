@@ -167,6 +167,7 @@
     {"name":"o_vermin_explosion","order":4,"path":"objects/o_vermin_explosion/o_vermin_explosion.yy",},
     {"name":"o_weapon_gen","order":9,"path":"objects/o_weapon_gen/o_weapon_gen.yy",},
     {"name":"o_xoopington","order":9,"path":"objects/o_xoopington/o_xoopington.yy",},
+    {"name":"Object122","order":7,"path":"objects/Object122/Object122.yy",},
     {"name":"Object73","order":2,"path":"objects/Object73/Object73.yy",},
     {"name":"oDecoration2","order":2,"path":"objects/oDecoration2/oDecoration2.yy",},
     {"name":"oExample","order":3,"path":"objects/oExample/oExample.yy",},

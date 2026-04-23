@@ -7,7 +7,9 @@
 /// @DnDArgument : "arg" "name"
 /// @DnDArgument : "arg_1" "hair"
 /// @DnDArgument : "arg_2" "color_of_suit"
-function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : YoYo Games.Data Structures.Create_List
+function scr_change_character(name, hair, color_of_suit) 
+{
+	/// @DnDAction : YoYo Games.Data Structures.Create_List
 	/// @DnDVersion : 1
 	/// @DnDHash : 47F1E677
 	/// @DnDInput : 6
@@ -78,12 +80,16 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 	/// @DnDHash : 76B8B3D3
 	/// @DnDParent : 7A41EDD0
 	/// @DnDArgument : "expr" "name"
-	var l76B8B3D3_0 = name;switch(l76B8B3D3_0){	/// @DnDAction : YoYo Games.Switch.Case
+	var l76B8B3D3_0 = name;
+switch(l76B8B3D3_0)
+{
+	/// @DnDAction : YoYo Games.Switch.Case
 		/// @DnDVersion : 1
 		/// @DnDHash : 39FEBF4E
 		/// @DnDParent : 76B8B3D3
 		/// @DnDArgument : "const" ""Zelinka""
-		case "Zelinka":	/// @DnDAction : YoYo Games.Common.Variable
+		case "Zelinka":
+	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 14F88D1D
 			/// @DnDParent : 39FEBF4E
@@ -329,14 +335,16 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDArgument : "var" "talking_mouths"
 			/// @DnDArgument : "value" "s_zelinka_mouth_a"
 			/// @DnDArgument : "value_1" "s_zelinka_mouth_g"
-			/// @DnDArgument : "value_2" "s_zelinka_mouth_o"	break;
+			/// @DnDArgument : "value_2" "s_zelinka_mouth_o"
+	break;
 	
 		/// @DnDAction : YoYo Games.Switch.Case
 		/// @DnDVersion : 1
 		/// @DnDHash : 5277A3DC
 		/// @DnDParent : 76B8B3D3
 		/// @DnDArgument : "const" ""Gurchin""
-		case "Gurchin":	/// @DnDAction : YoYo Games.Data Structures.List_Add
+		case "Gurchin":
+	/// @DnDAction : YoYo Games.Data Structures.List_Add
 			/// @DnDVersion : 1
 			/// @DnDHash : 5737ED1F
 			/// @DnDInput : 3
@@ -459,19 +467,270 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDArgument : "value_1" "s_gurchin_mouth_i"
 			/// @DnDArgument : "value_2" "s_gurchin_mouth_o"
 			/// @DnDArgument : "value_3" "s_gurchin_mouth_e"
-			ds_list_add(talking_mouths, s_gurchin_mouth_a, s_gurchin_mouth_i, s_gurchin_mouth_o, s_gurchin_mouth_e);	break;}
+			ds_list_add(talking_mouths, s_gurchin_mouth_a, s_gurchin_mouth_i, s_gurchin_mouth_o, s_gurchin_mouth_e);
+	break;
+	
+		/// @DnDAction : YoYo Games.Switch.Case
+		/// @DnDVersion : 1
+		/// @DnDHash : 38B718F0
+		/// @DnDParent : 76B8B3D3
+		/// @DnDArgument : "const" ""Robot""
+		case "Robot":
+	/// @DnDAction : YoYo Games.Common.Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 4885AD93
+			/// @DnDParent : 38B718F0
+			/// @DnDArgument : "expr" "s_zelinka_ponder_eyes"
+			/// @DnDArgument : "var" "ponder_eyes_sprite"
+			ponder_eyes_sprite = s_zelinka_ponder_eyes;
+		
+			/// @DnDAction : YoYo Games.Common.Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 46BB926D
+			/// @DnDInput : 26
+			/// @DnDParent : 38B718F0
+			/// @DnDArgument : "expr" "s_zelinka_antenna"
+			/// @DnDArgument : "expr_1" "s_zelinka_ear"
+			/// @DnDArgument : "expr_2" "s_zelinka_head"
+			/// @DnDArgument : "expr_3" "s_zelinka_hair"
+			/// @DnDArgument : "expr_4" "s_zelinka_bangs"
+			/// @DnDArgument : "expr_5" "s_zelinka_mouthgood"
+			/// @DnDArgument : "expr_6" "s_zelinka_mouthmeh"
+			/// @DnDArgument : "expr_7" "s_zelinka_mouthohnah"
+			/// @DnDArgument : "expr_8" "s_zelinka_idle"
+			/// @DnDArgument : "expr_9" "s_zelinka_walk"
+			/// @DnDArgument : "expr_10" "s_zelinka_eyes"
+			/// @DnDArgument : "expr_11" "-41-8"
+			/// @DnDArgument : "expr_12" "-67-5"
+			/// @DnDArgument : "expr_13" "-11-39"
+			/// @DnDArgument : "expr_14" "2.2"
+			/// @DnDArgument : "expr_15" ""Zelinka""
+			/// @DnDArgument : "expr_16" "5"
+			/// @DnDArgument : "expr_17" "6.7"
+			/// @DnDArgument : "expr_18" "13"
+			/// @DnDArgument : "expr_19" "3"
+			/// @DnDArgument : "expr_20" "4"
+			/// @DnDArgument : "expr_21" ".5"
+			/// @DnDArgument : "expr_22" "2"
+			/// @DnDArgument : "expr_23" "300"
+			/// @DnDArgument : "expr_24" "s_zelinka_knockback"
+			/// @DnDArgument : "expr_25" "o_goozi"
+			/// @DnDArgument : "var" "antenna_sprite"
+			/// @DnDArgument : "var_1" "ear_sprite"
+			/// @DnDArgument : "var_2" "head_sprite"
+			/// @DnDArgument : "var_3" "hair_sprite"
+			/// @DnDArgument : "var_4" "bangs_sprite"
+			/// @DnDArgument : "var_5" "smile_sprite"
+			/// @DnDArgument : "var_6" "straightface_sprite"
+			/// @DnDArgument : "var_7" "frown_sprite"
+			/// @DnDArgument : "var_8" "idle_sprite"
+			/// @DnDArgument : "var_9" "walk_sprite"
+			/// @DnDArgument : "var_10" "eyes_sprite"
+			/// @DnDArgument : "var_11" "head_height"
+			/// @DnDArgument : "var_12" "eye_height"
+			/// @DnDArgument : "var_13" "hair_height"
+			/// @DnDArgument : "var_14" "walk_lift_magnitude"
+			/// @DnDArgument : "var_15" "character_index"
+			/// @DnDArgument : "var_16" "max_hp"
+			/// @DnDArgument : "var_17" "walk_speed"
+			/// @DnDArgument : "var_18" "jumpheight"
+			/// @DnDArgument : "var_19" "walk_bobbing_strength"
+			/// @DnDArgument : "var_20" "ear_bobbing_strength"
+			/// @DnDArgument : "var_21" "hair_weight"
+			/// @DnDArgument : "var_22" "head_offset_x"
+			/// @DnDArgument : "var_23" "special_meter_cap"
+			/// @DnDArgument : "var_24" "knockback_sprite"
+			/// @DnDArgument : "var_25" "default_gun"
+			antenna_sprite = s_zelinka_antenna;
+			ear_sprite = s_zelinka_ear;
+			head_sprite = s_zelinka_head;
+			hair_sprite = s_zelinka_hair;
+			bangs_sprite = s_zelinka_bangs;
+			smile_sprite = s_zelinka_mouthgood;
+			straightface_sprite = s_zelinka_mouthmeh;
+			frown_sprite = s_zelinka_mouthohnah;
+			idle_sprite = s_zelinka_idle;
+			walk_sprite = s_zelinka_walk;
+			eyes_sprite = s_zelinka_eyes;
+			head_height = -41-8;
+			eye_height = -67-5;
+			hair_height = -11-39;
+			walk_lift_magnitude = 2.2;
+			character_index = "Robot";
+			max_hp = 5;
+			walk_speed = 6.7;
+			jumpheight = 13;
+			walk_bobbing_strength = 3;
+			ear_bobbing_strength = 4;
+			hair_weight = .5;
+			head_offset_x = 2;
+			special_meter_cap = 300;
+			knockback_sprite = s_zelinka_knockback;
+			default_gun = o_xoopington;
+		
+			/// @DnDAction : YoYo Games.Instances.Change_Instance
+			/// @DnDVersion : 1
+			/// @DnDHash : 0CE52536
+			/// @DnDApplyTo : mygurn
+			/// @DnDParent : 38B718F0
+			/// @DnDArgument : "objind" "o_xoopington"
+			/// @DnDSaveInfo : "objind" "o_xoopington"
+			with(mygurn) instance_change(o_xoopington, true);
+		
+			/// @DnDAction : YoYo Games.Data Structures.Map_Set_Value
+			/// @DnDVersion : 1
+			/// @DnDHash : 57280EF1
+			/// @DnDInput : 2
+			/// @DnDParent : 38B718F0
+			/// @DnDArgument : "var" "weapon_levels"
+			/// @DnDArgument : "key" "o_gon"
+			/// @DnDArgument : "value" "0"
+			/// @DnDArgument : "key_1" "o_xoopington"
+			/// @DnDArgument : "value_1" "3"
+			ds_map_replace(weapon_levels, o_gon, 0);
+			ds_map_replace(weapon_levels, o_xoopington, 3);
+		
+			/// @DnDAction : YoYo Games.Data Structures.List_Add
+			/// @DnDVersion : 1
+			/// @DnDHash : 31BECBC0
+			/// @DnDInput : 3
+			/// @DnDParent : 38B718F0
+			/// @DnDArgument : "var" "good_job_lines"
+			/// @DnDArgument : "value" ""Love it.""
+			/// @DnDArgument : "value_1" ""oooo cutttieee""
+			/// @DnDArgument : "value_2" ""heh~ maybe you're not half bad after all, what do you say me and you find some get a oil can and a beer respectively after this is all over""
+			ds_list_add(good_job_lines, "Love it.", "oooo cutttieee", "heh~ maybe you're not half bad after all, what do you say me and you find some get a oil can and a beer respectively after this is all over");
+		
+			/// @DnDAction : YoYo Games.Data Structures.List_Add
+			/// @DnDVersion : 1
+			/// @DnDHash : 22C29D0F
+			/// @DnDInput : 2
+			/// @DnDParent : 38B718F0
+			/// @DnDArgument : "var" "you_suck_lines"
+			/// @DnDArgument : "value" ""kys""
+			/// @DnDArgument : "value_1" ""nice job retard""
+			ds_list_add(you_suck_lines, "kys", "nice job retard");
+		
+			/// @DnDAction : YoYo Games.Data Structures.List_Add
+			/// @DnDVersion : 1
+			/// @DnDHash : 01E8A76E
+			/// @DnDInput : 2
+			/// @DnDParent : 38B718F0
+			/// @DnDArgument : "var" "i_need_help_lines"
+			/// @DnDArgument : "value" ""help""
+			/// @DnDArgument : "value_1" ""BROTHER HELP ME STOP FARMING AND HELP""
+			ds_list_add(i_need_help_lines, "help", "BROTHER HELP ME STOP FARMING AND HELP");
+		
+			/// @DnDAction : YoYo Games.Data Structures.List_Add
+			/// @DnDVersion : 1
+			/// @DnDHash : 619510B4
+			/// @DnDInput : 2
+			/// @DnDParent : 38B718F0
+			/// @DnDArgument : "var" "gloat_lines"
+			/// @DnDArgument : "value" ""holy shit im goated""
+			/// @DnDArgument : "value_1" ""someone get a camera i just hit a clip""
+			ds_list_add(gloat_lines, "holy shit im goated", "someone get a camera i just hit a clip");
+		
+			/// @DnDAction : YoYo Games.Data Structures.List_Add
+			/// @DnDVersion : 1
+			/// @DnDHash : 4D159DB9
+			/// @DnDInput : 2
+			/// @DnDParent : 38B718F0
+			/// @DnDArgument : "var" "i_want_that_lines"
+			/// @DnDArgument : "value" ""bitch get your dirty ass fingers off my shit and hand it over""
+			/// @DnDArgument : "value_1" ""MINE""
+			ds_list_add(i_want_that_lines, "bitch get your dirty ass fingers off my shit and hand it over", "MINE");
+		
+			/// @DnDAction : YoYo Games.Data Structures.List_Add
+			/// @DnDVersion : 1
+			/// @DnDHash : 14E36FAF
+			/// @DnDParent : 38B718F0
+			/// @DnDArgument : "var" "hi_lines"
+			/// @DnDArgument : "value" ""Hiiiii~""
+			ds_list_add(hi_lines, "Hiiiii~");
+		
+			/// @DnDAction : YoYo Games.Data Structures.List_Add
+			/// @DnDVersion : 1
+			/// @DnDHash : 75D5AC3F
+			/// @DnDInput : 3
+			/// @DnDParent : 38B718F0
+			/// @DnDArgument : "var" "talking_mouths"
+			/// @DnDArgument : "value" "s_zelinka_mouth_a"
+			/// @DnDArgument : "value_1" "s_zelinka_mouth_g"
+			/// @DnDArgument : "value_2" "s_zelinka_mouth_o"
+			ds_list_add(talking_mouths, s_zelinka_mouth_a, s_zelinka_mouth_g, s_zelinka_mouth_o);
+		
+			/// @DnDAction : YoYo Games.Data Structures.Map_Set_Value
+			/// @DnDVersion : 1
+			/// @DnDHash : 06B2183B
+			/// @DnDInput : 12
+			/// @DnDParent : 38B718F0
+			/// @DnDArgument : "var" "expressions"
+			/// @DnDArgument : "key" ""joy_eyes""
+			/// @DnDArgument : "value" "s_zelinka_joy_eyes"
+			/// @DnDArgument : "key_1" ""joy_mouth""
+			/// @DnDArgument : "value_1" "s_zelinka_mouth_joy"
+			/// @DnDArgument : "key_2" ""sad_eyes""
+			/// @DnDArgument : "value_2" "s_zelinka_sad_eyes"
+			/// @DnDArgument : "key_3" ""sad_mouth""
+			/// @DnDArgument : "value_3" "s_zelinka_mouth_sad"
+			/// @DnDArgument : "key_4" ""scared_eyes""
+			/// @DnDArgument : "value_4" "s_zelinka_scared_eyes"
+			/// @DnDArgument : "key_5" ""scared_mouth""
+			/// @DnDArgument : "value_5" "s_zelinka_mouth_scared"
+			/// @DnDArgument : "key_6" ""confident_eyes""
+			/// @DnDArgument : "value_6" "s_zelinka_joy_eyes"
+			/// @DnDArgument : "key_7" ""confident_mouth""
+			/// @DnDArgument : "value_7" "s_zelinka_mouthgood"
+			/// @DnDArgument : "key_8" ""ponder_eyes""
+			/// @DnDArgument : "value_8" "s_zelinka_ponder_eyes"
+			/// @DnDArgument : "key_9" ""ponder_mouth""
+			/// @DnDArgument : "value_9" "s_zelinka_mouthmeh"
+			/// @DnDArgument : "key_10" ""neutral_eyes""
+			/// @DnDArgument : "value_10" "s_zelinka_eyes"
+			/// @DnDArgument : "key_11" ""neutral_mouth""
+			/// @DnDArgument : "value_11" "s_zelinka_mouthgood"
+			ds_map_replace(expressions, "joy_eyes", s_zelinka_joy_eyes);
+			ds_map_replace(expressions, "joy_mouth", s_zelinka_mouth_joy);
+			ds_map_replace(expressions, "sad_eyes", s_zelinka_sad_eyes);
+			ds_map_replace(expressions, "sad_mouth", s_zelinka_mouth_sad);
+			ds_map_replace(expressions, "scared_eyes", s_zelinka_scared_eyes);
+			ds_map_replace(expressions, "scared_mouth", s_zelinka_mouth_scared);
+			ds_map_replace(expressions, "confident_eyes", s_zelinka_joy_eyes);
+			ds_map_replace(expressions, "confident_mouth", s_zelinka_mouthgood);
+			ds_map_replace(expressions, "ponder_eyes", s_zelinka_ponder_eyes);
+			ds_map_replace(expressions, "ponder_mouth", s_zelinka_mouthmeh);
+			ds_map_replace(expressions, "neutral_eyes", s_zelinka_eyes);
+			ds_map_replace(expressions, "neutral_mouth", s_zelinka_mouthgood);
+		
+			/// @DnDAction : YoYo Games.Data Structures.List_Add
+			/// @DnDVersion : 1
+			/// @DnDHash : 0A021A2A
+			/// @DnDInput : 3
+			/// @DnDParent : 38B718F0
+			/// @DnDArgument : "var" "talking_mouths"
+			/// @DnDArgument : "value" "s_zelinka_mouth_a"
+			/// @DnDArgument : "value_1" "s_zelinka_mouth_g"
+			/// @DnDArgument : "value_2" "s_zelinka_mouth_o"
+			ds_list_add(talking_mouths, s_zelinka_mouth_a, s_zelinka_mouth_g, s_zelinka_mouth_o);
+	break;
+}
 
 	/// @DnDAction : YoYo Games.Switch.Switch
 	/// @DnDVersion : 1
 	/// @DnDHash : 5B88D4CF
 	/// @DnDParent : 7A41EDD0
 	/// @DnDArgument : "expr" "hair"
-	var l5B88D4CF_0 = hair;switch(l5B88D4CF_0){	/// @DnDAction : YoYo Games.Switch.Case
+	var l5B88D4CF_0 = hair;
+switch(l5B88D4CF_0)
+{
+	/// @DnDAction : YoYo Games.Switch.Case
 		/// @DnDVersion : 1
 		/// @DnDHash : 32161951
 		/// @DnDParent : 5B88D4CF
 		/// @DnDArgument : "const" ""afro_bun""
-		case "afro_bun":	/// @DnDAction : YoYo Games.Common.Variable
+		case "afro_bun":
+	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 40DF0DFB
 			/// @DnDInput : 2
@@ -481,14 +740,16 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDArgument : "var" "bangs_sprite"
 			/// @DnDArgument : "var_1" "hair_sprite"
 			bangs_sprite = s_player_afro_bun_bangs;
-			hair_sprite = s_player_afro_bun;	break;
+			hair_sprite = s_player_afro_bun;
+	break;
 	
 		/// @DnDAction : YoYo Games.Switch.Case
 		/// @DnDVersion : 1
 		/// @DnDHash : 13691236
 		/// @DnDParent : 5B88D4CF
 		/// @DnDArgument : "const" ""bald""
-		case "bald":	/// @DnDAction : YoYo Games.Common.Variable
+		case "bald":
+	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 67D04AE6
 			/// @DnDInput : 2
@@ -498,14 +759,16 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDArgument : "var" "bangs_sprite"
 			/// @DnDArgument : "var_1" "hair_sprite"
 			bangs_sprite = s_empty_sprite_for_bald;
-			hair_sprite = s_empty_sprite_for_bald;	break;
+			hair_sprite = s_empty_sprite_for_bald;
+	break;
 	
 		/// @DnDAction : YoYo Games.Switch.Case
 		/// @DnDVersion : 1
 		/// @DnDHash : 359C18A3
 		/// @DnDParent : 5B88D4CF
 		/// @DnDArgument : "const" ""afro""
-		case "afro":	/// @DnDAction : YoYo Games.Common.Variable
+		case "afro":
+	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 56407484
 			/// @DnDInput : 3
@@ -518,14 +781,16 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDArgument : "var_2" "hair_weight"
 			bangs_sprite = s_player_afro_bangs;
 			hair_sprite = s_player_hair;
-			hair_weight = 1.5;	break;
+			hair_weight = 1.5;
+	break;
 	
 		/// @DnDAction : YoYo Games.Switch.Case
 		/// @DnDVersion : 1
 		/// @DnDHash : 6C208E31
 		/// @DnDParent : 5B88D4CF
 		/// @DnDArgument : "const" ""cap_and_dreads""
-		case "cap_and_dreads":	/// @DnDAction : YoYo Games.Common.Variable
+		case "cap_and_dreads":
+	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 11DEB827
 			/// @DnDInput : 3
@@ -561,7 +826,9 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDArgument : "var" "rah.master"
 			/// @DnDArgument : "var_1" "rah.depth"
 			rah.master = id;
-			rah.depth = depth+1;	break;}
+			rah.depth = depth+1;
+	break;
+}
 
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
@@ -615,4 +882,5 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 	ds_map_replace(vocabulary, I_NEED_HELP, i_need_help_lines);
 	ds_map_replace(vocabulary, GLOAT, gloat_lines);
 	ds_map_replace(vocabulary, I_WANT_THAT, i_want_that_lines);
-	ds_map_replace(vocabulary, HI, hi_lines);}
+	ds_map_replace(vocabulary, HI, hi_lines);
+}

@@ -319,9 +319,9 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDVersion : 1
 				/// @DnDHash : 2373F2A7
 				/// @DnDParent : 3A9CC710
-				/// @DnDArgument : "expr" "10/global.firerate_bonus"
+				/// @DnDArgument : "expr" "10 / (global.firerate_bonus * weilder.firerate_bonus)"
 				/// @DnDArgument : "var" "charge"
-				charge = 10/global.firerate_bonus;
+				charge = 10 / (global.firerate_bonus * weilder.firerate_bonus);
 			
 				/// @DnDAction : YoYo Games.Common.If_Variable
 				/// @DnDVersion : 1
@@ -343,9 +343,9 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 					/// @DnDVersion : 1
 					/// @DnDHash : 3EBD9619
 					/// @DnDParent : 120390CF
-					/// @DnDArgument : "expr" "120/global.reload_bonus"
+					/// @DnDArgument : "expr" "120/global.reload_bonus*weilder.reload_bonus"
 					/// @DnDArgument : "var" "charge"
-					charge = 120/global.reload_bonus;
+					charge = 120/global.reload_bonus*weilder.reload_bonus;
 				
 					/// @DnDAction : YoYo Games.Common.Variable
 					/// @DnDVersion : 1
@@ -376,11 +376,11 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDHash : 630C2FAD
 			/// @DnDInput : 2
 			/// @DnDParent : 12FBD3EC
-			/// @DnDArgument : "expr" "ammo_cap*global.ammo_bonus"
+			/// @DnDArgument : "expr" "ammo_cap*global.ammo_bonus*weilder.ammo_bonus"
 			/// @DnDArgument : "expr_1" "stance.CASUAL"
 			/// @DnDArgument : "var" "ammo"
 			/// @DnDArgument : "var_1" "anim"
-			ammo = ammo_cap*global.ammo_bonus;
+			ammo = ammo_cap*global.ammo_bonus*weilder.ammo_bonus;
 			anim = stance.CASUAL;}}
 
 	/// @DnDAction : YoYo Games.Common.Variable
@@ -413,11 +413,11 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDInput : 2
 			/// @DnDParent : 05665C54
 			/// @DnDArgument : "expr" "stance.RELOAD"
-			/// @DnDArgument : "expr_1" "120/global.reload_bonus"
+			/// @DnDArgument : "expr_1" "120/global.reload_bonus*weilder.reload_bonus"
 			/// @DnDArgument : "var" "anim"
 			/// @DnDArgument : "var_1" "charge"
 			anim = stance.RELOAD;
-			charge = 120/global.reload_bonus;
+			charge = 120/global.reload_bonus*weilder.reload_bonus;
 		
 			/// @DnDAction : YoYo Games.Audio.Play_Audio
 			/// @DnDVersion : 1.1

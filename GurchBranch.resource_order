@@ -116,6 +116,7 @@
     {"name":"e_notif","order":5,"path":"objects/e_notif/e_notif.yy",},
     {"name":"e_other_notif","order":8,"path":"objects/e_other_notif/e_other_notif.yy",},
     {"name":"e_wave_card","order":6,"path":"objects/e_wave_card/e_wave_card.yy",},
+    {"name":"mrlocal_ip","order":7,"path":"objects/mrlocal_ip/mrlocal_ip.yy",},
     {"name":"o_bat","order":1,"path":"objects/o_bat/o_bat.yy",},
     {"name":"o_boss_gurchenis","order":1,"path":"objects/o_boss_gurchenis/o_boss_gurchenis.yy",},
     {"name":"o_bubble","order":23,"path":"objects/o_bubble/o_bubble.yy",},

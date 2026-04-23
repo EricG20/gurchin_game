@@ -1128,9 +1128,9 @@ if(!(state == ps.DIE)){	/// @DnDAction : YoYo Games.Common.If_Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 7E36C8E9
 			/// @DnDParent : 73609B42
-			/// @DnDArgument : "expr" "lerp(mouth_transformation, 1, power(.01, global.game_speed))"
+			/// @DnDArgument : "expr" "lerp(mouth_transformation, 1,.14*global.game_speed)"
 			/// @DnDArgument : "var" "mouth_transformation"
-			mouth_transformation = lerp(mouth_transformation, 1, power(.01, global.game_speed));}
+			mouth_transformation = lerp(mouth_transformation, 1,.14*global.game_speed);}
 	
 		/// @DnDAction : YoYo Games.Common.If_Expression
 		/// @DnDVersion : 1

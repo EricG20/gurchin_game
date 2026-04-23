@@ -194,6 +194,7 @@
     {"id":{"name":"e_wave_card","path":"objects/e_wave_card/e_wave_card.yy",},},
     {"id":{"name":"e_whiteflash","path":"objects/e_whiteflash/e_whiteflash.yy",},},
     {"id":{"name":"mo_bike","path":"objects/mo_bike/mo_bike.yy",},},
+    {"id":{"name":"mrlocal_ip","path":"objects/mrlocal_ip/mrlocal_ip.yy",},},
     {"id":{"name":"o_B_gunclaw","path":"objects/o_B_gunclaw/o_B_gunclaw.yy",},},
     {"id":{"name":"o_bat","path":"objects/o_bat/o_bat.yy",},},
     {"id":{"name":"o_big_bullet","path":"objects/o_big_bullet/o_big_bullet.yy",},},

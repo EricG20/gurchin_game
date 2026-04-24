@@ -1,11 +1,12 @@
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 5E4C0E46
-/// @DnDArgument : "code" "global.last_seq_from_host = -1;$(13_10)global.mm_url = "https://zpdf-mtchserver.fly.dev";$(13_10)$(13_10)client_socket = network_create_socket(network_socket_tcp);$(13_10)keyboard_string = "";$(13_10)join_code = "";$(13_10)connecting = false;$(13_10)"
+/// @DnDArgument : "code" "global.last_seq_from_host = -1;$(13_10)global.mm_url = "https://zpdf-mtchserver.fly.dev";$(13_10)$(13_10)client_socket = network_create_socket(network_socket_tcp);$(13_10)global.udp_socket = network_create_socket_ext(network_socket_udp, UDP_SERVER_PORT);$(13_10)keyboard_string = "";$(13_10)join_code = "";$(13_10)connecting = false;$(13_10)"
 global.last_seq_from_host = -1;
 global.mm_url = "https://zpdf-mtchserver.fly.dev";
 
 client_socket = network_create_socket(network_socket_tcp);
+global.udp_socket = network_create_socket_ext(network_socket_udp, UDP_SERVER_PORT);
 keyboard_string = "";
 join_code = "";
 connecting = false;

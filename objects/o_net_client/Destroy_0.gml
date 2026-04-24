@@ -6,6 +6,10 @@
 if (socket_exists("client_socket")) {
     network_destroy(client_socket);
 }
+if (variable_global_exists("udp_socket") && global.udp_socket >= 0) {
+    network_destroy(global.udp_socket);
+    global.udp_socket = -1;
+}
 
 connecting = false;
 join_code = "";

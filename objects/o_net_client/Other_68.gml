@@ -31,8 +31,9 @@ if (type == network_type_data) {
 	
 	if(packet_type == 0){
 		var _ip = string(async_load[? "ip"]);
-		show_debug_message("Punch packet from: " + _ip + ":" +string(async_load[? "port"]));
-		network_connect(client_socket, _ip, TCP_SERVER_PORT);
+		var _port = async_load[? "port"];
+		show_debug_message("Punch packet from: " + _ip + ":" +string(_port));
+		network_connect(client_socket, _ip, _port);
 	}
     if (packet_type == 2) {
         var char_index = buffer_read(buff, buffer_string);

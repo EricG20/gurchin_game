@@ -360,6 +360,9 @@ function sanitize_join_code(str) {
 }
 
 function scr_client_begin_nat_punch(){
+    if (!instance_exists(mrlocal_ip)) {
+        instance_create_layer(0, 0, "Instances", mrlocal_ip);
+    }
 	var headers = ds_map_create();
 	http_request(global.mm_url + "/stun", "GET", headers, "");
 	ds_map_destroy(headers);

@@ -3,7 +3,8 @@
 /// @DnDHash : 2349CA0A
 /// @DnDArgument : "code" "global.players = array_create(5, -1);$(13_10)"
 global.players = array_create(5, -1);
-network_config_use_ipv6(true);
+global.host_local_ip = "searching";
+instance_create_layer(0, 0, "Instances", mrlocal_ip);
 
 /// @DnDAction : YoYo Games.Data Structures.Create_Map
 /// @DnDVersion : 1

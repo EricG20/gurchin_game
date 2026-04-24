@@ -7,6 +7,8 @@ global.mm_url = "https://zpdf-mtchserver.fly.dev";
 
 client_socket = network_create_socket(network_socket_udp);
 global.udp_socket = client_socket;
+network_set_timeout(client_socket, 10000, 10000);
+
 keyboard_string = "";
 join_code = "";
 connecting = false;

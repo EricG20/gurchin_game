@@ -378,7 +378,15 @@ var l61EB12DC_0 = state;switch(l61EB12DC_0){	/// @DnDAction : YoYo Games.Swit
 			/// @DnDParent : 757EA620
 			/// @DnDArgument : "expr" "dude.player_id"
 			/// @DnDArgument : "var" "global.players[0]"
-			global.players[0] = dude.player_id;}	break;
+			global.players[0] = dude.player_id;
+		
+			/// @DnDAction : YoYo Games.Instances.Create_Instance
+			/// @DnDVersion : 1
+			/// @DnDHash : 7C7A93D1
+			/// @DnDParent : 757EA620
+			/// @DnDArgument : "objectid" "mrlocal_ip"
+			/// @DnDSaveInfo : "objectid" "mrlocal_ip"
+			instance_create_layer(0, 0, "Instances", mrlocal_ip);}	break;
 
 	/// @DnDAction : YoYo Games.Switch.Case
 	/// @DnDVersion : 1

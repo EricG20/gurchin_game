@@ -10,13 +10,6 @@ global.players = array_create(5, -1);
 /// @DnDArgument : "var" "player_details"
 player_details = ds_map_create();
 
-/// @DnDAction : YoYo Games.Instances.Create_Instance
-/// @DnDVersion : 1
-/// @DnDHash : 33C7C235
-/// @DnDArgument : "objectid" "mrlocal_ip"
-/// @DnDSaveInfo : "objectid" "mrlocal_ip"
-instance_create_layer(0, 0, "Instances", mrlocal_ip);
-
 /// @DnDAction : YoYo Games.Random.Randomize
 /// @DnDVersion : 1
 /// @DnDHash : 3617FA59

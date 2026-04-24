@@ -160,6 +160,7 @@
     {"id":{"name":"walk_bob_curve","path":"animcurves/walk_bob_curve/walk_bob_curve.yy",},},
     {"id":{"name":"walk_squash_curve","path":"animcurves/walk_squash_curve/walk_squash_curve.yy",},},
     {"id":{"name":"GradientsGM","path":"extensions/GradientsGM/GradientsGM.yy",},},
+    {"id":{"name":"calibri","path":"fonts/calibri/calibri.yy",},},
     {"id":{"name":"fntDefault","path":"fonts/fntDefault/fntDefault.yy",},},
     {"id":{"name":"Font1","path":"fonts/Font1/Font1.yy",},},
     {"id":{"name":"fontTbyDefault_bold","path":"fonts/fontTbyDefault_bold/fontTbyDefault_bold.yy",},},

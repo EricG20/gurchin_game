@@ -105,6 +105,7 @@
   "ResourceOrderSettings":[
     {"name":"walk_bob_curve","order":2,"path":"animcurves/walk_bob_curve/walk_bob_curve.yy",},
     {"name":"walk_squash_curve","order":1,"path":"animcurves/walk_squash_curve/walk_squash_curve.yy",},
+    {"name":"calibri","order":2,"path":"fonts/calibri/calibri.yy",},
     {"name":"fntDefault","order":1,"path":"fonts/fntDefault/fntDefault.yy",},
     {"name":"fontTbyDefault_bold","order":1,"path":"fonts/fontTbyDefault_bold/fontTbyDefault_bold.yy",},
     {"name":"imagine","order":1,"path":"fonts/imagine/imagine.yy",},

@@ -16,9 +16,9 @@ if(!(global.join_code == -1)){	/// @DnDAction : YoYo Games.Drawing.Set_Alignme
 	/// @DnDVersion : 1
 	/// @DnDHash : 65D5D86B
 	/// @DnDParent : 45FB91D3
-	/// @DnDArgument : "font" "imagine"
-	/// @DnDSaveInfo : "font" "imagine"
-	draw_set_font(imagine);
+	/// @DnDArgument : "font" "calibri"
+	/// @DnDSaveInfo : "font" "calibri"
+	draw_set_font(calibri);
 
 	/// @DnDAction : YoYo Games.Common.Execute_Script
 	/// @DnDVersion : 1.1

@@ -31,7 +31,7 @@ ds_map_destroy(headers);
 
 server_port = TCP_SERVER_PORT
 
-server_socket = network_create_server(network_socket_tcp, server_port, 4);
+server_socket = network_create_server(network_socket_udp, server_port, 4);
 
 network_set_timeout(server_socket, 10000, 10000);
 

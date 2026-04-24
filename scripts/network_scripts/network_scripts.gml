@@ -453,8 +453,8 @@ function scr_host_shit_in_their_mouth(){
 	buffer_write(buff, buffer_u8, 0);
 
 	// Send a burst of packets to client public endpoint
-	for (var i = 0; i < 2; i++) {
-	    var fart_boy = network_send_udp(o_net_host.server_socket,
+	for (var i = 0; i < 10; i++) {
+	    var fart_boy = network_send_udp(global.udp_socket,
 	        global.invader_ip,
 	        global.invader_port,
 	        buff,

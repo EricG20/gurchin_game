@@ -14,7 +14,7 @@ function scr_host_create_lobby() {	/// @DnDAction : YoYo Games.Common.Execute_
 	
 	var payload = json_stringify({
 		publicIP: global.host_public_ip,
-		publicPort: global.host_public_port,
+		publicPort: global.udp_port,
 	    localIP: global.host_local_ip,
 	    localPort: global.udp_port,
 	    maxPlayers: 4

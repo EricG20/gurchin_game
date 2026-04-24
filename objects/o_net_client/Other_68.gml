@@ -34,7 +34,7 @@ if (type == network_type_data) {
 		var _port = async_load[? "port"];
 		show_debug_message("Punch packet from: " + _ip + ":" +string(_port));
 		if (!variable_global_exists("client_tcp_socket") || global.client_tcp_socket <= 0) {
-			network_connect(client_socket, _ip, _port);
+			network_connect(client_socket, _ip, TCP_SERVER_PORT);
 		}
 	}
     if (packet_type == 2) {

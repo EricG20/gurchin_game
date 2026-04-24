@@ -85,9 +85,6 @@ if (string_pos("/punch/", url) > 0) {
 		
 	}
 
-    global.target_local_ip = result.hostLocalIP;
-    global.target_local_port = result.hostLocalPort;
-
     //global.host_public_ip   = result.hostPublicIP;
     //global.host_public_port = result.hostPublicPort;
 	show_debug_message("CLIENT PUNCH HANDLER ENTERED");

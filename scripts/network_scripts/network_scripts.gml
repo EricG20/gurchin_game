@@ -369,13 +369,7 @@ function scr_client_begin_nat_punch(){
 function scr_client_request_punch(){
 	var headers = ds_map_create();
 	headers[? "Content-Type"] = "application/json";
-    
-    var payload = json_stringify({
-        localIP: global.host_local_ip,
-        localPort: UDP_SERVER_PORT
-    });
-    
-	http_request(global.mm_url + "/punch/" + join_code, "POST", headers, payload);
+	http_request(global.mm_url + "/punch/" + join_code, "POST", headers, "{}");
 	ds_map_destroy(headers);
 
 }
@@ -389,12 +383,7 @@ function scr_client_start_punch(){
 	buffer_write(buff, buffer_u8, 0);
 
 	for (var i = 0; i < 10; i++) {
-	    network_send_udp(global.udp_socket, global.target_ip, global.target_port, buff, buffer_tell(buff));
-		network_send_udp(global.udp_socket, global.target_ip, UDP_SERVER_PORT, buff, buffer_tell(buff));
-        
-        if (variable_global_exists("target_local_ip") && global.target_local_ip != "") {
-             network_send_udp(global.udp_socket, global.target_local_ip, global.target_local_port, buff, buffer_tell(buff));
-        }
+	    network_send_udp(global.udp_socket, global.target_ip, UDP_SERVER_PORT, buff, buffer_tell(buff));
 	}
 
 	buffer_delete(buff);
@@ -448,21 +437,10 @@ function scr_host_start_punch(){
 	        buff,
 	        buffer_tell(buff)
 	    );
-        
-        if (variable_global_exists("client_local_ip") && global.client_local_ip != "") {
-             network_send_udp(global.udp_socket,
-                global.client_local_ip,
-                global.client_local_port,
-                buff,
-                buffer_tell(buff)
-            );
-        }
 	}
 
 	buffer_delete(buff);
-    
-    show_debug_message("HOST NAT PUNCHING TOWARDS CLIENT: " + string(global.client_public_ip));
-    if (variable_global_exists("client_local_ip") && global.client_local_ip != "") show_debug_message("AND LOCAL: " + string(global.client_local_ip));
+
 }
 
 function scr_host_shit_in_their_mouth(){

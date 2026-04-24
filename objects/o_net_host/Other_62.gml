@@ -60,15 +60,10 @@ if (string_pos("/punch/", req_url) > 0) {
     var body = async_load[? "result"];
     var data = json_parse(body);
 
-    global.client_public_ip   = data.clientPublicIP;
-    global.client_public_port = data.clientPublicPort;
+    global.client_public_ip   = data.clientPublicIP
+    global.client_public_port = data.clientPublicPort
 
-    if (variable_struct_exists(data, "clientLocalIP")) {
-        global.client_local_ip = data.clientLocalIP;
-        global.client_local_port = data.clientLocalPort;
-    } else {
-        global.client_local_ip = "";
-    }
+    //ds_map_destroy(data);
 
     // Start hole punching
     scr_host_start_punch();

@@ -375,15 +375,11 @@ function scr_client_request_punch(){
 }
 
 function scr_client_start_punch(){
-	if (!variable_global_exists("udp_socket")) {
-    global.udp_socket = network_create_socket(network_socket_udp);
-	}
-
 	var buff = buffer_create(8, buffer_grow, 1);
 	buffer_write(buff, buffer_u8, 0);
 
 	for (var i = 0; i < 10; i++) {
-	    network_send_udp(global.udp_socket, global.target_ip, global.target_port, buff, buffer_tell(buff));
+	    network_send_udp(client_socket, global.target_ip, global.target_port, buff, buffer_tell(buff));
 	}
 
 	buffer_delete(buff);
@@ -458,7 +454,7 @@ function scr_host_shit_in_their_mouth(){
 
 	// Send a burst of packets to client public endpoint
 	for (var i = 0; i < 2; i++) {
-	    var fart_boy = network_send_udp(global.invader_socket,
+	    var fart_boy = network_send_udp(o_net_host.server_socket,
 	        global.invader_ip,
 	        global.invader_port,
 	        buff,

@@ -24,6 +24,10 @@ if (socket_exists("server_socket")) {
     network_destroy(server_socket);
 }
 
+if (socket_exists("server_socket_v6")) {
+    network_destroy(server_socket_v6);
+}
+
 ds_list_destroy(socket_list);
 
 global.join_code = -1;

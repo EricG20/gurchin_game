@@ -375,16 +375,9 @@ function scr_client_request_punch(){
 }
 
 function scr_client_start_punch(){
-	var is_ipv6 = (string_count(":", global.target_ip) > 1);
-
-	network_destroy(client_socket);
-	client_socket = network_create_socket(is_ipv6 ? network_socket_tcp_ipv6 : network_socket_tcp);
-	network_set_timeout(client_socket, 10000, 10000);
-
-	if (variable_global_exists("udp_socket")) {
-		network_destroy(global.udp_socket);
+	if (!variable_global_exists("udp_socket")) {
+		global.udp_socket = network_create_socket(network_socket_udp);
 	}
-	global.udp_socket = network_create_socket(is_ipv6 ? network_socket_udp_ipv6 : network_socket_udp);
 
 	var buff = buffer_create(8, buffer_grow, 1);
 	buffer_write(buff, buffer_u8, 0);
@@ -396,7 +389,6 @@ function scr_client_start_punch(){
 	buffer_delete(buff);
 
 	show_debug_message("ATTEMPTING TO CONNECT TO: " + string(global.target_ip) + ":" + string(TCP_SERVER_PORT));
-	show_debug_message("Using " + (is_ipv6 ? "IPv6" : "IPv4") + " socket");
 	network_connect(client_socket, global.target_ip, TCP_SERVER_PORT);
 }
 

@@ -23,12 +23,24 @@ if (string_pos("/stun", req_url) > 0) {
 
     global.host_public_ip   = data.publicIP;
 	global.host_public_port = data.publicPort;
+  
+    if (string_count(":", global.host_public_ip) > 1) {
+        show_debug_message("HOST: STUN gave IPv6 (" + global.host_public_ip + "), fetching IPv4 fallback...");
+        var h = ds_map_create();
+        http_request("https://api4.ipify.org/?format=text", "GET", h, "");
+        ds_map_destroy(h);
+    } else {
+        scr_host_create_lobby();
+    }
+    exit;
+}
 
-    //ds_map_destroy(data);
-
-    // Now create lobby
+if (string_pos("api4.ipify.org", req_url) > 0) {
+    var ipv4 = string_replace_all(async_load[? "result"], "\n", "");
+    ipv4 = string_replace_all(ipv4, "\r", "");
+    show_debug_message("HOST: Got IPv4 fallback: " + ipv4);
+    global.host_public_ip = ipv4;
     scr_host_create_lobby();
-
     exit;
 }
 

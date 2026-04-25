@@ -24,7 +24,7 @@ if (socket_exists("server_socket")) {
     network_destroy(server_socket);
 }
 
-if (socket_exists("server_socket_v6")) {
+if (variable_instance_exists(id, "server_socket_v6") && server_socket_v6 >= 0) {
     network_destroy(server_socket_v6);
 }
 

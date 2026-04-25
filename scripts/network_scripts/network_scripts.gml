@@ -380,6 +380,7 @@ function scr_client_start_punch(){
 	network_destroy(client_socket);
 	client_socket = network_create_socket(is_ipv6 ? network_socket_tcp_ipv6 : network_socket_tcp);
 	network_set_timeout(client_socket, 10000, 10000);
+
 	if (variable_global_exists("udp_socket")) {
 		network_destroy(global.udp_socket);
 	}
@@ -394,7 +395,6 @@ function scr_client_start_punch(){
 
 	buffer_delete(buff);
 
-	// Now attempt real connection
 	show_debug_message("ATTEMPTING TO CONNECT TO: " + string(global.target_ip) + ":" + string(TCP_SERVER_PORT));
 	show_debug_message("Using " + (is_ipv6 ? "IPv6" : "IPv4") + " socket");
 	network_connect(client_socket, global.target_ip, TCP_SERVER_PORT);

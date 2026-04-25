@@ -33,6 +33,8 @@ server_port = TCP_SERVER_PORT
 
 server_socket = network_create_server(network_socket_tcp, server_port, 4);
 network_set_timeout(server_socket, 10000, 10000);
+server_socket_v6 = network_create_server(network_socket_tcp_ipv6, server_port, 4);
+show_debug_message("IPv6 server socket: " + string(server_socket_v6));
 
 //var url = "http://localhost:3000/create";
 //var data = json_stringify({

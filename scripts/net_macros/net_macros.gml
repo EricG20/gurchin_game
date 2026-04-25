@@ -43,3 +43,6 @@
 #macro PACKET_GAME_LOGIC_UDP 29
 #macro TCP_SERVER_PORT 6215
 #macro UDP_SERVER_PORT 40010
+
+#macro network_socket_tcp_ipv6 5
+#macro network_socket_udp_ipv6 6

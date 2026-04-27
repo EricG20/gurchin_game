@@ -47,3 +47,10 @@ network_set_timeout(server_socket, 10000, 10000);
 //http_request(url, "POST", headers, data);
 
 //ds_map_destroy(headers);
+
+/// @DnDAction : YoYo Games.Common.Execute_Code
+/// @DnDVersion : 1
+/// @DnDHash : 083AD872
+/// @DnDArgument : "code" "/// @description Execute Code$(13_10)//global.relay_tcp_sock = network_connect("127.0.0.1", 40000);$(13_10)$(13_10)$(13_10)"
+/// @description Execute Code
+//global.relay_tcp_sock = network_connect("127.0.0.1", 40000);

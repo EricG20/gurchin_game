@@ -735,6 +735,15 @@ var l511F3266_0 = state;switch(l511F3266_0){	/// @DnDAction : YoYo Games.Swit
 			/// @DnDArgument : "const" "true"
 			case true:	/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDVersion : 1
+				/// @DnDHash : 73CE049B
+				/// @DnDParent : 77A31912
+				/// @DnDArgument : "expr" "1*global.game_time"
+				/// @DnDArgument : "expr_relative" "1"
+				/// @DnDArgument : "var" "completion_time"
+				completion_time += 1*global.game_time;
+			
+				/// @DnDAction : YoYo Games.Common.Variable
+				/// @DnDVersion : 1
 				/// @DnDHash : 04AA71E1
 				/// @DnDParent : 77A31912
 				/// @DnDArgument : "expr" "false"
@@ -1369,17 +1378,19 @@ var l511F3266_0 = state;switch(l511F3266_0){	/// @DnDAction : YoYo Games.Swit
 						/// @DnDAction : YoYo Games.Common.Variable
 						/// @DnDVersion : 1
 						/// @DnDHash : 59E49ED6
-						/// @DnDInput : 4
+						/// @DnDInput : 5
 						/// @DnDParent : 6CC35814
 						/// @DnDArgument : "expr_2" "true"
 						/// @DnDArgument : "var" "highest_combo"
 						/// @DnDArgument : "var_1" "pylon_lost_health"
 						/// @DnDArgument : "var_2" "can_skip_wave"
 						/// @DnDArgument : "var_3" "combo_bar"
+						/// @DnDArgument : "var_4" "completion_time"
 						highest_combo = 0;
 						pylon_lost_health = 0;
 						can_skip_wave = true;
 						combo_bar = 0;
+						completion_time = 0;
 					
 						/// @DnDAction : YoYo Games.Common.If_Variable
 						/// @DnDVersion : 1

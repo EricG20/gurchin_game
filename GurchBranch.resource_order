@@ -746,6 +746,7 @@
     {"name":"s_power_symbol","order":72,"path":"sprites/s_power_symbol/s_power_symbol.yy",},
     {"name":"s_roboguts","order":22,"path":"sprites/s_roboguts/s_roboguts.yy",},
     {"name":"s_runners","order":97,"path":"sprites/s_runners/s_runners.yy",},
+    {"name":"s_scanline","order":6,"path":"sprites/s_scanline/s_scanline.yy",},
     {"name":"s_shotgun_w_hands","order":92,"path":"sprites/s_shotgun_w_hands/s_shotgun_w_hands.yy",},
     {"name":"s_shotgun","order":61,"path":"sprites/s_shotgun/s_shotgun.yy",},
     {"name":"s_smallflash","order":63,"path":"sprites/s_smallflash/s_smallflash.yy",},

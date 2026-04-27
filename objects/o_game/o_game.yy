@@ -96,6 +96,7 @@
     {"$GMObjectProperty":"v2","%Name":"enemies_spawned","filters":[],"listItems":[],"multiselect":false,"name":"enemies_spawned","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"send_timer","filters":[],"listItems":[],"multiselect":false,"name":"send_timer","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.0","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"context_sensitive_button","filters":[],"listItems":[],"multiselect":false,"name":"context_sensitive_button","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"noone","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"completion_time","filters":[],"listItems":[],"multiselect":false,"name":"completion_time","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.0","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

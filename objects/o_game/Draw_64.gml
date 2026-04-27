@@ -132,6 +132,55 @@ var l03FDEC77_0 = state;switch(l03FDEC77_0){	/// @DnDAction : YoYo Games.Swit
 		/// @DnDArgument : "text" "floor(display_score)"
 		draw_text_transformed(60, 150, string("") + string(floor(display_score)), 2, 2, 0);
 	
+		/// @DnDAction : YoYo Games.Common.Function_Call
+		/// @DnDVersion : 1
+		/// @DnDHash : 08A4D128
+		/// @DnDParent : 08A52609
+		/// @DnDArgument : "var" "clock_string"
+		/// @DnDArgument : "var_temp" "1"
+		/// @DnDArgument : "function" "format_time_to_clock"
+		/// @DnDArgument : "arg" "completion_time/60"
+		var clock_string = format_time_to_clock(completion_time/60);
+	
+		/// @DnDAction : YoYo Games.Drawing.Set_Font
+		/// @DnDVersion : 1
+		/// @DnDHash : 0A24E293
+		/// @DnDParent : 08A52609
+		/// @DnDArgument : "font" "imagine"
+		/// @DnDSaveInfo : "font" "imagine"
+		draw_set_font(imagine);
+	
+		/// @DnDAction : YoYo Games.Common.Execute_Script
+		/// @DnDVersion : 1.1
+		/// @DnDHash : 1134E356
+		/// @DnDInput : 14
+		/// @DnDParent : 08A52609
+		/// @DnDArgument : "script" "draw_text_colour_outline"
+		/// @DnDArgument : "arg" "1700"
+		/// @DnDArgument : "arg_1" "80"
+		/// @DnDArgument : "arg_2" "clock_string"
+		/// @DnDArgument : "arg_3" "c_white"
+		/// @DnDArgument : "arg_4" "c_white"
+		/// @DnDArgument : "arg_5" "1"
+		/// @DnDArgument : "arg_6" "c_black"
+		/// @DnDArgument : "arg_7" "c_black"
+		/// @DnDArgument : "arg_8" "1"
+		/// @DnDArgument : "arg_9" "1"
+		/// @DnDArgument : "arg_10" "8"
+		/// @DnDArgument : "arg_11" "1"
+		/// @DnDArgument : "arg_12" "1"
+		/// @DnDArgument : "arg_13" "0"
+		/// @DnDSaveInfo : "script" "draw_text_colour_outline"
+		script_execute(draw_text_colour_outline, 1700, 80, clock_string, c_white, c_white, 1, c_black, c_black, 1, 1, 8, 1, 1, 0);
+	
+		/// @DnDAction : YoYo Games.Drawing.Set_Font
+		/// @DnDVersion : 1
+		/// @DnDHash : 7F7F3FC3
+		/// @DnDParent : 08A52609
+		/// @DnDArgument : "font" "fontTbyDefault"
+		/// @DnDSaveInfo : "font" "fontTbyDefault"
+		draw_set_font(fontTbyDefault);
+	
 		/// @DnDAction : YoYo Games.Drawing.Draw_Value_Transformed
 		/// @DnDVersion : 1
 		/// @DnDHash : 17DD5291

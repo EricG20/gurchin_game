@@ -28,8 +28,8 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 3780D062
 	/// @DnDParent : 5B389BFB
-	/// @DnDArgument : "angle" "apoint_direction(x,y, weilder.reticle.x, weilder.reticle.y)"
-	image_angle = apoint_direction(x,y, weilder.reticle.x, weilder.reticle.y);
+	/// @DnDArgument : "angle" "point_direction(x,y, weilder.reticle.x, weilder.reticle.y)"
+	image_angle = point_direction(x,y, weilder.reticle.x, weilder.reticle.y);
 
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
@@ -109,7 +109,7 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDArgument : "var" "charge"
 			/// @DnDArgument : "op" "4"
 			/// @DnDArgument : "value" "120/clamp(global.reload_bonus*weilder.reload_bonus-.5,1,3)"
-			if(charge >= 120/clamp(global.reload_bonus*weilder.reload_bonus-.5,1,3)){	/// @DnDAction : YoYo Games.Common.If_Variable
+			if(charge >= 120/clamp(global.reload_bonus*weilder.reload_bonus-.5,1,3)){	/// @DnDAction : YoYo Games.Common.If_Variable
 				/// @DnDVersion : 1
 				/// @DnDHash : 2A4B330F
 				/// @DnDParent : 3A9CC710
@@ -324,7 +324,7 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDHash : 48AF556A
 				/// @DnDParent : 3A9CC710
 				/// @DnDArgument : "var" "floor(ammo) mod clamp(floor(4/(global.reload_bonus*weilder.reload_bonus)),0.5,6)"
-				if(floor(ammo) mod clamp(floor(4/(global.reload_bonus*weilder.reload_bonus)),0.5,6) == 0){	/// @DnDAction : YoYo Games.Data Structures.DS_Clear
+				if(floor(ammo) mod clamp(floor(4/(global.reload_bonus*weilder.reload_bonus)),0.5,6) == 0){	/// @DnDAction : YoYo Games.Data Structures.DS_Clear
 					/// @DnDVersion : 1
 					/// @DnDHash : 27C3180E
 					/// @DnDParent : 48AF556A

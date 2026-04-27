@@ -1017,6 +1017,7 @@
     {"id":{"name":"s_power_symbol","path":"sprites/s_power_symbol/s_power_symbol.yy",},},
     {"id":{"name":"s_roboguts","path":"sprites/s_roboguts/s_roboguts.yy",},},
     {"id":{"name":"s_runners","path":"sprites/s_runners/s_runners.yy",},},
+    {"id":{"name":"s_scanline","path":"sprites/s_scanline/s_scanline.yy",},},
     {"id":{"name":"s_shotgun_w_hands","path":"sprites/s_shotgun_w_hands/s_shotgun_w_hands.yy",},},
     {"id":{"name":"s_shotgun","path":"sprites/s_shotgun/s_shotgun.yy",},},
     {"id":{"name":"s_smallflash","path":"sprites/s_smallflash/s_smallflash.yy",},},

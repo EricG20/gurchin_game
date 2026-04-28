@@ -212,12 +212,12 @@ if(control_type == cr.LOCAL){	/// @DnDAction : YoYo Games.Switch.Switch
 					/// @DnDArgument : "x" "15+9"
 					/// @DnDArgument : "y" "840+60"
 					/// @DnDArgument : "xscale" "29+(wep_display_width*.005)*29.1"
-					/// @DnDArgument : "yscale" "14.5"
+					/// @DnDArgument : "yscale" "13.3"
 					/// @DnDArgument : "alpha" ".2"
 					/// @DnDArgument : "sprite" "s_scanline"
 					/// @DnDArgument : "frame" "(current_time/16.66666)/5.2 %5"
 					/// @DnDSaveInfo : "sprite" "s_scanline"
-					draw_sprite_ext(s_scanline, (current_time/16.66666)/5.2 %5, 15+9, 840+60, 29+(wep_display_width*.005)*29.1, 14.5, 0, $FFFFFF & $ffffff, .2);
+					draw_sprite_ext(s_scanline, (current_time/16.66666)/5.2 %5, 15+9, 840+60, 29+(wep_display_width*.005)*29.1, 13.3, 0, $FFFFFF & $ffffff, .2);
 				
 					/// @DnDAction : YoYo Games.Drawing.Draw_Sprite_Transformed
 					/// @DnDVersion : 1

@@ -27,3 +27,9 @@ enum TURRET{
 /// @DnDArgument : "expr" "TURRET.IDLE"
 /// @DnDArgument : "var" "state"
 state = TURRET.IDLE;
+
+/// @DnDAction : YoYo Games.Data Structures.Create_List
+/// @DnDVersion : 1
+/// @DnDHash : 56EBC089
+/// @DnDArgument : "var" "collided_with"
+collided_with = ds_list_create();

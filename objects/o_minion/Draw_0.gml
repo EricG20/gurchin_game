@@ -1,28 +1,28 @@
-/// @DnDAction : YoYo Games.Collisions.If_Object_At
-/// @DnDVersion : 1.1
-/// @DnDHash : 6EA4B19D
-/// @DnDArgument : "x_relative" "1"
-/// @DnDArgument : "y_relative" "1"
-/// @DnDArgument : "object" "o_game.local_player.reticle"
-var l6EA4B19D_0 = instance_place(x + 0, y + 0, [o_game.local_player.reticle]);if ((l6EA4B19D_0 > 0)){	/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDVersion : 1
+/// @DnDHash : 7895B2CC
+/// @DnDArgument : "var" "distance_to_object(o_game.local_player.reticle)"
+/// @DnDArgument : "op" "3"
+/// @DnDArgument : "value" "100"
+if(distance_to_object(o_game.local_player.reticle) <= 100){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 6D220669
-	/// @DnDParent : 6EA4B19D
+	/// @DnDParent : 7895B2CC
 	/// @DnDArgument : "expr" "lerp(blurb_alpha, 1, .2*global.game_speed)"
 	/// @DnDArgument : "var" "blurb_alpha"
 	blurb_alpha = lerp(blurb_alpha, 1, .2*global.game_speed);}
 
-/// @DnDAction : YoYo Games.Collisions.If_Object_At
-/// @DnDVersion : 1.1
-/// @DnDHash : 319EC446
-/// @DnDArgument : "x_relative" "1"
-/// @DnDArgument : "y_relative" "1"
-/// @DnDArgument : "object" "o_game.local_player.reticle"
+/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDVersion : 1
+/// @DnDHash : 43813B89
+/// @DnDArgument : "var" "distance_to_object(o_game.local_player.reticle)"
 /// @DnDArgument : "not" "1"
-var l319EC446_0 = instance_place(x + 0, y + 0, [o_game.local_player.reticle]);if (!(l319EC446_0 > 0)){	/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDArgument : "op" "3"
+/// @DnDArgument : "value" "100"
+if(!(distance_to_object(o_game.local_player.reticle) <= 100)){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
-	/// @DnDHash : 24AEBBE3
-	/// @DnDParent : 319EC446
+	/// @DnDHash : 5FF6F95A
+	/// @DnDParent : 43813B89
 	/// @DnDArgument : "expr" "lerp(blurb_alpha, 0, .2*global.game_speed)"
 	/// @DnDArgument : "var" "blurb_alpha"
 	blurb_alpha = lerp(blurb_alpha, 0, .2*global.game_speed);}
@@ -62,64 +62,6 @@ draw_sprite_ext(s_turret_gun2x, 0, x + 0, y + -54, 1, gun_orientation, point_dir
 /// @DnDVersion : 1
 /// @DnDHash : 45039862
 draw_self();
-
-/// @DnDAction : YoYo Games.Drawing.Set_Font
-/// @DnDVersion : 1
-/// @DnDHash : 5AC19D3E
-/// @DnDArgument : "font" "imagine"
-/// @DnDSaveInfo : "font" "imagine"
-draw_set_font(imagine);
-
-/// @DnDAction : YoYo Games.Common.Execute_Script
-/// @DnDVersion : 1.1
-/// @DnDHash : 0BEEA986
-/// @DnDInput : 14
-/// @DnDArgument : "script" "draw_text_colour_outline"
-/// @DnDArgument : "arg" "x-70"
-/// @DnDArgument : "arg_1" "y - 80"
-/// @DnDArgument : "arg_2" ""LVL  " + string(level)"
-/// @DnDArgument : "arg_3" "c_white"
-/// @DnDArgument : "arg_4" "c_white"
-/// @DnDArgument : "arg_5" "1"
-/// @DnDArgument : "arg_6" "c_blue"
-/// @DnDArgument : "arg_7" "c_black"
-/// @DnDArgument : "arg_8" "1"
-/// @DnDArgument : "arg_9" "2"
-/// @DnDArgument : "arg_10" "8"
-/// @DnDArgument : "arg_11" ".5"
-/// @DnDArgument : "arg_12" ".5"
-/// @DnDArgument : "arg_13" "0"
-/// @DnDSaveInfo : "script" "draw_text_colour_outline"
-script_execute(draw_text_colour_outline, x-70, y - 80, "LVL  " + string(level), c_white, c_white, 1, c_blue, c_black, 1, 2, 8, .5, .5, 0);
-
-/// @DnDAction : YoYo Games.Common.Execute_Script
-/// @DnDVersion : 1.1
-/// @DnDHash : 523E1F2B
-/// @DnDInput : 14
-/// @DnDArgument : "script" "draw_text_colour_outline"
-/// @DnDArgument : "arg" "x-70"
-/// @DnDArgument : "arg_1" "y - 60"
-/// @DnDArgument : "arg_2" ""HP:  " + string(hp)"
-/// @DnDArgument : "arg_3" "c_white"
-/// @DnDArgument : "arg_4" "c_white"
-/// @DnDArgument : "arg_5" "1"
-/// @DnDArgument : "arg_6" "c_red"
-/// @DnDArgument : "arg_7" "c_black"
-/// @DnDArgument : "arg_8" "1"
-/// @DnDArgument : "arg_9" "2"
-/// @DnDArgument : "arg_10" "8"
-/// @DnDArgument : "arg_11" ".5"
-/// @DnDArgument : "arg_12" ".5"
-/// @DnDArgument : "arg_13" "0"
-/// @DnDSaveInfo : "script" "draw_text_colour_outline"
-script_execute(draw_text_colour_outline, x-70, y - 60, "HP:  " + string(hp), c_white, c_white, 1, c_red, c_black, 1, 2, 8, .5, .5, 0);
-
-/// @DnDAction : YoYo Games.Drawing.Set_Font
-/// @DnDVersion : 1
-/// @DnDHash : 6BC4BFA0
-/// @DnDArgument : "font" "fontTbyDefault"
-/// @DnDSaveInfo : "font" "fontTbyDefault"
-draw_set_font(fontTbyDefault);
 
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1

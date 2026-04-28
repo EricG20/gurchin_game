@@ -1,7 +1,7 @@
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 2A4632DF
-/// @DnDArgument : "code" "/// @description Execute Code$(13_10)inputs = {$(13_10)    left: false,$(13_10)    right: false,$(13_10)    jump: false,$(13_10)    boost_start: false,$(13_10)    boost: false,$(13_10)    up: false,$(13_10)    down: false,$(13_10)    reload: false,$(13_10)    melee: false,$(13_10)    jump_release: false,$(13_10)    shoot: false,$(13_10)    shooting: false,$(13_10)    shoot_release: false,$(13_10)    special: false,$(13_10)    swap: false,$(13_10)    accept: false,$(13_10)    cancel: false,$(13_10)    up_tap: false,$(13_10)    down_tap: false,$(13_10)	tick: false$(13_10)};$(13_10)$(13_10)#macro GOOD_JOB 1$(13_10)#macro YOU_SUCK 2$(13_10)#macro I_NEED_HELP 3$(13_10)#macro GLOAT 4$(13_10)#macro I_WANT_THAT 5$(13_10)#macro HI 6$(13_10)"
+/// @DnDArgument : "code" "/// @description Execute Code$(13_10)inputs = {$(13_10)    left: false,$(13_10)    right: false,$(13_10)    jump: false,$(13_10)    boost_start: false,$(13_10)    boost: false,$(13_10)    up: false,$(13_10)    down: false,$(13_10)    reload: false,$(13_10)    melee: false,$(13_10)    jump_release: false,$(13_10)    shoot: false,$(13_10)    shooting: false,$(13_10)    shoot_release: false,$(13_10)    special: false,$(13_10)    swap: false,$(13_10)    accept: false,$(13_10)    cancel: false,$(13_10)    up_tap: false,$(13_10)    down_tap: false,$(13_10)	tick: false$(13_10)};$(13_10)$(13_10)delete_these_when_i_go = {$(13_10)	$(13_10)}$(13_10)$(13_10)#macro GOOD_JOB 1$(13_10)#macro YOU_SUCK 2$(13_10)#macro I_NEED_HELP 3$(13_10)#macro GLOAT 4$(13_10)#macro I_WANT_THAT 5$(13_10)#macro HI 6$(13_10)"
 /// @description Execute Code
 inputs = {
     left: false,
@@ -25,6 +25,10 @@ inputs = {
     down_tap: false,
 	tick: false
 };
+
+delete_these_when_i_go = {
+	
+}
 
 #macro GOOD_JOB 1
 #macro YOU_SUCK 2
@@ -88,20 +92,6 @@ head_offset_y = 0;
 hair_offset_y = 0;
 gwah = -1;
 this_expression = "";
-
-// Robot Personal Upgrades
-permanent_firerate_bonus = 1;
-firerate_bonus = 1;
-ammo_bonus = 1;
-booster_bonus = 1;
-movementspeed_bonus = 1;
-reload_bonus = 1;
-booster_recharge_bonus = 1;
-robot_upgrade_level = 0;
-
-upgrade_offhand_reload = false;
-upgrade_switch_firerate = false;
-switch_firerate_timer = 0;
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1

@@ -737,10 +737,10 @@ var l511F3266_0 = state;switch(l511F3266_0){	/// @DnDAction : YoYo Games.Swit
 				/// @DnDVersion : 1
 				/// @DnDHash : 73CE049B
 				/// @DnDParent : 77A31912
-				/// @DnDArgument : "expr" "1*global.game_speed"
+				/// @DnDArgument : "expr" "1*global.game_time"
 				/// @DnDArgument : "expr_relative" "1"
 				/// @DnDArgument : "var" "completion_time"
-				completion_time += 1*global.game_speed;
+				completion_time += 1*global.game_time;
 			
 				/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDVersion : 1

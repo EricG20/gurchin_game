@@ -194,4 +194,10 @@ var l7ACFFB81_0 = data_mode;switch(l7ACFFB81_0){	/// @DnDAction : YoYo Games.
 	/// @DnDHash : 534D0CC9
 	/// @DnDParent : 7ACFFB81
 	/// @DnDArgument : "const" ""swap_priority""
-	case "swap_priority":	break;}
+	case "swap_priority":	/// @DnDAction : YoYo Games.Common.Variable
+		/// @DnDVersion : 1
+		/// @DnDHash : 55F53BC0
+		/// @DnDParent : 534D0CC9
+		/// @DnDArgument : "expr" "is_clicked"
+		/// @DnDArgument : "var" "o_game.swaps_farthest_weapon"
+		o_game.swaps_farthest_weapon = is_clicked;	break;}

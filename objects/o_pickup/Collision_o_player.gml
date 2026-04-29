@@ -69,30 +69,36 @@ if(!((other.mygurn.object_index == o_emptyhanded) || (other.mygurn.object_index 
 		/// @DnDParent : 39FA97C3
 		/// @DnDArgument : "var" "is_there_space"
 		/// @DnDArgument : "value" "-1"
-		if(is_there_space == -1){	/// @DnDAction : YoYo Games.Data Structures.List_Remove
+		if(is_there_space == -1){	/// @DnDAction : YoYo Games.Common.If_Variable
 			/// @DnDVersion : 1
-			/// @DnDHash : 2EE2DBE2
+			/// @DnDHash : 5CB8B7AC
 			/// @DnDParent : 122121CD
-			/// @DnDArgument : "var" "other.weapon_invo"
-			/// @DnDArgument : "index" "other.weapon_invo_cap-1"
-			if(ds_list_size(other.weapon_invo) > other.weapon_invo_cap-1)	ds_list_delete(other.weapon_invo, other.weapon_invo_cap-1);
-		
-			/// @DnDAction : YoYo Games.Data Structures.Map_Set_Value
-			/// @DnDVersion : 1
-			/// @DnDHash : 00AC1703
-			/// @DnDParent : 122121CD
-			/// @DnDArgument : "var" "other.weapon_ammo"
-			/// @DnDArgument : "key" "other.mygurn.object_index"
-			/// @DnDArgument : "value" "other.mygurn.ammo"
-			ds_map_replace(other.weapon_ammo, other.mygurn.object_index, other.mygurn.ammo);
-		
-			/// @DnDAction : YoYo Games.Data Structures.List_Add
-			/// @DnDVersion : 1
-			/// @DnDHash : 0493E848
-			/// @DnDParent : 122121CD
-			/// @DnDArgument : "var" "other.weapon_invo"
-			/// @DnDArgument : "value" "other.mygurn.object_index"
-			ds_list_add(other.weapon_invo, other.mygurn.object_index);}
+			/// @DnDArgument : "var" "o_game.swaps_farthest_weapon"
+			/// @DnDArgument : "value" "true"
+			if(o_game.swaps_farthest_weapon == true){	/// @DnDAction : YoYo Games.Data Structures.List_Remove
+				/// @DnDVersion : 1
+				/// @DnDHash : 2EE2DBE2
+				/// @DnDParent : 5CB8B7AC
+				/// @DnDArgument : "var" "other.weapon_invo"
+				/// @DnDArgument : "index" "other.weapon_invo_cap-1"
+				if(ds_list_size(other.weapon_invo) > other.weapon_invo_cap-1)	ds_list_delete(other.weapon_invo, other.weapon_invo_cap-1);
+			
+				/// @DnDAction : YoYo Games.Data Structures.Map_Set_Value
+				/// @DnDVersion : 1
+				/// @DnDHash : 00AC1703
+				/// @DnDParent : 5CB8B7AC
+				/// @DnDArgument : "var" "other.weapon_ammo"
+				/// @DnDArgument : "key" "other.mygurn.object_index"
+				/// @DnDArgument : "value" "other.mygurn.ammo"
+				ds_map_replace(other.weapon_ammo, other.mygurn.object_index, other.mygurn.ammo);
+			
+				/// @DnDAction : YoYo Games.Data Structures.List_Add
+				/// @DnDVersion : 1
+				/// @DnDHash : 0493E848
+				/// @DnDParent : 5CB8B7AC
+				/// @DnDArgument : "var" "other.weapon_invo"
+				/// @DnDArgument : "value" "other.mygurn.object_index"
+				ds_list_add(other.weapon_invo, other.mygurn.object_index);}}
 	
 		/// @DnDAction : YoYo Games.Common.Else
 		/// @DnDVersion : 1

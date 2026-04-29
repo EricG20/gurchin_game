@@ -52,12 +52,12 @@ if(point_direction(x,y-54,target_x,target_y) > 90 && point_direction(x,y-54,targ
 /// @DnDArgument : "x_relative" "1"
 /// @DnDArgument : "y" "-54"
 /// @DnDArgument : "y_relative" "1"
-/// @DnDArgument : "xscale" "getting_ready_to_fire/25"
+/// @DnDArgument : "xscale" "clamp(getting_ready_to_fire/10,0,1)"
 /// @DnDArgument : "yscale" "gun_orientation"
 /// @DnDArgument : "rot" "point_direction(x,y-50,target_x,target_y)"
 /// @DnDArgument : "sprite" "s_turret_gun2x"
 /// @DnDSaveInfo : "sprite" "s_turret_gun2x"
-draw_sprite_ext(s_turret_gun2x, 0, x + 0, y + -54, getting_ready_to_fire/25, gun_orientation, point_direction(x,y-50,target_x,target_y), $FFFFFF & $ffffff, 1);
+draw_sprite_ext(s_turret_gun2x, 0, x + 0, y + -54, clamp(getting_ready_to_fire/10,0,1), gun_orientation, point_direction(x,y-50,target_x,target_y), $FFFFFF & $ffffff, 1);
 
 /// @DnDAction : YoYo Games.Drawing.Draw_Sprite_Transformed
 /// @DnDVersion : 1
@@ -65,72 +65,14 @@ draw_sprite_ext(s_turret_gun2x, 0, x + 0, y + -54, getting_ready_to_fire/25, gun
 /// @DnDArgument : "x_relative" "1"
 /// @DnDArgument : "y_relative" "1"
 /// @DnDArgument : "sprite" "sprite_index"
-/// @DnDArgument : "frame" "getting_ready_to_fire*.24"
-draw_sprite_ext(sprite_index, getting_ready_to_fire*.24, x + 0, y + 0, 1, 1, 0, $FFFFFF & $ffffff, 1);
+/// @DnDArgument : "frame" "clamp(getting_ready_to_fire*.48,0, 5)"
+draw_sprite_ext(sprite_index, clamp(getting_ready_to_fire*.48,0, 5), x + 0, y + 0, 1, 1, 0, $FFFFFF & $ffffff, 1);
 
 /// @DnDAction : YoYo Games.Drawing.Draw_Self
 /// @DnDVersion : 1
 /// @DnDHash : 45039862
 /// @DnDDisabled : 1
 
-
-/// @DnDAction : YoYo Games.Drawing.Set_Font
-/// @DnDVersion : 1
-/// @DnDHash : 5AC19D3E
-/// @DnDArgument : "font" "imagine"
-/// @DnDSaveInfo : "font" "imagine"
-draw_set_font(imagine);
-
-/// @DnDAction : YoYo Games.Common.Execute_Script
-/// @DnDVersion : 1.1
-/// @DnDHash : 0BEEA986
-/// @DnDInput : 14
-/// @DnDArgument : "script" "draw_text_colour_outline"
-/// @DnDArgument : "arg" "x-70"
-/// @DnDArgument : "arg_1" "y - 80"
-/// @DnDArgument : "arg_2" ""LVL  " + string(level)"
-/// @DnDArgument : "arg_3" "c_white"
-/// @DnDArgument : "arg_4" "c_white"
-/// @DnDArgument : "arg_5" "1"
-/// @DnDArgument : "arg_6" "c_blue"
-/// @DnDArgument : "arg_7" "c_black"
-/// @DnDArgument : "arg_8" "1"
-/// @DnDArgument : "arg_9" "2"
-/// @DnDArgument : "arg_10" "8"
-/// @DnDArgument : "arg_11" ".5"
-/// @DnDArgument : "arg_12" ".5"
-/// @DnDArgument : "arg_13" "0"
-/// @DnDSaveInfo : "script" "draw_text_colour_outline"
-script_execute(draw_text_colour_outline, x-70, y - 80, "LVL  " + string(level), c_white, c_white, 1, c_blue, c_black, 1, 2, 8, .5, .5, 0);
-
-/// @DnDAction : YoYo Games.Common.Execute_Script
-/// @DnDVersion : 1.1
-/// @DnDHash : 523E1F2B
-/// @DnDInput : 14
-/// @DnDArgument : "script" "draw_text_colour_outline"
-/// @DnDArgument : "arg" "x-70"
-/// @DnDArgument : "arg_1" "y - 60"
-/// @DnDArgument : "arg_2" ""HP:  " + string(hp)"
-/// @DnDArgument : "arg_3" "c_white"
-/// @DnDArgument : "arg_4" "c_white"
-/// @DnDArgument : "arg_5" "1"
-/// @DnDArgument : "arg_6" "c_red"
-/// @DnDArgument : "arg_7" "c_black"
-/// @DnDArgument : "arg_8" "1"
-/// @DnDArgument : "arg_9" "2"
-/// @DnDArgument : "arg_10" "8"
-/// @DnDArgument : "arg_11" ".5"
-/// @DnDArgument : "arg_12" ".5"
-/// @DnDArgument : "arg_13" "0"
-/// @DnDSaveInfo : "script" "draw_text_colour_outline"
-script_execute(draw_text_colour_outline, x-70, y - 60, "HP:  " + string(hp), c_white, c_white, 1, c_red, c_black, 1, 2, 8, .5, .5, 0);
-
-/// @DnDAction : YoYo Games.Drawing.Set_Font
-/// @DnDVersion : 1
-/// @DnDHash : 6BC4BFA0
-/// @DnDArgument : "font" "fontTbyDefault"
-/// @DnDSaveInfo : "font" "fontTbyDefault"
-draw_set_font(fontTbyDefault);
 
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1

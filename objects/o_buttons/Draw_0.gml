@@ -74,8 +74,8 @@ var l139575C2_0 = instance_place(x + 0, y + 0, [o_cursor]);if ((l139575C2_0 > 0
 	/// @DnDHash : 371AF139
 	/// @DnDParent : 139575C2
 	/// @DnDArgument : "var" "data_mode"
-	/// @DnDArgument : "value" ""bright_flashes""
-	if(data_mode == "bright_flashes"){	/// @DnDAction : YoYo Games.Common.Execute_Script
+	/// @DnDArgument : "value" ""swap_priority""
+	if(data_mode == "swap_priority"){	/// @DnDAction : YoYo Games.Common.Execute_Script
 		/// @DnDVersion : 1.1
 		/// @DnDHash : 6C6F395C
 		/// @DnDParent : 371AF139

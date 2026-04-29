@@ -79,7 +79,7 @@ script_execute(flash_make);
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 265018CA
-/// @DnDInput : 5
+/// @DnDInput : 7
 /// @DnDArgument : "expr_3" "-1"
 /// @DnDArgument : "expr_4" """"
 /// @DnDArgument : "var" "head_offset_x"
@@ -87,11 +87,15 @@ script_execute(flash_make);
 /// @DnDArgument : "var_2" "hair_offset_y"
 /// @DnDArgument : "var_3" "gwah"
 /// @DnDArgument : "var_4" "this_expression"
+/// @DnDArgument : "var_5" "switch_firerate_timer"
+/// @DnDArgument : "var_6" "permanent_firerate_bonus"
 head_offset_x = 0;
 head_offset_y = 0;
 hair_offset_y = 0;
 gwah = -1;
 this_expression = "";
+switch_firerate_timer = 0;
+permanent_firerate_bonus = 0;
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1

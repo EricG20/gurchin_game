@@ -187,4 +187,11 @@ var l7ACFFB81_0 = data_mode;switch(l7ACFFB81_0){	/// @DnDAction : YoYo Games.
 		/// @DnDParent : 663ECA92
 		/// @DnDArgument : "expr" "is_clicked"
 		/// @DnDArgument : "var" "o_game.can_shake"
-		o_game.can_shake = is_clicked;	break;}
+		o_game.can_shake = is_clicked;	break;
+
+	/// @DnDAction : YoYo Games.Switch.Case
+	/// @DnDVersion : 1
+	/// @DnDHash : 534D0CC9
+	/// @DnDParent : 7ACFFB81
+	/// @DnDArgument : "const" ""swap_priority""
+	case "swap_priority":	break;}

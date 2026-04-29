@@ -82,7 +82,7 @@ var l1488A020_0 = state;switch(l1488A020_0){	/// @DnDAction : YoYo Games.Swit
 				/// @DnDArgument : "expr_1" "lerp(target_y, victim_y_center, .1*global.game_speed)"
 				/// @DnDArgument : "expr_2" "(-1*global.firerate_bonus)*global.game_speed"
 				/// @DnDArgument : "expr_relative_2" "1"
-				/// @DnDArgument : "expr_3" "lerp(getting_ready_to_fire, 25, 0.1*global.game_speed)"
+				/// @DnDArgument : "expr_3" "lerp(getting_ready_to_fire, 25, 0.03*global.game_speed)"
 				/// @DnDArgument : "var" "target_x"
 				/// @DnDArgument : "var_1" "target_y"
 				/// @DnDArgument : "var_2" "cooldown"
@@ -90,7 +90,7 @@ var l1488A020_0 = state;switch(l1488A020_0){	/// @DnDAction : YoYo Games.Swit
 				target_x = lerp(target_x, victim.x, .1*global.game_speed);
 				target_y = lerp(target_y, victim_y_center, .1*global.game_speed);
 				cooldown += (-1*global.firerate_bonus)*global.game_speed;
-				getting_ready_to_fire = lerp(getting_ready_to_fire, 25, 0.1*global.game_speed);}}
+				getting_ready_to_fire = lerp(getting_ready_to_fire, 25, 0.03*global.game_speed);}}
 	
 		/// @DnDAction : YoYo Games.Common.If_Expression
 		/// @DnDVersion : 1
@@ -115,12 +115,12 @@ var l1488A020_0 = state;switch(l1488A020_0){	/// @DnDAction : YoYo Games.Swit
 			/// @DnDHash : 45C2065B
 			/// @DnDInput : 2
 			/// @DnDParent : 1BA680E0
-			/// @DnDArgument : "expr" "lerp(target_x, x, .05*global.game_speed)"
-			/// @DnDArgument : "expr_1" "lerp(target_y, y-90, .05*global.game_speed)"
+			/// @DnDArgument : "expr" "lerp(target_x, x, .2*global.game_speed)"
+			/// @DnDArgument : "expr_1" "lerp(target_y, y-90, .2*global.game_speed)"
 			/// @DnDArgument : "var" "target_x"
 			/// @DnDArgument : "var_1" "target_y"
-			target_x = lerp(target_x, x, .05*global.game_speed);
-			target_y = lerp(target_y, y-90, .05*global.game_speed);}
+			target_x = lerp(target_x, x, .2*global.game_speed);
+			target_y = lerp(target_y, y-90, .2*global.game_speed);}
 	
 		/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1

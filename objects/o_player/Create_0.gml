@@ -1,7 +1,7 @@
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 2A4632DF
-/// @DnDArgument : "code" "/// @description Execute Code$(13_10)inputs = {$(13_10)    left: false,$(13_10)    right: false,$(13_10)    jump: false,$(13_10)    boost_start: false,$(13_10)    boost: false,$(13_10)    up: false,$(13_10)    down: false,$(13_10)    reload: false,$(13_10)    melee: false,$(13_10)    jump_release: false,$(13_10)    shoot: false,$(13_10)    shooting: false,$(13_10)    shoot_release: false,$(13_10)    special: false,$(13_10)    swap: false,$(13_10)    accept: false,$(13_10)    cancel: false,$(13_10)    up_tap: false,$(13_10)    down_tap: false,$(13_10)	tick: false$(13_10)};$(13_10)$(13_10)delete_these_when_i_go = {$(13_10)	$(13_10)}$(13_10)$(13_10)#macro GOOD_JOB 1$(13_10)#macro YOU_SUCK 2$(13_10)#macro I_NEED_HELP 3$(13_10)#macro GLOAT 4$(13_10)#macro I_WANT_THAT 5$(13_10)#macro HI 6$(13_10)"
+/// @DnDArgument : "code" "/// @description Execute Code$(13_10)inputs = {$(13_10)    left: false,$(13_10)    right: false,$(13_10)    jump: false,$(13_10)    boost_start: false,$(13_10)    boost: false,$(13_10)    up: false,$(13_10)    down: false,$(13_10)    reload: false,$(13_10)    melee: false,$(13_10)    jump_release: false,$(13_10)    shoot: false,$(13_10)    shooting: false,$(13_10)    shoot_release: false,$(13_10)    special: false,$(13_10)    swap: false,$(13_10)    accept: false,$(13_10)    cancel: false,$(13_10)    up_tap: false,$(13_10)    down_tap: false,$(13_10)	tick: false$(13_10)};$(13_10)$(13_10)#macro GOOD_JOB 1$(13_10)#macro YOU_SUCK 2$(13_10)#macro I_NEED_HELP 3$(13_10)#macro GLOAT 4$(13_10)#macro I_WANT_THAT 5$(13_10)#macro HI 6$(13_10)"
 /// @description Execute Code
 inputs = {
     left: false,
@@ -25,10 +25,6 @@ inputs = {
     down_tap: false,
 	tick: false
 };
-
-delete_these_when_i_go = {
-	
-}
 
 #macro GOOD_JOB 1
 #macro YOU_SUCK 2
@@ -79,23 +75,50 @@ script_execute(flash_make);
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 265018CA
-/// @DnDInput : 7
+/// @DnDInput : 16
 /// @DnDArgument : "expr_3" "-1"
 /// @DnDArgument : "expr_4" """"
+/// @DnDArgument : "expr_5" "1"
+/// @DnDArgument : "expr_6" "1"
+/// @DnDArgument : "expr_7" "1"
+/// @DnDArgument : "expr_8" "1"
+/// @DnDArgument : "expr_9" "1"
+/// @DnDArgument : "expr_10" "1"
+/// @DnDArgument : "expr_11" "1"
+/// @DnDArgument : "expr_13" "false"
+/// @DnDArgument : "expr_14" "false"
 /// @DnDArgument : "var" "head_offset_x"
 /// @DnDArgument : "var_1" "head_offset_y"
 /// @DnDArgument : "var_2" "hair_offset_y"
 /// @DnDArgument : "var_3" "gwah"
 /// @DnDArgument : "var_4" "this_expression"
-/// @DnDArgument : "var_5" "switch_firerate_timer"
-/// @DnDArgument : "var_6" "permanent_firerate_bonus"
+/// @DnDArgument : "var_5" "permanent_firerate_bonus"
+/// @DnDArgument : "var_6" "firerate_bonus"
+/// @DnDArgument : "var_7" "ammo_bonus"
+/// @DnDArgument : "var_8" "booster_bonus"
+/// @DnDArgument : "var_9" "movementspeed_bonus"
+/// @DnDArgument : "var_10" "reload_bonus"
+/// @DnDArgument : "var_11" "booster_recharge_bonus"
+/// @DnDArgument : "var_12" "robot_upgrade_level"
+/// @DnDArgument : "var_13" "upgrade_offhand_reload"
+/// @DnDArgument : "var_14" "upgrade_switch_firerate"
+/// @DnDArgument : "var_15" "switch_firerate_timer"
 head_offset_x = 0;
 head_offset_y = 0;
 hair_offset_y = 0;
 gwah = -1;
 this_expression = "";
+permanent_firerate_bonus = 1;
+firerate_bonus = 1;
+ammo_bonus = 1;
+booster_bonus = 1;
+movementspeed_bonus = 1;
+reload_bonus = 1;
+booster_recharge_bonus = 1;
+robot_upgrade_level = 0;
+upgrade_offhand_reload = false;
+upgrade_switch_firerate = false;
 switch_firerate_timer = 0;
-permanent_firerate_bonus = 0;
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1

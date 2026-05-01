@@ -1,3 +1,10 @@
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 583660F3
+/// @DnDArgument : "expr" ""well that doesnt matter now does it""
+/// @DnDArgument : "var" "global.host_local_ip"
+global.host_local_ip = "well that doesnt matter now does it";
+
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 2349CA0A

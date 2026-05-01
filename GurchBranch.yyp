@@ -143,6 +143,7 @@
     {"link":"io.gamemaker.gm_filter_greyscale-1.0.0","name":"io.gamemaker.gm_filter_greyscale-1.0.0","path":"io.gamemaker.gm_filter_greyscale-1.0.0.yyp",},
     {"link":"io.gamemaker.gm_filter_colourise-1.0.0","name":"io.gamemaker.gm_filter_colourise-1.0.0","path":"io.gamemaker.gm_filter_colourise-1.0.0.yyp",},
     {"link":"io.gamemaker.gm_filter_twirl_distort-1.0.0","name":"io.gamemaker.gm_filter_twirl_distort-1.0.0","path":"io.gamemaker.gm_filter_twirl_distort-1.0.0.yyp",},
+    {"link":"io.gamemaker.gm_filter_edgedetect-1.0.0","name":"io.gamemaker.gm_filter_edgedetect-1.0.0","path":"io.gamemaker.gm_filter_edgedetect-1.0.0.yyp",},
   ],
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"gamecontrollerdb.txt","CopyToMask":-1,"filePath":"datafiles","name":"gamecontrollerdb.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},

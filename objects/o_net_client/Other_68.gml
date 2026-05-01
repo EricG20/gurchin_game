@@ -1,12 +1,11 @@
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 71BD5852
-/// @DnDArgument : "code" "/// @description Execute Code$(13_10)var type = async_load[? "type"];$(13_10)$(13_10)if (type == network_type_connect) {$(13_10)   show_debug_message("Connected to host!");$(13_10)$(13_10)    // 1. Store TCP socket$(13_10)    global.client_tcp_socket = async_load[? "socket"];$(13_10)$(13_10)    // 2. Create UDP socket if not created yet$(13_10)    if (!variable_global_exists("udp_socket")) {$(13_10)        global.udp_socket = network_create_socket(network_socket_udp);$(13_10)    }$(13_10)$(13_10)	//var my_character_index = o_game.local_player.character_index;$(13_10)	//var my_suit_color = o_game.local_player.suit_color;$(13_10)	//var my_hair = o_game.local_player.haircut;$(13_10)		$(13_10)	//send_player_appearance(new_socket, o_game.local_player.character_index, o_game.local_player.suit_color, o_game.local_player.haircut, o_game.local_player.player_id);$(13_10)$(13_10)}$(13_10)$(13_10)if (type == network_type_data) {$(13_10)    var buff = async_load[? "buffer"];$(13_10)	var sender_slot = buffer_read(buff, buffer_u8);$(13_10)    var packet_type = buffer_read(buff, buffer_u8);$(13_10)	show_debug_message("Client received: " + string(packet_type));$(13_10)	$(13_10)	if(packet_type == 0){$(13_10)		var _ip = string(async_load[? "ip"]);$(13_10)		show_debug_message("Punch packet from: " + _ip + ":" +string(async_load[? "port"]));$(13_10)		network_connect(client_socket, _ip, TCP_SERVER_PORT);$(13_10)	}$(13_10)    if (packet_type == 2) {$(13_10)        var char_index = buffer_read(buff, buffer_string);$(13_10)        var suit_color = buffer_read(buff, buffer_u32);$(13_10)        var hair       = buffer_read(buff, buffer_string);$(13_10)		var _player_id = buffer_read(buff, buffer_u8);$(13_10)		$(13_10)		var my_character_index = o_game.local_player.character_index;$(13_10)		var my_suit_color = o_game.local_player.suit_color;$(13_10)		var my_hair = o_game.local_player.haircut;$(13_10)$(13_10)        // Spawn remote player$(13_10)        var p = instance_create_layer(950, 800, "Instances", o_player);$(13_10)        p.control_type = cr.NET;$(13_10)		p.player_id = _player_id;$(13_10)$(13_10)        // Apply appearance$(13_10)        //p.character_index = char_index;$(13_10)        //p.suit_color      = suit_color;$(13_10)        //p.hair            = hair;$(13_10)$(13_10)		with (p){$(13_10)			scr_change_character(char_index, hair, suit_color);$(13_10)		}$(13_10)		if(_player_id == 0){$(13_10)		show_debug_message("CLIENT SENDING APPEARANCE");$(13_10)		send_player_appearance(client_socket, my_character_index, my_suit_color, my_hair, o_game.local_player.player_id);$(13_10)		o_game.local_player.socket = client_socket;$(13_10)		}$(13_10)    }$(13_10)	if (packet_type == PACKET_MOVEMENT) {$(13_10)    var px = buffer_read(buff, buffer_f32);$(13_10)    var py = buffer_read(buff, buffer_f32);$(13_10)	var _player_id = buffer_read(buff, buffer_u8);$(13_10)$(13_10)    with (o_player) {$(13_10)        if (control_type == cr.NET && player_id == _player_id) {$(13_10)            x = px;$(13_10)            y = py;$(13_10)        }$(13_10)    }$(13_10)}//end of movement packet read$(13_10)	if (packet_type == PACKET_INPUT) {$(13_10)$(13_10)    var sock = async_load[? "id"]; // the client who sent it$(13_10)$(13_10)    // Find the correct remote player$(13_10)    var p = noone;$(13_10)	var _player_id = buffer_read(buff, buffer_u8);$(13_10)    with (o_player) {$(13_10)        if (control_type == cr.NET && player_id == _player_id) {$(13_10)            p = id;$(13_10)        }$(13_10)    }$(13_10)	show_debug_message(string(p));$(13_10)    if (p != noone) {$(13_10)$(13_10)        var keys = global.input_keys;$(13_10)$(13_10)        for (var i = 0; i < array_length(keys); i++) {$(13_10)            var key = keys[i];$(13_10)			var val = buffer_read(buff, buffer_u8);$(13_10)            p.inputs[$ key] = val;$(13_10)			$(13_10)			show_debug_message(key + " = " + string(val));$(13_10)        }$(13_10)		show_debug_message("-----------------------------------------------");$(13_10)    }$(13_10)	}$(13_10)	if (packet_type == PACKET_VELOCITY) {$(13_10)    var phsp = buffer_read(buff, buffer_f32);$(13_10)    var pvsp = buffer_read(buff, buffer_f32);$(13_10)	var _player_id = buffer_read(buff, buffer_u8);$(13_10)$(13_10)    // Find the remote player associated with this socket$(13_10)    var sock = async_load[? "id"];$(13_10)	show_debug_message("Velocity packet from socket: " + string(sock));$(13_10)$(13_10)    with (o_player) {$(13_10)		//show_debug_message("Player socket: " + string(socket));$(13_10)        if (control_type == cr.NET && player_id == _player_id) {$(13_10)            hsp = phsp;$(13_10)            vsp = pvsp;$(13_10)        }$(13_10)    }$(13_10)	}$(13_10)	if (packet_type == PACKET_AIM) {$(13_10)    var paimx = buffer_read(buff, buffer_f32);$(13_10)    var paimy = buffer_read(buff, buffer_f32);$(13_10)	var pnav = buffer_read(buff, buffer_f32);$(13_10)	var _player_id = buffer_read(buff, buffer_u8);$(13_10)$(13_10)    // Find the remote player associated with this socket$(13_10)    var sock = async_load[? "id"];$(13_10)	show_debug_message("Aim packet from socket: " + string(sock));$(13_10)$(13_10)    with (o_player) {$(13_10)		show_debug_message("Player socket: " + string(socket));$(13_10)        if (player_id == _player_id && control_type == cr.NET) {$(13_10)            reticle.x = paimx;$(13_10)            reticle.y = paimy;$(13_10)			nav = pnav;$(13_10)        }$(13_10)    }$(13_10)	}$(13_10)	if (packet_type == PACKET_BULLET) {$(13_10)    var pbullet_num = buffer_read(buff, buffer_u32);$(13_10)    var phsp = buffer_read(buff, buffer_f32);$(13_10)	var pvsp = buffer_read(buff, buffer_f32);$(13_10)	var phoming = buffer_read(buff, buffer_bool);$(13_10)	var px = buffer_read(buff, buffer_f32);$(13_10)	var py = buffer_read(buff, buffer_f32);$(13_10)	var p_proj = buffer_read(buff, buffer_u16);$(13_10)	var p_proj_sprite = buffer_read(buff, buffer_u16);$(13_10)	var _player_id = buffer_read(buff, buffer_u8);$(13_10)$(13_10)    // Find the remote bullet associated with this socket$(13_10)    var sock = async_load[? "id"];$(13_10)	show_debug_message("Bullet packet from socket: " + string(sock));$(13_10)	$(13_10)	var this_bullet = noone;$(13_10)	with (p_proj){$(13_10)	if (sender.player_id == _player_id && pbullet_num == bullet_number && sender.control_type == cr.NET){$(13_10)		//audio_play_sound(dry_fart, 0, false);$(13_10)		this_bullet = id;$(13_10)	}}$(13_10)	if (this_bullet == noone){$(13_10)	this_bullet = instance_create_layer(px, py, "Instances", p_proj);$(13_10)	with (o_player) {$(13_10)		//show_debug_message("Player socket: " + string(socket));$(13_10)        if (player_id == _player_id && control_type == cr.NET) {$(13_10)            this_bullet.sender = id;$(13_10)			bullets_shot = pbullet_num;$(13_10)			}$(13_10)		}$(13_10)	}$(13_10)    with (this_bullet) {$(13_10)            x = px;$(13_10)            y = py;$(13_10)			hsp = phsp;$(13_10)			vsp = pvsp;$(13_10)			homing = phoming;$(13_10)		}$(13_10)	}$(13_10)	if (packet_type == PACKET_AMMO) {$(13_10)    var pammo = buffer_read(buff, buffer_f32);$(13_10)	var _player_id = buffer_read(buff, buffer_u8);$(13_10)$(13_10)    // Find the remote player associated with this socket$(13_10)    var sock = async_load[? "id"];$(13_10)	show_debug_message("Aim packet from socket: " + string(sock));$(13_10)$(13_10)    with (o_player) {$(13_10)		show_debug_message("Player socket: " + string(socket));$(13_10)        if (player_id == _player_id && control_type == cr.NET) {$(13_10)            mygurn.ammo = pammo;$(13_10)			}$(13_10)		}$(13_10)	}$(13_10)	if (packet_type == PACKET_ENEMYSPAWN) {$(13_10)    var px = buffer_read(buff, buffer_f32);$(13_10)	var py = buffer_read(buff, buffer_f32);$(13_10)	var pobj = buffer_read(buff, buffer_u16);$(13_10)	var php = buffer_read(buff, buffer_f32);$(13_10)	var pnum = buffer_read(buff, buffer_u32);$(13_10)	var pstate = buffer_read(buff, buffer_u8);$(13_10)	var pcooldown = buffer_read(buff, buffer_f32);$(13_10)	var pfacing = buffer_read(buff, buffer_s8);$(13_10)	var pvariance = buffer_read(buff, buffer_f32);$(13_10)$(13_10)    // This is a client exclusive packet, so there is no need to identify the packet sender.$(13_10)	var this_enemy = instance_create_layer(px, py, "Instances", pobj);$(13_10)    with (this_enemy) {$(13_10)        hp = php;$(13_10)		enemy_num = pnum;$(13_10)		state = pstate;$(13_10)		cooldown = pcooldown;$(13_10)		facing = pfacing;$(13_10)		variance = pvariance;$(13_10)		}$(13_10)	}$(13_10)	$(13_10)	if (packet_type == PACKET_ENEMY_CORRECTION) {$(13_10)    var px = buffer_read(buff, buffer_f32);$(13_10)	var py = buffer_read(buff, buffer_f32);$(13_10)	var phsp = buffer_read(buff, buffer_f32);$(13_10)	var pvsp = buffer_read(buff, buffer_f32);$(13_10)	var pobj = buffer_read(buff, buffer_u16);$(13_10)	var php = buffer_read(buff, buffer_f32);$(13_10)	var pnum = buffer_read(buff, buffer_u32);$(13_10)	var pstate = buffer_read(buff, buffer_u8);$(13_10)	var pcooldown = buffer_read(buff, buffer_f32);$(13_10)	var pfacing = buffer_read(buff, buffer_s8);$(13_10)	$(13_10)$(13_10)    // This is a client exclusive packet, so there is no need to identify the packet sender.$(13_10)	if (instance_exists(pobj)){$(13_10)    with (pobj) {$(13_10)		if (enemy_num == pnum){$(13_10)		x = px;$(13_10)		y = py;$(13_10)		hsp = phsp;$(13_10)		vsp = pvsp;$(13_10)        hp = php;$(13_10)		state = pstate;$(13_10)		cooldown = pcooldown;$(13_10)		facing = pfacing;$(13_10)		$(13_10)		//audio_play_sound(dry_fart,0,false); // I am trying to see if this packet works$(13_10)		//OK IT WORKS$(13_10)			}$(13_10)		}$(13_10)	}$(13_10)	}$(13_10)	if (packet_type == PACKET_GAME_LOGIC) {$(13_10)    var p_pylon_incr = buffer_read(buff, buffer_f32);$(13_10)	var p_pylon_enemies = buffer_read(buff, buffer_u32);$(13_10)	var p_enemy_count = buffer_read(buff, buffer_u32);$(13_10)	var p_in_wave = buffer_read(buff, buffer_bool);$(13_10)	var p_combo_bar = buffer_read(buff, buffer_f32);$(13_10)	var p_combo_num = buffer_read(buff, buffer_u32);$(13_10)	var p_flub = buffer_read(buff, buffer_f32);$(13_10)	var p_scor = buffer_read(buff, buffer_f64);$(13_10)$(13_10)    // This is a client exclusive packet, so there is no need to identify the packet sender.$(13_10)    o_game.pylon_incr = p_pylon_incr;$(13_10)	o_game.pylon_enemies = p_pylon_enemies;$(13_10)	o_game.pylon_enemy_count = p_enemy_count;$(13_10)	o_game.in_wave = p_in_wave;$(13_10)	o_game.combo_bar = p_combo_bar;$(13_10)	o_game.combo_num = p_combo_num;$(13_10)	o_game.flub = p_flub;$(13_10)	o_game.scor = p_scor;$(13_10)	}$(13_10)	$(13_10)	if (packet_type == PACKET_FLUB) {$(13_10)		var p_flubbington = buffer_read(buff, buffer_f32);$(13_10)		var p_hsp = buffer_read(buff, buffer_f32);$(13_10)		var p_vsp = buffer_read(buff, buffer_f32);$(13_10)		var p_will_combine = buffer_read(buff, buffer_bool);$(13_10)		var p_x = buffer_read(buff, buffer_f32);$(13_10)		var p_y = buffer_read(buff, buffer_f32);$(13_10)		$(13_10)		var tourist_flub = instance_create_layer(p_x, p_y, "Instances_Front", o_flub);$(13_10)		tourist_flub.flubbington = p_flubbington;$(13_10)		tourist_flub.hsp = p_hsp;$(13_10)		tourist_flub.vsp = p_vsp;$(13_10)		tourist_flub.will_combine = p_will_combine;$(13_10)	}$(13_10)	$(13_10)	if (packet_type == PACKET_WEAPON_DROP) {$(13_10)		var p_weapon_index = buffer_read(buff, buffer_u16);$(13_10)		var p_x = buffer_read(buff, buffer_f32);$(13_10)		var p_y = buffer_read(buff, buffer_f32);$(13_10)		$(13_10)		cool_wep = instance_create_layer(p_x, p_y, "Instances", o_pickup);$(13_10)		with(cool_wep){$(13_10)			weapon_index = p_weapon_index;$(13_10)		}$(13_10)		$(13_10)	}$(13_10)	$(13_10)	if (packet_type == PACKET_BUFF) {$(13_10)		var p_buff = buffer_read(buff, buffer_string);$(13_10)		$(13_10)		with(o_buff_gen){$(13_10)			buff_to_be = p_buff;$(13_10)			client_operate = true;$(13_10)		}$(13_10)		$(13_10)	}$(13_10)	$(13_10)	if (packet_type == PACKET_ID){$(13_10)		$(13_10)		var p_id = buffer_read(buff, buffer_u8);$(13_10)		$(13_10)		with(o_game.local_player){$(13_10)			player_id = p_id;$(13_10)			global.players[p_id] = player_id;$(13_10)		}$(13_10)		$(13_10)	}$(13_10)	if (packet_type == PACKET_PLAYER_LIST){$(13_10)	$(13_10)		for (var i = 0; i < 5; i++){$(13_10)			var p_index = buffer_read(buff, buffer_s8);$(13_10)			if (global.players[i] != p_index && p_index != -1){$(13_10)				request_appearence_packet(client_socket, i);$(13_10)			}$(13_10)			global.players[i] = p_index;$(13_10)		}$(13_10)	$(13_10)	}$(13_10)	if (packet_type == PACKET_SET_MISSION){$(13_10)		$(13_10)		var p_mission = buffer_read(buff, buffer_s8);$(13_10)		$(13_10)		with (o_routing_terminal){$(13_10)			selected_mission = p_mission;$(13_10)		}$(13_10)	$(13_10)	}$(13_10)	if (packet_type == PACKET_PLAYER_READY){$(13_10)	$(13_10)		var p_ready = buffer_read(buff, buffer_bool);$(13_10)		var p_id = buffer_read(buff, buffer_u8);$(13_10)		$(13_10)		with (o_player){$(13_10)			if (player_id == p_id && control_type == cr.NET) {$(13_10)				ready = p_ready;$(13_10)			}$(13_10)		}$(13_10)	}$(13_10)	if (packet_type == PACKET_COMMUNICATION){$(13_10)	$(13_10)		var p_dialogue = buffer_read(buff, buffer_string);$(13_10)		var p_mouth = buffer_read(buff, buffer_string);$(13_10)		var p_expression = buffer_read(buff, buffer_string);$(13_10)		var p_id = buffer_read(buff, buffer_u8);$(13_10)		$(13_10)		with (o_player){$(13_10)			if (player_id == p_id && control_type == cr.NET) {$(13_10)				scr_make_zorb_say(p_dialogue, p_expression, p_mouth);$(13_10)			}$(13_10)		}$(13_10)	}$(13_10)	$(13_10)//	if (async_load[? "type"] == network_type_udp) {$(13_10)$(13_10)//    var buff = async_load[? "buffer"];$(13_10)$(13_10)//    // --- Read header ---$(13_10)//    var packet_type = buffer_read(buff, buffer_u8);$(13_10)//    var seq         = buffer_read(buff, buffer_u16);$(13_10)//    var sender_id   = buffer_read(buff, buffer_u8);$(13_10)$(13_10)//    // --- Drop old packets (client-side) ---$(13_10)//    if (seq <= global.last_seq_from_host) exit;$(13_10)//    global.last_seq_from_host = seq;$(13_10)$(13_10)//    // --- Parse packet body ---$(13_10)//    switch (packet_type) {$(13_10)$(13_10)//        case PACKET_MOVEMENT:$(13_10)//            var px = buffer_read(buff, buffer_f32);$(13_10)//            var py = buffer_read(buff, buffer_f32);$(13_10)$(13_10)//            with (o_player) {$(13_10)//                if (control_type == cr.NET && player_id == sender_id) {$(13_10)//                    x = px;$(13_10)//                    y = py;$(13_10)//                }$(13_10)//            }$(13_10)//        break;$(13_10)$(13_10)$(13_10)//        case PACKET_INPUT:$(13_10)//            var keys = global.input_keys;$(13_10)$(13_10)//            with (o_player) {$(13_10)//                if (control_type == cr.NET && player_id == sender_id) {$(13_10)//                    for (var i = 0; i < array_length(keys); i++) {$(13_10)//                        inputs[$ keys[i]] = buffer_read(buff, buffer_u8);$(13_10)//                    }$(13_10)//                }$(13_10)//            }$(13_10)//        break;$(13_10)$(13_10)$(13_10)//        case PACKET_VELOCITY:$(13_10)//            var phsp = buffer_read(buff, buffer_f32);$(13_10)//            var pvsp = buffer_read(buff, buffer_f32);$(13_10)$(13_10)//            with (o_player) {$(13_10)//                if (control_type == cr.NET && player_id == sender_id) {$(13_10)//                    hsp = phsp;$(13_10)//                    vsp = pvsp;$(13_10)//                }$(13_10)//            }$(13_10)//        break;$(13_10)$(13_10)$(13_10)//        case PACKET_AIM:$(13_10)//            var paimx = buffer_read(buff, buffer_f32);$(13_10)//            var paimy = buffer_read(buff, buffer_f32);$(13_10)//            var pnav  = buffer_read(buff, buffer_f32);$(13_10)$(13_10)//            with (o_player) {$(13_10)//                if (control_type == cr.NET && player_id == sender_id) {$(13_10)//                    reticle.x = paimx;$(13_10)//                    reticle.y = paimy;$(13_10)//                    nav = pnav;$(13_10)//                }$(13_10)//            }$(13_10)//        break;$(13_10)//    }$(13_10)//}$(13_10)$(13_10)	if (packet_type == PACKET_DELETE_PLAYER){$(13_10)		$(13_10)		var p_id = buffer_read(buff, buffer_u8);$(13_10)		$(13_10)		with(o_player){$(13_10)			if (player_id == p_id){$(13_10)				scr_delete_player();$(13_10)			}$(13_10)		}$(13_10)		$(13_10)	}$(13_10)}$(13_10)"
-/// @description Execute Code
+/// @DnDArgument : "code" "var type = async_load[? "type"];$(13_10)$(13_10)if (type == network_type_connect) {$(13_10)    show_debug_message("Connected to host!");$(13_10)$(13_10)    // 1. Store TCP socket$(13_10)    global.client_tcp_socket = async_load[? "socket"];$(13_10)$(13_10)    // 2. Create UDP socket if not created yet$(13_10)    if (!variable_global_exists("udp_socket")) {$(13_10)        global.udp_socket = network_create_socket(network_socket_udp);$(13_10)    }$(13_10)$(13_10)    // You can send appearance later once JOIN + ID etc are stable$(13_10)}$(13_10)$(13_10)if (type == network_type_data) {$(13_10)	if (!(async_load[? "size"] > 0))exit;$(13_10)$(13_10)	var raw = async_load[? "buffer"];$(13_10)	var size = buffer_get_size(raw);$(13_10)$(13_10)	// Make a clean buffer we control$(13_10)	var buff = buffer_create(size, buffer_fixed, 1);$(13_10)	buffer_copy(buff, 0, raw, 0, size);$(13_10)$(13_10)	// Now buff is safe to parse$(13_10)	buffer_seek(buff, buffer_seek_start, 0);$(13_10)$(13_10)$(13_10)	show_debug_message("TCP DATA EVENT, size = " + string(size));$(13_10)	show_debug_message(string(buff));$(13_10)	buffer_seek(buff, buffer_seek_start, 0);$(13_10)$(13_10)    // ---- TCP FRAMED PACKET LOOP ----$(13_10)    while (buffer_tell(buff) + 2 <= size) {$(13_10)        var packet_len = buffer_read(buff, buffer_u16);$(13_10)$(13_10)        // Incomplete packet, stop and wait for next async$(13_10)        if (buffer_tell(buff) + packet_len > size) {$(13_10)            break;$(13_10)        }$(13_10)$(13_10)        var sender_slot = buffer_read(buff, buffer_u8);$(13_10)        var packet_type = buffer_read(buff, buffer_u8);$(13_10)$(13_10)        show_debug_message("Client received: " + string(packet_type));$(13_10)$(13_10)        // ---- PACKET 0 ----$(13_10)        if (packet_type == 0) {$(13_10)            // punch / debug, currently unused$(13_10)            // var _ip = string(async_load[? "ip"]);$(13_10)            // show_debug_message("Punch packet from: " + _ip + ":" + string(async_load[? "port"]));$(13_10)        }$(13_10)$(13_10)        // ---- PACKET 1 ----$(13_10)        if (packet_type == 1) {$(13_10)            client_socket = async_load[? "id"];$(13_10)        }$(13_10)$(13_10)        // ---- PACKET 2: APPEARANCE ----$(13_10)        if (packet_type == 2) {$(13_10)            var char_index = buffer_read(buff, buffer_string);$(13_10)            var suit_color = buffer_read(buff, buffer_u32);$(13_10)            var hair       = buffer_read(buff, buffer_string);$(13_10)            var _player_id = buffer_read(buff, buffer_u8);$(13_10)$(13_10)            var my_character_index = o_game.local_player.character_index;$(13_10)            var my_suit_color      = o_game.local_player.suit_color;$(13_10)            var my_hair            = o_game.local_player.haircut;$(13_10)$(13_10)            var p = instance_create_layer(950, 800, "Instances", o_player);$(13_10)            p.control_type = cr.NET;$(13_10)            p.player_id    = _player_id;$(13_10)$(13_10)            with (p) {$(13_10)                scr_change_character(char_index, hair, suit_color);$(13_10)            }$(13_10)$(13_10)            if (_player_id == 0) {$(13_10)                show_debug_message("CLIENT SENDING APPEARANCE");$(13_10)                send_player_appearance($(13_10)                    client_socket,$(13_10)                    2,$(13_10)                    my_character_index,$(13_10)                    my_suit_color,$(13_10)                    my_hair,$(13_10)                    o_game.local_player.player_id$(13_10)                );$(13_10)                o_game.local_player.socket = client_socket;$(13_10)            }$(13_10)        }$(13_10)$(13_10)        // ---- JOIN ACK ----$(13_10)        if (packet_type == JOIN_ACK) {$(13_10)            show_debug_message("TCP READY ACK RECEIVED");$(13_10)            global.can_send_tcp = true;$(13_10)        }$(13_10)$(13_10)        // ---- JOIN RESPONSE ----$(13_10)        if (packet_type == PACKET_JOIN_RESPONSE) {$(13_10)            global.lobby_id  = buffer_read(buff, buffer_u8);$(13_10)            global.my_slot   = buffer_read(buff, buffer_u8);$(13_10)            global.host_slot = buffer_read(buff, buffer_u8);$(13_10)            audio_play_sound(uinotif, 0, false);$(13_10)            alarm[0] = 90;$(13_10)        }$(13_10)$(13_10)        // ---- MOVEMENT ----$(13_10)        if (packet_type == PACKET_MOVEMENT) {$(13_10)            var px = buffer_read(buff, buffer_f32);$(13_10)            var py = buffer_read(buff, buffer_f32);$(13_10)            var _player_id = buffer_read(buff, buffer_u8);$(13_10)$(13_10)            with (o_player) {$(13_10)                if (control_type == cr.NET && player_id == _player_id) {$(13_10)                    x = px;$(13_10)                    y = py;$(13_10)                }$(13_10)            }$(13_10)        }$(13_10)$(13_10)        // ---- INPUT ----$(13_10)        if (packet_type == PACKET_INPUT) {$(13_10)            var sock = async_load[? "id"];$(13_10)            var p = noone;$(13_10)            var _player_id = buffer_read(buff, buffer_u8);$(13_10)$(13_10)            with (o_player) {$(13_10)                if (control_type == cr.NET && player_id == _player_id) {$(13_10)                    p = id;$(13_10)                }$(13_10)            }$(13_10)$(13_10)            show_debug_message(string(p));$(13_10)$(13_10)            if (p != noone) {$(13_10)                var keys = global.input_keys;$(13_10)$(13_10)                for (var i = 0; i < array_length(keys); i++) {$(13_10)                    var key = keys[i];$(13_10)                    var val = buffer_read(buff, buffer_u8);$(13_10)                    p.inputs[$ key] = val;$(13_10)                    show_debug_message(key + " = " + string(val));$(13_10)                }$(13_10)                show_debug_message("-----------------------------------------------");$(13_10)            }$(13_10)        }$(13_10)$(13_10)        // ---- VELOCITY ----$(13_10)        if (packet_type == PACKET_VELOCITY) {$(13_10)            var phsp      = buffer_read(buff, buffer_f32);$(13_10)            var pvsp      = buffer_read(buff, buffer_f32);$(13_10)            var _player_id = buffer_read(buff, buffer_u8);$(13_10)            var sock      = async_load[? "id"];$(13_10)$(13_10)            show_debug_message("Velocity packet from socket: " + string(sock));$(13_10)$(13_10)            with (o_player) {$(13_10)                if (control_type == cr.NET && player_id == _player_id) {$(13_10)                    hsp = phsp;$(13_10)                    vsp = pvsp;$(13_10)                }$(13_10)            }$(13_10)        }$(13_10)$(13_10)        // ---- AIM ----$(13_10)        if (packet_type == PACKET_AIM) {$(13_10)            var paimx     = buffer_read(buff, buffer_f32);$(13_10)            var paimy     = buffer_read(buff, buffer_f32);$(13_10)            var pnav      = buffer_read(buff, buffer_f32);$(13_10)            var _player_id = buffer_read(buff, buffer_u8);$(13_10)            var sock      = async_load[? "id"];$(13_10)$(13_10)            show_debug_message("Aim packet from socket: " + string(sock));$(13_10)$(13_10)            with (o_player) {$(13_10)                show_debug_message("Player socket: " + string(socket));$(13_10)                if (player_id == _player_id && control_type == cr.NET) {$(13_10)                    reticle.x = paimx;$(13_10)                    reticle.y = paimy;$(13_10)                    nav       = pnav;$(13_10)                }$(13_10)            }$(13_10)        }$(13_10)$(13_10)        // ---- BULLET ----$(13_10)        if (packet_type == PACKET_BULLET) {$(13_10)            var pbullet_num   = buffer_read(buff, buffer_u32);$(13_10)            var phsp          = buffer_read(buff, buffer_f32);$(13_10)            var pvsp          = buffer_read(buff, buffer_f32);$(13_10)            var phoming       = buffer_read(buff, buffer_bool);$(13_10)            var px            = buffer_read(buff, buffer_f32);$(13_10)            var py            = buffer_read(buff, buffer_f32);$(13_10)            var p_proj        = buffer_read(buff, buffer_u16);$(13_10)            var p_proj_sprite = buffer_read(buff, buffer_u16);$(13_10)            var _player_id    = buffer_read(buff, buffer_u8);$(13_10)            var sock          = async_load[? "id"];$(13_10)$(13_10)            show_debug_message("Bullet packet from socket: " + string(sock));$(13_10)$(13_10)            var this_bullet = noone;$(13_10)$(13_10)            with (p_proj) {$(13_10)                if (sender.player_id == _player_id &&$(13_10)                    pbullet_num == bullet_number &&$(13_10)                    sender.control_type == cr.NET) {$(13_10)                    this_bullet = id;$(13_10)                }$(13_10)            }$(13_10)$(13_10)            if (this_bullet == noone) {$(13_10)                this_bullet = instance_create_layer(px, py, "Instances", p_proj);$(13_10)                with (o_player) {$(13_10)                    if (player_id == _player_id && control_type == cr.NET) {$(13_10)                        this_bullet.sender = id;$(13_10)                        bullets_shot       = pbullet_num;$(13_10)                    }$(13_10)                }$(13_10)            }$(13_10)$(13_10)            with (this_bullet) {$(13_10)                x      = px;$(13_10)                y      = py;$(13_10)                hsp    = phsp;$(13_10)                vsp    = pvsp;$(13_10)                homing = phoming;$(13_10)            }$(13_10)        }$(13_10)$(13_10)        // ---- AMMO ----$(13_10)        if (packet_type == PACKET_AMMO) {$(13_10)            var pammo      = buffer_read(buff, buffer_f32);$(13_10)            var _player_id = buffer_read(buff, buffer_u8);$(13_10)            var sock       = async_load[? "id"];$(13_10)$(13_10)            show_debug_message("Aim packet from socket: " + string(sock));$(13_10)$(13_10)            with (o_player) {$(13_10)                show_debug_message("Player socket: " + string(socket));$(13_10)                if (player_id == _player_id && control_type == cr.NET) {$(13_10)                    mygurn.ammo = pammo;$(13_10)                }$(13_10)            }$(13_10)        }$(13_10)$(13_10)        // ---- ENEMY SPAWN ----$(13_10)        if (packet_type == PACKET_ENEMYSPAWN) {$(13_10)            var px        = buffer_read(buff, buffer_f32);$(13_10)            var py        = buffer_read(buff, buffer_f32);$(13_10)            var pobj      = buffer_read(buff, buffer_u16);$(13_10)            var php       = buffer_read(buff, buffer_f32);$(13_10)            var pnum      = buffer_read(buff, buffer_u32);$(13_10)            var pstate    = buffer_read(buff, buffer_u8);$(13_10)            var pcooldown = buffer_read(buff, buffer_f32);$(13_10)            var pfacing   = buffer_read(buff, buffer_s8);$(13_10)            var pvariance = buffer_read(buff, buffer_f32);$(13_10)$(13_10)            var this_enemy = instance_create_layer(px, py, "Instances", pobj);$(13_10)            with (this_enemy) {$(13_10)                hp       = php;$(13_10)                enemy_num = pnum;$(13_10)                state    = pstate;$(13_10)                cooldown = pcooldown;$(13_10)                facing   = pfacing;$(13_10)                variance = pvariance;$(13_10)            }$(13_10)        }$(13_10)$(13_10)        // ---- ENEMY CORRECTION ----$(13_10)        if (packet_type == PACKET_ENEMY_CORRECTION) {$(13_10)            var px        = buffer_read(buff, buffer_f32);$(13_10)            var py        = buffer_read(buff, buffer_f32);$(13_10)            var phsp      = buffer_read(buff, buffer_f32);$(13_10)            var pvsp      = buffer_read(buff, buffer_f32);$(13_10)            var pobj      = buffer_read(buff, buffer_u16);$(13_10)            var php       = buffer_read(buff, buffer_f32);$(13_10)            var pnum      = buffer_read(buff, buffer_u32);$(13_10)            var pstate    = buffer_read(buff, buffer_u8);$(13_10)            var pcooldown = buffer_read(buff, buffer_f32);$(13_10)            var pfacing   = buffer_read(buff, buffer_s8);$(13_10)$(13_10)            if (instance_exists(pobj)) {$(13_10)                with (pobj) {$(13_10)                    if (enemy_num == pnum) {$(13_10)                        x        = px;$(13_10)                        y        = py;$(13_10)                        hsp      = phsp;$(13_10)                        vsp      = pvsp;$(13_10)                        hp       = php;$(13_10)                        state    = pstate;$(13_10)                        cooldown = pcooldown;$(13_10)                        facing   = pfacing;$(13_10)                    }$(13_10)                }$(13_10)            }$(13_10)        }$(13_10)$(13_10)        // ---- GAME LOGIC ----$(13_10)        if (packet_type == PACKET_GAME_LOGIC) {$(13_10)            var p_pylon_incr    = buffer_read(buff, buffer_f32);$(13_10)            var p_pylon_enemies = buffer_read(buff, buffer_u32);$(13_10)            var p_enemy_count   = buffer_read(buff, buffer_u32);$(13_10)            var p_in_wave       = buffer_read(buff, buffer_bool);$(13_10)            var p_combo_bar     = buffer_read(buff, buffer_f32);$(13_10)            var p_combo_num     = buffer_read(buff, buffer_u32);$(13_10)            var p_flub          = buffer_read(buff, buffer_f32);$(13_10)            var p_scor          = buffer_read(buff, buffer_f64);$(13_10)$(13_10)            o_game.pylon_incr       = p_pylon_incr;$(13_10)            o_game.pylon_enemies    = p_pylon_enemies;$(13_10)            o_game.pylon_enemy_count = p_enemy_count;$(13_10)            o_game.in_wave          = p_in_wave;$(13_10)            o_game.combo_bar        = p_combo_bar;$(13_10)            o_game.combo_num        = p_combo_num;$(13_10)            o_game.flub             = p_flub;$(13_10)            o_game.scor             = p_scor;$(13_10)        }$(13_10)$(13_10)        // ---- FLUB ----$(13_10)        if (packet_type == PACKET_FLUB) {$(13_10)            var p_flubbington  = buffer_read(buff, buffer_f32);$(13_10)            var p_hsp          = buffer_read(buff, buffer_f32);$(13_10)            var p_vsp          = buffer_read(buff, buffer_f32);$(13_10)            var p_will_combine = buffer_read(buff, buffer_bool);$(13_10)            var p_x            = buffer_read(buff, buffer_f32);$(13_10)            var p_y            = buffer_read(buff, buffer_f32);$(13_10)$(13_10)            var tourist_flub = instance_create_layer(p_x, p_y, "Instances_Front", o_flub);$(13_10)            tourist_flub.flubbington = p_flubbington;$(13_10)            tourist_flub.hsp         = p_hsp;$(13_10)            tourist_flub.vsp         = p_vsp;$(13_10)            tourist_flub.will_combine = p_will_combine;$(13_10)        }$(13_10)$(13_10)        // ---- WEAPON DROP ----$(13_10)        if (packet_type == PACKET_WEAPON_DROP) {$(13_10)            var p_weapon_index = buffer_read(buff, buffer_u16);$(13_10)            var p_x            = buffer_read(buff, buffer_f32);$(13_10)            var p_y            = buffer_read(buff, buffer_f32);$(13_10)$(13_10)            cool_wep = instance_create_layer(p_x, p_y, "Instances", o_pickup);$(13_10)            with (cool_wep) {$(13_10)                weapon_index = p_weapon_index;$(13_10)            }$(13_10)        }$(13_10)$(13_10)        // ---- BUFF ----$(13_10)        if (packet_type == PACKET_BUFF) {$(13_10)            var p_buff = buffer_read(buff, buffer_string);$(13_10)$(13_10)            with (o_buff_gen) {$(13_10)                buff_to_be    = p_buff;$(13_10)                client_operate = true;$(13_10)            }$(13_10)        }$(13_10)$(13_10)        // ---- ID ----$(13_10)        if (packet_type == PACKET_ID) {$(13_10)            var p_id = buffer_read(buff, buffer_u8);$(13_10)$(13_10)            with (o_game.local_player) {$(13_10)                player_id = p_id;$(13_10)                global.players[p_id] = player_id;$(13_10)            }$(13_10)        }$(13_10)$(13_10)        // ---- PLAYER LIST ----$(13_10)        if (packet_type == PACKET_PLAYER_LIST) {$(13_10)            for (var i = 0; i < 5; i++) {$(13_10)                var p_index = buffer_read(buff, buffer_s8);$(13_10)                if (global.players[i] != p_index && p_index != -1) {$(13_10)                    request_appearence_packet(client_socket, i);$(13_10)                }$(13_10)                global.players[i] = p_index;$(13_10)            }$(13_10)        }$(13_10)$(13_10)        // ---- SET MISSION ----$(13_10)        if (packet_type == PACKET_SET_MISSION) {$(13_10)            var p_mission = buffer_read(buff, buffer_s8);$(13_10)$(13_10)            with (o_routing_terminal) {$(13_10)                selected_mission = p_mission;$(13_10)            }$(13_10)        }$(13_10)$(13_10)        // ---- PLAYER READY ----$(13_10)        if (packet_type == PACKET_PLAYER_READY) {$(13_10)            var p_ready = buffer_read(buff, buffer_bool);$(13_10)            var p_id    = buffer_read(buff, buffer_u8);$(13_10)$(13_10)            with (o_player) {$(13_10)                if (player_id == p_id && control_type == cr.NET) {$(13_10)                    ready = p_ready;$(13_10)                }$(13_10)            }$(13_10)        }$(13_10)$(13_10)        // ---- COMMUNICATION ----$(13_10)        if (packet_type == PACKET_COMMUNICATION) {$(13_10)            var p_dialogue   = buffer_read(buff, buffer_string);$(13_10)            var p_mouth      = buffer_read(buff, buffer_string);$(13_10)            var p_expression = buffer_read(buff, buffer_string);$(13_10)            var p_id         = buffer_read(buff, buffer_u8);$(13_10)$(13_10)            with (o_player) {$(13_10)                if (player_id == p_id && control_type == cr.NET) {$(13_10)                    scr_make_zorb_say(p_dialogue, p_expression, p_mouth);$(13_10)                }$(13_10)            }$(13_10)        }$(13_10)$(13_10)        // ---- DELETE PLAYER ----$(13_10)        if (packet_type == PACKET_DELETE_PLAYER) {$(13_10)            var p_id = buffer_read(buff, buffer_u8);$(13_10)$(13_10)            with (o_player) {$(13_10)                if (player_id == p_id) {$(13_10)                    scr_delete_player();$(13_10)                }$(13_10)            }$(13_10)        }$(13_10)$(13_10)        // after each packet, we’ve already consumed exactly packet_len bytes$(13_10)        // because: 1 (slot) + 1 (type) + payload == packet_len$(13_10)        // loop continues until no more full packets$(13_10)		$(13_10)$(13_10)    }$(13_10)	buffer_delete(buff);$(13_10)}$(13_10)"
 var type = async_load[? "type"];
 
 if (type == network_type_connect) {
-   show_debug_message("Connected to host!");
+    show_debug_message("Connected to host!");
 
     // 1. Store TCP socket
     global.client_tcp_socket = async_load[? "socket"];
@@ -16,431 +15,422 @@ if (type == network_type_connect) {
         global.udp_socket = network_create_socket(network_socket_udp);
     }
 
-	//var my_character_index = o_game.local_player.character_index;
-	//var my_suit_color = o_game.local_player.suit_color;
-	//var my_hair = o_game.local_player.haircut;
-		
-	//send_player_appearance(new_socket, o_game.local_player.character_index, o_game.local_player.suit_color, o_game.local_player.haircut, o_game.local_player.player_id);
-
+    // You can send appearance later once JOIN + ID etc are stable
 }
 
 if (type == network_type_data) {
-    var buff = async_load[? "buffer"];
-	var sender_slot = buffer_read(buff, buffer_u8);
-    var packet_type = buffer_read(buff, buffer_u8);
-	show_debug_message("Client received: " + string(packet_type));
-	
-	if(packet_type == 0){
-		var _ip = string(async_load[? "ip"]);
-		show_debug_message("Punch packet from: " + _ip + ":" +string(async_load[? "port"]));
-		network_connect(client_socket, _ip, TCP_SERVER_PORT);
-	}
-    if (packet_type == 2) {
-        var char_index = buffer_read(buff, buffer_string);
-        var suit_color = buffer_read(buff, buffer_u32);
-        var hair       = buffer_read(buff, buffer_string);
-		var _player_id = buffer_read(buff, buffer_u8);
-		
-		var my_character_index = o_game.local_player.character_index;
-		var my_suit_color = o_game.local_player.suit_color;
-		var my_hair = o_game.local_player.haircut;
+	if (!(async_load[? "size"] > 0))exit;
 
-        // Spawn remote player
-        var p = instance_create_layer(950, 800, "Instances", o_player);
-        p.control_type = cr.NET;
-		p.player_id = _player_id;
+	var raw = async_load[? "buffer"];
+	var size = buffer_get_size(raw);
 
-        // Apply appearance
-        //p.character_index = char_index;
-        //p.suit_color      = suit_color;
-        //p.hair            = hair;
+	// Make a clean buffer we control
+	var buff = buffer_create(size, buffer_fixed, 1);
+	buffer_copy(buff, 0, raw, 0, size);
 
-		with (p){
-			scr_change_character(char_index, hair, suit_color);
-		}
-		if(_player_id == 0){
-		show_debug_message("CLIENT SENDING APPEARANCE");
-		send_player_appearance(client_socket, my_character_index, my_suit_color, my_hair, o_game.local_player.player_id);
-		o_game.local_player.socket = client_socket;
-		}
-    }
-	if (packet_type == PACKET_MOVEMENT) {
-    var px = buffer_read(buff, buffer_f32);
-    var py = buffer_read(buff, buffer_f32);
-	var _player_id = buffer_read(buff, buffer_u8);
+	// Now buff is safe to parse
+	buffer_seek(buff, buffer_seek_start, 0);
 
-    with (o_player) {
-        if (control_type == cr.NET && player_id == _player_id) {
-            x = px;
-            y = py;
+
+	show_debug_message("TCP DATA EVENT, size = " + string(size));
+	show_debug_message(string(buff));
+	buffer_seek(buff, buffer_seek_start, 0);
+
+    // ---- TCP FRAMED PACKET LOOP ----
+    while (buffer_tell(buff) + 2 <= size) {
+        var packet_len = buffer_read(buff, buffer_u16);
+
+        // Incomplete packet, stop and wait for next async
+        if (buffer_tell(buff) + packet_len > size) {
+            break;
         }
-    }
-}//end of movement packet read
-	if (packet_type == PACKET_INPUT) {
 
-    var sock = async_load[? "id"]; // the client who sent it
+        var sender_slot = buffer_read(buff, buffer_u8);
+        var packet_type = buffer_read(buff, buffer_u8);
 
-    // Find the correct remote player
-    var p = noone;
-	var _player_id = buffer_read(buff, buffer_u8);
-    with (o_player) {
-        if (control_type == cr.NET && player_id == _player_id) {
-            p = id;
+        show_debug_message("Client received: " + string(packet_type));
+
+        // ---- PACKET 0 ----
+        if (packet_type == 0) {
+            // punch / debug, currently unused
+            // var _ip = string(async_load[? "ip"]);
+            // show_debug_message("Punch packet from: " + _ip + ":" + string(async_load[? "port"]));
         }
-    }
-	show_debug_message(string(p));
-    if (p != noone) {
 
-        var keys = global.input_keys;
-
-        for (var i = 0; i < array_length(keys); i++) {
-            var key = keys[i];
-			var val = buffer_read(buff, buffer_u8);
-            p.inputs[$ key] = val;
-			
-			show_debug_message(key + " = " + string(val));
+        // ---- PACKET 1 ----
+        if (packet_type == 1) {
+            client_socket = async_load[? "id"];
         }
-		show_debug_message("-----------------------------------------------");
-    }
-	}
-	if (packet_type == PACKET_VELOCITY) {
-    var phsp = buffer_read(buff, buffer_f32);
-    var pvsp = buffer_read(buff, buffer_f32);
-	var _player_id = buffer_read(buff, buffer_u8);
 
-    // Find the remote player associated with this socket
-    var sock = async_load[? "id"];
-	show_debug_message("Velocity packet from socket: " + string(sock));
+        // ---- PACKET 2: APPEARANCE ----
+        if (packet_type == 2) {
+            var char_index = buffer_read(buff, buffer_string);
+            var suit_color = buffer_read(buff, buffer_u32);
+            var hair       = buffer_read(buff, buffer_string);
+            var _player_id = buffer_read(buff, buffer_u8);
 
-    with (o_player) {
-		//show_debug_message("Player socket: " + string(socket));
-        if (control_type == cr.NET && player_id == _player_id) {
-            hsp = phsp;
-            vsp = pvsp;
+            var my_character_index = o_game.local_player.character_index;
+            var my_suit_color      = o_game.local_player.suit_color;
+            var my_hair            = o_game.local_player.haircut;
+
+            var p = instance_create_layer(950, 800, "Instances", o_player);
+            p.control_type = cr.NET;
+            p.player_id    = _player_id;
+
+            with (p) {
+                scr_change_character(char_index, hair, suit_color);
+            }
+
+            if (_player_id == 0) {
+                show_debug_message("CLIENT SENDING APPEARANCE");
+                send_player_appearance(
+                    client_socket,
+                    2,
+                    my_character_index,
+                    my_suit_color,
+                    my_hair,
+                    o_game.local_player.player_id
+                );
+                o_game.local_player.socket = client_socket;
+            }
         }
-    }
-	}
-	if (packet_type == PACKET_AIM) {
-    var paimx = buffer_read(buff, buffer_f32);
-    var paimy = buffer_read(buff, buffer_f32);
-	var pnav = buffer_read(buff, buffer_f32);
-	var _player_id = buffer_read(buff, buffer_u8);
 
-    // Find the remote player associated with this socket
-    var sock = async_load[? "id"];
-	show_debug_message("Aim packet from socket: " + string(sock));
-
-    with (o_player) {
-		show_debug_message("Player socket: " + string(socket));
-        if (player_id == _player_id && control_type == cr.NET) {
-            reticle.x = paimx;
-            reticle.y = paimy;
-			nav = pnav;
+        // ---- JOIN ACK ----
+        if (packet_type == JOIN_ACK) {
+            show_debug_message("TCP READY ACK RECEIVED");
+            global.can_send_tcp = true;
         }
+
+        // ---- JOIN RESPONSE ----
+        if (packet_type == PACKET_JOIN_RESPONSE) {
+            global.lobby_id  = buffer_read(buff, buffer_u8);
+            global.my_slot   = buffer_read(buff, buffer_u8);
+            global.host_slot = buffer_read(buff, buffer_u8);
+            audio_play_sound(uinotif, 0, false);
+            alarm[0] = 90;
+        }
+
+        // ---- MOVEMENT ----
+        if (packet_type == PACKET_MOVEMENT) {
+            var px = buffer_read(buff, buffer_f32);
+            var py = buffer_read(buff, buffer_f32);
+            var _player_id = buffer_read(buff, buffer_u8);
+
+            with (o_player) {
+                if (control_type == cr.NET && player_id == _player_id) {
+                    x = px;
+                    y = py;
+                }
+            }
+        }
+
+        // ---- INPUT ----
+        if (packet_type == PACKET_INPUT) {
+            var sock = async_load[? "id"];
+            var p = noone;
+            var _player_id = buffer_read(buff, buffer_u8);
+
+            with (o_player) {
+                if (control_type == cr.NET && player_id == _player_id) {
+                    p = id;
+                }
+            }
+
+            show_debug_message(string(p));
+
+            if (p != noone) {
+                var keys = global.input_keys;
+
+                for (var i = 0; i < array_length(keys); i++) {
+                    var key = keys[i];
+                    var val = buffer_read(buff, buffer_u8);
+                    p.inputs[$ key] = val;
+                    show_debug_message(key + " = " + string(val));
+                }
+                show_debug_message("-----------------------------------------------");
+            }
+        }
+
+        // ---- VELOCITY ----
+        if (packet_type == PACKET_VELOCITY) {
+            var phsp      = buffer_read(buff, buffer_f32);
+            var pvsp      = buffer_read(buff, buffer_f32);
+            var _player_id = buffer_read(buff, buffer_u8);
+            var sock      = async_load[? "id"];
+
+            show_debug_message("Velocity packet from socket: " + string(sock));
+
+            with (o_player) {
+                if (control_type == cr.NET && player_id == _player_id) {
+                    hsp = phsp;
+                    vsp = pvsp;
+                }
+            }
+        }
+
+        // ---- AIM ----
+        if (packet_type == PACKET_AIM) {
+            var paimx     = buffer_read(buff, buffer_f32);
+            var paimy     = buffer_read(buff, buffer_f32);
+            var pnav      = buffer_read(buff, buffer_f32);
+            var _player_id = buffer_read(buff, buffer_u8);
+            var sock      = async_load[? "id"];
+
+            show_debug_message("Aim packet from socket: " + string(sock));
+
+            with (o_player) {
+                show_debug_message("Player socket: " + string(socket));
+                if (player_id == _player_id && control_type == cr.NET) {
+                    reticle.x = paimx;
+                    reticle.y = paimy;
+                    nav       = pnav;
+                }
+            }
+        }
+
+        // ---- BULLET ----
+        if (packet_type == PACKET_BULLET) {
+            var pbullet_num   = buffer_read(buff, buffer_u32);
+            var phsp          = buffer_read(buff, buffer_f32);
+            var pvsp          = buffer_read(buff, buffer_f32);
+            var phoming       = buffer_read(buff, buffer_bool);
+            var px            = buffer_read(buff, buffer_f32);
+            var py            = buffer_read(buff, buffer_f32);
+            var p_proj        = buffer_read(buff, buffer_u16);
+            var p_proj_sprite = buffer_read(buff, buffer_u16);
+            var _player_id    = buffer_read(buff, buffer_u8);
+            var sock          = async_load[? "id"];
+
+            show_debug_message("Bullet packet from socket: " + string(sock));
+
+            var this_bullet = noone;
+
+            with (p_proj) {
+                if (sender.player_id == _player_id &&
+                    pbullet_num == bullet_number &&
+                    sender.control_type == cr.NET) {
+                    this_bullet = id;
+                }
+            }
+
+            if (this_bullet == noone) {
+                this_bullet = instance_create_layer(px, py, "Instances", p_proj);
+                with (o_player) {
+                    if (player_id == _player_id && control_type == cr.NET) {
+                        this_bullet.sender = id;
+                        bullets_shot       = pbullet_num;
+                    }
+                }
+            }
+
+            with (this_bullet) {
+                x      = px;
+                y      = py;
+                hsp    = phsp;
+                vsp    = pvsp;
+                homing = phoming;
+            }
+        }
+
+        // ---- AMMO ----
+        if (packet_type == PACKET_AMMO) {
+            var pammo      = buffer_read(buff, buffer_f32);
+            var _player_id = buffer_read(buff, buffer_u8);
+            var sock       = async_load[? "id"];
+
+            show_debug_message("Aim packet from socket: " + string(sock));
+
+            with (o_player) {
+                show_debug_message("Player socket: " + string(socket));
+                if (player_id == _player_id && control_type == cr.NET) {
+                    mygurn.ammo = pammo;
+                }
+            }
+        }
+
+        // ---- ENEMY SPAWN ----
+        if (packet_type == PACKET_ENEMYSPAWN) {
+            var px        = buffer_read(buff, buffer_f32);
+            var py        = buffer_read(buff, buffer_f32);
+            var pobj      = buffer_read(buff, buffer_u16);
+            var php       = buffer_read(buff, buffer_f32);
+            var pnum      = buffer_read(buff, buffer_u32);
+            var pstate    = buffer_read(buff, buffer_u8);
+            var pcooldown = buffer_read(buff, buffer_f32);
+            var pfacing   = buffer_read(buff, buffer_s8);
+            var pvariance = buffer_read(buff, buffer_f32);
+
+            var this_enemy = instance_create_layer(px, py, "Instances", pobj);
+            with (this_enemy) {
+                hp       = php;
+                enemy_num = pnum;
+                state    = pstate;
+                cooldown = pcooldown;
+                facing   = pfacing;
+                variance = pvariance;
+            }
+        }
+
+        // ---- ENEMY CORRECTION ----
+        if (packet_type == PACKET_ENEMY_CORRECTION) {
+            var px        = buffer_read(buff, buffer_f32);
+            var py        = buffer_read(buff, buffer_f32);
+            var phsp      = buffer_read(buff, buffer_f32);
+            var pvsp      = buffer_read(buff, buffer_f32);
+            var pobj      = buffer_read(buff, buffer_u16);
+            var php       = buffer_read(buff, buffer_f32);
+            var pnum      = buffer_read(buff, buffer_u32);
+            var pstate    = buffer_read(buff, buffer_u8);
+            var pcooldown = buffer_read(buff, buffer_f32);
+            var pfacing   = buffer_read(buff, buffer_s8);
+
+            if (instance_exists(pobj)) {
+                with (pobj) {
+                    if (enemy_num == pnum) {
+                        x        = px;
+                        y        = py;
+                        hsp      = phsp;
+                        vsp      = pvsp;
+                        hp       = php;
+                        state    = pstate;
+                        cooldown = pcooldown;
+                        facing   = pfacing;
+                    }
+                }
+            }
+        }
+
+        // ---- GAME LOGIC ----
+        if (packet_type == PACKET_GAME_LOGIC) {
+            var p_pylon_incr    = buffer_read(buff, buffer_f32);
+            var p_pylon_enemies = buffer_read(buff, buffer_u32);
+            var p_enemy_count   = buffer_read(buff, buffer_u32);
+            var p_in_wave       = buffer_read(buff, buffer_bool);
+            var p_combo_bar     = buffer_read(buff, buffer_f32);
+            var p_combo_num     = buffer_read(buff, buffer_u32);
+            var p_flub          = buffer_read(buff, buffer_f32);
+            var p_scor          = buffer_read(buff, buffer_f64);
+
+            o_game.pylon_incr       = p_pylon_incr;
+            o_game.pylon_enemies    = p_pylon_enemies;
+            o_game.pylon_enemy_count = p_enemy_count;
+            o_game.in_wave          = p_in_wave;
+            o_game.combo_bar        = p_combo_bar;
+            o_game.combo_num        = p_combo_num;
+            o_game.flub             = p_flub;
+            o_game.scor             = p_scor;
+        }
+
+        // ---- FLUB ----
+        if (packet_type == PACKET_FLUB) {
+            var p_flubbington  = buffer_read(buff, buffer_f32);
+            var p_hsp          = buffer_read(buff, buffer_f32);
+            var p_vsp          = buffer_read(buff, buffer_f32);
+            var p_will_combine = buffer_read(buff, buffer_bool);
+            var p_x            = buffer_read(buff, buffer_f32);
+            var p_y            = buffer_read(buff, buffer_f32);
+
+            var tourist_flub = instance_create_layer(p_x, p_y, "Instances_Front", o_flub);
+            tourist_flub.flubbington = p_flubbington;
+            tourist_flub.hsp         = p_hsp;
+            tourist_flub.vsp         = p_vsp;
+            tourist_flub.will_combine = p_will_combine;
+        }
+
+        // ---- WEAPON DROP ----
+        if (packet_type == PACKET_WEAPON_DROP) {
+            var p_weapon_index = buffer_read(buff, buffer_u16);
+            var p_x            = buffer_read(buff, buffer_f32);
+            var p_y            = buffer_read(buff, buffer_f32);
+
+            cool_wep = instance_create_layer(p_x, p_y, "Instances", o_pickup);
+            with (cool_wep) {
+                weapon_index = p_weapon_index;
+            }
+        }
+
+        // ---- BUFF ----
+        if (packet_type == PACKET_BUFF) {
+            var p_buff = buffer_read(buff, buffer_string);
+
+            with (o_buff_gen) {
+                buff_to_be    = p_buff;
+                client_operate = true;
+            }
+        }
+
+        // ---- ID ----
+        if (packet_type == PACKET_ID) {
+            var p_id = buffer_read(buff, buffer_u8);
+
+            with (o_game.local_player) {
+                player_id = p_id;
+                global.players[p_id] = player_id;
+            }
+        }
+
+        // ---- PLAYER LIST ----
+        if (packet_type == PACKET_PLAYER_LIST) {
+            for (var i = 0; i < 5; i++) {
+                var p_index = buffer_read(buff, buffer_s8);
+                if (global.players[i] != p_index && p_index != -1) {
+                    request_appearence_packet(client_socket, i);
+                }
+                global.players[i] = p_index;
+            }
+        }
+
+        // ---- SET MISSION ----
+        if (packet_type == PACKET_SET_MISSION) {
+            var p_mission = buffer_read(buff, buffer_s8);
+
+            with (o_routing_terminal) {
+                selected_mission = p_mission;
+            }
+        }
+
+        // ---- PLAYER READY ----
+        if (packet_type == PACKET_PLAYER_READY) {
+            var p_ready = buffer_read(buff, buffer_bool);
+            var p_id    = buffer_read(buff, buffer_u8);
+
+            with (o_player) {
+                if (player_id == p_id && control_type == cr.NET) {
+                    ready = p_ready;
+                }
+            }
+        }
+
+        // ---- COMMUNICATION ----
+        if (packet_type == PACKET_COMMUNICATION) {
+            var p_dialogue   = buffer_read(buff, buffer_string);
+            var p_mouth      = buffer_read(buff, buffer_string);
+            var p_expression = buffer_read(buff, buffer_string);
+            var p_id         = buffer_read(buff, buffer_u8);
+
+            with (o_player) {
+                if (player_id == p_id && control_type == cr.NET) {
+                    scr_make_zorb_say(p_dialogue, p_expression, p_mouth);
+                }
+            }
+        }
+
+        // ---- DELETE PLAYER ----
+        if (packet_type == PACKET_DELETE_PLAYER) {
+            var p_id = buffer_read(buff, buffer_u8);
+
+            with (o_player) {
+                if (player_id == p_id) {
+                    scr_delete_player();
+                }
+            }
+        }
+
+        // after each packet, we’ve already consumed exactly packet_len bytes
+        // because: 1 (slot) + 1 (type) + payload == packet_len
+        // loop continues until no more full packets
+		
+
     }
-	}
-	if (packet_type == PACKET_BULLET) {
-    var pbullet_num = buffer_read(buff, buffer_u32);
-    var phsp = buffer_read(buff, buffer_f32);
-	var pvsp = buffer_read(buff, buffer_f32);
-	var phoming = buffer_read(buff, buffer_bool);
-	var px = buffer_read(buff, buffer_f32);
-	var py = buffer_read(buff, buffer_f32);
-	var p_proj = buffer_read(buff, buffer_u16);
-	var p_proj_sprite = buffer_read(buff, buffer_u16);
-	var _player_id = buffer_read(buff, buffer_u8);
-
-    // Find the remote bullet associated with this socket
-    var sock = async_load[? "id"];
-	show_debug_message("Bullet packet from socket: " + string(sock));
-	
-	var this_bullet = noone;
-	with (p_proj){
-	if (sender.player_id == _player_id && pbullet_num == bullet_number && sender.control_type == cr.NET){
-		//audio_play_sound(dry_fart, 0, false);
-		this_bullet = id;
-	}}
-	if (this_bullet == noone){
-	this_bullet = instance_create_layer(px, py, "Instances", p_proj);
-	with (o_player) {
-		//show_debug_message("Player socket: " + string(socket));
-        if (player_id == _player_id && control_type == cr.NET) {
-            this_bullet.sender = id;
-			bullets_shot = pbullet_num;
-			}
-		}
-	}
-    with (this_bullet) {
-            x = px;
-            y = py;
-			hsp = phsp;
-			vsp = pvsp;
-			homing = phoming;
-		}
-	}
-	if (packet_type == PACKET_AMMO) {
-    var pammo = buffer_read(buff, buffer_f32);
-	var _player_id = buffer_read(buff, buffer_u8);
-
-    // Find the remote player associated with this socket
-    var sock = async_load[? "id"];
-	show_debug_message("Aim packet from socket: " + string(sock));
-
-    with (o_player) {
-		show_debug_message("Player socket: " + string(socket));
-        if (player_id == _player_id && control_type == cr.NET) {
-            mygurn.ammo = pammo;
-			}
-		}
-	}
-	if (packet_type == PACKET_ENEMYSPAWN) {
-    var px = buffer_read(buff, buffer_f32);
-	var py = buffer_read(buff, buffer_f32);
-	var pobj = buffer_read(buff, buffer_u16);
-	var php = buffer_read(buff, buffer_f32);
-	var pnum = buffer_read(buff, buffer_u32);
-	var pstate = buffer_read(buff, buffer_u8);
-	var pcooldown = buffer_read(buff, buffer_f32);
-	var pfacing = buffer_read(buff, buffer_s8);
-	var pvariance = buffer_read(buff, buffer_f32);
-
-    // This is a client exclusive packet, so there is no need to identify the packet sender.
-	var this_enemy = instance_create_layer(px, py, "Instances", pobj);
-    with (this_enemy) {
-        hp = php;
-		enemy_num = pnum;
-		state = pstate;
-		cooldown = pcooldown;
-		facing = pfacing;
-		variance = pvariance;
-		}
-	}
-	
-	if (packet_type == PACKET_ENEMY_CORRECTION) {
-    var px = buffer_read(buff, buffer_f32);
-	var py = buffer_read(buff, buffer_f32);
-	var phsp = buffer_read(buff, buffer_f32);
-	var pvsp = buffer_read(buff, buffer_f32);
-	var pobj = buffer_read(buff, buffer_u16);
-	var php = buffer_read(buff, buffer_f32);
-	var pnum = buffer_read(buff, buffer_u32);
-	var pstate = buffer_read(buff, buffer_u8);
-	var pcooldown = buffer_read(buff, buffer_f32);
-	var pfacing = buffer_read(buff, buffer_s8);
-	
-
-    // This is a client exclusive packet, so there is no need to identify the packet sender.
-	if (instance_exists(pobj)){
-    with (pobj) {
-		if (enemy_num == pnum){
-		x = px;
-		y = py;
-		hsp = phsp;
-		vsp = pvsp;
-        hp = php;
-		state = pstate;
-		cooldown = pcooldown;
-		facing = pfacing;
-		
-		//audio_play_sound(dry_fart,0,false); // I am trying to see if this packet works
-		//OK IT WORKS
-			}
-		}
-	}
-	}
-	if (packet_type == PACKET_GAME_LOGIC) {
-    var p_pylon_incr = buffer_read(buff, buffer_f32);
-	var p_pylon_enemies = buffer_read(buff, buffer_u32);
-	var p_enemy_count = buffer_read(buff, buffer_u32);
-	var p_in_wave = buffer_read(buff, buffer_bool);
-	var p_combo_bar = buffer_read(buff, buffer_f32);
-	var p_combo_num = buffer_read(buff, buffer_u32);
-	var p_flub = buffer_read(buff, buffer_f32);
-	var p_scor = buffer_read(buff, buffer_f64);
-
-    // This is a client exclusive packet, so there is no need to identify the packet sender.
-    o_game.pylon_incr = p_pylon_incr;
-	o_game.pylon_enemies = p_pylon_enemies;
-	o_game.pylon_enemy_count = p_enemy_count;
-	o_game.in_wave = p_in_wave;
-	o_game.combo_bar = p_combo_bar;
-	o_game.combo_num = p_combo_num;
-	o_game.flub = p_flub;
-	o_game.scor = p_scor;
-	}
-	
-	if (packet_type == PACKET_FLUB) {
-		var p_flubbington = buffer_read(buff, buffer_f32);
-		var p_hsp = buffer_read(buff, buffer_f32);
-		var p_vsp = buffer_read(buff, buffer_f32);
-		var p_will_combine = buffer_read(buff, buffer_bool);
-		var p_x = buffer_read(buff, buffer_f32);
-		var p_y = buffer_read(buff, buffer_f32);
-		
-		var tourist_flub = instance_create_layer(p_x, p_y, "Instances_Front", o_flub);
-		tourist_flub.flubbington = p_flubbington;
-		tourist_flub.hsp = p_hsp;
-		tourist_flub.vsp = p_vsp;
-		tourist_flub.will_combine = p_will_combine;
-	}
-	
-	if (packet_type == PACKET_WEAPON_DROP) {
-		var p_weapon_index = buffer_read(buff, buffer_u16);
-		var p_x = buffer_read(buff, buffer_f32);
-		var p_y = buffer_read(buff, buffer_f32);
-		
-		cool_wep = instance_create_layer(p_x, p_y, "Instances", o_pickup);
-		with(cool_wep){
-			weapon_index = p_weapon_index;
-		}
-		
-	}
-	
-	if (packet_type == PACKET_BUFF) {
-		var p_buff = buffer_read(buff, buffer_string);
-		
-		with(o_buff_gen){
-			buff_to_be = p_buff;
-			client_operate = true;
-		}
-		
-	}
-	
-	if (packet_type == PACKET_ID){
-		
-		var p_id = buffer_read(buff, buffer_u8);
-		
-		with(o_game.local_player){
-			player_id = p_id;
-			global.players[p_id] = player_id;
-		}
-		
-	}
-	if (packet_type == PACKET_PLAYER_LIST){
-	
-		for (var i = 0; i < 5; i++){
-			var p_index = buffer_read(buff, buffer_s8);
-			if (global.players[i] != p_index && p_index != -1){
-				request_appearence_packet(client_socket, i);
-			}
-			global.players[i] = p_index;
-		}
-	
-	}
-	if (packet_type == PACKET_SET_MISSION){
-		
-		var p_mission = buffer_read(buff, buffer_s8);
-		
-		with (o_routing_terminal){
-			selected_mission = p_mission;
-		}
-	
-	}
-	if (packet_type == PACKET_PLAYER_READY){
-	
-		var p_ready = buffer_read(buff, buffer_bool);
-		var p_id = buffer_read(buff, buffer_u8);
-		
-		with (o_player){
-			if (player_id == p_id && control_type == cr.NET) {
-				ready = p_ready;
-			}
-		}
-	}
-	if (packet_type == PACKET_COMMUNICATION){
-	
-		var p_dialogue = buffer_read(buff, buffer_string);
-		var p_mouth = buffer_read(buff, buffer_string);
-		var p_expression = buffer_read(buff, buffer_string);
-		var p_id = buffer_read(buff, buffer_u8);
-		
-		with (o_player){
-			if (player_id == p_id && control_type == cr.NET) {
-				scr_make_zorb_say(p_dialogue, p_expression, p_mouth);
-			}
-		}
-	}
-	
-//	if (async_load[? "type"] == network_type_udp) {
-
-//    var buff = async_load[? "buffer"];
-
-//    // --- Read header ---
-//    var packet_type = buffer_read(buff, buffer_u8);
-//    var seq         = buffer_read(buff, buffer_u16);
-//    var sender_id   = buffer_read(buff, buffer_u8);
-
-//    // --- Drop old packets (client-side) ---
-//    if (seq <= global.last_seq_from_host) exit;
-//    global.last_seq_from_host = seq;
-
-//    // --- Parse packet body ---
-//    switch (packet_type) {
-
-//        case PACKET_MOVEMENT:
-//            var px = buffer_read(buff, buffer_f32);
-//            var py = buffer_read(buff, buffer_f32);
-
-//            with (o_player) {
-//                if (control_type == cr.NET && player_id == sender_id) {
-//                    x = px;
-//                    y = py;
-//                }
-//            }
-//        break;
-
-
-//        case PACKET_INPUT:
-//            var keys = global.input_keys;
-
-//            with (o_player) {
-//                if (control_type == cr.NET && player_id == sender_id) {
-//                    for (var i = 0; i < array_length(keys); i++) {
-//                        inputs[$ keys[i]] = buffer_read(buff, buffer_u8);
-//                    }
-//                }
-//            }
-//        break;
-
-
-//        case PACKET_VELOCITY:
-//            var phsp = buffer_read(buff, buffer_f32);
-//            var pvsp = buffer_read(buff, buffer_f32);
-
-//            with (o_player) {
-//                if (control_type == cr.NET && player_id == sender_id) {
-//                    hsp = phsp;
-//                    vsp = pvsp;
-//                }
-//            }
-//        break;
-
-
-//        case PACKET_AIM:
-//            var paimx = buffer_read(buff, buffer_f32);
-//            var paimy = buffer_read(buff, buffer_f32);
-//            var pnav  = buffer_read(buff, buffer_f32);
-
-//            with (o_player) {
-//                if (control_type == cr.NET && player_id == sender_id) {
-//                    reticle.x = paimx;
-//                    reticle.y = paimy;
-//                    nav = pnav;
-//                }
-//            }
-//        break;
-//    }
-//}
-
-	if (packet_type == PACKET_DELETE_PLAYER){
-		
-		var p_id = buffer_read(buff, buffer_u8);
-		
-		with(o_player){
-			if (player_id == p_id){
-				scr_delete_player();
-			}
-		}
-		
-	}
+	buffer_delete(buff);
 }

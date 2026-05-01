@@ -14,8 +14,12 @@ socket_list = ds_list_create();
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 4358704B
-/// @DnDArgument : "code" "/// @description Execute Code$(13_10)global.last_seq_from_host = -1;$(13_10)$(13_10)global.mm_url = "https://zpdf-mtchserver.fly.dev";$(13_10)$(13_10)global.udp_port = 40010;$(13_10)global.udp_socket = network_create_socket_ext(network_socket_udp, global.udp_port);$(13_10)$(13_10)// Ask for public IP/port$(13_10)var headers = ds_map_create();$(13_10)headers[? "Content-Type"] = "application/json";$(13_10)http_request(global.mm_url + "/stun", "GET", headers, "");$(13_10)ds_map_destroy(headers);$(13_10)$(13_10)server_port = TCP_SERVER_PORT$(13_10)$(13_10)server_socket = network_create_server(network_socket_tcp, server_port, 4);$(13_10)$(13_10)network_set_timeout(server_socket, 10000, 10000);$(13_10)$(13_10)//var url = "http://localhost:3000/create";$(13_10)//var data = json_stringify({$(13_10)//    port: server_port,$(13_10)//    maxPlayers: 4$(13_10)//});$(13_10)$(13_10)//var headers = ds_map_create();$(13_10)//headers[? "Content-Type"] = "application/json";$(13_10)$(13_10)//http_request(url, "POST", headers, data);$(13_10)$(13_10)//ds_map_destroy(headers);"
+/// @DnDArgument : "code" "/// @description Execute Code$(13_10)// Create this once in o_net_host / o_net_client Create event:$(13_10)accum = buffer_create(1024, buffer_grow, 1);$(13_10)buffer_seek(accum, buffer_seek_start, 0);$(13_10)$(13_10)global.last_seq_from_host = -1;$(13_10)$(13_10)global.mm_url = "https://zpdf-mtchserver.fly.dev";$(13_10)$(13_10)global.udp_port = 40010;$(13_10)global.udp_socket = network_create_socket_ext(network_socket_udp, global.udp_port);$(13_10)$(13_10)// Ask for public IP/port$(13_10)var headers = ds_map_create();$(13_10)headers[? "Content-Type"] = "application/json";$(13_10)http_request(global.mm_url + "/stun", "GET", headers, "");$(13_10)ds_map_destroy(headers);$(13_10)$(13_10)server_port = TCP_SERVER_PORT$(13_10)$(13_10)server_socket = network_create_server(network_socket_tcp, server_port, 4);$(13_10)$(13_10)network_set_timeout(server_socket, 10000, 10000);$(13_10)$(13_10)//var url = "http://localhost:3000/create";$(13_10)//var data = json_stringify({$(13_10)//    port: server_port,$(13_10)//    maxPlayers: 4$(13_10)//});$(13_10)$(13_10)//var headers = ds_map_create();$(13_10)//headers[? "Content-Type"] = "application/json";$(13_10)$(13_10)//http_request(url, "POST", headers, data);$(13_10)$(13_10)//ds_map_destroy(headers);"
 /// @description Execute Code
+// Create this once in o_net_host / o_net_client Create event:
+accum = buffer_create(1024, buffer_grow, 1);
+buffer_seek(accum, buffer_seek_start, 0);
+
 global.last_seq_from_host = -1;
 
 global.mm_url = "https://zpdf-mtchserver.fly.dev";

@@ -383,10 +383,11 @@ var l61EB12DC_0 = state;switch(l61EB12DC_0){	/// @DnDAction : YoYo Games.Swit
 			/// @DnDAction : YoYo Games.Instances.Create_Instance
 			/// @DnDVersion : 1
 			/// @DnDHash : 7C7A93D1
+			/// @DnDDisabled : 1
 			/// @DnDParent : 757EA620
 			/// @DnDArgument : "objectid" "mrlocal_ip"
 			/// @DnDSaveInfo : "objectid" "mrlocal_ip"
-			instance_create_layer(0, 0, "Instances", mrlocal_ip);
+		
 		
 			/// @DnDAction : YoYo Games.Instances.Create_Instance
 			/// @DnDVersion : 1

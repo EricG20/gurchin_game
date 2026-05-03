@@ -569,10 +569,10 @@ if(!(state == ps.DIE)){	/// @DnDAction : YoYo Games.Common.If_Variable
 			/// @DnDArgument : "xscale" "facing-(squashstretch*facing)"
 			/// @DnDArgument : "yscale" "1+squashstretch"
 			/// @DnDArgument : "alpha" "sin(iframes/2)+1"
-			/// @DnDArgument : "sprite" "walk_sprite"
+			/// @DnDArgument : "sprite" "sprite_index"
 			/// @DnDArgument : "frame" "image_index"
 			/// @DnDArgument : "col" "suit_color"
-			draw_sprite_ext(walk_sprite, image_index, x + 0, y + -walk_bob_height*walk_lift_magnitude, facing-(squashstretch*facing), 1+squashstretch, 0, suit_color & $ffffff, sin(iframes/2)+1);
+			draw_sprite_ext(sprite_index, image_index, x + 0, y + -walk_bob_height*walk_lift_magnitude, facing-(squashstretch*facing), 1+squashstretch, 0, suit_color & $ffffff, sin(iframes/2)+1);
 		
 			/// @DnDAction : YoYo Games.Instances.Sprite_Animation_Speed
 			/// @DnDVersion : 1
@@ -588,6 +588,19 @@ if(!(state == ps.DIE)){	/// @DnDAction : YoYo Games.Common.If_Variable
 			/// @DnDArgument : "value" "walk_sprite"
 			/// @DnDArgument : "instvar" "10"
 			sprite_index = walk_sprite;
+		
+			/// @DnDAction : YoYo Games.Common.If_Expression
+			/// @DnDVersion : 1
+			/// @DnDHash : 1DBAC322
+			/// @DnDParent : 25740D4A
+			/// @DnDArgument : "expr" "sliding"
+			if(sliding){	/// @DnDAction : YoYo Games.Instances.Set_Instance_Var
+				/// @DnDVersion : 1
+				/// @DnDHash : 1ACB2409
+				/// @DnDParent : 1DBAC322
+				/// @DnDArgument : "value" "slide_sprite"
+				/// @DnDArgument : "instvar" "10"
+				sprite_index = slide_sprite;}
 		
 			/// @DnDAction : YoYo Games.Common.If_Variable
 			/// @DnDVersion : 1
@@ -1195,12 +1208,12 @@ if(!(state == ps.DIE)){	/// @DnDAction : YoYo Games.Common.If_Variable
 	/// @DnDHash : 6990FA62
 	/// @DnDParent : 22C59357
 	/// @DnDArgument : "x" "facing*head_offset_x+x-hsp"
-	/// @DnDArgument : "y" "head_height+head_offset_y+y-vsp-(sign(vsp)*squashstretch*40)+hair_offset_y"
+	/// @DnDArgument : "y" "head_height+head_offset_y+y-vsp-(sign(vsp)*squashstretch*40)+hair_offset_y*hair_weight"
 	/// @DnDArgument : "xscale" "facing-(squashstretch*facing)"
 	/// @DnDArgument : "yscale" "1+squashstretch"
 	/// @DnDArgument : "alpha" "sin(iframes/2)+1"
 	/// @DnDArgument : "sprite" "antenna_sprite"
-	draw_sprite_ext(antenna_sprite, 0, facing*head_offset_x+x-hsp, head_height+head_offset_y+y-vsp-(sign(vsp)*squashstretch*40)+hair_offset_y, facing-(squashstretch*facing), 1+squashstretch, 0, $FFFFFF & $ffffff, sin(iframes/2)+1);
+	draw_sprite_ext(antenna_sprite, 0, facing*head_offset_x+x-hsp, head_height+head_offset_y+y-vsp-(sign(vsp)*squashstretch*40)+hair_offset_y*hair_weight, facing-(squashstretch*facing), 1+squashstretch, 0, $FFFFFF & $ffffff, sin(iframes/2)+1);
 
 	/// @DnDAction : YoYo Games.Drawing.Draw_Sprite_Transformed
 	/// @DnDVersion : 1

@@ -60,11 +60,19 @@ function boost_control() {	/// @DnDAction : YoYo Games.Common.If_Expression
 			/// @DnDArgument : "var" "v_fuel"
 			/// @DnDArgument : "op" "3"
 			/// @DnDArgument : "value" "50*global.booster_bonus*booster_bonus"
-			if(v_fuel <= 50*global.booster_bonus*booster_bonus){	/// @DnDAction : YoYo Games.Common.Variable
+			if(v_fuel <= 50*global.booster_bonus*booster_bonus){	/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDVersion : 1
 				/// @DnDHash : 2392FDE3
 				/// @DnDParent : 269B593A
 				/// @DnDArgument : "expr" ".5*global.game_speed*global.booster_recharge_bonus*booster_recharge_bonus"
 				/// @DnDArgument : "expr_relative" "1"
 				/// @DnDArgument : "var" "v_fuel"
-				v_fuel += .5*global.game_speed*global.booster_recharge_bonus*booster_recharge_bonus;}}}}
+				v_fuel += .5*global.game_speed*global.booster_recharge_bonus*booster_recharge_bonus;}}}
+
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 024FF14F
+	/// @DnDParent : 49DA5EC1
+	/// @DnDArgument : "expr" "clamp(v_fuel, 0, 50*global.booster_bonus*booster_bonus)"
+	/// @DnDArgument : "var" "v_fuel"
+	v_fuel = clamp(v_fuel, 0, 50*global.booster_bonus*booster_bonus);}

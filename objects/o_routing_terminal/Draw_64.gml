@@ -83,10 +83,10 @@ if(displaying_info){	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDArgument : "xscale" "11.4286"
 			/// @DnDArgument : "yscale" "2.23214286*display_alpha"
 			/// @DnDArgument : "alpha" "abs(sin(current_time*.0021))"
-			/// @DnDArgument : "sprite" "comb_background"
-			/// @DnDArgument : "col" "$FFFF0000"
-			/// @DnDSaveInfo : "sprite" "comb_background"
-			draw_sprite_ext(comb_background, 0, 1281, -2.5+120*i, 11.4286, 2.23214286*display_alpha, 0, $FFFF0000 & $ffffff, abs(sin(current_time*.0021)));}
+			/// @DnDArgument : "sprite" "zorb_uibox_highlight"
+			/// @DnDArgument : "col" "$FFFFFFFF"
+			/// @DnDSaveInfo : "sprite" "zorb_uibox_highlight"
+			draw_sprite_ext(zorb_uibox_highlight, 0, 1281, -2.5+120*i, 11.4286, 2.23214286*display_alpha, 0, $FFFFFFFF & $ffffff, abs(sin(current_time*.0021)));}
 	
 		/// @DnDAction : YoYo Games.Data Structures.List_Get_At
 		/// @DnDVersion : 1

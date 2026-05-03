@@ -34,7 +34,7 @@ game_set_speed(30, gamespeed_fps);
 /// @DnDAction : YoYo Games.Common.Set_Global
 /// @DnDVersion : 1
 /// @DnDHash : 75E9B451
-/// @DnDInput : 8
+/// @DnDInput : 9
 /// @DnDArgument : "value_1" "1"
 /// @DnDArgument : "value_2" "1"
 /// @DnDArgument : "value_3" "1"
@@ -42,6 +42,7 @@ game_set_speed(30, gamespeed_fps);
 /// @DnDArgument : "value_5" "1"
 /// @DnDArgument : "value_6" "1"
 /// @DnDArgument : "value_7" "1"
+/// @DnDArgument : "value_8" "1"
 /// @DnDArgument : "var" "targ_x"
 /// @DnDArgument : "var_1" "firerate_bonus"
 /// @DnDArgument : "var_2" "ammo_bonus"
@@ -50,6 +51,7 @@ game_set_speed(30, gamespeed_fps);
 /// @DnDArgument : "var_5" "reload_bonus"
 /// @DnDArgument : "var_6" "flat_firerate_bonus"
 /// @DnDArgument : "var_7" "flat_reload_bonus"
+/// @DnDArgument : "var_8" "booster_recharge_bonus"
 global.targ_x = 0;
 global.firerate_bonus = 1;
 global.ammo_bonus = 1;
@@ -151,12 +153,13 @@ script_execute(gradient_int);
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 6072CAF4
-/// @DnDArgument : "code" "/// @description Execute Code$(13_10)enum ps {$(13_10)	IDLE,$(13_10)	WALK,$(13_10)	AIR,$(13_10)	THINK,$(13_10)	HIT,$(13_10)	WIN,$(13_10)	DIE$(13_10)	$(13_10)}$(13_10)$(13_10)enum es {$(13_10)	IDLE,$(13_10)	WALK,$(13_10)	AIR,$(13_10)	CHARGE,$(13_10)	ATTACK,$(13_10)	KNOCKBACK,$(13_10)	DEATH$(13_10)	$(13_10)}$(13_10)$(13_10)enum gm {$(13_10)	TEST,$(13_10)	LEVEL,$(13_10)	HUB,$(13_10)	SELECT,$(13_10)	GATE,$(13_10)	BOSS,$(13_10)	PYLON,$(13_10)	RESULTS,$(13_10)	TITLE$(13_10)}$(13_10)$(13_10)enum gr {$(13_10)	S,$(13_10)	A,$(13_10)	B,$(13_10)	C,$(13_10)	DUNNO$(13_10)}$(13_10)$(13_10)enum cr {$(13_10)	LOCAL,$(13_10)	NET$(13_10)}$(13_10)$(13_10)state = gm.TITLE$(13_10)$(13_10)global.input_keys = [$(13_10)    "left",$(13_10)    "right",$(13_10)    "jump",$(13_10)    "boost_start",$(13_10)    "boost",$(13_10)    "up",$(13_10)    "down",$(13_10)    "reload",$(13_10)    "melee",$(13_10)    "jump_release",$(13_10)    "shoot",$(13_10)    "shooting",$(13_10)    "shoot_release",$(13_10)    "special",$(13_10)    "swap",$(13_10)    "accept",$(13_10)    "cancel",$(13_10)    "up_tap",$(13_10)    "down_tap",$(13_10)	"tick"$(13_10)];$(13_10)"
+/// @DnDArgument : "code" "/// @description Execute Code$(13_10)enum ps {$(13_10)	IDLE,$(13_10)	WALK,$(13_10)	AIR,$(13_10)	SLIDE,$(13_10)	THINK,$(13_10)	HIT,$(13_10)	WIN,$(13_10)	DIE$(13_10)	$(13_10)}$(13_10)$(13_10)enum es {$(13_10)	IDLE,$(13_10)	WALK,$(13_10)	AIR,$(13_10)	CHARGE,$(13_10)	ATTACK,$(13_10)	KNOCKBACK,$(13_10)	DEATH$(13_10)	$(13_10)}$(13_10)$(13_10)enum gm {$(13_10)	TEST,$(13_10)	LEVEL,$(13_10)	HUB,$(13_10)	SELECT,$(13_10)	GATE,$(13_10)	BOSS,$(13_10)	PYLON,$(13_10)	RESULTS,$(13_10)	TITLE$(13_10)}$(13_10)$(13_10)enum gr {$(13_10)	S,$(13_10)	A,$(13_10)	B,$(13_10)	C,$(13_10)	DUNNO$(13_10)}$(13_10)$(13_10)enum cr {$(13_10)	LOCAL,$(13_10)	NET$(13_10)}$(13_10)$(13_10)state = gm.TITLE$(13_10)$(13_10)global.input_keys = [$(13_10)    "left",$(13_10)    "right",$(13_10)    "jump",$(13_10)    "boost_start",$(13_10)    "boost",$(13_10)    "up",$(13_10)    "down",$(13_10)    "reload",$(13_10)    "melee",$(13_10)    "jump_release",$(13_10)    "shoot",$(13_10)    "shooting",$(13_10)    "shoot_release",$(13_10)    "special",$(13_10)    "swap",$(13_10)    "accept",$(13_10)    "cancel",$(13_10)    "up_tap",$(13_10)    "down_tap",$(13_10)	"tick"$(13_10)];$(13_10)"
 /// @description Execute Code
 enum ps {
 	IDLE,
 	WALK,
 	AIR,
+	SLIDE,
 	THINK,
 	HIT,
 	WIN,

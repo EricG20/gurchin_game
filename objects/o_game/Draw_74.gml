@@ -10,13 +10,13 @@ var l5C985A9E_0 = state;switch(l5C985A9E_0){	/// @DnDAction : YoYo Games.Swit
 	case gm.PYLON:	/// @DnDAction : YoYo Games.Drawing.Draw_Sprite_Transformed
 		/// @DnDVersion : 1
 		/// @DnDHash : 3177052A
+		/// @DnDDisabled : 1
 		/// @DnDParent : 42070D0E
 		/// @DnDArgument : "x" "-5"
 		/// @DnDArgument : "y" "-10"
 		/// @DnDArgument : "xscale" ".8"
 		/// @DnDArgument : "sprite" "s_ui_background"
-		/// @DnDSaveInfo : "sprite" "s_ui_background"
-		draw_sprite_ext(s_ui_background, 0, -5, -10, .8, 1, 0, $FFFFFF & $ffffff, 1);	break;}
+		/// @DnDSaveInfo : "sprite" "s_ui_background"	break;}
 
 /// @DnDAction : YoYo Games.Drawing.Draw_Sprite_Transformed
 /// @DnDVersion : 1

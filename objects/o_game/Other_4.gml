@@ -46,7 +46,6 @@ var l61EB12DC_0 = state;switch(l61EB12DC_0){	/// @DnDAction : YoYo Games.Swit
 				/// @DnDParent : 559C0940
 				/// @DnDArgument : "expr_2" "3"
 				/// @DnDArgument : "expr_3" "1"
-				/// @DnDArgument : "expr_9" "1000000"
 				/// @DnDArgument : "expr_12" "false"
 				/// @DnDArgument : "expr_14" "true"
 				/// @DnDArgument : "expr_15" "20"
@@ -99,7 +98,7 @@ var l61EB12DC_0 = state;switch(l61EB12DC_0){	/// @DnDAction : YoYo Games.Swit
 				highest_combo = 0;
 				grade_tally = 0;
 				grade_tally_total = 0;
-				flub = 1000000;
+				flub = 0;
 				new_flub = 0;
 				display_flub = 0;
 				finish_counting = false;

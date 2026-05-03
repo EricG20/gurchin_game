@@ -27,7 +27,102 @@ var l49655D8D_0 = room;switch(l49655D8D_0){	/// @DnDAction : YoYo Games.Switc
 		/// @DnDArgument : "alpha" "pause_background_alpha"
 		/// @DnDArgument : "sprite" "Layer_1"
 		/// @DnDSaveInfo : "sprite" "Layer_1"
-		draw_sprite_ext(Layer_1, 0, o_camera.x, o_camera.y, 1, 1, 0, $FFFFFF & $ffffff, pause_background_alpha);	break;
+		draw_sprite_ext(Layer_1, 0, o_camera.x, o_camera.y, 1, 1, 0, $FFFFFF & $ffffff, pause_background_alpha);
+	
+		/// @DnDAction : YoYo Games.Drawing.Set_Alignment
+		/// @DnDVersion : 1.1
+		/// @DnDHash : 5560B293
+		/// @DnDParent : 58B7720C
+		/// @DnDArgument : "halign" "fa_center"
+		draw_set_halign(fa_center);
+		draw_set_valign(fa_top);
+	
+		/// @DnDAction : YoYo Games.Common.Execute_Script
+		/// @DnDVersion : 1.1
+		/// @DnDHash : 766D0EA6
+		/// @DnDParent : 58B7720C
+		/// @DnDArgument : "var" "weapon_name"
+		/// @DnDArgument : "var_temp" "1"
+		/// @DnDArgument : "script" "scr_weapon_names"
+		/// @DnDArgument : "arg" "local_player.mygurn.object_index"
+		/// @DnDSaveInfo : "script" "scr_weapon_names"
+		var weapon_name = script_execute(scr_weapon_names, local_player.mygurn.object_index);
+	
+		/// @DnDAction : YoYo Games.Common.Execute_Script
+		/// @DnDVersion : 1.1
+		/// @DnDHash : 57E08C6D
+		/// @DnDParent : 58B7720C
+		/// @DnDArgument : "var" "weapon_desc"
+		/// @DnDArgument : "var_temp" "1"
+		/// @DnDArgument : "script" "scr_weapon_descs"
+		/// @DnDArgument : "arg" "local_player.mygurn.object_index"
+		/// @DnDSaveInfo : "script" "scr_weapon_descs"
+		var weapon_desc = script_execute(scr_weapon_descs, local_player.mygurn.object_index);
+	
+		/// @DnDAction : YoYo Games.Common.Function_Call
+		/// @DnDVersion : 1
+		/// @DnDHash : 2866D2EF
+		/// @DnDInput : 3
+		/// @DnDParent : 58B7720C
+		/// @DnDArgument : "var" "weapon_desc"
+		/// @DnDArgument : "function" "wrap_text"
+		/// @DnDArgument : "arg" "weapon_desc"
+		/// @DnDArgument : "arg_1" "60"
+		/// @DnDArgument : "arg_2" "2"
+		weapon_desc = wrap_text(weapon_desc, 60, 2);
+	
+		/// @DnDAction : YoYo Games.Common.Execute_Script
+		/// @DnDVersion : 1.1
+		/// @DnDHash : 2DDF17C6
+		/// @DnDInput : 14
+		/// @DnDParent : 58B7720C
+		/// @DnDArgument : "script" "draw_text_colour_outline"
+		/// @DnDArgument : "arg" "o_camera.x-480"
+		/// @DnDArgument : "arg_1" "o_camera.y-380"
+		/// @DnDArgument : "arg_2" "weapon_name"
+		/// @DnDArgument : "arg_3" "c_white"
+		/// @DnDArgument : "arg_4" "c_white"
+		/// @DnDArgument : "arg_5" "pause_background_alpha"
+		/// @DnDArgument : "arg_6" "c_green"
+		/// @DnDArgument : "arg_7" "c_black"
+		/// @DnDArgument : "arg_8" "pause_background_alpha"
+		/// @DnDArgument : "arg_9" "2"
+		/// @DnDArgument : "arg_10" "6"
+		/// @DnDArgument : "arg_11" "2"
+		/// @DnDArgument : "arg_12" "2"
+		/// @DnDArgument : "arg_13" "0"
+		/// @DnDSaveInfo : "script" "draw_text_colour_outline"
+		script_execute(draw_text_colour_outline, o_camera.x-480, o_camera.y-380, weapon_name, c_white, c_white, pause_background_alpha, c_green, c_black, pause_background_alpha, 2, 6, 2, 2, 0);
+	
+		/// @DnDAction : YoYo Games.Common.Execute_Script
+		/// @DnDVersion : 1.1
+		/// @DnDHash : 6AE52F6A
+		/// @DnDInput : 14
+		/// @DnDParent : 58B7720C
+		/// @DnDArgument : "script" "draw_text_colour_outline"
+		/// @DnDArgument : "arg" "o_camera.x-480"
+		/// @DnDArgument : "arg_1" "o_camera.y-290"
+		/// @DnDArgument : "arg_2" "weapon_desc"
+		/// @DnDArgument : "arg_3" "c_white"
+		/// @DnDArgument : "arg_4" "c_white"
+		/// @DnDArgument : "arg_5" "pause_background_alpha"
+		/// @DnDArgument : "arg_6" "c_black"
+		/// @DnDArgument : "arg_7" "c_black"
+		/// @DnDArgument : "arg_8" "pause_background_alpha"
+		/// @DnDArgument : "arg_9" "2"
+		/// @DnDArgument : "arg_10" "6"
+		/// @DnDArgument : "arg_11" "1"
+		/// @DnDArgument : "arg_12" "1"
+		/// @DnDArgument : "arg_13" "0"
+		/// @DnDSaveInfo : "script" "draw_text_colour_outline"
+		script_execute(draw_text_colour_outline, o_camera.x-480, o_camera.y-290, weapon_desc, c_white, c_white, pause_background_alpha, c_black, c_black, pause_background_alpha, 2, 6, 1, 1, 0);
+	
+		/// @DnDAction : YoYo Games.Drawing.Set_Alignment
+		/// @DnDVersion : 1.1
+		/// @DnDHash : 007375A4
+		/// @DnDParent : 58B7720C
+		draw_set_halign(fa_left);
+		draw_set_valign(fa_top);	break;
 
 	/// @DnDAction : YoYo Games.Switch.Default
 	/// @DnDVersion : 1

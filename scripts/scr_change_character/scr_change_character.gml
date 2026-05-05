@@ -553,7 +553,7 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDArgument : "expr_22" "2"
 			/// @DnDArgument : "expr_23" "300"
 			/// @DnDArgument : "expr_24" "s_zelinka_knockback"
-			/// @DnDArgument : "expr_25" "o_xoopington"
+			/// @DnDArgument : "expr_25" "o_grelauncher"
 			/// @DnDArgument : "var" "antenna_sprite"
 			/// @DnDArgument : "var_1" "ear_sprite"
 			/// @DnDArgument : "var_2" "head_sprite"
@@ -605,7 +605,7 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			head_offset_x = 2;
 			special_meter_cap = 300;
 			knockback_sprite = s_zelinka_knockback;
-			default_gun = o_xoopington;
+			default_gun = o_grelauncher;
 		
 			/// @DnDAction : YoYo Games.Instances.Change_Instance
 			/// @DnDVersion : 1
@@ -625,10 +625,10 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDArgument : "var" "weapon_levels"
 			/// @DnDArgument : "key" "o_gon"
 			/// @DnDArgument : "value" "0"
-			/// @DnDArgument : "key_1" "o_xoopington"
-			/// @DnDArgument : "value_1" "1"
+			/// @DnDArgument : "key_1" "o_grelauncher"
+			/// @DnDArgument : "value_1" "3"
 			ds_map_replace(weapon_levels, o_gon, 0);
-			ds_map_replace(weapon_levels, o_xoopington, 1);
+			ds_map_replace(weapon_levels, o_grelauncher, 3);
 		
 			/// @DnDAction : YoYo Games.Data Structures.List_Add
 			/// @DnDVersion : 1

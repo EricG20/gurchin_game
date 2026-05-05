@@ -56,7 +56,7 @@ if(InputReleased(INPUT_VERB.SPECIAL, o_game.local_player.player_id)){	/// @DnD
 	/// @DnDVersion : 1
 	/// @DnDHash : 0B1C2D3E
 	/// @DnDParent : 9A0B1C2D
-	/// @DnDArgument : "code" "var chosen_ability = selected_options[hover_index];$(13_10)show_debug_message("Robot Special Chose Option: " + chosen_ability);$(13_10)$(13_10)// Apply bonus to local player$(13_10)with(o_game.local_player) {$(13_10)    switch(chosen_ability) {$(13_10)        case "Fire Rate Up": $(13_10)            firerate_bonus += .15;$(13_10)        break;$(13_10)        case "Reload Speed Up": $(13_10)            reload_bonus += .15;$(13_10)        break;$(13_10)        case "Movement Speed Up": $(13_10)            movementspeed_bonus += .15;$(13_10)        break;$(13_10)        case "Dash Recharge Up": $(13_10)            booster_recharge_bonus += .5;$(13_10)        break;$(13_10)        case "Ammo Up": $(13_10)            ammo_bonus += .5;$(13_10)        break;$(13_10)		case "Pulse Wave":$(13_10)			upgrade_pulse_wave = true;$(13_10)		break;$(13_10)		case "Off-hand Reload Up":$(13_10)			upgrade_offhand_reload = true;$(13_10)		break;$(13_10)		case "Switch Fire Rate Boost":$(13_10)			upgrade_switch_firerate = true;$(13_10)		break;$(13_10)    }$(13_10)    // Increment local upgrade level$(13_10)    robot_upgrade_level += 1;$(13_10)}"
+	/// @DnDArgument : "code" "var chosen_ability = selected_options[hover_index];$(13_10)show_debug_message("Robot Special Chose Option: " + chosen_ability);$(13_10)$(13_10)// Apply bonus to local player$(13_10)with(o_game.local_player) {$(13_10)    switch(chosen_ability) {$(13_10)        case "Fire Rate Up": $(13_10)            permanent_firerate_bonus += .15;$(13_10)        break;$(13_10)        case "Reload Speed Up": $(13_10)            reload_bonus += .15;$(13_10)        break;$(13_10)        case "Movement Speed Up": $(13_10)            movementspeed_bonus += .15;$(13_10)        break;$(13_10)        case "Dash Recharge Up": $(13_10)            booster_recharge_bonus += .5;$(13_10)        break;$(13_10)        case "Ammo Up": $(13_10)            ammo_bonus += .5;$(13_10)        break;$(13_10)		case "Pulse Wave":$(13_10)			upgrade_pulse_wave = true;$(13_10)		break;$(13_10)		case "Off-hand Reload Up":$(13_10)			upgrade_offhand_reload = true;$(13_10)		break;$(13_10)		case "Switch Fire Rate Boost":$(13_10)			upgrade_switch_firerate = true;$(13_10)		break;$(13_10)    }$(13_10)    // Increment local upgrade level$(13_10)    robot_upgrade_level += 1;$(13_10)}"
 	var chosen_ability = selected_options[hover_index];
 	show_debug_message("Robot Special Chose Option: " + chosen_ability);
 	
@@ -64,7 +64,7 @@ if(InputReleased(INPUT_VERB.SPECIAL, o_game.local_player.player_id)){	/// @DnD
 	with(o_game.local_player) {
 	    switch(chosen_ability) {
 	        case "Fire Rate Up": 
-	            firerate_bonus += .15;
+	            permanent_firerate_bonus += .15;
 	        break;
 	        case "Reload Speed Up": 
 	            reload_bonus += .15;

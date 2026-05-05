@@ -915,10 +915,9 @@ function player_controlz() {	/// @DnDAction : YoYo Games.Common.Execute_Script
 				/// @DnDArgument : "ypos_relative" "1"
 				/// @DnDArgument : "var" "billy"
 				/// @DnDArgument : "var_temp" "1"
-				/// @DnDArgument : "objectid" "o_kick_up"
+				/// @DnDArgument : "objectid" "upgrade_pulse_wave ? o_pulse_wave : o_kick_up"
 				/// @DnDArgument : "layer" ""Instances_Front""
-				/// @DnDSaveInfo : "objectid" "o_kick_up"
-				var billy = instance_create_layer(x + 0, y + 0, "Instances_Front", o_kick_up);
+				var billy = instance_create_layer(x + 0, y + 0, "Instances_Front", upgrade_pulse_wave ? o_pulse_wave : o_kick_up);
 			
 				/// @DnDAction : YoYo Games.Audio.Play_Audio
 				/// @DnDVersion : 1.1
@@ -982,11 +981,10 @@ function player_controlz() {	/// @DnDAction : YoYo Games.Common.Execute_Script
 		/// @DnDVersion : 1
 		/// @DnDHash : 13EB5123
 		/// @DnDComment : dude lmao
-		/// @DnDDisabled : 1
 		/// @DnDParent : 7038A84F
 		/// @DnDArgument : "expr" "special_meter_cap+1"
 		/// @DnDArgument : "var" "special_meter"
-	
+		special_meter = special_meter_cap+1;
 	
 		/// @DnDAction : YoYo Games.Common.If_Variable
 		/// @DnDVersion : 1

@@ -488,8 +488,8 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDArgument : "expr" "s_zelinka_antenna"
 			/// @DnDArgument : "expr_1" "s_zelinka_ear"
 			/// @DnDArgument : "expr_2" "s_zelinka_head"
-			/// @DnDArgument : "expr_3" "s_zelinka_hair"
-			/// @DnDArgument : "expr_4" "s_zelinka_bangs"
+			/// @DnDArgument : "expr_3" "s_empty_sprite_for_bald"
+			/// @DnDArgument : "expr_4" "s_empty_sprite_for_bald"
 			/// @DnDArgument : "expr_5" "s_zelinka_mouthgood"
 			/// @DnDArgument : "expr_6" "s_zelinka_mouthmeh"
 			/// @DnDArgument : "expr_7" "s_zelinka_mouthohnah"
@@ -500,7 +500,7 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDArgument : "expr_12" "-67-5"
 			/// @DnDArgument : "expr_13" "-11-39"
 			/// @DnDArgument : "expr_14" "2.2"
-			/// @DnDArgument : "expr_15" ""Zelinka""
+			/// @DnDArgument : "expr_15" ""Robot""
 			/// @DnDArgument : "expr_16" "5"
 			/// @DnDArgument : "expr_17" "6.7"
 			/// @DnDArgument : "expr_18" "13"
@@ -510,7 +510,7 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDArgument : "expr_22" "2"
 			/// @DnDArgument : "expr_23" "300"
 			/// @DnDArgument : "expr_24" "s_zelinka_knockback"
-			/// @DnDArgument : "expr_25" "o_goozi"
+			/// @DnDArgument : "expr_25" "o_xoopington"
 			/// @DnDArgument : "var" "antenna_sprite"
 			/// @DnDArgument : "var_1" "ear_sprite"
 			/// @DnDArgument : "var_2" "head_sprite"
@@ -540,8 +540,8 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			antenna_sprite = s_zelinka_antenna;
 			ear_sprite = s_zelinka_ear;
 			head_sprite = s_zelinka_head;
-			hair_sprite = s_zelinka_hair;
-			bangs_sprite = s_zelinka_bangs;
+			hair_sprite = s_empty_sprite_for_bald;
+			bangs_sprite = s_empty_sprite_for_bald;
 			smile_sprite = s_zelinka_mouthgood;
 			straightface_sprite = s_zelinka_mouthmeh;
 			frown_sprite = s_zelinka_mouthohnah;
@@ -552,7 +552,7 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			eye_height = -67-5;
 			hair_height = -11-39;
 			walk_lift_magnitude = 2.2;
-			character_index = "Zelinka";
+			character_index = "Robot";
 			max_hp = 5;
 			walk_speed = 6.7;
 			jumpheight = 13;
@@ -562,16 +562,17 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			head_offset_x = 2;
 			special_meter_cap = 300;
 			knockback_sprite = s_zelinka_knockback;
-			default_gun = o_goozi;
+			default_gun = o_xoopington;
 		
 			/// @DnDAction : YoYo Games.Instances.Change_Instance
 			/// @DnDVersion : 1
 			/// @DnDHash : 0CE52536
+			/// @DnDDisabled : 1
 			/// @DnDApplyTo : mygurn
 			/// @DnDParent : 38B718F0
 			/// @DnDArgument : "objind" "o_xoopington"
 			/// @DnDSaveInfo : "objind" "o_xoopington"
-			with(mygurn) instance_change(o_xoopington, true);
+		
 		
 			/// @DnDAction : YoYo Games.Data Structures.Map_Set_Value
 			/// @DnDVersion : 1
@@ -582,9 +583,9 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDArgument : "key" "o_gon"
 			/// @DnDArgument : "value" "0"
 			/// @DnDArgument : "key_1" "o_xoopington"
-			/// @DnDArgument : "value_1" "3"
+			/// @DnDArgument : "value_1" "1"
 			ds_map_replace(weapon_levels, o_gon, 0);
-			ds_map_replace(weapon_levels, o_xoopington, 3);
+			ds_map_replace(weapon_levels, o_xoopington, 1);
 		
 			/// @DnDAction : YoYo Games.Data Structures.List_Add
 			/// @DnDVersion : 1
@@ -600,12 +601,13 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDAction : YoYo Games.Data Structures.List_Add
 			/// @DnDVersion : 1
 			/// @DnDHash : 22C29D0F
-			/// @DnDInput : 2
+			/// @DnDInput : 3
 			/// @DnDParent : 38B718F0
 			/// @DnDArgument : "var" "you_suck_lines"
 			/// @DnDArgument : "value" ""kys""
 			/// @DnDArgument : "value_1" ""nice job retard""
-			ds_list_add(you_suck_lines, "kys", "nice job retard");
+			/// @DnDArgument : "value_2" ""jesus fuck what are you aiming at""
+			ds_list_add(you_suck_lines, "kys", "nice job retard", "jesus fuck what are you aiming at");
 		
 			/// @DnDAction : YoYo Games.Data Structures.List_Add
 			/// @DnDVersion : 1
@@ -620,12 +622,13 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDAction : YoYo Games.Data Structures.List_Add
 			/// @DnDVersion : 1
 			/// @DnDHash : 619510B4
-			/// @DnDInput : 2
+			/// @DnDInput : 3
 			/// @DnDParent : 38B718F0
 			/// @DnDArgument : "var" "gloat_lines"
 			/// @DnDArgument : "value" ""holy shit im goated""
 			/// @DnDArgument : "value_1" ""someone get a camera i just hit a clip""
-			ds_list_add(gloat_lines, "holy shit im goated", "someone get a camera i just hit a clip");
+			/// @DnDArgument : "value_2" ""RAHHH""
+			ds_list_add(gloat_lines, "holy shit im goated", "someone get a camera i just hit a clip", "RAHHH");
 		
 			/// @DnDAction : YoYo Games.Data Structures.List_Add
 			/// @DnDVersion : 1
@@ -640,10 +643,12 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDAction : YoYo Games.Data Structures.List_Add
 			/// @DnDVersion : 1
 			/// @DnDHash : 14E36FAF
+			/// @DnDInput : 2
 			/// @DnDParent : 38B718F0
 			/// @DnDArgument : "var" "hi_lines"
 			/// @DnDArgument : "value" ""Hiiiii~""
-			ds_list_add(hi_lines, "Hiiiii~");
+			/// @DnDArgument : "value_1" ""Heyya!""
+			ds_list_add(hi_lines, "Hiiiii~", "Heyya!");
 		
 			/// @DnDAction : YoYo Games.Data Structures.List_Add
 			/// @DnDVersion : 1

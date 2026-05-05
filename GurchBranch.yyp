@@ -259,6 +259,7 @@
     {"id":{"name":"o_pickup","path":"objects/o_pickup/o_pickup.yy",},},
     {"id":{"name":"o_player_spawn","path":"objects/o_player_spawn/o_player_spawn.yy",},},
     {"id":{"name":"o_player","path":"objects/o_player/o_player.yy",},},
+    {"id":{"name":"o_pulse_wave","path":"objects/o_pulse_wave/o_pulse_wave.yy",},},
     {"id":{"name":"o_pylon","path":"objects/o_pylon/o_pylon.yy",},},
     {"id":{"name":"o_red_vermin_explosion","path":"objects/o_red_vermin_explosion/o_red_vermin_explosion.yy",},},
     {"id":{"name":"o_reticle","path":"objects/o_reticle/o_reticle.yy",},},

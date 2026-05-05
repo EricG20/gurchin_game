@@ -157,6 +157,7 @@
     {"name":"o_performance_tracker","order":34,"path":"objects/o_performance_tracker/o_performance_tracker.yy",},
     {"name":"o_pickup","order":5,"path":"objects/o_pickup/o_pickup.yy",},
     {"name":"o_player_spawn","order":40,"path":"objects/o_player_spawn/o_player_spawn.yy",},
+    {"name":"o_pulse_wave","order":42,"path":"objects/o_pulse_wave/o_pulse_wave.yy",},
     {"name":"o_pylon","order":2,"path":"objects/o_pylon/o_pylon.yy",},
     {"name":"o_red_vermin_explosion","order":7,"path":"objects/o_red_vermin_explosion/o_red_vermin_explosion.yy",},
     {"name":"o_reticle","order":37,"path":"objects/o_reticle/o_reticle.yy",},

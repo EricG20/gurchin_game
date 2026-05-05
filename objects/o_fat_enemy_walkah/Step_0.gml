@@ -1,3 +1,8 @@
+/// @DnDAction : YoYo Games.Instances.Inherit_Event
+/// @DnDVersion : 1
+/// @DnDHash : 767A66CA
+event_inherited();
+
 /// @DnDAction : YoYo Games.Common.Execute_Script
 /// @DnDVersion : 1.1
 /// @DnDHash : 19E8EF50
@@ -22,8 +27,10 @@ script_execute(movement_stuff);
 /// @DnDAction : YoYo Games.Common.If_Expression
 /// @DnDVersion : 1
 /// @DnDHash : 2A5A8999
+/// @DnDInput : 2
 /// @DnDArgument : "expr" "on_ground"
-if(on_ground){	/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDArgument : "expr_1" "state != es.KNOCKBACK"
+if(on_ground && state != es.KNOCKBACK){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 36BC9442
 	/// @DnDInput : 2

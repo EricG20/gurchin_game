@@ -47,6 +47,8 @@
     {"$GMObjectProperty":"v2","%Name":"awesome_lockout","filters":[],"listItems":[],"multiselect":false,"name":"awesome_lockout","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
     {"$GMObjectProperty":"v2","%Name":"awesome_reload_width","filters":[],"listItems":[],"multiselect":false,"name":"awesome_reload_width","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"10","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"full_shot_tokens","filters":[],"listItems":[],"multiselect":false,"name":"full_shot_tokens","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"glorp_x","filters":[],"listItems":[],"multiselect":false,"name":"glorp_x","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.0","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"glorp_y","filters":[],"listItems":[],"multiselect":false,"name":"glorp_y","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.0","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

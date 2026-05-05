@@ -1,26 +1,36 @@
+/// @DnDAction : YoYo Games.Instances.Inherit_Event
+/// @DnDVersion : 1
+/// @DnDHash : 1AE74791
+event_inherited();
+
 /// @DnDAction : YoYo Games.Common.Execute_Script
 /// @DnDVersion : 1.1
 /// @DnDHash : 19E8EF50
 /// @DnDArgument : "script" "flash_reduce"
+/// @DnDSaveInfo : "script" "flash_reduce"
 script_execute(flash_reduce);
 
 /// @DnDAction : YoYo Games.Common.Execute_Script
 /// @DnDVersion : 1.1
 /// @DnDHash : 493C8123
 /// @DnDArgument : "script" "check_ground"
+/// @DnDSaveInfo : "script" "check_ground"
 script_execute(check_ground);
 
 /// @DnDAction : YoYo Games.Common.Execute_Script
 /// @DnDVersion : 1.1
 /// @DnDHash : 6E865C25
 /// @DnDArgument : "script" "movement_stuff"
+/// @DnDSaveInfo : "script" "movement_stuff"
 script_execute(movement_stuff);
 
 /// @DnDAction : YoYo Games.Common.If_Expression
 /// @DnDVersion : 1
 /// @DnDHash : 2A5A8999
+/// @DnDInput : 2
 /// @DnDArgument : "expr" "on_ground"
-if(on_ground){	/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDArgument : "expr_1" "state != es.KNOCKBACK"
+if(on_ground && state != es.KNOCKBACK){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 36BC9442
 	/// @DnDInput : 2
@@ -43,6 +53,7 @@ if(on_ground){	/// @DnDAction : YoYo Games.Common.Variable
 /// @DnDArgument : "y_relative" "1"
 /// @DnDArgument : "object" "o_solid"
 /// @DnDArgument : "not" "1"
+/// @DnDSaveInfo : "object" "o_solid"
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 6F0C6F4F
@@ -59,6 +70,7 @@ if(on_ground){	/// @DnDAction : YoYo Games.Common.Variable
 /// @DnDArgument : "y" "-10"
 /// @DnDArgument : "y_relative" "1"
 /// @DnDArgument : "object" "o_solid"
+/// @DnDSaveInfo : "object" "o_solid"
 var l5BAE664B_0 = instance_place(x + facing*5, y + -10, [o_solid]);if ((l5BAE664B_0 > 0)){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 5E75421E
@@ -87,4 +99,5 @@ if(gurchenis_buff){	/// @DnDAction : YoYo Games.Common.Execute_Script
 	/// @DnDHash : 3FA3C51A
 	/// @DnDParent : 1CB86729
 	/// @DnDArgument : "script" "scr_gurchenisaura"
+	/// @DnDSaveInfo : "script" "scr_gurchenisaura"
 	script_execute(scr_gurchenisaura);}

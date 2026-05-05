@@ -75,7 +75,7 @@ script_execute(flash_make);
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 265018CA
-/// @DnDInput : 16
+/// @DnDInput : 17
 /// @DnDArgument : "expr_3" "-1"
 /// @DnDArgument : "expr_4" """"
 /// @DnDArgument : "expr_5" "1"
@@ -87,6 +87,7 @@ script_execute(flash_make);
 /// @DnDArgument : "expr_11" "1"
 /// @DnDArgument : "expr_13" "false"
 /// @DnDArgument : "expr_14" "false"
+/// @DnDArgument : "expr_16" "false"
 /// @DnDArgument : "var" "head_offset_x"
 /// @DnDArgument : "var_1" "head_offset_y"
 /// @DnDArgument : "var_2" "hair_offset_y"
@@ -103,6 +104,7 @@ script_execute(flash_make);
 /// @DnDArgument : "var_13" "upgrade_offhand_reload"
 /// @DnDArgument : "var_14" "upgrade_switch_firerate"
 /// @DnDArgument : "var_15" "switch_firerate_timer"
+/// @DnDArgument : "var_16" "upgrade_pulse_wave"
 head_offset_x = 0;
 head_offset_y = 0;
 hair_offset_y = 0;
@@ -119,6 +121,7 @@ robot_upgrade_level = 0;
 upgrade_offhand_reload = false;
 upgrade_switch_firerate = false;
 switch_firerate_timer = 0;
+upgrade_pulse_wave = false;
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1

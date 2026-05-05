@@ -61,6 +61,32 @@ if(control_type == cr.LOCAL){	/// @DnDAction : YoYo Games.Switch.Switch
 			
 				/// @DnDAction : YoYo Games.Drawing.Draw_Sprite_Transformed
 				/// @DnDVersion : 1
+				/// @DnDHash : 7D085003
+				/// @DnDParent : 7D13822A
+				/// @DnDArgument : "x" "20+93"
+				/// @DnDArgument : "y" "20+30+26+140"
+				/// @DnDArgument : "xscale" "5.8"
+				/// @DnDArgument : "yscale" "-1"
+				/// @DnDArgument : "sprite" "spr_tinyhudbar"
+				/// @DnDArgument : "col" "$FF000000"
+				/// @DnDSaveInfo : "sprite" "spr_tinyhudbar"
+				draw_sprite_ext(spr_tinyhudbar, 0, 20+93, 20+30+26+140, 5.8, -1, 0, $FF000000 & $ffffff, 1);
+			
+				/// @DnDAction : YoYo Games.Drawing.Draw_Sprite_Transformed
+				/// @DnDVersion : 1
+				/// @DnDHash : 2A8D144D
+				/// @DnDParent : 7D13822A
+				/// @DnDArgument : "x" "20+93"
+				/// @DnDArgument : "y" "20+30+26+140"
+				/// @DnDArgument : "xscale" "(special_meter/special_meter_cap)*5.8"
+				/// @DnDArgument : "yscale" "-1"
+				/// @DnDArgument : "sprite" "spr_tinyhudbar"
+				/// @DnDArgument : "col" "$FF0000FF"
+				/// @DnDSaveInfo : "sprite" "spr_tinyhudbar"
+				draw_sprite_ext(spr_tinyhudbar, 0, 20+93, 20+30+26+140, (special_meter/special_meter_cap)*5.8, -1, 0, $FF0000FF & $ffffff, 1);
+			
+				/// @DnDAction : YoYo Games.Drawing.Draw_Sprite_Transformed
+				/// @DnDVersion : 1
 				/// @DnDHash : 041E3228
 				/// @DnDParent : 7D13822A
 				/// @DnDArgument : "x" "20"
@@ -73,17 +99,24 @@ if(control_type == cr.LOCAL){	/// @DnDAction : YoYo Games.Switch.Switch
 			
 				/// @DnDAction : YoYo Games.Drawing.Draw_Sprite_Transformed
 				/// @DnDVersion : 1
+				/// @DnDHash : 6633D184
+				/// @DnDParent : 7D13822A
+				/// @DnDArgument : "x" "20+58"
+				/// @DnDArgument : "y" "20+60"
+				/// @DnDArgument : "sprite" "spr_icon"
+				draw_sprite_ext(spr_icon, 0, 20+58, 20+60, 1, 1, 0, $FFFFFF & $ffffff, 1);
+			
+				/// @DnDAction : YoYo Games.Drawing.Draw_Sprite_Transformed
+				/// @DnDVersion : 1
 				/// @DnDHash : 33A99E14
-				/// @DnDDisabled : 1
 				/// @DnDParent : 7D13822A
 				/// @DnDArgument : "x" "20"
-				/// @DnDArgument : "y" "40+153+120"
-				/// @DnDArgument : "xscale" ".8"
-				/// @DnDArgument : "yscale" "-1"
+				/// @DnDArgument : "y" "40+140"
+				/// @DnDArgument : "xscale" "1.1"
 				/// @DnDArgument : "sprite" "spr_small_hud_element"
 				/// @DnDArgument : "col" "suit_color"
 				/// @DnDSaveInfo : "sprite" "spr_small_hud_element"
-			
+				draw_sprite_ext(spr_small_hud_element, 0, 20, 40+140, 1.1, 1, 0, suit_color & $ffffff, 1);
 			
 				/// @DnDAction : YoYo Games.Common.Execute_Script
 				/// @DnDVersion : 1.1
@@ -99,14 +132,22 @@ if(control_type == cr.LOCAL){	/// @DnDAction : YoYo Games.Switch.Switch
 				/// @DnDArgument : "arg_5" "1"
 				/// @DnDArgument : "arg_6" "$FFAFFF00"
 				/// @DnDArgument : "arg_7" "$FFAFFF00"
-				/// @DnDArgument : "arg_8" ".2"
+				/// @DnDArgument : "arg_8" ".1"
 				/// @DnDArgument : "arg_9" "3"
 				/// @DnDArgument : "arg_10" "8"
 				/// @DnDArgument : "arg_11" "1.3"
 				/// @DnDArgument : "arg_12" "1.3"
 				/// @DnDArgument : "arg_13" "0"
 				/// @DnDSaveInfo : "script" "draw_text_colour_outline"
-				script_execute(draw_text_colour_outline, 20+160, 20+32, character_index, $FFAFFF00, $FFAFFF00, 1, $FFAFFF00, $FFAFFF00, .2, 3, 8, 1.3, 1.3, 0);
+				script_execute(draw_text_colour_outline, 20+160, 20+32, character_index, $FFAFFF00, $FFAFFF00, 1, $FFAFFF00, $FFAFFF00, .1, 3, 8, 1.3, 1.3, 0);
+			
+				/// @DnDAction : YoYo Games.Drawing.Set_Alignment
+				/// @DnDVersion : 1.1
+				/// @DnDHash : 47C8028C
+				/// @DnDParent : 7D13822A
+				/// @DnDArgument : "halign" "fa_center"
+				draw_set_halign(fa_center);
+				draw_set_valign(fa_top);
 			
 				/// @DnDAction : YoYo Games.Common.Execute_Script
 				/// @DnDVersion : 1.1
@@ -114,22 +155,22 @@ if(control_type == cr.LOCAL){	/// @DnDAction : YoYo Games.Switch.Switch
 				/// @DnDInput : 14
 				/// @DnDParent : 7D13822A
 				/// @DnDArgument : "script" "draw_text_colour_outline"
-				/// @DnDArgument : "arg" "20+37"
-				/// @DnDArgument : "arg_1" "20+54"
+				/// @DnDArgument : "arg" "20+58"
+				/// @DnDArgument : "arg_1" "20+80+12"
 				/// @DnDArgument : "arg_2" "hp"
 				/// @DnDArgument : "arg_3" "$FFAFFF00"
 				/// @DnDArgument : "arg_4" "$FFAFFF00"
 				/// @DnDArgument : "arg_5" "1"
 				/// @DnDArgument : "arg_6" "$FFAFFF00"
 				/// @DnDArgument : "arg_7" "$FFAFFF00"
-				/// @DnDArgument : "arg_8" ".2"
+				/// @DnDArgument : "arg_8" ".1"
 				/// @DnDArgument : "arg_9" "3"
 				/// @DnDArgument : "arg_10" "8"
-				/// @DnDArgument : "arg_11" "2.3"
-				/// @DnDArgument : "arg_12" "2.3"
+				/// @DnDArgument : "arg_11" "1"
+				/// @DnDArgument : "arg_12" "1"
 				/// @DnDArgument : "arg_13" "0"
 				/// @DnDSaveInfo : "script" "draw_text_colour_outline"
-				script_execute(draw_text_colour_outline, 20+37, 20+54, hp, $FFAFFF00, $FFAFFF00, 1, $FFAFFF00, $FFAFFF00, .2, 3, 8, 2.3, 2.3, 0);
+				script_execute(draw_text_colour_outline, 20+58, 20+80+12, hp, $FFAFFF00, $FFAFFF00, 1, $FFAFFF00, $FFAFFF00, .1, 3, 8, 1, 1, 0);
 			
 				/// @DnDAction : YoYo Games.Common.Temp_Variable
 				/// @DnDVersion : 1
@@ -145,22 +186,29 @@ if(control_type == cr.LOCAL){	/// @DnDAction : YoYo Games.Switch.Switch
 				/// @DnDInput : 14
 				/// @DnDParent : 7D13822A
 				/// @DnDArgument : "script" "draw_text_colour_outline"
-				/// @DnDArgument : "arg" "20+20"
-				/// @DnDArgument : "arg_1" "20+112"
+				/// @DnDArgument : "arg" "20+58"
+				/// @DnDArgument : "arg_1" "20+120"
 				/// @DnDArgument : "arg_2" "boost_fuel"
 				/// @DnDArgument : "arg_3" "$FF0CEAFF"
 				/// @DnDArgument : "arg_4" "$FF0CEAFF"
 				/// @DnDArgument : "arg_5" "1"
 				/// @DnDArgument : "arg_6" "$FF0CEAFF"
 				/// @DnDArgument : "arg_7" "$FF0CEAFF"
-				/// @DnDArgument : "arg_8" ".2"
+				/// @DnDArgument : "arg_8" ".1"
 				/// @DnDArgument : "arg_9" "3"
 				/// @DnDArgument : "arg_10" "8"
 				/// @DnDArgument : "arg_11" "1"
 				/// @DnDArgument : "arg_12" "1"
 				/// @DnDArgument : "arg_13" "0"
 				/// @DnDSaveInfo : "script" "draw_text_colour_outline"
-				script_execute(draw_text_colour_outline, 20+20, 20+112, boost_fuel, $FF0CEAFF, $FF0CEAFF, 1, $FF0CEAFF, $FF0CEAFF, .2, 3, 8, 1, 1, 0);
+				script_execute(draw_text_colour_outline, 20+58, 20+120, boost_fuel, $FF0CEAFF, $FF0CEAFF, 1, $FF0CEAFF, $FF0CEAFF, .1, 3, 8, 1, 1, 0);
+			
+				/// @DnDAction : YoYo Games.Drawing.Set_Alignment
+				/// @DnDVersion : 1.1
+				/// @DnDHash : 3AB3CF72
+				/// @DnDParent : 7D13822A
+				draw_set_halign(fa_left);
+				draw_set_valign(fa_top);
 			
 				/// @DnDAction : YoYo Games.Common.Execute_Script
 				/// @DnDVersion : 1.1

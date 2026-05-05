@@ -15,16 +15,18 @@ function scr_delete_player(who=self) {	/// @DnDAction : YoYo Games.Common.Vari
 	/// @DnDAction : YoYo Games.Instances.Destroy_Instance
 	/// @DnDVersion : 1
 	/// @DnDHash : 6A0A459E
+	/// @DnDDisabled : 1
 	/// @DnDApplyTo : who.mygurn
 	/// @DnDParent : 713F2183
-	with(who.mygurn) instance_destroy();
+
 
 	/// @DnDAction : YoYo Games.Instances.Destroy_Instance
 	/// @DnDVersion : 1
 	/// @DnDHash : 5668F255
+	/// @DnDDisabled : 1
 	/// @DnDApplyTo : who.reticle
 	/// @DnDParent : 713F2183
-	with(who.reticle) instance_destroy();
+
 
 	/// @DnDAction : YoYo Games.Instances.Destroy_Instance
 	/// @DnDVersion : 1

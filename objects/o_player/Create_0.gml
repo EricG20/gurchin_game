@@ -1,7 +1,7 @@
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 2A4632DF
-/// @DnDArgument : "code" "/// @description Execute Code$(13_10)inputs = {$(13_10)    left: false,$(13_10)    right: false,$(13_10)    jump: false,$(13_10)    boost_start: false,$(13_10)    boost: false,$(13_10)    up: false,$(13_10)    down: false,$(13_10)    reload: false,$(13_10)    melee: false,$(13_10)    jump_release: false,$(13_10)    shoot: false,$(13_10)    shooting: false,$(13_10)    shoot_release: false,$(13_10)    special: false,$(13_10)    swap: false,$(13_10)    accept: false,$(13_10)    cancel: false,$(13_10)    up_tap: false,$(13_10)    down_tap: false,$(13_10)	tick: false$(13_10)};$(13_10)$(13_10)#macro GOOD_JOB 1$(13_10)#macro YOU_SUCK 2$(13_10)#macro I_NEED_HELP 3$(13_10)#macro GLOAT 4$(13_10)#macro I_WANT_THAT 5$(13_10)#macro HI 6$(13_10)"
+/// @DnDArgument : "code" "/// @description Execute Code$(13_10)inputs = {$(13_10)    left: false,$(13_10)    right: false,$(13_10)    jump: false,$(13_10)    boost_start: false,$(13_10)    boost: false,$(13_10)    up: false,$(13_10)    down: false,$(13_10)    reload: false,$(13_10)    melee: false,$(13_10)    jump_release: false,$(13_10)    shoot: false,$(13_10)    shooting: false,$(13_10)    shoot_release: false,$(13_10)    special: false,$(13_10)    swap: false,$(13_10)    accept: false,$(13_10)    cancel: false,$(13_10)    up_tap: false,$(13_10)    down_tap: false,$(13_10)	tick: false$(13_10)};$(13_10)$(13_10)belongings = {$(13_10)$(13_10)}$(13_10)#macro GOOD_JOB 1$(13_10)#macro YOU_SUCK 2$(13_10)#macro I_NEED_HELP 3$(13_10)#macro GLOAT 4$(13_10)#macro I_WANT_THAT 5$(13_10)#macro HI 6$(13_10)"
 /// @description Execute Code
 inputs = {
     left: false,
@@ -26,6 +26,9 @@ inputs = {
 	tick: false
 };
 
+belongings = {
+
+}
 #macro GOOD_JOB 1
 #macro YOU_SUCK 2
 #macro I_NEED_HELP 3
@@ -202,6 +205,17 @@ var player_num = instance_number(o_player);
 /// @DnDArgument : "objectid" "o_reticle"
 /// @DnDSaveInfo : "objectid" "o_reticle"
 reticle = instance_create_layer(x + 0, y + 0, "Instances", o_reticle);
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 4D9D4666
+/// @DnDInput : 2
+/// @DnDArgument : "expr" "reticle"
+/// @DnDArgument : "expr_1" "mygurn"
+/// @DnDArgument : "var" "belongings.reticle"
+/// @DnDArgument : "var_1" "belongings.gurn"
+belongings.reticle = reticle;
+belongings.gurn = mygurn;
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1

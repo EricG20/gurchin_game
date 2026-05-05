@@ -102,8 +102,8 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDParent : 3F4C6B2D
 			/// @DnDArgument : "var" "charge"
 			/// @DnDArgument : "op" "4"
-			/// @DnDArgument : "value" "(7-weilder.curr_weapon_level)/clamp((global.firerate_bonus*weilder.firerate_bonus)*.65,1,2)"
-			if(charge >= (7-weilder.curr_weapon_level)/clamp((global.firerate_bonus*weilder.firerate_bonus)*.65,1,2)){	/// @DnDAction : YoYo Games.Audio.Play_Audio
+			/// @DnDArgument : "value" "(7-weilder.curr_weapon_level)/clamp((global.firerate_bonus*weilder.firerate_bonus)*.72,1,2)"
+			if(charge >= (7-weilder.curr_weapon_level)/clamp((global.firerate_bonus*weilder.firerate_bonus)*.72,1,2)){	/// @DnDAction : YoYo Games.Audio.Play_Audio
 				/// @DnDVersion : 1.1
 				/// @DnDHash : 30B085F3
 				/// @DnDParent : 3A9CC710

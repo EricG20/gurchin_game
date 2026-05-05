@@ -938,7 +938,15 @@ function player_controlz() {	/// @DnDAction : YoYo Games.Common.Execute_Script
 				/// @DnDArgument : "var" "billy.facing"
 				/// @DnDArgument : "var_1" "billy.sender"
 				billy.facing = facing;
-				billy.sender = id;}}}
+				billy.sender = id;
+			
+				/// @DnDAction : YoYo Games.Common.Variable
+				/// @DnDVersion : 1
+				/// @DnDHash : 28B8575B
+				/// @DnDParent : 36F626D2
+				/// @DnDArgument : "expr" "billy.image_xscale * billy.facing"
+				/// @DnDArgument : "var" "billy.image_xscale"
+				billy.image_xscale = billy.image_xscale * billy.facing;}}}
 
 	/// @DnDAction : YoYo Games.Common.If_Expression
 	/// @DnDVersion : 1

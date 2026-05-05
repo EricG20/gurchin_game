@@ -86,10 +86,14 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 		case "Zelinka":	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 14F88D1D
+			/// @DnDInput : 2
 			/// @DnDParent : 39FEBF4E
 			/// @DnDArgument : "expr" "s_zelinka_ponder_eyes"
+			/// @DnDArgument : "expr_1" "s_zelinka_ico"
 			/// @DnDArgument : "var" "ponder_eyes_sprite"
+			/// @DnDArgument : "var_1" "spr_icon"
 			ponder_eyes_sprite = s_zelinka_ponder_eyes;
+			spr_icon = s_zelinka_ico;
 		
 			/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
@@ -113,7 +117,7 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDArgument : "expr_14" "2.2"
 			/// @DnDArgument : "expr_15" ""Zelinka""
 			/// @DnDArgument : "expr_16" "5"
-			/// @DnDArgument : "expr_17" "6.7"
+			/// @DnDArgument : "expr_17" "6.9"
 			/// @DnDArgument : "expr_18" "13"
 			/// @DnDArgument : "expr_19" "3"
 			/// @DnDArgument : "expr_20" "4"
@@ -169,7 +173,7 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			walk_lift_magnitude = 2.2;
 			character_index = "Zelinka";
 			max_hp = 5;
-			walk_speed = 6.7;
+			walk_speed = 6.9;
 			jumpheight = 13;
 			walk_bobbing_strength = 3;
 			ear_bobbing_strength = 4;
@@ -180,6 +184,14 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			default_gun = o_goozi;
 			slide_sprite = s_zelinka_slide;
 			slide_head_y_offset = 25;
+		
+			/// @DnDAction : YoYo Games.Common.Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 25B96E74
+			/// @DnDParent : 39FEBF4E
+			/// @DnDArgument : "expr" "1.15"
+			/// @DnDArgument : "var" "permanent_firerate_bonus"
+			permanent_firerate_bonus = 1.15;
 		
 			/// @DnDAction : YoYo Games.Instances.Change_Instance
 			/// @DnDVersion : 1
@@ -808,14 +820,20 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 3AB36994
-			/// @DnDInput : 2
+			/// @DnDInput : 4
 			/// @DnDParent : 6C208E31
 			/// @DnDArgument : "expr" "id"
 			/// @DnDArgument : "expr_1" "depth+1"
+			/// @DnDArgument : "expr_2" "rah"
+			/// @DnDArgument : "expr_3" "true"
 			/// @DnDArgument : "var" "rah.master"
 			/// @DnDArgument : "var_1" "rah.depth"
+			/// @DnDArgument : "var_2" "belongings.hair"
+			/// @DnDArgument : "var_3" "rah.persistent"
 			rah.master = id;
-			rah.depth = depth+1;	break;}
+			rah.depth = depth+1;
+			belongings.hair = rah;
+			rah.persistent = true;	break;}
 
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1

@@ -83,12 +83,13 @@ var l03FDEC77_0 = state;switch(l03FDEC77_0){	/// @DnDAction : YoYo Games.Swit
 				/// @DnDHash : 702B46C4
 				/// @DnDParent : 683F9B7D
 				/// @DnDArgument : "x" "500+targ_x_approacher"
-				/// @DnDArgument : "y" "200+i*60"
-				/// @DnDArgument : "xscale" "string_length(string(i) + ". " + string(ploobug))/4"
+				/// @DnDArgument : "y" "194+i*60"
+				/// @DnDArgument : "xscale" "string_width(string(i) + ". " + string(ploobug))/24"
+				/// @DnDArgument : "yscale" "1.05"
 				/// @DnDArgument : "alpha" ".5"
 				/// @DnDArgument : "sprite" "comb_background"
 				/// @DnDSaveInfo : "sprite" "comb_background"
-				draw_sprite_ext(comb_background, 0, 500+targ_x_approacher, 200+i*60, string_length(string(i) + ". " + string(ploobug))/4, 1, 0, $FFFFFF & $ffffff, .5);
+				draw_sprite_ext(comb_background, 0, 500+targ_x_approacher, 194+i*60, string_width(string(i) + ". " + string(ploobug))/24, 1.05, 0, $FFFFFF & $ffffff, .5);
 			
 				/// @DnDAction : YoYo Games.Drawing.Draw_Value_Transformed
 				/// @DnDVersion : 1

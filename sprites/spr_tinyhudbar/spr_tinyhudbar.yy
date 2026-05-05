@@ -34,9 +34,9 @@
     "resourceVersion":"2.0",
     "right":10,
     "tileMode":[
+      3,
       0,
-      0,
-      0,
+      3,
       0,
       1,
     ],

@@ -1,7 +1,7 @@
 /// @DnDAction : YoYo Games.Common.Function
 /// @DnDVersion : 1
 /// @DnDHash : 15BEF912
-/// @DnDComment : // Script assets have changed for v2.3.0 see$(13_10)// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+/// @DnDComment : message string is what you want them to say$(13_10)eye type is the expression they make with their eyes$(13_10)mouth type is ditto but with mouth$(13_10)valid types are as follows:$(13_10)joy | sad | scared | confident | ponder | neutral$(13_10)for eyes you must enter a string with a type followed by _eyes$(13_10)ex: "sad_eyes"$(13_10)for mouth its the same except with _mouth$(13_10)ex: "joy_mouth"$(13_10)combining mismatching types will result in more dynamic expressions or just some weird shit
 /// @DnDInput : 4
 /// @DnDArgument : "funcName" "scr_make_zorb_say"
 /// @DnDArgument : "arg" "message_string"

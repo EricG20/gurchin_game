@@ -10,7 +10,7 @@
 function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : YoYo Games.Data Structures.Create_List
 	/// @DnDVersion : 1
 	/// @DnDHash : 47F1E677
-	/// @DnDInput : 6
+	/// @DnDInput : 7
 	/// @DnDParent : 7A41EDD0
 	/// @DnDArgument : "var" "good_job_lines"
 	/// @DnDArgument : "var_1" "you_suck_lines"
@@ -18,12 +18,14 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 	/// @DnDArgument : "var_3" "gloat_lines"
 	/// @DnDArgument : "var_4" "i_want_that_lines"
 	/// @DnDArgument : "var_5" "hi_lines"
+	/// @DnDArgument : "var_6" "special_lines"
 	good_job_lines = ds_list_create();
 	you_suck_lines = ds_list_create();
 	i_need_help_lines = ds_list_create();
 	gloat_lines = ds_list_create();
 	i_want_that_lines = ds_list_create();
 	hi_lines = ds_list_create();
+	special_lines = ds_list_create();
 
 	/// @DnDAction : YoYo Games.Data Structures.List_Add
 	/// @DnDVersion : 1
@@ -72,6 +74,14 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 	/// @DnDArgument : "var" "hi_lines"
 	/// @DnDArgument : "value" """"
 	ds_list_add(hi_lines, "");
+
+	/// @DnDAction : YoYo Games.Data Structures.List_Add
+	/// @DnDVersion : 1
+	/// @DnDHash : 7DF392D3
+	/// @DnDParent : 7A41EDD0
+	/// @DnDArgument : "var" "special_lines"
+	/// @DnDArgument : "value" """"
+	ds_list_add(special_lines, "");
 
 	/// @DnDAction : YoYo Games.Switch.Switch
 	/// @DnDVersion : 1
@@ -286,6 +296,16 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 		
 			/// @DnDAction : YoYo Games.Data Structures.List_Add
 			/// @DnDVersion : 1
+			/// @DnDHash : 5754D028
+			/// @DnDInput : 2
+			/// @DnDParent : 39FEBF4E
+			/// @DnDArgument : "var" "special_lines"
+			/// @DnDArgument : "value" ""Bullet storm is ready!""
+			/// @DnDArgument : "value_1" ""They'll need a really good umbrella for this.""
+			ds_list_add(special_lines, "Bullet storm is ready!", "They'll need a really good umbrella for this.");
+		
+			/// @DnDAction : YoYo Games.Data Structures.List_Add
+			/// @DnDVersion : 1
 			/// @DnDHash : 30203A07
 			/// @DnDInput : 3
 			/// @DnDParent : 39FEBF4E
@@ -423,6 +443,17 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDArgument : "value" ""Hello!""
 			/// @DnDArgument : "value_1" ""Hey, whats up?""
 			ds_list_add(hi_lines, "Hello!", "Hey, whats up?");
+		
+			/// @DnDAction : YoYo Games.Data Structures.List_Add
+			/// @DnDVersion : 1
+			/// @DnDHash : 1D3A722B
+			/// @DnDInput : 3
+			/// @DnDParent : 5277A3DC
+			/// @DnDArgument : "var" "special_lines"
+			/// @DnDArgument : "value" ""Turret building time.""
+			/// @DnDArgument : "value_1" ""Ready to build a turret!""
+			/// @DnDArgument : "value_2" ""Time out! I wanna build something!""
+			ds_list_add(special_lines, "Turret building time.", "Ready to build a turret!", "Time out! I wanna build something!");
 		
 			/// @DnDAction : YoYo Games.Data Structures.Map_Set_Value
 			/// @DnDVersion : 1
@@ -661,6 +692,14 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDArgument : "value" ""Hiiiii~""
 			/// @DnDArgument : "value_1" ""Heyya!""
 			ds_list_add(hi_lines, "Hiiiii~", "Heyya!");
+		
+			/// @DnDAction : YoYo Games.Data Structures.List_Add
+			/// @DnDVersion : 1
+			/// @DnDHash : 490BAF47
+			/// @DnDParent : 38B718F0
+			/// @DnDArgument : "var" "special_lines"
+			/// @DnDArgument : "value" ""I'M GONNA CRANK IT""
+			ds_list_add(special_lines, "I'M GONNA CRANK IT");
 		
 			/// @DnDAction : YoYo Games.Data Structures.List_Add
 			/// @DnDVersion : 1

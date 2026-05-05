@@ -42,7 +42,7 @@
     ],
     "top":21,
   },
-  "origin":1,
+  "origin":0,
   "parent":{
     "name":"ui stuff",
     "path":"folders/Sprites/ui stuff.yy",
@@ -94,7 +94,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":50,
+    "xorigin":0,
     "yorigin":0,
   },
   "swatchColours":null,

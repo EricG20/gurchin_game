@@ -42,4 +42,16 @@ function scr_weapon_descs(wep_index) {	/// @DnDAction : YoYo Games.Switch.Swit
 			/// @DnDHash : 7A524892
 			/// @DnDParent : 197134D8
 			/// @DnDArgument : "value" ""The ZHG-5 is a simple yet effective handgun. With its light weight and low spread, it is a good weapon for a multitude of situations. It was the first gun to have Gurchin’s patented Load Variable Limit (LVL) system tested and implemented into the Zorbulon Weapons Engineering process. As such, Gurchin has become somewhat attached to the weapon. Each level increases the number of bullets fired.""
-			return "The ZHG-5 is a simple yet effective handgun. With its light weight and low spread, it is a good weapon for a multitude of situations. It was the first gun to have Gurchin’s patented Load Variable Limit (LVL) system tested and implemented into the Zorbulon Weapons Engineering process. As such, Gurchin has become somewhat attached to the weapon. Each level increases the number of bullets fired.";	break;}}
+			return "The ZHG-5 is a simple yet effective handgun. With its light weight and low spread, it is a good weapon for a multitude of situations. It was the first gun to have Gurchin’s patented Load Variable Limit (LVL) system tested and implemented into the Zorbulon Weapons Engineering process. As such, Gurchin has become somewhat attached to the weapon. Each level increases the number of bullets fired.";	break;
+	
+		/// @DnDAction : YoYo Games.Switch.Case
+		/// @DnDVersion : 1
+		/// @DnDHash : 7293F7AC
+		/// @DnDParent : 146EBC5E
+		/// @DnDArgument : "const" "o_machgun"
+		case o_machgun:	/// @DnDAction : YoYo Games.Common.Return
+			/// @DnDVersion : 1
+			/// @DnDHash : 0051D692
+			/// @DnDParent : 7293F7AC
+			/// @DnDArgument : "value" ""The GAR-14 is the main infantry weapon for the Zorbulan empire. Engineered to be as simple as possible to use, it boasts effective fire rate, damage, and accuracy, which makes it the common favorite amongst the force. However, some zorbulans still struggle to use the weapon due to aiming being required. To fix this, the Load Variable Limit (LVL) system allows some of the bullets to find an enemy for you, increasing every level.""
+			return "The GAR-14 is the main infantry weapon for the Zorbulan empire. Engineered to be as simple as possible to use, it boasts effective fire rate, damage, and accuracy, which makes it the common favorite amongst the force. However, some zorbulans still struggle to use the weapon due to aiming being required. To fix this, the Load Variable Limit (LVL) system allows some of the bullets to find an enemy for you, increasing every level.";	break;}}

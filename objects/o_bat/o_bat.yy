@@ -12,7 +12,10 @@
   ],
   "managed":true,
   "name":"o_bat",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"o_weapon","path":"objects/o_weapon/o_weapon.yy",},"propertyId":{"name":"show_front_hand","path":"objects/o_weapon/o_weapon.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"False",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"o_weapon","path":"objects/o_weapon/o_weapon.yy",},"propertyId":{"name":"show_back_hand","path":"objects/o_weapon/o_weapon.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
+  ],
   "parent":{
     "name":"weapons",
     "path":"folders/Objects/weapons.yy",

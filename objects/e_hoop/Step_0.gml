@@ -11,16 +11,16 @@ alpher += -.1*global.game_speed;
 /// @DnDHash : 4C537C44
 /// @DnDInput : 3
 /// @DnDArgument : "value" "alpher"
-/// @DnDArgument : "value_1" ".1"
+/// @DnDArgument : "value_1" ".1*global.game_speed"
 /// @DnDArgument : "value_relative_1" "1"
-/// @DnDArgument : "value_2" ".1"
+/// @DnDArgument : "value_2" ".1*global.game_speed"
 /// @DnDArgument : "value_relative_2" "1"
 /// @DnDArgument : "instvar" "13"
 /// @DnDArgument : "instvar_1" "15"
 /// @DnDArgument : "instvar_2" "16"
 image_alpha = alpher;
-image_xscale += .1;
-image_yscale += .1;
+image_xscale += .1*global.game_speed;
+image_yscale += .1*global.game_speed;
 
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1

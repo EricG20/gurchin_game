@@ -58,6 +58,25 @@ if(persistent){	/// @DnDAction : YoYo Games.Drawing.Draw_Sprite
 	/// @DnDArgument : "sprite" "s_mini_player"
 	/// @DnDSaveInfo : "sprite" "s_mini_player"}
 
+/// @DnDAction : YoYo Games.Common.If_Expression
+/// @DnDVersion : 1
+/// @DnDHash : 589C4B5F
+/// @DnDArgument : "expr" "special_line_flag"
+if(special_line_flag){	/// @DnDAction : YoYo Games.Drawing.Draw_Sprite_Transformed
+	/// @DnDVersion : 1
+	/// @DnDHash : 65B346B1
+	/// @DnDParent : 589C4B5F
+	/// @DnDArgument : "x_relative" "1"
+	/// @DnDArgument : "y_relative" "1"
+	/// @DnDArgument : "xscale" "1.5+sin(current_time/1000)*.2"
+	/// @DnDArgument : "yscale" "1.5-sin(current_time/1000)*.2"
+	/// @DnDArgument : "alpha" ".5+(sin(current_time/800))*.2"
+	/// @DnDArgument : "sprite" "s_charged_aura"
+	/// @DnDArgument : "frame" "scr_anim_index(20, 4)"
+	/// @DnDArgument : "col" "suit_color"
+	/// @DnDSaveInfo : "sprite" "s_charged_aura"
+	draw_sprite_ext(s_charged_aura, scr_anim_index(20, 4), x + 0, y + 0, 1.5+sin(current_time/1000)*.2, 1.5-sin(current_time/1000)*.2, 0, suit_color & $ffffff, .5+(sin(current_time/800))*.2);}
+
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1
 /// @DnDHash : 22C59357

@@ -10,11 +10,12 @@ colors = ds_list_create();
 /// @DnDAction : YoYo Games.Data Structures.List_Add
 /// @DnDVersion : 1
 /// @DnDHash : 3232B9BD
-/// @DnDInput : 2
+/// @DnDInput : 3
 /// @DnDArgument : "var" "char_list"
 /// @DnDArgument : "value" ""Gurchin""
 /// @DnDArgument : "value_1" ""Zelinka""
-ds_list_add(char_list, "Gurchin", "Zelinka", "Robot");
+/// @DnDArgument : "value_2" ""J0UL3S""
+ds_list_add(char_list, "Gurchin", "Zelinka", "J0UL3S");
 
 /// @DnDAction : YoYo Games.Data Structures.Create_List
 /// @DnDVersion : 1

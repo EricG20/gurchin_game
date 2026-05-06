@@ -60,13 +60,13 @@ while ((rem_x > 0)) {
 	/// @DnDHash : 654FD813
 	/// @DnDInput : 2
 	/// @DnDParent : 766D71E0
-	/// @DnDArgument : "expr" "step_x"
+	/// @DnDArgument : "expr" "step_x*global.game_speed"
 	/// @DnDArgument : "expr_relative" "1"
 	/// @DnDArgument : "expr_1" "-1"
 	/// @DnDArgument : "expr_relative_1" "1"
 	/// @DnDArgument : "var" "x"
 	/// @DnDArgument : "var_1" "rem_x"
-	x += step_x;
+	x += step_x*global.game_speed;
 	rem_x += -1;
 }
 
@@ -111,13 +111,13 @@ while ((rem_y > 0)) {
 	/// @DnDHash : 115A47BB
 	/// @DnDInput : 2
 	/// @DnDParent : 4E89AE58
-	/// @DnDArgument : "expr" "step_y"
+	/// @DnDArgument : "expr" "step_y*global.game_speed"
 	/// @DnDArgument : "expr_relative" "1"
 	/// @DnDArgument : "expr_1" "-1"
 	/// @DnDArgument : "expr_relative_1" "1"
 	/// @DnDArgument : "var" "y"
 	/// @DnDArgument : "var_1" "rem_y"
-	y += step_y;
+	y += step_y*global.game_speed;
 	rem_y += -1;
 }
 
@@ -154,10 +154,10 @@ if(on_ground){	/// @DnDAction : YoYo Games.Common.Variable
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 73F67366
-/// @DnDArgument : "expr" "-1"
+/// @DnDArgument : "expr" "-1*global.game_speed"
 /// @DnDArgument : "expr_relative" "1"
 /// @DnDArgument : "var" "fuse"
-fuse += -1;
+fuse += -1*global.game_speed;
 
 /// @DnDAction : YoYo Games.Common.If_Expression
 /// @DnDVersion : 1

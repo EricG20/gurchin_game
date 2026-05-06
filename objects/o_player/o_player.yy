@@ -111,6 +111,8 @@
     {"$GMObjectProperty":"v2","%Name":"slide_head_y_offset","filters":[],"listItems":[],"multiselect":false,"name":"slide_head_y_offset","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"2","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"spr_icon","filters":[],"listItems":[],"multiselect":false,"name":"spr_icon","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"s_gurchin_ico","varType":4,},
     {"$GMObjectProperty":"v2","%Name":"special_line_flag","filters":[],"listItems":[],"multiselect":false,"name":"special_line_flag","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+    {"$GMObjectProperty":"v2","%Name":"spr_hand","filters":[],"listItems":[],"multiselect":false,"name":"spr_hand","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"s_player_arms","varType":4,},
+    {"$GMObjectProperty":"v2","%Name":"spr_hand_walk","filters":[],"listItems":[],"multiselect":false,"name":"spr_hand_walk","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"s_player_walk_hand","varType":4,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

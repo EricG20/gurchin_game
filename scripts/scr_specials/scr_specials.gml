@@ -75,8 +75,8 @@ function scr_specials() {	/// @DnDAction : YoYo Games.Switch.Switch
 		/// @DnDVersion : 1
 		/// @DnDHash : 609C369E
 		/// @DnDParent : 42076BBB
-		/// @DnDArgument : "const" ""Robot""
-		case "Robot":	/// @DnDAction : YoYo Games.Instances.Create_Instance
+		/// @DnDArgument : "const" ""J0UL3S""
+		case "J0UL3S":	/// @DnDAction : YoYo Games.Instances.Create_Instance
 			/// @DnDVersion : 1
 			/// @DnDHash : 407F6372
 			/// @DnDParent : 609C369E

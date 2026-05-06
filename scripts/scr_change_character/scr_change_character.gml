@@ -514,45 +514,52 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 		/// @DnDVersion : 1
 		/// @DnDHash : 38B718F0
 		/// @DnDParent : 76B8B3D3
-		/// @DnDArgument : "const" ""Robot""
-		case "Robot":	/// @DnDAction : YoYo Games.Common.Variable
+		/// @DnDArgument : "const" ""J0UL3S""
+		case "J0UL3S":	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 4885AD93
+			/// @DnDInput : 3
 			/// @DnDParent : 38B718F0
-			/// @DnDArgument : "expr" "s_zelinka_ponder_eyes"
+			/// @DnDArgument : "expr" "s_joules_neutral"
+			/// @DnDArgument : "expr_1" "s_joules_hand"
+			/// @DnDArgument : "expr_2" "s_joules_walkhand"
 			/// @DnDArgument : "var" "ponder_eyes_sprite"
-			ponder_eyes_sprite = s_zelinka_ponder_eyes;
+			/// @DnDArgument : "var_1" "spr_hand"
+			/// @DnDArgument : "var_2" "spr_hand_walk"
+			ponder_eyes_sprite = s_joules_neutral;
+			spr_hand = s_joules_hand;
+			spr_hand_walk = s_joules_walkhand;
 		
 			/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 46BB926D
 			/// @DnDInput : 26
 			/// @DnDParent : 38B718F0
-			/// @DnDArgument : "expr" "s_zelinka_antenna"
-			/// @DnDArgument : "expr_1" "s_zelinka_ear"
-			/// @DnDArgument : "expr_2" "s_zelinka_head"
+			/// @DnDArgument : "expr" "s_joules_antennae"
+			/// @DnDArgument : "expr_1" "s_joules_ear"
+			/// @DnDArgument : "expr_2" "s_joules_head"
 			/// @DnDArgument : "expr_3" "s_empty_sprite_for_bald"
 			/// @DnDArgument : "expr_4" "s_empty_sprite_for_bald"
-			/// @DnDArgument : "expr_5" "s_zelinka_mouthgood"
-			/// @DnDArgument : "expr_6" "s_zelinka_mouthmeh"
-			/// @DnDArgument : "expr_7" "s_zelinka_mouthohnah"
-			/// @DnDArgument : "expr_8" "s_zelinka_idle"
-			/// @DnDArgument : "expr_9" "s_zelinka_walk"
-			/// @DnDArgument : "expr_10" "s_zelinka_eyes"
-			/// @DnDArgument : "expr_11" "-41-8"
-			/// @DnDArgument : "expr_12" "-67-5"
+			/// @DnDArgument : "expr_5" "s_joules_neutralmouth"
+			/// @DnDArgument : "expr_6" "s_joules_sad_mouth"
+			/// @DnDArgument : "expr_7" "s_joules_scared_mouth"
+			/// @DnDArgument : "expr_8" "s_joules_idle"
+			/// @DnDArgument : "expr_9" "s_joules_walk"
+			/// @DnDArgument : "expr_10" "s_joules_neutral"
+			/// @DnDArgument : "expr_11" "-42"
+			/// @DnDArgument : "expr_12" "-66"
 			/// @DnDArgument : "expr_13" "-11-39"
 			/// @DnDArgument : "expr_14" "2.2"
-			/// @DnDArgument : "expr_15" ""Robot""
-			/// @DnDArgument : "expr_16" "5"
-			/// @DnDArgument : "expr_17" "6.7"
-			/// @DnDArgument : "expr_18" "13"
+			/// @DnDArgument : "expr_15" ""J0UL3S""
+			/// @DnDArgument : "expr_16" "8"
+			/// @DnDArgument : "expr_17" "6"
+			/// @DnDArgument : "expr_18" "11"
 			/// @DnDArgument : "expr_19" "3"
-			/// @DnDArgument : "expr_20" "4"
+			/// @DnDArgument : "expr_20" "1"
 			/// @DnDArgument : "expr_21" ".5"
 			/// @DnDArgument : "expr_22" "2"
 			/// @DnDArgument : "expr_23" "300"
-			/// @DnDArgument : "expr_24" "s_zelinka_knockback"
+			/// @DnDArgument : "expr_24" "s_joules_hit"
 			/// @DnDArgument : "expr_25" "o_grelauncher"
 			/// @DnDArgument : "var" "antenna_sprite"
 			/// @DnDArgument : "var_1" "ear_sprite"
@@ -580,31 +587,31 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDArgument : "var_23" "special_meter_cap"
 			/// @DnDArgument : "var_24" "knockback_sprite"
 			/// @DnDArgument : "var_25" "default_gun"
-			antenna_sprite = s_zelinka_antenna;
-			ear_sprite = s_zelinka_ear;
-			head_sprite = s_zelinka_head;
+			antenna_sprite = s_joules_antennae;
+			ear_sprite = s_joules_ear;
+			head_sprite = s_joules_head;
 			hair_sprite = s_empty_sprite_for_bald;
 			bangs_sprite = s_empty_sprite_for_bald;
-			smile_sprite = s_zelinka_mouthgood;
-			straightface_sprite = s_zelinka_mouthmeh;
-			frown_sprite = s_zelinka_mouthohnah;
-			idle_sprite = s_zelinka_idle;
-			walk_sprite = s_zelinka_walk;
-			eyes_sprite = s_zelinka_eyes;
-			head_height = -41-8;
-			eye_height = -67-5;
+			smile_sprite = s_joules_neutralmouth;
+			straightface_sprite = s_joules_sad_mouth;
+			frown_sprite = s_joules_scared_mouth;
+			idle_sprite = s_joules_idle;
+			walk_sprite = s_joules_walk;
+			eyes_sprite = s_joules_neutral;
+			head_height = -42;
+			eye_height = -66;
 			hair_height = -11-39;
 			walk_lift_magnitude = 2.2;
-			character_index = "Robot";
-			max_hp = 5;
-			walk_speed = 6.7;
-			jumpheight = 13;
+			character_index = "J0UL3S";
+			max_hp = 8;
+			walk_speed = 6;
+			jumpheight = 11;
 			walk_bobbing_strength = 3;
-			ear_bobbing_strength = 4;
+			ear_bobbing_strength = 1;
 			hair_weight = .5;
 			head_offset_x = 2;
 			special_meter_cap = 300;
-			knockback_sprite = s_zelinka_knockback;
+			knockback_sprite = s_joules_hit;
 			default_gun = o_grelauncher;
 		
 			/// @DnDAction : YoYo Games.Instances.Change_Instance
@@ -872,19 +879,66 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			rah.master = id;
 			rah.depth = depth+1;
 			belongings.hair = rah;
-			rah.persistent = true;	break;}
+			rah.persistent = true;	break;
+	
+		/// @DnDAction : YoYo Games.Switch.Case
+		/// @DnDVersion : 1
+		/// @DnDHash : 2428AFE9
+		/// @DnDParent : 5B88D4CF
+		/// @DnDArgument : "const" ""default""
+		case "default":	/// @DnDAction : YoYo Games.Switch.Switch
+			/// @DnDVersion : 1
+			/// @DnDHash : 127398C5
+			/// @DnDParent : 2428AFE9
+			/// @DnDArgument : "expr" "character_index"
+			var l127398C5_0 = character_index;switch(l127398C5_0){	/// @DnDAction : YoYo Games.Switch.Case
+				/// @DnDVersion : 1
+				/// @DnDHash : 5FDD0B96
+				/// @DnDParent : 127398C5
+				/// @DnDArgument : "const" ""J0UL3S""
+				case "J0UL3S":	/// @DnDAction : YoYo Games.Instances.Create_Instance
+					/// @DnDVersion : 1
+					/// @DnDHash : 229CE6AD
+					/// @DnDParent : 5FDD0B96
+					/// @DnDArgument : "xpos_relative" "1"
+					/// @DnDArgument : "ypos_relative" "1"
+					/// @DnDArgument : "var" "rah"
+					/// @DnDArgument : "objectid" "e_twin_circuits"
+					/// @DnDSaveInfo : "objectid" "e_twin_circuits"
+					rah = instance_create_layer(x + 0, y + 0, "Instances", e_twin_circuits);
+				
+					/// @DnDAction : YoYo Games.Common.Variable
+					/// @DnDVersion : 1
+					/// @DnDHash : 3E60B9B2
+					/// @DnDInput : 4
+					/// @DnDParent : 5FDD0B96
+					/// @DnDArgument : "expr" "id"
+					/// @DnDArgument : "expr_1" "depth-1"
+					/// @DnDArgument : "expr_2" "rah"
+					/// @DnDArgument : "expr_3" "true"
+					/// @DnDArgument : "var" "rah.master"
+					/// @DnDArgument : "var_1" "rah.depth"
+					/// @DnDArgument : "var_2" "belongings.hair"
+					/// @DnDArgument : "var_3" "rah.persistent"
+					rah.master = id;
+					rah.depth = depth-1;
+					belongings.hair = rah;
+					rah.persistent = true;	break;}	break;}
 
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 2B9320FD
-	/// @DnDInput : 2
+	/// @DnDInput : 3
 	/// @DnDParent : 7A41EDD0
 	/// @DnDArgument : "expr" "color_of_suit"
 	/// @DnDArgument : "expr_1" "hair"
+	/// @DnDArgument : "expr_2" "max_hp"
 	/// @DnDArgument : "var" "suit_color"
 	/// @DnDArgument : "var_1" "haircut"
+	/// @DnDArgument : "var_2" "hp"
 	suit_color = color_of_suit;
 	haircut = hair;
+	hp = max_hp;
 
 	/// @DnDAction : YoYo Games.Data Structures.Stack_Push
 	/// @DnDVersion : 1

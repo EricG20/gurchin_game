@@ -556,11 +556,11 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDArgument : "expr_18" "11"
 			/// @DnDArgument : "expr_19" "3"
 			/// @DnDArgument : "expr_20" "1"
-			/// @DnDArgument : "expr_21" ".5"
+			/// @DnDArgument : "expr_21" ".01"
 			/// @DnDArgument : "expr_22" "2"
 			/// @DnDArgument : "expr_23" "300"
 			/// @DnDArgument : "expr_24" "s_joules_hit"
-			/// @DnDArgument : "expr_25" "o_grelauncher"
+			/// @DnDArgument : "expr_25" "o_bubbler"
 			/// @DnDArgument : "var" "antenna_sprite"
 			/// @DnDArgument : "var_1" "ear_sprite"
 			/// @DnDArgument : "var_2" "head_sprite"
@@ -608,11 +608,11 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			jumpheight = 11;
 			walk_bobbing_strength = 3;
 			ear_bobbing_strength = 1;
-			hair_weight = .5;
+			hair_weight = .01;
 			head_offset_x = 2;
 			special_meter_cap = 300;
 			knockback_sprite = s_joules_hit;
-			default_gun = o_grelauncher;
+			default_gun = o_bubbler;
 		
 			/// @DnDAction : YoYo Games.Instances.Change_Instance
 			/// @DnDVersion : 1
@@ -632,10 +632,10 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDArgument : "var" "weapon_levels"
 			/// @DnDArgument : "key" "o_gon"
 			/// @DnDArgument : "value" "0"
-			/// @DnDArgument : "key_1" "o_grelauncher"
-			/// @DnDArgument : "value_1" "3"
+			/// @DnDArgument : "key_1" "default_gun"
+			/// @DnDArgument : "value_1" "1"
 			ds_map_replace(weapon_levels, o_gon, 0);
-			ds_map_replace(weapon_levels, o_grelauncher, 3);
+			ds_map_replace(weapon_levels, default_gun, 1);
 		
 			/// @DnDAction : YoYo Games.Data Structures.List_Add
 			/// @DnDVersion : 1
@@ -643,21 +643,22 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDInput : 3
 			/// @DnDParent : 38B718F0
 			/// @DnDArgument : "var" "good_job_lines"
-			/// @DnDArgument : "value" ""Love it.""
-			/// @DnDArgument : "value_1" ""oooo cutttieee""
-			/// @DnDArgument : "value_2" ""heh~ maybe you're not half bad after all, what do you say me and you find some get a oil can and a beer respectively after this is all over""
-			ds_list_add(good_job_lines, "Love it.", "oooo cutttieee", "heh~ maybe you're not half bad after all, what do you say me and you find some get a oil can and a beer respectively after this is all over");
+			/// @DnDArgument : "value" ""My sensors are picking up on ideal activity.""
+			/// @DnDArgument : "value_1" ""That is how I would have proceeded.""
+			/// @DnDArgument : "value_2" ""Installing fireworks.img""
+			ds_list_add(good_job_lines, "My sensors are picking up on ideal activity.", "That is how I would have proceeded.", "Installing fireworks.img");
 		
 			/// @DnDAction : YoYo Games.Data Structures.List_Add
 			/// @DnDVersion : 1
 			/// @DnDHash : 22C29D0F
-			/// @DnDInput : 3
+			/// @DnDInput : 4
 			/// @DnDParent : 38B718F0
 			/// @DnDArgument : "var" "you_suck_lines"
-			/// @DnDArgument : "value" ""kys""
-			/// @DnDArgument : "value_1" ""nice job retard""
-			/// @DnDArgument : "value_2" ""jesus fuck what are you aiming at""
-			ds_list_add(you_suck_lines, "kys", "nice job retard", "jesus fuck what are you aiming at");
+			/// @DnDArgument : "value" ""Maybe if you were less organic you'd leave less room for error.""
+			/// @DnDArgument : "value_1" ""A garbage cleanup protocol is coming for you.""
+			/// @DnDArgument : "value_2" ""You are like Bloatware for this team.""
+			/// @DnDArgument : "value_3" ""You should be deprecated.""
+			ds_list_add(you_suck_lines, "Maybe if you were less organic you'd leave less room for error.", "A garbage cleanup protocol is coming for you.", "You are like Bloatware for this team.", "You should be deprecated.");
 		
 			/// @DnDAction : YoYo Games.Data Structures.List_Add
 			/// @DnDVersion : 1
@@ -665,9 +666,9 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDInput : 2
 			/// @DnDParent : 38B718F0
 			/// @DnDArgument : "var" "i_need_help_lines"
-			/// @DnDArgument : "value" ""help""
-			/// @DnDArgument : "value_1" ""BROTHER HELP ME STOP FARMING AND HELP""
-			ds_list_add(i_need_help_lines, "help", "BROTHER HELP ME STOP FARMING AND HELP");
+			/// @DnDArgument : "value" ""BROADCASTING DISTRESS SIGNAL!""
+			/// @DnDArgument : "value_1" ""Please! I don't want to shut down!""
+			ds_list_add(i_need_help_lines, "BROADCASTING DISTRESS SIGNAL!", "Please! I don't want to shut down!");
 		
 			/// @DnDAction : YoYo Games.Data Structures.List_Add
 			/// @DnDVersion : 1
@@ -675,10 +676,10 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDInput : 3
 			/// @DnDParent : 38B718F0
 			/// @DnDArgument : "var" "gloat_lines"
-			/// @DnDArgument : "value" ""holy shit im goated""
-			/// @DnDArgument : "value_1" ""someone get a camera i just hit a clip""
-			/// @DnDArgument : "value_2" ""RAHHH""
-			ds_list_add(gloat_lines, "holy shit im goated", "someone get a camera i just hit a clip", "RAHHH");
+			/// @DnDArgument : "value" ""Somebody aquire a digestive unit for me treat me to some dinner.""
+			/// @DnDArgument : "value_1" ""I am clipping that.""
+			/// @DnDArgument : "value_2" ""You will not find a ZA unit as optimized as I.""
+			ds_list_add(gloat_lines, "Somebody aquire a digestive unit for me treat me to some dinner.", "I am clipping that.", "You will not find a ZA unit as optimized as I.");
 		
 			/// @DnDAction : YoYo Games.Data Structures.List_Add
 			/// @DnDVersion : 1
@@ -686,9 +687,9 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDInput : 2
 			/// @DnDParent : 38B718F0
 			/// @DnDArgument : "var" "i_want_that_lines"
-			/// @DnDArgument : "value" ""bitch get your dirty ass fingers off my shit and hand it over""
+			/// @DnDArgument : "value" ""Requesting this resource.""
 			/// @DnDArgument : "value_1" ""MINE""
-			ds_list_add(i_want_that_lines, "bitch get your dirty ass fingers off my shit and hand it over", "MINE");
+			ds_list_add(i_want_that_lines, "Requesting this resource.", "MINE");
 		
 			/// @DnDAction : YoYo Games.Data Structures.List_Add
 			/// @DnDVersion : 1
@@ -696,17 +697,19 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDInput : 2
 			/// @DnDParent : 38B718F0
 			/// @DnDArgument : "var" "hi_lines"
-			/// @DnDArgument : "value" ""Hiiiii~""
-			/// @DnDArgument : "value_1" ""Heyya!""
-			ds_list_add(hi_lines, "Hiiiii~", "Heyya!");
+			/// @DnDArgument : "value" ""Hello World!""
+			/// @DnDArgument : "value_1" ""Greetings.""
+			ds_list_add(hi_lines, "Hello World!", "Greetings.");
 		
 			/// @DnDAction : YoYo Games.Data Structures.List_Add
 			/// @DnDVersion : 1
 			/// @DnDHash : 490BAF47
+			/// @DnDInput : 2
 			/// @DnDParent : 38B718F0
 			/// @DnDArgument : "var" "special_lines"
-			/// @DnDArgument : "value" ""I'M GONNA CRANK IT""
-			ds_list_add(special_lines, "I'M GONNA CRANK IT");
+			/// @DnDArgument : "value" ""Ready to initate extension fetching protocol.""
+			/// @DnDArgument : "value_1" ""It is time for growth.""
+			ds_list_add(special_lines, "Ready to initate extension fetching protocol.", "It is time for growth.");
 		
 			/// @DnDAction : YoYo Games.Data Structures.List_Add
 			/// @DnDVersion : 1
@@ -726,52 +729,53 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDParent : 38B718F0
 			/// @DnDArgument : "var" "expressions"
 			/// @DnDArgument : "key" ""joy_eyes""
-			/// @DnDArgument : "value" "s_zelinka_joy_eyes"
+			/// @DnDArgument : "value" "s_joules_heart_eyes"
 			/// @DnDArgument : "key_1" ""joy_mouth""
-			/// @DnDArgument : "value_1" "s_zelinka_mouth_joy"
+			/// @DnDArgument : "value_1" "s_joules_joy_mouth"
 			/// @DnDArgument : "key_2" ""sad_eyes""
-			/// @DnDArgument : "value_2" "s_zelinka_sad_eyes"
+			/// @DnDArgument : "value_2" "s_joules_sad_eyes"
 			/// @DnDArgument : "key_3" ""sad_mouth""
-			/// @DnDArgument : "value_3" "s_zelinka_mouth_sad"
+			/// @DnDArgument : "value_3" "s_joules_sad_mouth"
 			/// @DnDArgument : "key_4" ""scared_eyes""
-			/// @DnDArgument : "value_4" "s_zelinka_scared_eyes"
+			/// @DnDArgument : "value_4" "s_joules_sad_mouth"
 			/// @DnDArgument : "key_5" ""scared_mouth""
-			/// @DnDArgument : "value_5" "s_zelinka_mouth_scared"
+			/// @DnDArgument : "value_5" "s_joules_scared_mouth"
 			/// @DnDArgument : "key_6" ""confident_eyes""
-			/// @DnDArgument : "value_6" "s_zelinka_joy_eyes"
+			/// @DnDArgument : "value_6" "s_joules_joy_eyes"
 			/// @DnDArgument : "key_7" ""confident_mouth""
-			/// @DnDArgument : "value_7" "s_zelinka_mouthgood"
+			/// @DnDArgument : "value_7" "s_joules_joy_mouth"
 			/// @DnDArgument : "key_8" ""ponder_eyes""
-			/// @DnDArgument : "value_8" "s_zelinka_ponder_eyes"
+			/// @DnDArgument : "value_8" "s_joules_neutral"
 			/// @DnDArgument : "key_9" ""ponder_mouth""
-			/// @DnDArgument : "value_9" "s_zelinka_mouthmeh"
+			/// @DnDArgument : "value_9" "s_joules_sad_mouth"
 			/// @DnDArgument : "key_10" ""neutral_eyes""
-			/// @DnDArgument : "value_10" "s_zelinka_eyes"
+			/// @DnDArgument : "value_10" "s_joules_neutral"
 			/// @DnDArgument : "key_11" ""neutral_mouth""
-			/// @DnDArgument : "value_11" "s_zelinka_mouthgood"
-			ds_map_replace(expressions, "joy_eyes", s_zelinka_joy_eyes);
-			ds_map_replace(expressions, "joy_mouth", s_zelinka_mouth_joy);
-			ds_map_replace(expressions, "sad_eyes", s_zelinka_sad_eyes);
-			ds_map_replace(expressions, "sad_mouth", s_zelinka_mouth_sad);
-			ds_map_replace(expressions, "scared_eyes", s_zelinka_scared_eyes);
-			ds_map_replace(expressions, "scared_mouth", s_zelinka_mouth_scared);
-			ds_map_replace(expressions, "confident_eyes", s_zelinka_joy_eyes);
-			ds_map_replace(expressions, "confident_mouth", s_zelinka_mouthgood);
-			ds_map_replace(expressions, "ponder_eyes", s_zelinka_ponder_eyes);
-			ds_map_replace(expressions, "ponder_mouth", s_zelinka_mouthmeh);
-			ds_map_replace(expressions, "neutral_eyes", s_zelinka_eyes);
-			ds_map_replace(expressions, "neutral_mouth", s_zelinka_mouthgood);
+			/// @DnDArgument : "value_11" "s_joules_neutralmouth"
+			ds_map_replace(expressions, "joy_eyes", s_joules_heart_eyes);
+			ds_map_replace(expressions, "joy_mouth", s_joules_joy_mouth);
+			ds_map_replace(expressions, "sad_eyes", s_joules_sad_eyes);
+			ds_map_replace(expressions, "sad_mouth", s_joules_sad_mouth);
+			ds_map_replace(expressions, "scared_eyes", s_joules_sad_mouth);
+			ds_map_replace(expressions, "scared_mouth", s_joules_scared_mouth);
+			ds_map_replace(expressions, "confident_eyes", s_joules_joy_eyes);
+			ds_map_replace(expressions, "confident_mouth", s_joules_joy_mouth);
+			ds_map_replace(expressions, "ponder_eyes", s_joules_neutral);
+			ds_map_replace(expressions, "ponder_mouth", s_joules_sad_mouth);
+			ds_map_replace(expressions, "neutral_eyes", s_joules_neutral);
+			ds_map_replace(expressions, "neutral_mouth", s_joules_neutralmouth);
 		
 			/// @DnDAction : YoYo Games.Data Structures.List_Add
 			/// @DnDVersion : 1
 			/// @DnDHash : 0A021A2A
-			/// @DnDInput : 3
+			/// @DnDInput : 4
 			/// @DnDParent : 38B718F0
 			/// @DnDArgument : "var" "talking_mouths"
-			/// @DnDArgument : "value" "s_zelinka_mouth_a"
-			/// @DnDArgument : "value_1" "s_zelinka_mouth_g"
-			/// @DnDArgument : "value_2" "s_zelinka_mouth_o"
-			ds_list_add(talking_mouths, s_zelinka_mouth_a, s_zelinka_mouth_g, s_zelinka_mouth_o);	break;}
+			/// @DnDArgument : "value" "s_joules_a_mouth"
+			/// @DnDArgument : "value_1" "s_joules_o_mouth"
+			/// @DnDArgument : "value_2" "s_joules_i_mouth"
+			/// @DnDArgument : "value_3" "s_joules_e_mouth"
+			ds_list_add(talking_mouths, s_joules_a_mouth, s_joules_o_mouth, s_joules_i_mouth, s_joules_e_mouth);	break;}
 
 	/// @DnDAction : YoYo Games.Switch.Switch
 	/// @DnDVersion : 1
@@ -913,7 +917,7 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 					/// @DnDInput : 4
 					/// @DnDParent : 5FDD0B96
 					/// @DnDArgument : "expr" "id"
-					/// @DnDArgument : "expr_1" "depth-1"
+					/// @DnDArgument : "expr_1" "depth+1"
 					/// @DnDArgument : "expr_2" "rah"
 					/// @DnDArgument : "expr_3" "true"
 					/// @DnDArgument : "var" "rah.master"
@@ -921,7 +925,7 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 					/// @DnDArgument : "var_2" "belongings.hair"
 					/// @DnDArgument : "var_3" "rah.persistent"
 					rah.master = id;
-					rah.depth = depth-1;
+					rah.depth = depth+1;
 					belongings.hair = rah;
 					rah.persistent = true;	break;}	break;}
 

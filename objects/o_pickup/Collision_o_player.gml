@@ -1,3 +1,21 @@
+/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDVersion : 1
+/// @DnDHash : 30808DB5
+/// @DnDArgument : "var" "other.character_index"
+/// @DnDArgument : "value" ""J0UL3S""
+if(other.character_index == "J0UL3S"){	/// @DnDAction : YoYo Games.Common.If_Expression
+	/// @DnDVersion : 1
+	/// @DnDHash : 581FC98A
+	/// @DnDParent : 30808DB5
+	/// @DnDArgument : "expr" "weapon_index == o_gon || weapon_index == o_goozi"
+	if(weapon_index == o_gon || weapon_index == o_goozi){	/// @DnDAction : YoYo Games.Common.Variable
+		/// @DnDVersion : 1
+		/// @DnDHash : 04CB7BA3
+		/// @DnDParent : 581FC98A
+		/// @DnDArgument : "expr" "o_joules_arm"
+		/// @DnDArgument : "var" "weapon_index"
+		weapon_index = o_joules_arm;}}
+
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 06E4892D

@@ -59,17 +59,17 @@ var l29A2478F_0 = anim;switch(l29A2478F_0){	/// @DnDAction : YoYo Games.Switc
 			/// @DnDArgument : "script" "scr_laser"
 			/// @DnDArgument : "arg" "glorb_x"
 			/// @DnDArgument : "arg_1" "glorb_y"
-			/// @DnDArgument : "arg_2" "clamp(light_wobble*.2, .1, .2)*2"
+			/// @DnDArgument : "arg_2" "clamp(light_wobble*.2, .1, .2)*(2*weilder.curr_weapon_level)"
 			/// @DnDArgument : "arg_3" "undefined"
 			/// @DnDArgument : "arg_4" "undefined"
 			/// @DnDArgument : "arg_5" "undefined"
 			/// @DnDArgument : "arg_6" "col1"
 			/// @DnDArgument : "arg_7" "col2"
 			/// @DnDArgument : "arg_8" "col3"
-			/// @DnDArgument : "arg_9" ".2"
-			/// @DnDArgument : "arg_10" "2*curr_weapon_level"
+			/// @DnDArgument : "arg_9" ".2*power(2, weilder.curr_weapon_level-1)"
+			/// @DnDArgument : "arg_10" "2*weilder.curr_weapon_level"
 			/// @DnDSaveInfo : "script" "scr_laser"
-			script_execute(scr_laser, glorb_x, glorb_y, clamp(light_wobble*.2, .1, .2)*2, undefined, undefined, undefined, col1, col2, col3, .2, 2*curr_weapon_level);}	break;
+			script_execute(scr_laser, glorb_x, glorb_y, clamp(light_wobble*.2, .1, .2)*(2*weilder.curr_weapon_level), undefined, undefined, undefined, col1, col2, col3, .2*power(2, weilder.curr_weapon_level-1), 2*weilder.curr_weapon_level);}	break;
 
 	/// @DnDAction : YoYo Games.Switch.Case
 	/// @DnDVersion : 1

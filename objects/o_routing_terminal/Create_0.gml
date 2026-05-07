@@ -13,13 +13,11 @@ mission_details = ds_map_create();
 /// @DnDAction : YoYo Games.Data Structures.List_Add
 /// @DnDVersion : 1
 /// @DnDHash : 06EA90A4
-/// @DnDInput : 4
+/// @DnDInput : 2
 /// @DnDArgument : "var" "missions"
 /// @DnDArgument : "value" ""classic""
-/// @DnDArgument : "value_1" ""classic""
-/// @DnDArgument : "value_2" ""classic""
-/// @DnDArgument : "value_3" ""classic""
-ds_list_add(missions, "classic", "classic", "classic", "classic");
+/// @DnDArgument : "value_1" ""city_invasion""
+ds_list_add(missions, "classic", "city_invasion");
 
 /// @DnDAction : YoYo Games.Data Structures.Map_Set_Value
 /// @DnDVersion : 1
@@ -28,17 +26,36 @@ ds_list_add(missions, "classic", "classic", "classic", "classic");
 /// @DnDInput : 4
 /// @DnDArgument : "var" "mission_details"
 /// @DnDArgument : "key" ""classic_thumbnail""
-/// @DnDArgument : "value" "s_mini_player"
+/// @DnDArgument : "value" "classic_thumbnail"
 /// @DnDArgument : "key_1" ""classic_title""
 /// @DnDArgument : "value_1" ""Grivna-Prime Assault!""
 /// @DnDArgument : "key_2" ""classic_desc""
 /// @DnDArgument : "value_2" ""Vurmin are attacking the ship housing our Glorbulous Empress, and are heading straight for the Core Pylon!""
 /// @DnDArgument : "key_3" ""classic_room""
 /// @DnDArgument : "value_3" "ship_room"
-ds_map_replace(mission_details, "classic_thumbnail", s_mini_player);
+ds_map_replace(mission_details, "classic_thumbnail", classic_thumbnail);
 ds_map_replace(mission_details, "classic_title", "Grivna-Prime Assault!");
 ds_map_replace(mission_details, "classic_desc", "Vurmin are attacking the ship housing our Glorbulous Empress, and are heading straight for the Core Pylon!");
 ds_map_replace(mission_details, "classic_room", ship_room);
+
+/// @DnDAction : YoYo Games.Data Structures.Map_Set_Value
+/// @DnDVersion : 1
+/// @DnDHash : 17AD1B05
+/// @DnDComment : city invasion details
+/// @DnDInput : 4
+/// @DnDArgument : "var" "mission_details"
+/// @DnDArgument : "key" ""city_invasion_thumbnail""
+/// @DnDArgument : "value" "ny_thumbnail"
+/// @DnDArgument : "key_1" ""city_invasion_title""
+/// @DnDArgument : "value_1" ""New York Invasion!""
+/// @DnDArgument : "key_2" ""city_invasion_desc""
+/// @DnDArgument : "value_2" ""New York is under attack by Vurmin! Protect Mayor Jorhan Zamdani at all costs!""
+/// @DnDArgument : "key_3" ""city_invasion_room""
+/// @DnDArgument : "value_3" "city"
+ds_map_replace(mission_details, "city_invasion_thumbnail", ny_thumbnail);
+ds_map_replace(mission_details, "city_invasion_title", "New York Invasion!");
+ds_map_replace(mission_details, "city_invasion_desc", "New York is under attack by Vurmin! Protect Mayor Jorhan Zamdani at all costs!");
+ds_map_replace(mission_details, "city_invasion_room", city);
 
 /// @DnDAction : YoYo Games.Instances.Create_Instance
 /// @DnDVersion : 1

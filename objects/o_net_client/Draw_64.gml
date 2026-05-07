@@ -174,4 +174,110 @@ var l268BCF82_0 = find_state;switch(l268BCF82_0){	/// @DnDAction : YoYo Games
 		/// @DnDParent : 52734F12
 		/// @DnDArgument : "font" "fontTbyDefault"
 		/// @DnDSaveInfo : "font" "fontTbyDefault"
-		draw_set_font(fontTbyDefault);	break;}
+		draw_set_font(fontTbyDefault);	break;
+
+	/// @DnDAction : YoYo Games.Switch.Case
+	/// @DnDVersion : 1
+	/// @DnDHash : 1360B114
+	/// @DnDParent : 268BCF82
+	/// @DnDArgument : "const" "enter.IP_ADDRESS"
+	case enter.IP_ADDRESS:	/// @DnDAction : YoYo Games.Drawing.Draw_Sprite_Transformed
+		/// @DnDVersion : 1
+		/// @DnDHash : 57A40829
+		/// @DnDParent : 1360B114
+		/// @DnDArgument : "x" "960"
+		/// @DnDArgument : "y" "540"
+		/// @DnDArgument : "xscale" "5.57*31"
+		/// @DnDArgument : "yscale" "5.5*16*display_alpha"
+		/// @DnDArgument : "alpha" "display_alpha*.2"
+		/// @DnDArgument : "sprite" "s_scanline_center"
+		/// @DnDArgument : "frame" "(current_time/16.66666)/5.2 %5"
+		/// @DnDSaveInfo : "sprite" "s_scanline_center"
+		draw_sprite_ext(s_scanline_center, (current_time/16.66666)/5.2 %5, 960, 540, 5.57*31, 5.5*16*display_alpha, 0, $FFFFFF & $ffffff, display_alpha*.2);
+	
+		/// @DnDAction : YoYo Games.Drawing.Draw_Sprite_Transformed
+		/// @DnDVersion : 1
+		/// @DnDHash : 305E4A73
+		/// @DnDParent : 1360B114
+		/// @DnDArgument : "x" "960"
+		/// @DnDArgument : "y" "540"
+		/// @DnDArgument : "xscale" "31"
+		/// @DnDArgument : "yscale" "16*display_alpha"
+		/// @DnDArgument : "alpha" "display_alpha"
+		/// @DnDArgument : "sprite" "zorb_uibox_centered"
+		/// @DnDSaveInfo : "sprite" "zorb_uibox_centered"
+		draw_sprite_ext(zorb_uibox_centered, 0, 960, 540, 31, 16*display_alpha, 0, $FFFFFF & $ffffff, display_alpha);
+	
+		/// @DnDAction : YoYo Games.Drawing.Draw_Sprite_Transformed
+		/// @DnDVersion : 1
+		/// @DnDHash : 1D49A22A
+		/// @DnDParent : 1360B114
+		/// @DnDArgument : "x" "960"
+		/// @DnDArgument : "y" "540"
+		/// @DnDArgument : "xscale" "30"
+		/// @DnDArgument : "yscale" "(15)*display_alpha"
+		/// @DnDArgument : "alpha" ".5*(display_alpha*(sin(current_time/700)+1))"
+		/// @DnDArgument : "sprite" "zorb_uibox_centered_highlight"
+		/// @DnDSaveInfo : "sprite" "zorb_uibox_centered_highlight"
+		draw_sprite_ext(zorb_uibox_centered_highlight, 0, 960, 540, 30, (15)*display_alpha, 0, $FFFFFF & $ffffff, .5*(display_alpha*(sin(current_time/700)+1)));
+	
+		/// @DnDAction : YoYo Games.Drawing.Set_Alignment
+		/// @DnDVersion : 1.1
+		/// @DnDHash : 40B2C648
+		/// @DnDParent : 1360B114
+		/// @DnDArgument : "halign" "fa_center"
+		draw_set_halign(fa_center);
+		draw_set_valign(fa_top);
+	
+		/// @DnDAction : YoYo Games.Common.Execute_Script
+		/// @DnDVersion : 1.1
+		/// @DnDHash : 16644989
+		/// @DnDInput : 14
+		/// @DnDParent : 1360B114
+		/// @DnDArgument : "script" "draw_text_colour_outline"
+		/// @DnDArgument : "arg" "960"
+		/// @DnDArgument : "arg_1" "560"
+		/// @DnDArgument : "arg_2" "join_code"
+		/// @DnDArgument : "arg_3" "c_white"
+		/// @DnDArgument : "arg_4" "c_yellow"
+		/// @DnDArgument : "arg_5" "display_alpha"
+		/// @DnDArgument : "arg_6" "c_orange"
+		/// @DnDArgument : "arg_7" "c_black"
+		/// @DnDArgument : "arg_8" "display_alpha"
+		/// @DnDArgument : "arg_9" "3"
+		/// @DnDArgument : "arg_10" "6"
+		/// @DnDArgument : "arg_11" "2"
+		/// @DnDArgument : "arg_12" "2"
+		/// @DnDArgument : "arg_13" "0"
+		/// @DnDSaveInfo : "script" "draw_text_colour_outline"
+		script_execute(draw_text_colour_outline, 960, 560, join_code, c_white, c_yellow, display_alpha, c_orange, c_black, display_alpha, 3, 6, 2, 2, 0);
+	
+		/// @DnDAction : YoYo Games.Common.Execute_Script
+		/// @DnDVersion : 1.1
+		/// @DnDHash : 319F2C04
+		/// @DnDInput : 14
+		/// @DnDParent : 1360B114
+		/// @DnDArgument : "script" "draw_text_colour_outline"
+		/// @DnDArgument : "arg" "960"
+		/// @DnDArgument : "arg_1" "770-0"
+		/// @DnDArgument : "arg_2" ""Enter the host's IP Address.""
+		/// @DnDArgument : "arg_3" "c_ltgray"
+		/// @DnDArgument : "arg_4" "c_ltgray"
+		/// @DnDArgument : "arg_5" "display_alpha"
+		/// @DnDArgument : "arg_6" "c_black"
+		/// @DnDArgument : "arg_7" "c_black"
+		/// @DnDArgument : "arg_8" "display_alpha"
+		/// @DnDArgument : "arg_9" "2"
+		/// @DnDArgument : "arg_10" "6"
+		/// @DnDArgument : "arg_11" "1"
+		/// @DnDArgument : "arg_12" "1"
+		/// @DnDArgument : "arg_13" "0"
+		/// @DnDSaveInfo : "script" "draw_text_colour_outline"
+		script_execute(draw_text_colour_outline, 960, 770-0, "Enter the host's IP Address.", c_ltgray, c_ltgray, display_alpha, c_black, c_black, display_alpha, 2, 6, 1, 1, 0);
+	
+		/// @DnDAction : YoYo Games.Drawing.Set_Alignment
+		/// @DnDVersion : 1.1
+		/// @DnDHash : 0B37BEDF
+		/// @DnDParent : 1360B114
+		draw_set_halign(fa_left);
+		draw_set_valign(fa_top);	break;}

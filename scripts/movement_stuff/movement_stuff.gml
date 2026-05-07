@@ -417,9 +417,9 @@ function movement_stuff() {	/// @DnDAction : YoYo Games.Common.If_Variable
 					/// @DnDVersion : 1
 					/// @DnDHash : 5D1D8F54
 					/// @DnDParent : 75381642
-					/// @DnDArgument : "expr" "hsp*power(.985, global.game_speed)"
+					/// @DnDArgument : "expr" "hsp*power(slide_friction, global.game_speed)"
 					/// @DnDArgument : "var" "hsp"
-					hsp = hsp*power(.985, global.game_speed);
+					hsp = hsp*power(slide_friction, global.game_speed);
 				
 					/// @DnDAction : YoYo Games.Common.Temp_Variable
 					/// @DnDVersion : 1
@@ -444,7 +444,15 @@ function movement_stuff() {	/// @DnDAction : YoYo Games.Common.If_Variable
 					/// @DnDArgument : "expr" "slide_increase*.1 * slide_dir"
 					/// @DnDArgument : "expr_relative" "1"
 					/// @DnDArgument : "var" "hsp"
-					hsp += slide_increase*.1 * slide_dir;}
+					hsp += slide_increase*.1 * slide_dir;
+				
+					/// @DnDAction : YoYo Games.Common.Variable
+					/// @DnDVersion : 1
+					/// @DnDHash : 69D5159F
+					/// @DnDParent : 75381642
+					/// @DnDArgument : "expr" "clamp(hsp, -walk_speed*3, walk_speed*3)"
+					/// @DnDArgument : "var" "hsp"
+					hsp = clamp(hsp, -walk_speed*3, walk_speed*3);}
 			
 				/// @DnDAction : YoYo Games.Collisions.If_Object_At
 				/// @DnDVersion : 1.1

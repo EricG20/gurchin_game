@@ -8,8 +8,8 @@ circuit2= new VIRopeTextured(x-20, y, (sprite_get_height(s_joules_circuitribbon)
 circuitend1= new VIRopeTextured(x-20, y, (sprite_get_height(s_joules_circuitribbonend) - sprite_get_yoffset(s_joules_circuitribbonend)) * 1, 2, s_joules_circuitribbonend, 1, -1);
 circuitend2= new VIRopeTextured(x-20, y, (sprite_get_height(s_joules_circuitribbonend) - sprite_get_yoffset(s_joules_circuitribbonend)) * 1, 2, s_joules_circuitribbonend, 1, -1);
 
-circuit1.GetPointByKeyword(VI_POINT_INDEX.FIRST).mass = 1.2;
-circuit2.GetPointByKeyword(VI_POINT_INDEX.FIRST).mass = 1.2;
+circuit1.GetPointByKeyword(VI_POINT_INDEX.FIRST).mass = 3.2;
+circuit2.GetPointByKeyword(VI_POINT_INDEX.FIRST).mass = 3.2;
 //circuit1.LockUpperRow();
 //circuit2.LockUpperRow();
 

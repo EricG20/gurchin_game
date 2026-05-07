@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"joules_babble3",
+  "audioGroupId":{
+    "name":"effect_audio",
+    "path":"audiogroups/effect_audio",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":1,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.47369614,
+  "exportDir":"",
+  "name":"joules_babble3",
+  "parent":{
+    "name":"joules_v",
+    "path":"folders/Sounds/voices/joules_v.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":22050,
+  "soundFile":"joules_babble3.ogg",
+  "volume":1.0,
+}

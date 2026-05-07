@@ -518,17 +518,31 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 		case "J0UL3S":	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 4885AD93
-			/// @DnDInput : 3
+			/// @DnDInput : 5
 			/// @DnDParent : 38B718F0
 			/// @DnDArgument : "expr" "s_joules_neutral"
 			/// @DnDArgument : "expr_1" "s_joules_hand"
 			/// @DnDArgument : "expr_2" "s_joules_walkhand"
+			/// @DnDArgument : "expr_3" "s_joules_slide"
+			/// @DnDArgument : "expr_4" "10"
 			/// @DnDArgument : "var" "ponder_eyes_sprite"
 			/// @DnDArgument : "var_1" "spr_hand"
 			/// @DnDArgument : "var_2" "spr_hand_walk"
+			/// @DnDArgument : "var_3" "slide_sprite"
+			/// @DnDArgument : "var_4" "slide_head_y_offset"
 			ponder_eyes_sprite = s_joules_neutral;
 			spr_hand = s_joules_hand;
 			spr_hand_walk = s_joules_walkhand;
+			slide_sprite = s_joules_slide;
+			slide_head_y_offset = 10;
+		
+			/// @DnDAction : YoYo Games.Common.Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 05DA02AE
+			/// @DnDParent : 38B718F0
+			/// @DnDArgument : "expr" ".995"
+			/// @DnDArgument : "var" "slide_friction"
+			slide_friction = .995;
 		
 			/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
@@ -560,7 +574,7 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDArgument : "expr_22" "2"
 			/// @DnDArgument : "expr_23" "300"
 			/// @DnDArgument : "expr_24" "s_joules_hit"
-			/// @DnDArgument : "expr_25" "o_bubbler"
+			/// @DnDArgument : "expr_25" "o_joules_arm"
 			/// @DnDArgument : "var" "antenna_sprite"
 			/// @DnDArgument : "var_1" "ear_sprite"
 			/// @DnDArgument : "var_2" "head_sprite"
@@ -612,7 +626,7 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			head_offset_x = 2;
 			special_meter_cap = 300;
 			knockback_sprite = s_joules_hit;
-			default_gun = o_bubbler;
+			default_gun = o_joules_arm;
 		
 			/// @DnDAction : YoYo Games.Instances.Change_Instance
 			/// @DnDVersion : 1
@@ -676,10 +690,10 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDInput : 3
 			/// @DnDParent : 38B718F0
 			/// @DnDArgument : "var" "gloat_lines"
-			/// @DnDArgument : "value" ""Somebody aquire a digestive unit for me treat me to some dinner.""
+			/// @DnDArgument : "value" ""Somebody aquire a digestive unit for me and treat me to some dinner.""
 			/// @DnDArgument : "value_1" ""I am clipping that.""
 			/// @DnDArgument : "value_2" ""You will not find a ZA unit as optimized as I.""
-			ds_list_add(gloat_lines, "Somebody aquire a digestive unit for me treat me to some dinner.", "I am clipping that.", "You will not find a ZA unit as optimized as I.");
+			ds_list_add(gloat_lines, "Somebody aquire a digestive unit for me and treat me to some dinner.", "I am clipping that.", "You will not find a ZA unit as optimized as I.");
 		
 			/// @DnDAction : YoYo Games.Data Structures.List_Add
 			/// @DnDVersion : 1
@@ -710,17 +724,6 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 			/// @DnDArgument : "value" ""Ready to initate extension fetching protocol.""
 			/// @DnDArgument : "value_1" ""It is time for growth.""
 			ds_list_add(special_lines, "Ready to initate extension fetching protocol.", "It is time for growth.");
-		
-			/// @DnDAction : YoYo Games.Data Structures.List_Add
-			/// @DnDVersion : 1
-			/// @DnDHash : 75D5AC3F
-			/// @DnDInput : 3
-			/// @DnDParent : 38B718F0
-			/// @DnDArgument : "var" "talking_mouths"
-			/// @DnDArgument : "value" "s_zelinka_mouth_a"
-			/// @DnDArgument : "value_1" "s_zelinka_mouth_g"
-			/// @DnDArgument : "value_2" "s_zelinka_mouth_o"
-			ds_list_add(talking_mouths, s_zelinka_mouth_a, s_zelinka_mouth_g, s_zelinka_mouth_o);
 		
 			/// @DnDAction : YoYo Games.Data Structures.Map_Set_Value
 			/// @DnDVersion : 1

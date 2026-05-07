@@ -7,5 +7,5 @@ if (master !=noone){
 	x = (master.facing*-15)+master.facing*master.head_offset_x+master.x-(master.hsp*master.hair_weight);
 	y = master.hair_height-30+master.head_offset_y+master.y-(master.vsp*2)-(sign(master.vsp)*master.squashstretch*20*master.hair_weight)-master.walk_bob_height;
 	connector1.SetPosition(x+15*master.facing, y);
-	connector2.SetPosition(x-7*master.facing, y);
+	connector2.SetPosition(x-2*master.facing, y);
 }

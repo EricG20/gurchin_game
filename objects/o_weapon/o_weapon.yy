@@ -45,6 +45,7 @@
     {"$GMObjectProperty":"v2","%Name":"front_sprite_follows_cursor","filters":[],"listItems":[],"multiselect":false,"name":"front_sprite_follows_cursor","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
     {"$GMObjectProperty":"v2","%Name":"glorp_x","filters":[],"listItems":[],"multiselect":false,"name":"glorp_x","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.0","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"glorp_y","filters":[],"listItems":[],"multiselect":false,"name":"glorp_y","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.0","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"curr_weapon_level","filters":[],"listItems":[],"multiselect":false,"name":"curr_weapon_level","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

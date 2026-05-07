@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"joules_die",
+  "audioGroupId":{
+    "name":"effect_audio",
+    "path":"audiogroups/effect_audio",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":1,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":9.888164,
+  "exportDir":"",
+  "name":"joules_die",
+  "parent":{
+    "name":"joules_v",
+    "path":"folders/Sounds/voices/joules_v.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":11025,
+  "soundFile":"joules_die.ogg",
+  "volume":1.0,
+}

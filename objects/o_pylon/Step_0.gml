@@ -16,13 +16,13 @@ if(time_to_heal){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDParent : 07CB48BE
 	/// @DnDArgument : "expr" "10"
 	/// @DnDArgument : "expr_relative" "1"
-	/// @DnDArgument : "expr_1" "7"
+	/// @DnDArgument : "expr_1" "o_player.max_hp"
 	/// @DnDArgument : "expr_2" "false"
 	/// @DnDArgument : "var" "hp"
 	/// @DnDArgument : "var_1" "o_player.hp"
 	/// @DnDArgument : "var_2" "time_to_heal"
 	hp += 10;
-	o_player.hp = 7;
+	o_player.hp = o_player.max_hp;
 	time_to_heal = false;}
 
 /// @DnDAction : YoYo Games.Common.If_Expression

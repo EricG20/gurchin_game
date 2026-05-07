@@ -36,6 +36,27 @@ var l61EB12DC_0 = state;switch(l61EB12DC_0){	/// @DnDAction : YoYo Games.Swit
 		/// @DnDArgument : "expr" "room"
 		var l59A53139_0 = room;switch(l59A53139_0){	/// @DnDAction : YoYo Games.Switch.Case
 			/// @DnDVersion : 1
+			/// @DnDHash : 21232DE0
+			/// @DnDParent : 59A53139
+			/// @DnDArgument : "const" "city"
+			case city:	/// @DnDAction : YoYo Games.Common.Execute_Script
+				/// @DnDVersion : 1.1
+				/// @DnDHash : 6B84B5DC
+				/// @DnDParent : 21232DE0
+				/// @DnDArgument : "script" "scr_set_pylon_start_params"
+				/// @DnDSaveInfo : "script" "scr_set_pylon_start_params"
+				script_execute(scr_set_pylon_start_params);
+			
+				/// @DnDAction : YoYo Games.Common.Variable
+				/// @DnDVersion : 1
+				/// @DnDHash : 7F5900E6
+				/// @DnDParent : 21232DE0
+				/// @DnDArgument : "expr" "gm.PYLON"
+				/// @DnDArgument : "var" "state"
+				state = gm.PYLON;	break;
+		
+			/// @DnDAction : YoYo Games.Switch.Case
+			/// @DnDVersion : 1
 			/// @DnDHash : 559C0940
 			/// @DnDParent : 59A53139
 			/// @DnDArgument : "const" "ship_room"

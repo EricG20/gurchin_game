@@ -11,8 +11,8 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"o_bullet","path":"objects/o_bullet/o_bullet.yy",},"propertyId":{"name":"damage","path":"objects/o_bullet/o_bullet.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"5",},
   ],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"projectiles",
+    "path":"folders/Objects/projectiles.yy",
   },
   "parentObjectId":{
     "name":"o_bullet",

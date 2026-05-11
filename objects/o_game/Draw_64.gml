@@ -690,10 +690,10 @@ var l03FDEC77_0 = state;switch(l03FDEC77_0){	/// @DnDAction : YoYo Games.Swit
 			/// @DnDHash : 68567DEF
 			/// @DnDComment : why did I name it that
 			/// @DnDParent : 3DFD099B
-			/// @DnDArgument : "expr" ".01"
+			/// @DnDArgument : "expr" ".02*global.game_speed"
 			/// @DnDArgument : "expr_relative" "1"
 			/// @DnDArgument : "var" "white_beans"
-			white_beans += .01;
+			white_beans += .02*global.game_speed;
 		
 			/// @DnDAction : YoYo Games.Drawing.Draw_Sprite_Transformed
 			/// @DnDVersion : 1
@@ -716,29 +716,52 @@ var l03FDEC77_0 = state;switch(l03FDEC77_0){	/// @DnDAction : YoYo Games.Swit
 			if(white_beans >= 1.2){	/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDVersion : 1
 				/// @DnDHash : 2D2C4627
-				/// @DnDInput : 2
+				/// @DnDInput : 3
 				/// @DnDParent : 57D319FA
 				/// @DnDArgument : "expr" "gm.RESULTS"
 				/// @DnDArgument : "expr_1" "false"
 				/// @DnDArgument : "var" "o_game.state"
 				/// @DnDArgument : "var_1" "o_game.in_wave"
+				/// @DnDArgument : "var_2" "white_beans"
 				o_game.state = gm.RESULTS;
 				o_game.in_wave = false;
+				white_beans = 0;
+			
+				/// @DnDAction : YoYo Games.Common.Execute_Script
+				/// @DnDVersion : 1.1
+				/// @DnDHash : 02F94C82
+				/// @DnDParent : 57D319FA
+				/// @DnDArgument : "script" "scr_white_flash"
+				/// @DnDArgument : "arg" "1"
+				/// @DnDSaveInfo : "script" "scr_white_flash"
+				script_execute(scr_white_flash, 1);
 			
 				/// @DnDAction : YoYo Games.Rooms.Go_To_Room
 				/// @DnDVersion : 1
 				/// @DnDHash : 583E2FC7
+				/// @DnDDisabled : 1
 				/// @DnDParent : 57D319FA
 				/// @DnDArgument : "room" "results_room"
-				/// @DnDSaveInfo : "room" "results_room"
-				room_goto(results_room);}}	break;
+				/// @DnDSaveInfo : "room" "results_room"}}	break;
 
 	/// @DnDAction : YoYo Games.Switch.Case
 	/// @DnDVersion : 1
 	/// @DnDHash : 062A32BA
 	/// @DnDParent : 03FDEC77
 	/// @DnDArgument : "const" "gm.RESULTS"
-	case gm.RESULTS:	/// @DnDAction : YoYo Games.Drawing.Set_Alignment
+	case gm.RESULTS:	/// @DnDAction : YoYo Games.Common.Variable
+		/// @DnDVersion : 1
+		/// @DnDHash : 181772DA
+		/// @DnDInput : 2
+		/// @DnDParent : 062A32BA
+		/// @DnDArgument : "expr" "lerp(camzoom, 2, .1*global.game_speed)"
+		/// @DnDArgument : "expr_1" "lerp(o_camera.h_offset, 200, .1*global.game_speed)"
+		/// @DnDArgument : "var" "camzoom"
+		/// @DnDArgument : "var_1" "o_camera.h_offset"
+		camzoom = lerp(camzoom, 2, .1*global.game_speed);
+		o_camera.h_offset = lerp(o_camera.h_offset, 200, .1*global.game_speed);
+	
+		/// @DnDAction : YoYo Games.Drawing.Set_Alignment
 		/// @DnDVersion : 1.1
 		/// @DnDHash : 5C220032
 		/// @DnDParent : 062A32BA
@@ -944,9 +967,9 @@ var l03FDEC77_0 = state;switch(l03FDEC77_0){	/// @DnDAction : YoYo Games.Swit
 					/// @DnDVersion : 1
 					/// @DnDHash : 2F2AC72C
 					/// @DnDParent : 071223A4
-					/// @DnDArgument : "expr" "gm.SELECT"
+					/// @DnDArgument : "expr" "gm.LEVEL"
 					/// @DnDArgument : "var" "state"
-					state = gm.SELECT;
+					state = gm.LEVEL;
 				
 					/// @DnDAction : YoYo Games.Drawing.Draw_Value_Transformed
 					/// @DnDVersion : 1
@@ -986,9 +1009,16 @@ var l03FDEC77_0 = state;switch(l03FDEC77_0){	/// @DnDAction : YoYo Games.Swit
 					/// @DnDVersion : 1
 					/// @DnDHash : 3F4323B8
 					/// @DnDParent : 071223A4
-					/// @DnDArgument : "room" "map"
-					/// @DnDSaveInfo : "room" "map"
-					room_goto(map);}}}	break;}
+					/// @DnDArgument : "room" "personal_ufo"
+					/// @DnDSaveInfo : "room" "personal_ufo"
+					room_goto(personal_ufo);}}}
+	
+		/// @DnDAction : YoYo Games.Drawing.Set_Alignment
+		/// @DnDVersion : 1.1
+		/// @DnDHash : 5E708825
+		/// @DnDParent : 062A32BA
+		draw_set_halign(fa_left);
+		draw_set_valign(fa_top);	break;}
 
 /// @DnDAction : YoYo Games.Common.If_Expression
 /// @DnDVersion : 1
@@ -997,8 +1027,8 @@ var l03FDEC77_0 = state;switch(l03FDEC77_0){	/// @DnDAction : YoYo Games.Swit
 if(paused){	/// @DnDAction : YoYo Games.Drawing.Draw_Value_Transformed
 	/// @DnDVersion : 1
 	/// @DnDHash : 1A8D08C2
+	/// @DnDDisabled : 1
 	/// @DnDParent : 12AC8F72
 	/// @DnDArgument : "x" "960 - string_width("PAUSED bro")"
 	/// @DnDArgument : "y" "540"
-	/// @DnDArgument : "caption" ""PAUSED bro""
-	draw_text_transformed(960 - string_width("PAUSED bro"), 540, string("PAUSED bro") + "", 1, 1, 0);}
+	/// @DnDArgument : "caption" ""PAUSED bro""}

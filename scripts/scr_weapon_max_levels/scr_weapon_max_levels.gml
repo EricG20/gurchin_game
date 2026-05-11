@@ -54,4 +54,16 @@ function scr_weapon_max_levels(weapon_id) {	/// @DnDAction : YoYo Games.Switch
 			/// @DnDHash : 0F45C12C
 			/// @DnDParent : 7B159F5D
 			/// @DnDArgument : "value" "2"
-			return 2;	break;}}
+			return 2;	break;
+	
+		/// @DnDAction : YoYo Games.Switch.Case
+		/// @DnDVersion : 1
+		/// @DnDHash : 7B4C7F69
+		/// @DnDParent : 40FE4670
+		/// @DnDArgument : "const" "o_joules_arm"
+		case o_joules_arm:	/// @DnDAction : YoYo Games.Common.Return
+			/// @DnDVersion : 1
+			/// @DnDHash : 5E901C06
+			/// @DnDParent : 7B4C7F69
+			/// @DnDArgument : "value" "5"
+			return 5;	break;}}

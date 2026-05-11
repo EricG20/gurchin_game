@@ -518,23 +518,26 @@ function scr_change_character(name, hair, color_of_suit) {	/// @DnDAction : Yo
 		case "J0UL3S":	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 4885AD93
-			/// @DnDInput : 5
+			/// @DnDInput : 6
 			/// @DnDParent : 38B718F0
 			/// @DnDArgument : "expr" "s_joules_neutral"
 			/// @DnDArgument : "expr_1" "s_joules_hand"
 			/// @DnDArgument : "expr_2" "s_joules_walkhand"
 			/// @DnDArgument : "expr_3" "s_joules_slide"
 			/// @DnDArgument : "expr_4" "10"
+			/// @DnDArgument : "expr_5" "s_joules_ico"
 			/// @DnDArgument : "var" "ponder_eyes_sprite"
 			/// @DnDArgument : "var_1" "spr_hand"
 			/// @DnDArgument : "var_2" "spr_hand_walk"
 			/// @DnDArgument : "var_3" "slide_sprite"
 			/// @DnDArgument : "var_4" "slide_head_y_offset"
+			/// @DnDArgument : "var_5" "spr_icon"
 			ponder_eyes_sprite = s_joules_neutral;
 			spr_hand = s_joules_hand;
 			spr_hand_walk = s_joules_walkhand;
 			slide_sprite = s_joules_slide;
 			slide_head_y_offset = 10;
+			spr_icon = s_joules_ico;
 		
 			/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1

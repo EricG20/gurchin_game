@@ -10,17 +10,17 @@ var l5A590737_0 = o_game.state;switch(l5A590737_0){	/// @DnDAction : YoYo Gam
 		/// @DnDVersion : 1
 		/// @DnDHash : 58D0803D
 		/// @DnDParent : 50E88747
-		/// @DnDArgument : "expr" "the_boss.x-(o_player.x-o_cursor.x)*panning_strength"
+		/// @DnDArgument : "expr" "the_boss.x-(o_player.x-o_cursor.x)*panning_strength+h_offset"
 		/// @DnDArgument : "var" "x"
-		x = the_boss.x-(o_player.x-o_cursor.x)*panning_strength;
+		x = the_boss.x-(o_player.x-o_cursor.x)*panning_strength+h_offset;
 	
 		/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 06CF1C63
 		/// @DnDParent : 50E88747
-		/// @DnDArgument : "expr" "the_boss.y-(o_player.y-o_cursor.y)*panning_strength"
+		/// @DnDArgument : "expr" "the_boss.y-(o_player.y-o_cursor.y)*panning_strength+v_offset"
 		/// @DnDArgument : "var" "y"
-		y = the_boss.y-(o_player.y-o_cursor.y)*panning_strength;	break;
+		y = the_boss.y-(o_player.y-o_cursor.y)*panning_strength+v_offset;	break;
 
 	/// @DnDAction : YoYo Games.Switch.Case
 	/// @DnDVersion : 1

@@ -13,10 +13,12 @@
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"o_bullet","path":"objects/o_bullet/o_bullet.yy",},"propertyId":{"name":"enemy_tolerance","path":"objects/o_bullet/o_bullet.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"100",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"o_bullet","path":"objects/o_bullet/o_bullet.yy",},"propertyId":{"name":"damage","path":"objects/o_bullet/o_bullet.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"o_bullet","path":"objects/o_bullet/o_bullet.yy",},"propertyId":{"name":"stun_amount","path":"objects/o_bullet/o_bullet.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"6",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"o_bullet","path":"objects/o_bullet/o_bullet.yy",},"propertyId":{"name":"kb_vsp","path":"objects/o_bullet/o_bullet.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"-10",},
   ],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"projectiles",
+    "path":"folders/Objects/projectiles.yy",
   },
   "parentObjectId":{
     "name":"o_bullet",

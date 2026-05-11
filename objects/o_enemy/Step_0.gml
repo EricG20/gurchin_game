@@ -52,8 +52,8 @@ if(state == es.KNOCKBACK){	/// @DnDAction : YoYo Games.Common.If_Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 25913650
 		/// @DnDParent : 3DC58044
-		/// @DnDArgument : "expr" "(on_ground && abs(hsp) < 0.2)"
-		if((on_ground && abs(hsp) < 0.2)){	/// @DnDAction : YoYo Games.Common.Variable
+		/// @DnDArgument : "expr" "(on_ground && abs(hsp) < 0.02)"
+		if((on_ground && abs(hsp) < 0.02)){	/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 57FC1AE2
 			/// @DnDParent : 25913650

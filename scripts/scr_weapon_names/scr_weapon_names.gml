@@ -126,4 +126,16 @@ function scr_weapon_names(wep_index) {	/// @DnDAction : YoYo Games.Switch.Swit
 			/// @DnDHash : 3065A980
 			/// @DnDParent : 50F5B592
 			/// @DnDArgument : "value" ""X00-P1NG-T0N""
-			return "X00-P1NG-T0N";	break;}}
+			return "X00-P1NG-T0N";	break;
+	
+		/// @DnDAction : YoYo Games.Switch.Case
+		/// @DnDVersion : 1
+		/// @DnDHash : 0B7F5B7F
+		/// @DnDParent : 146EBC5E
+		/// @DnDArgument : "const" "o_joules_arm"
+		case o_joules_arm:	/// @DnDAction : YoYo Games.Common.Return
+			/// @DnDVersion : 1
+			/// @DnDHash : 6E1196D2
+			/// @DnDParent : 0B7F5B7F
+			/// @DnDArgument : "value" ""ZA Arm Cannon""
+			return "ZA Arm Cannon";	break;}}

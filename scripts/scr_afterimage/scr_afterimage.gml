@@ -65,7 +65,7 @@ function scr_afterimage() {	/// @DnDAction : YoYo Games.Switch.Switch
 			/// @DnDParent : 0BD42BDB
 			/// @DnDArgument : "expr" "facing"
 			/// @DnDArgument : "expr_1" "image_yscale"
-			/// @DnDArgument : "expr_2" "s_player_hair"
+			/// @DnDArgument : "expr_2" "hair_sprite"
 			/// @DnDArgument : "expr_3" "dir_index"
 			/// @DnDArgument : "expr_4" "image_angle"
 			/// @DnDArgument : "var" "hafim.image_xscale"
@@ -75,7 +75,7 @@ function scr_afterimage() {	/// @DnDAction : YoYo Games.Switch.Switch
 			/// @DnDArgument : "var_4" "hafim.image_angle"
 			hafim.image_xscale = facing;
 			hafim.image_yscale = image_yscale;
-			hafim.sprite_index = s_player_hair;
+			hafim.sprite_index = hair_sprite;
 			hafim.image_index = dir_index;
 			hafim.image_angle = image_angle;
 		
@@ -99,7 +99,7 @@ function scr_afterimage() {	/// @DnDAction : YoYo Games.Switch.Switch
 			/// @DnDParent : 0BD42BDB
 			/// @DnDArgument : "expr" "facing"
 			/// @DnDArgument : "expr_1" "image_yscale"
-			/// @DnDArgument : "expr_2" "s_player_head"
+			/// @DnDArgument : "expr_2" "head_sprite"
 			/// @DnDArgument : "expr_3" "dir_index"
 			/// @DnDArgument : "expr_4" "image_angle"
 			/// @DnDArgument : "var" "hafim.image_xscale"
@@ -109,7 +109,41 @@ function scr_afterimage() {	/// @DnDAction : YoYo Games.Switch.Switch
 			/// @DnDArgument : "var_4" "hafim.image_angle"
 			hafim.image_xscale = facing;
 			hafim.image_yscale = image_yscale;
-			hafim.sprite_index = s_player_head;
+			hafim.sprite_index = head_sprite;
+			hafim.image_index = dir_index;
+			hafim.image_angle = image_angle;
+		
+			/// @DnDAction : YoYo Games.Instances.Create_Instance
+			/// @DnDVersion : 1
+			/// @DnDHash : 5D68035C
+			/// @DnDParent : 0BD42BDB
+			/// @DnDArgument : "xpos" "head_offset_x"
+			/// @DnDArgument : "xpos_relative" "1"
+			/// @DnDArgument : "ypos" "-39+head_offset_y"
+			/// @DnDArgument : "ypos_relative" "1"
+			/// @DnDArgument : "var" "hafim"
+			/// @DnDArgument : "objectid" "e_afterimage"
+			/// @DnDSaveInfo : "objectid" "e_afterimage"
+			hafim = instance_create_layer(x + head_offset_x, y + -39+head_offset_y, "Instances", e_afterimage);
+		
+			/// @DnDAction : YoYo Games.Common.Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 0D1AC04F
+			/// @DnDInput : 5
+			/// @DnDParent : 0BD42BDB
+			/// @DnDArgument : "expr" "facing"
+			/// @DnDArgument : "expr_1" "image_yscale"
+			/// @DnDArgument : "expr_2" "antenna_sprite"
+			/// @DnDArgument : "expr_3" "dir_index"
+			/// @DnDArgument : "expr_4" "image_angle"
+			/// @DnDArgument : "var" "hafim.image_xscale"
+			/// @DnDArgument : "var_1" "hafim.image_yscale"
+			/// @DnDArgument : "var_2" "hafim.sprite_index"
+			/// @DnDArgument : "var_3" "hafim.image_index"
+			/// @DnDArgument : "var_4" "hafim.image_angle"
+			hafim.image_xscale = facing;
+			hafim.image_yscale = image_yscale;
+			hafim.sprite_index = antenna_sprite;
 			hafim.image_index = dir_index;
 			hafim.image_angle = image_angle;	break;
 	

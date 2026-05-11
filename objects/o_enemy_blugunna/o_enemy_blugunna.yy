@@ -11,7 +11,7 @@
   "name":"o_enemy_blugunna",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"o_enemy","path":"objects/o_enemy/o_enemy.yy",},"propertyId":{"name":"cooldown","path":"objects/o_enemy/o_enemy.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"200",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"o_entity","path":"objects/o_entity/o_entity.yy",},"propertyId":{"name":"hp","path":"objects/o_entity/o_entity.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"5",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"o_entity","path":"objects/o_entity/o_entity.yy",},"propertyId":{"name":"hp","path":"objects/o_entity/o_entity.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"6",},
   ],
   "parent":{
     "name":"enemies",
@@ -47,8 +47,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"s_blugunna_body_idle",
-    "path":"sprites/s_blugunna_body_idle/s_blugunna_body_idle.yy",
+    "name":"eyelith_eye",
+    "path":"sprites/eyelith_eye/eyelith_eye.yy",
   },
   "spriteMaskId":null,
   "visible":true,

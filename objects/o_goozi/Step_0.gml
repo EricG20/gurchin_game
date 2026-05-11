@@ -123,12 +123,12 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.Variable
 					/// @DnDParent : 1F64EBF0
 					/// @DnDArgument : "xpos" "5*weilder.facing+glorp_x"
 					/// @DnDArgument : "xpos_relative" "1"
-					/// @DnDArgument : "ypos" "+glorp_y"
+					/// @DnDArgument : "ypos" "glorp_y"
 					/// @DnDArgument : "ypos_relative" "1"
 					/// @DnDArgument : "var" "mybb"
 					/// @DnDArgument : "objectid" "o_bullet"
 					/// @DnDSaveInfo : "objectid" "o_bullet"
-					mybb = instance_create_layer(x + 5*weilder.facing+glorp_x, y + +glorp_y, "Instances", o_bullet);
+					mybb = instance_create_layer(x + 5*weilder.facing+glorp_x, y + glorp_y, "Instances", o_bullet);
 				
 					/// @DnDAction : YoYo Games.Common.Temp_Variable
 					/// @DnDVersion : 1

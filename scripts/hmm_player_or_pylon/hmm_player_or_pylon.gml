@@ -3,7 +3,8 @@
 /// @DnDHash : 2982FCA4
 /// @DnDComment : // Script assets have changed for v2.3.0 see$(13_10)// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 /// @DnDArgument : "funcName" "hmm_player_or_pylon"
-function hmm_player_or_pylon() {	/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDArgument : "arg" "overriding_distance=500"
+function hmm_player_or_pylon(overriding_distance=500) {	/// @DnDAction : YoYo Games.Common.If_Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 1E49823C
 	/// @DnDParent : 2982FCA4
@@ -16,8 +17,8 @@ function hmm_player_or_pylon() {	/// @DnDAction : YoYo Games.Common.If_Variabl
 		/// @DnDParent : 1E49823C
 		/// @DnDArgument : "var" "distance_to_object(o_player)"
 		/// @DnDArgument : "op" "1"
-		/// @DnDArgument : "value" "500"
-		if(distance_to_object(o_player) < 500){	/// @DnDAction : YoYo Games.Common.Execute_Script
+		/// @DnDArgument : "value" "overriding_distance"
+		if(distance_to_object(o_player) < overriding_distance){	/// @DnDAction : YoYo Games.Common.Execute_Script
 			/// @DnDVersion : 1.1
 			/// @DnDHash : 5F4F413C
 			/// @DnDParent : 1BFA89C4

@@ -1,3 +1,10 @@
+/// @DnDAction : YoYo Games.Common.Execute_Script
+/// @DnDVersion : 1.1
+/// @DnDHash : 6A2DFE07
+/// @DnDArgument : "script" "scr_weapon_depth"
+/// @DnDSaveInfo : "script" "scr_weapon_depth"
+script_execute(scr_weapon_depth);
+
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 5DBF59C7
@@ -1268,64 +1275,69 @@ if(!(global.game_speed == 0)){	/// @DnDAction : YoYo Games.Common.If_Variable
 				/// @DnDArgument : "arg" "mygurn"
 				instance_deactivate_object(mygurn);}}}
 
-	/// @DnDAction : YoYo Games.Common.If_Variable
+	/// @DnDAction : YoYo Games.Common.If_Expression
 	/// @DnDVersion : 1
-	/// @DnDHash : 2C6D4611
+	/// @DnDHash : 6F3F13D6
 	/// @DnDParent : 47ED6D9E
-	/// @DnDArgument : "var" "control_type"
-	/// @DnDArgument : "value" "cr.LOCAL"
-	if(control_type == cr.LOCAL){	/// @DnDAction : YoYo Games.Common.Execute_Code
+	/// @DnDArgument : "expr" "instance_exists(o_net_host) || instance_exists(o_net_client)"
+	if(instance_exists(o_net_host) || instance_exists(o_net_client)){	/// @DnDAction : YoYo Games.Common.If_Variable
 		/// @DnDVersion : 1
-		/// @DnDHash : 7C839B1C
-		/// @DnDParent : 2C6D4611
-		/// @DnDArgument : "code" "// How many seconds between packets?$(13_10)var send_interval = 0.3; // 30 times per second$(13_10)$(13_10)send_timer += delta_time / 1000000;$(13_10)$(13_10)if (send_timer >= send_interval) {$(13_10)    send_timer -= send_interval;$(13_10)	$(13_10)	if (instance_exists(o_net_host)){$(13_10)		for (var i = 0; i < ds_list_size(o_net_host.socket_list); i++;){$(13_10)			send_movement_packet(ds_list_find_value(o_net_host.socket_list, i), x, y);$(13_10)			fix_ammo_count(ds_list_find_value(o_net_host.socket_list, i));$(13_10)		}$(13_10)	}$(13_10)	else{$(13_10)    send_movement_packet(socket, x, y);$(13_10)	fix_ammo_count(socket);$(13_10)	}$(13_10)	//send_input_packet(socket, inputs);$(13_10)	//send_velocity_packet(socket, hsp, vsp);$(13_10)	//send_aim_packet(socket, reticle.x, reticle.y, nav);$(13_10)}$(13_10)"
-		// How many seconds between packets?
-		var send_interval = 0.3; // 30 times per second
-		
-		send_timer += delta_time / 1000000;
-		
-		if (send_timer >= send_interval) {
-		    send_timer -= send_interval;
+		/// @DnDHash : 2C6D4611
+		/// @DnDParent : 6F3F13D6
+		/// @DnDArgument : "var" "control_type"
+		/// @DnDArgument : "value" "cr.LOCAL"
+		if(control_type == cr.LOCAL){	/// @DnDAction : YoYo Games.Common.Execute_Code
+			/// @DnDVersion : 1
+			/// @DnDHash : 7C839B1C
+			/// @DnDParent : 2C6D4611
+			/// @DnDArgument : "code" "// How many seconds between packets?$(13_10)var send_interval = 0.3; // 30 times per second$(13_10)$(13_10)send_timer += delta_time / 1000000;$(13_10)$(13_10)if (send_timer >= send_interval) {$(13_10)    send_timer -= send_interval;$(13_10)	$(13_10)	if (instance_exists(o_net_host)){$(13_10)		for (var i = 0; i < ds_list_size(o_net_host.socket_list); i++;){$(13_10)			send_movement_packet(ds_list_find_value(o_net_host.socket_list, i), x, y);$(13_10)			if (mygurn.object_index != o_emptyhanded)fix_ammo_count(ds_list_find_value(o_net_host.socket_list, i));$(13_10)		}$(13_10)	}$(13_10)	else{$(13_10)    send_movement_packet(socket, x, y);$(13_10)	if (mygurn.object_index != o_emptyhanded)fix_ammo_count(socket);$(13_10)	}$(13_10)	//send_input_packet(socket, inputs);$(13_10)	//send_velocity_packet(socket, hsp, vsp);$(13_10)	//send_aim_packet(socket, reticle.x, reticle.y, nav);$(13_10)}$(13_10)"
+			// How many seconds between packets?
+			var send_interval = 0.3; // 30 times per second
 			
+			send_timer += delta_time / 1000000;
+			
+			if (send_timer >= send_interval) {
+			    send_timer -= send_interval;
+				
+				if (instance_exists(o_net_host)){
+					for (var i = 0; i < ds_list_size(o_net_host.socket_list); i++;){
+						send_movement_packet(ds_list_find_value(o_net_host.socket_list, i), x, y);
+						if (mygurn.object_index != o_emptyhanded)fix_ammo_count(ds_list_find_value(o_net_host.socket_list, i));
+					}
+				}
+				else{
+			    send_movement_packet(socket, x, y);
+				if (mygurn.object_index != o_emptyhanded)fix_ammo_count(socket);
+				}
+				//send_input_packet(socket, inputs);
+				//send_velocity_packet(socket, hsp, vsp);
+				//send_aim_packet(socket, reticle.x, reticle.y, nav);
+			}}
+	
+		/// @DnDAction : YoYo Games.Common.If_Variable
+		/// @DnDVersion : 1
+		/// @DnDHash : 7BD08504
+		/// @DnDParent : 6F3F13D6
+		/// @DnDArgument : "var" "control_type"
+		/// @DnDArgument : "value" "cr.NET"
+		if(control_type == cr.NET){	/// @DnDAction : YoYo Games.Common.Execute_Code
+			/// @DnDVersion : 1
+			/// @DnDHash : 2F472D50
+			/// @DnDParent : 7BD08504
+			/// @DnDArgument : "code" "/// @description Execute Code$(13_10)var send_interval = 0.3; // 30 times per second$(13_10)$(13_10)send_timer += delta_time / 1000000;$(13_10)$(13_10)if (send_timer >= send_interval) {$(13_10)    send_timer -= send_interval;$(13_10)if (instance_exists(o_net_host)){$(13_10)	for (var i = 0; i < ds_list_size(o_net_host.socket_list); i++;){$(13_10)		if (ds_list_find_value(o_net_host.socket_list, i) != socket){$(13_10)			send_movement_packet(ds_list_find_value(o_net_host.socket_list, i), x, y);$(13_10)			fix_ammo_count(ds_list_find_value(o_net_host.socket_list, i));$(13_10)		}$(13_10)	}$(13_10)}$(13_10)}"
+			/// @description Execute Code
+			var send_interval = 0.3; // 30 times per second
+			
+			send_timer += delta_time / 1000000;
+			
+			if (send_timer >= send_interval) {
+			    send_timer -= send_interval;
 			if (instance_exists(o_net_host)){
 				for (var i = 0; i < ds_list_size(o_net_host.socket_list); i++;){
-					send_movement_packet(ds_list_find_value(o_net_host.socket_list, i), x, y);
-					fix_ammo_count(ds_list_find_value(o_net_host.socket_list, i));
+					if (ds_list_find_value(o_net_host.socket_list, i) != socket){
+						send_movement_packet(ds_list_find_value(o_net_host.socket_list, i), x, y);
+						fix_ammo_count(ds_list_find_value(o_net_host.socket_list, i));
+					}
 				}
 			}
-			else{
-		    send_movement_packet(socket, x, y);
-			fix_ammo_count(socket);
-			}
-			//send_input_packet(socket, inputs);
-			//send_velocity_packet(socket, hsp, vsp);
-			//send_aim_packet(socket, reticle.x, reticle.y, nav);
-		}}
-
-	/// @DnDAction : YoYo Games.Common.If_Variable
-	/// @DnDVersion : 1
-	/// @DnDHash : 7BD08504
-	/// @DnDParent : 47ED6D9E
-	/// @DnDArgument : "var" "control_type"
-	/// @DnDArgument : "value" "cr.NET"
-	if(control_type == cr.NET){	/// @DnDAction : YoYo Games.Common.Execute_Code
-		/// @DnDVersion : 1
-		/// @DnDHash : 2F472D50
-		/// @DnDParent : 7BD08504
-		/// @DnDArgument : "code" "/// @description Execute Code$(13_10)var send_interval = 0.3; // 30 times per second$(13_10)$(13_10)send_timer += delta_time / 1000000;$(13_10)$(13_10)if (send_timer >= send_interval) {$(13_10)    send_timer -= send_interval;$(13_10)if (instance_exists(o_net_host)){$(13_10)	for (var i = 0; i < ds_list_size(o_net_host.socket_list); i++;){$(13_10)		if (ds_list_find_value(o_net_host.socket_list, i) != socket){$(13_10)			send_movement_packet(ds_list_find_value(o_net_host.socket_list, i), x, y);$(13_10)			fix_ammo_count(ds_list_find_value(o_net_host.socket_list, i));$(13_10)		}$(13_10)	}$(13_10)}$(13_10)}"
-		/// @description Execute Code
-		var send_interval = 0.3; // 30 times per second
-		
-		send_timer += delta_time / 1000000;
-		
-		if (send_timer >= send_interval) {
-		    send_timer -= send_interval;
-		if (instance_exists(o_net_host)){
-			for (var i = 0; i < ds_list_size(o_net_host.socket_list); i++;){
-				if (ds_list_find_value(o_net_host.socket_list, i) != socket){
-					send_movement_packet(ds_list_find_value(o_net_host.socket_list, i), x, y);
-					fix_ammo_count(ds_list_find_value(o_net_host.socket_list, i));
-				}
-			}
-		}
-		}}}
+			}}}}

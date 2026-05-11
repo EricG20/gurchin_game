@@ -8,8 +8,8 @@
   "name":"o_enemy_nade",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"projectiles",
+    "path":"folders/Objects/projectiles.yy",
   },
   "parentObjectId":{
     "name":"o_entity",

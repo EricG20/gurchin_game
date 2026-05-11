@@ -22,10 +22,10 @@ audio_play_sound(sfx_smallboom, 0, 0, 1.0, undefined, 1.0);
 /// @DnDHash : 20FB458B
 /// @DnDInput : 2
 /// @DnDArgument : "script" "process_pylon_kill"
-/// @DnDArgument : "arg" "75"
-/// @DnDArgument : "arg_1" "irandom_range(2,7)"
+/// @DnDArgument : "arg" "125"
+/// @DnDArgument : "arg_1" "irandom_range(3,9)"
 /// @DnDSaveInfo : "script" "process_pylon_kill"
-script_execute(process_pylon_kill, 75, irandom_range(2,7));
+script_execute(process_pylon_kill, 125, irandom_range(3,9));
 
 /// @DnDAction : YoYo Games.Common.Execute_Script
 /// @DnDVersion : 1.1

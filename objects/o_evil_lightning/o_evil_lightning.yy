@@ -11,8 +11,8 @@
   "name":"o_evil_lightning",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"projectiles",
+    "path":"folders/Objects/projectiles.yy",
   },
   "parentObjectId":null,
   "persistent":false,

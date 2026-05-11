@@ -3,7 +3,15 @@
 /// @DnDHash : 3CFB82B5
 /// @DnDArgument : "var" "ds_list_find_index(collided_with,other.id)"
 /// @DnDArgument : "value" "-1"
-if(ds_list_find_index(collided_with,other.id) == -1){	/// @DnDAction : YoYo Games.Common.Function_Call
+if(ds_list_find_index(collided_with,other.id) == -1){	/// @DnDAction : YoYo Games.Common.Execute_Script
+	/// @DnDVersion : 1.1
+	/// @DnDHash : 5593FC7A
+	/// @DnDParent : 3CFB82B5
+	/// @DnDArgument : "script" "scr_stun_logic"
+	/// @DnDSaveInfo : "script" "scr_stun_logic"
+	script_execute(scr_stun_logic);
+
+	/// @DnDAction : YoYo Games.Common.Function_Call
 	/// @DnDVersion : 1
 	/// @DnDHash : 28675648
 	/// @DnDInput : 2

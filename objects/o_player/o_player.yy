@@ -115,6 +115,7 @@
     {"$GMObjectProperty":"v2","%Name":"spr_hand_walk","filters":[],"listItems":[],"multiselect":false,"name":"spr_hand_walk","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"s_player_walk_hand","varType":4,},
     {"$GMObjectProperty":"v2","%Name":"slide_friction","filters":[],"listItems":[],"multiselect":false,"name":"slide_friction","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":".985","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"da_wheel","filters":[],"listItems":[],"multiselect":false,"name":"da_wheel","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.0","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"spr_hand_iso","filters":[],"listItems":[],"multiselect":false,"name":"spr_hand_iso","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"s_gurchin_hand_iso","varType":4,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

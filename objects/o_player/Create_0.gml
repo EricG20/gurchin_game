@@ -153,9 +153,13 @@ mygurn = instance_create_layer(x + 0, y + 0, "Instances_Front", o_emptyhanded);
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 61658F32
+/// @DnDInput : 2
 /// @DnDArgument : "expr" "id"
+/// @DnDArgument : "expr_1" "true"
 /// @DnDArgument : "var" "mygurn.weilder"
+/// @DnDArgument : "var_1" "mygurn.persistent"
 mygurn.weilder = id;
+mygurn.persistent = true;
 
 /// @DnDAction : YoYo Games.Instances.Create_Instance
 /// @DnDVersion : 1

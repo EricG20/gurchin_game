@@ -415,16 +415,16 @@ var l511F3266_0 = state;switch(l511F3266_0){	/// @DnDAction : YoYo Games.Swit
 				/// @DnDVersion : 1
 				/// @DnDHash : 3359EBD8
 				/// @DnDParent : 389EF27E
-				/// @DnDArgument : "code" "var _cam_x = o_camera.x;$(13_10)var _cam_y = o_camera.y;$(13_10)$(13_10)layer_x("clouds1", _cam_x * .99 + current_time*power(.01,1));$(13_10)layer_y("clouds1", _cam_y *.99 - 900);$(13_10)layer_x("clouds2", _cam_x * .90 + current_time*power(.04,1));$(13_10)layer_y("clouds2", _cam_y *.90- 900);$(13_10)layer_x("clouds3", _cam_x * .85 + current_time*power(.09,1));$(13_10)layer_y("clouds3", _cam_y *.85- 900);$(13_10)layer_x("buildings2", _cam_x * .70);$(13_10)layer_y("buildings2", _cam_y *.50 +300);$(13_10)layer_x("buildings1", _cam_x * .65);$(13_10)layer_y("buildings1", _cam_y *.45 +450);"
+				/// @DnDArgument : "code" "var _cam_x = o_camera.x;$(13_10)var _cam_y = o_camera.y;$(13_10)$(13_10)layer_x("clouds1", _cam_x * .99 + current_time*power(.01,1));$(13_10)layer_y("clouds1", _cam_y *.99 - 900);$(13_10)layer_x("clouds2", _cam_x * .97 + current_time*power(.04,1));$(13_10)layer_y("clouds2", _cam_y *.97- 900);$(13_10)layer_x("clouds3", _cam_x * .93 + current_time*power(.09,1));$(13_10)layer_y("clouds3", _cam_y *.93- 900);$(13_10)layer_x("buildings2", _cam_x * .70);$(13_10)layer_y("buildings2", _cam_y *.50 +300);$(13_10)layer_x("buildings1", _cam_x * .65);$(13_10)layer_y("buildings1", _cam_y *.45 +450);"
 				var _cam_x = o_camera.x;
 				var _cam_y = o_camera.y;
 				
 				layer_x("clouds1", _cam_x * .99 + current_time*power(.01,1));
 				layer_y("clouds1", _cam_y *.99 - 900);
-				layer_x("clouds2", _cam_x * .90 + current_time*power(.04,1));
-				layer_y("clouds2", _cam_y *.90- 900);
-				layer_x("clouds3", _cam_x * .85 + current_time*power(.09,1));
-				layer_y("clouds3", _cam_y *.85- 900);
+				layer_x("clouds2", _cam_x * .97 + current_time*power(.04,1));
+				layer_y("clouds2", _cam_y *.97- 900);
+				layer_x("clouds3", _cam_x * .93 + current_time*power(.09,1));
+				layer_y("clouds3", _cam_y *.93- 900);
 				layer_x("buildings2", _cam_x * .70);
 				layer_y("buildings2", _cam_y *.50 +300);
 				layer_x("buildings1", _cam_x * .65);

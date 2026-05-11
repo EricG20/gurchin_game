@@ -12,22 +12,22 @@ The focus for 4900 is to expand the games scope, providing more weapons, enemies
 
 
 
-Weapons: 9/10
+Weapons: 11/10
 
-Enemies: 6/10
+Enemies: 9/10 (13 technically but theyre not in rotation)
 
-Multiplayer: idk about like 92% done and then its time for testing
+Multiplayer: functional but requires port forwarding or vpn
 
 
 
-Test Build (Last Updated 2/2/2026): https://vulkinx.itch.io/zorb-pylon-defence-force-testing
+Test Build (Last Updated 5/11/2026): https://vulkinx.itch.io/zorb-pylon-defence-force-testing
 
 
 
 to-do:
 
 * Fix tab freezing(done)
-* **Fix game getting progressively greener** (HOW DO I FIX THIS????!?!)
+* **Fix game getting progressively greener** (consequence of webgl build)
 * Add 144 fps mode(done)
 * Add special meter(done)
 * Add Gurchin's Turret Special(done)
@@ -40,35 +40,35 @@ to-do:
 * Make weapon inventory mechanic(done)
 * Add XOO-P1NG-TON (done)
 * Add weapon level indicator(done)
-* Adjust UI to look not so ugly (wip)
+* Adjust UI to look not so ugly (done)
 * \- This means making health, fuel, and special meter more readable
 * \- (this also meant reworking the weapon display menu but I got to that luckily
-* Add and complete dasher enemy
-* **Add New York Invasion Mission**
-* **Add Gurchenis Gauntlet Mission**
-* Add G'Molgda (and his default and his special)
-* Add Gurchin II
+* Add and complete dasher enemy (done)
+* **Add New York Invasion Mission (\*moving hand side to side gesture\*)**
+* **Add Gurchenis Gauntlet Mission (scrapped)**
+* Add G'Molgda (and his default and his special) (scrapped)
+* Add Gurchin II (scrapped, J0UL3S was added instead)
 * Add emote system (for signaling to other players context sensitive information like "I need help!" or "Great job!", should be unique lines per character) (done)
-* (MAYBE) Adjust the Empresses design (maybe I made her too skinny)
-* **Add Multiplayer for gods sake (just about done)**
-* **Get Node.js matchmaking server onto a public IP address**
-* **Fix scr\_afterimage**
+* (MAYBE) Adjust the Empresses design (maybe I made her too skinny) (no)
+* **Add Multiplayer for gods sake (yeah)**
+* **Get Node.js matchmaking server onto a public IP address (done\[fly.io])**
+* **Fix scr\_afterimage (sort of)**
 
 
 
 Multiplayer facilitating changes to be made:
 
-* Rework grade rewarding sequence to something more object oriented and changable with internal game speed(so pausing finally works)
-* Figure out if players should share combo meter between them or have it be individual (how will this be graded?)
+* Rework grade rewarding sequence to something more object oriented and changable with internal game speed(so pausing finally works) (didn't have time for it)
+* Figure out if players should share combo meter between them or have it be individual (how will this be graded?) (they will)
 * Figure out if players share flub or not (yes they do)
-* Make picking up flub increase score
+* Make picking up flub increase score (didn't do that)
 
 
 
-Far off stuff:
+Far off stuff: (I suspected I wouldn't do these)
 
 * **Add Takema (and her default and her special)**
-* **Add J0UL3S (and their default and their special)**
+* **Add J0UL3S (and their default and their special) (how the hell did this get done)**
 * **Add Qwoth Invasion Mission**
 * **Add Zorbulan Monument Mission**
 * **Rework Bat to be more interesting**
@@ -90,4 +90,6 @@ Input V10 (https://codeberg.org/offalynne/Input)
 Verlet Integration (https://github.com/sareklambert/gms-verlet-integration)
 
 Circular Bars (https://marketplace.gamemaker.io/assets/5369/circular-bars-for-gms2)
+
+Node.js \& Express
 

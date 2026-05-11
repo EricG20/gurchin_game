@@ -11,20 +11,20 @@ if(!(activated)){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDArgument : "var" "hsp"
 	hsp = 3*facing;
 
+	/// @DnDAction : YoYo Games.Common.Execute_Script
+	/// @DnDVersion : 1.1
+	/// @DnDHash : 397A693F
+	/// @DnDParent : 73A06398
+	/// @DnDArgument : "script" "face_pylon"
+	/// @DnDSaveInfo : "script" "face_pylon"
+	script_execute(face_pylon);
+
 	/// @DnDAction : YoYo Games.Common.If_Expression
 	/// @DnDVersion : 1
 	/// @DnDHash : 3FD02104
 	/// @DnDParent : 73A06398
 	/// @DnDArgument : "expr" "distance_to_object(o_pylon) < 600"
-	if(distance_to_object(o_pylon) < 600){	/// @DnDAction : YoYo Games.Common.Execute_Script
-		/// @DnDVersion : 1.1
-		/// @DnDHash : 397A693F
-		/// @DnDParent : 3FD02104
-		/// @DnDArgument : "script" "face_pylon"
-		/// @DnDSaveInfo : "script" "face_pylon"
-		script_execute(face_pylon);
-	
-		/// @DnDAction : YoYo Games.Common.Variable
+	if(distance_to_object(o_pylon) < 600){	/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 34FD571F
 		/// @DnDParent : 3FD02104

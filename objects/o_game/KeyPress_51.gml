@@ -2,15 +2,14 @@
 /// @DnDVersion : 1
 /// @DnDHash : 51B36287
 /// @DnDInput : 3
+/// @DnDDisabled : 1
 /// @DnDArgument : "expr" "irandom_range(1000,9999)"
 /// @DnDArgument : "expr_1" "gm.RESULTS"
 /// @DnDArgument : "expr_2" "false"
 /// @DnDArgument : "var" "scor"
 /// @DnDArgument : "var_1" "state"
 /// @DnDArgument : "var_2" "finish_counting"
-scor = irandom_range(1000,9999);
-state = gm.RESULTS;
-finish_counting = false;
+
 
 /// @DnDAction : YoYo Games.Rooms.Go_To_Room
 /// @DnDVersion : 1

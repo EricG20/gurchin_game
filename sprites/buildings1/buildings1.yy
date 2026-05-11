@@ -2,7 +2,7 @@
   "$GMSprite":"v2",
   "%Name":"buildings1",
   "bboxMode":0,
-  "bbox_bottom":499,
+  "bbox_bottom":799,
   "bbox_left":0,
   "bbox_right":499,
   "bbox_top":16,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"07250675-a92d-4908-a492-3afb73c68994","name":"07250675-a92d-4908-a492-3afb73c68994","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"71506af6-a7c6-4f5a-8389-d6b9dba13248","name":"71506af6-a7c6-4f5a-8389-d6b9dba13248","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":500,
+  "height":800,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"cb342ad8-b319-4bd5-a971-c0ea804d8ae3","blendMode":0,"displayName":"default","isLocked":false,"name":"cb342ad8-b319-4bd5-a971-c0ea804d8ae3","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"0e05b6a9-fff0-449d-a8f0-ee99882ed7e6","blendMode":0,"displayName":"default","isLocked":false,"name":"0e05b6a9-fff0-449d-a8f0-ee99882ed7e6","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"buildings1",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"07250675-a92d-4908-a492-3afb73c68994","path":"sprites/buildings1/buildings1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"b887c992-3a6b-42cf-ad8d-0e94f7cba239","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"71506af6-a7c6-4f5a-8389-d6b9dba13248","path":"sprites/buildings1/buildings1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"c42e79e6-f65c-450d-a673-323ae61e9e80","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

@@ -168,7 +168,7 @@ if(displaying_info){	/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDInput : 14
 		/// @DnDParent : 7F94679B
 		/// @DnDArgument : "script" "draw_text_colour_outline"
-		/// @DnDArgument : "arg" "1281 + 160"
+		/// @DnDArgument : "arg" "1281 + 260"
 		/// @DnDArgument : "arg_1" "120*i+70"
 		/// @DnDArgument : "arg_2" "mission_desc"
 		/// @DnDArgument : "arg_3" "c_white"
@@ -183,7 +183,7 @@ if(displaying_info){	/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDArgument : "arg_12" ".5"
 		/// @DnDArgument : "arg_13" "0"
 		/// @DnDSaveInfo : "script" "draw_text_colour_outline"
-		script_execute(draw_text_colour_outline, 1281 + 160, 120*i+70, mission_desc, c_white, c_white, 1, c_gray, c_gray, 1, 1, 4, .5, .5, 0);}}
+		script_execute(draw_text_colour_outline, 1281 + 260, 120*i+70, mission_desc, c_white, c_white, 1, c_gray, c_gray, 1, 1, 4, .5, .5, 0);}}
 
 /// @DnDAction : YoYo Games.Common.If_Expression
 /// @DnDVersion : 1

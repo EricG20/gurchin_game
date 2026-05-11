@@ -49,6 +49,45 @@ var l61EB12DC_0 = state;switch(l61EB12DC_0){	/// @DnDAction : YoYo Games.Swit
 			
 				/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDVersion : 1
+				/// @DnDHash : 23D46A3A
+				/// @DnDInput : 2
+				/// @DnDParent : 21232DE0
+				/// @DnDArgument : "expr" "10"
+				/// @DnDArgument : "expr_1" "5"
+				/// @DnDArgument : "var" "pylon_enemy_goal"
+				/// @DnDArgument : "var_1" "final_wave"
+				pylon_enemy_goal = 10;
+				final_wave = 5;
+			
+				/// @DnDAction : YoYo Games.Instances.Create_Instance
+				/// @DnDVersion : 1
+				/// @DnDHash : 4D6FC659
+				/// @DnDParent : 21232DE0
+				/// @DnDArgument : "xpos" "960"
+				/// @DnDArgument : "var" "cardh"
+				/// @DnDArgument : "objectid" "e_card"
+				/// @DnDArgument : "layer" ""Effects""
+				/// @DnDSaveInfo : "objectid" "e_card"
+				cardh = instance_create_layer(960, 0, "Effects", e_card);
+			
+				/// @DnDAction : YoYo Games.Common.Execute_Script
+				/// @DnDVersion : 1.1
+				/// @DnDHash : 6C1399AE
+				/// @DnDParent : 21232DE0
+				/// @DnDArgument : "script" "scr_fadeout_song"
+				/// @DnDSaveInfo : "script" "scr_fadeout_song"
+				script_execute(scr_fadeout_song);
+			
+				/// @DnDAction : YoYo Games.Common.Variable
+				/// @DnDVersion : 1
+				/// @DnDHash : 518095AA
+				/// @DnDParent : 21232DE0
+				/// @DnDArgument : "expr" "Layer_1"
+				/// @DnDArgument : "var" "cardh.sprite_index"
+				cardh.sprite_index = Layer_1;
+			
+				/// @DnDAction : YoYo Games.Common.Variable
+				/// @DnDVersion : 1
 				/// @DnDHash : 7F5900E6
 				/// @DnDParent : 21232DE0
 				/// @DnDArgument : "expr" "gm.PYLON"
@@ -384,7 +423,16 @@ var l61EB12DC_0 = state;switch(l61EB12DC_0){	/// @DnDAction : YoYo Games.Swit
 				/// @DnDParent : 330D9C2E
 				/// @DnDArgument : "expr" "welcome_to_ufo"
 				/// @DnDArgument : "var" "cardh.sprite_index"
-				cardh.sprite_index = welcome_to_ufo;	break;}
+				cardh.sprite_index = welcome_to_ufo;
+			
+				/// @DnDAction : YoYo Games.Common.Execute_Script
+				/// @DnDVersion : 1.1
+				/// @DnDHash : 57A18829
+				/// @DnDParent : 330D9C2E
+				/// @DnDArgument : "script" "scr_change_song"
+				/// @DnDArgument : "arg" "ufo"
+				/// @DnDSaveInfo : "script" "scr_change_song"
+				script_execute(scr_change_song, ufo);	break;}
 	
 		/// @DnDAction : YoYo Games.Common.If_Expression
 		/// @DnDVersion : 1

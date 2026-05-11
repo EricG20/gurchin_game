@@ -30,12 +30,12 @@ ds_list_add(missions, "classic", "city_invasion");
 /// @DnDArgument : "key_1" ""classic_title""
 /// @DnDArgument : "value_1" ""Grivna-Prime Assault!""
 /// @DnDArgument : "key_2" ""classic_desc""
-/// @DnDArgument : "value_2" ""Vurmin are attacking the ship housing our Glorbulous Empress, and are heading straight for the Core Pylon!""
+/// @DnDArgument : "value_2" ""Classic Zorbulon Pylon Defence Force. Hard as nails""
 /// @DnDArgument : "key_3" ""classic_room""
 /// @DnDArgument : "value_3" "ship_room"
 ds_map_replace(mission_details, "classic_thumbnail", classic_thumbnail);
 ds_map_replace(mission_details, "classic_title", "Grivna-Prime Assault!");
-ds_map_replace(mission_details, "classic_desc", "Vurmin are attacking the ship housing our Glorbulous Empress, and are heading straight for the Core Pylon!");
+ds_map_replace(mission_details, "classic_desc", "Classic Zorbulon Pylon Defence Force. Hard as nails");
 ds_map_replace(mission_details, "classic_room", ship_room);
 
 /// @DnDAction : YoYo Games.Data Structures.Map_Set_Value
@@ -49,12 +49,12 @@ ds_map_replace(mission_details, "classic_room", ship_room);
 /// @DnDArgument : "key_1" ""city_invasion_title""
 /// @DnDArgument : "value_1" ""New York Invasion!""
 /// @DnDArgument : "key_2" ""city_invasion_desc""
-/// @DnDArgument : "value_2" ""New York is under attack by Vurmin! Protect Mayor Jorhan Zamdani at all costs!""
+/// @DnDArgument : "value_2" ""A flat city map. 4 waves, smaller enemy goal, plum easy.""
 /// @DnDArgument : "key_3" ""city_invasion_room""
 /// @DnDArgument : "value_3" "city"
 ds_map_replace(mission_details, "city_invasion_thumbnail", ny_thumbnail);
 ds_map_replace(mission_details, "city_invasion_title", "New York Invasion!");
-ds_map_replace(mission_details, "city_invasion_desc", "New York is under attack by Vurmin! Protect Mayor Jorhan Zamdani at all costs!");
+ds_map_replace(mission_details, "city_invasion_desc", "A flat city map. 4 waves, smaller enemy goal, plum easy.");
 ds_map_replace(mission_details, "city_invasion_room", city);
 
 /// @DnDAction : YoYo Games.Instances.Create_Instance

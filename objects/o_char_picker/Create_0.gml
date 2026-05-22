@@ -1,3 +1,10 @@
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 4269A4D8
+/// @DnDArgument : "expr" "-1"
+/// @DnDArgument : "var" "scroll_pos"
+scroll_pos = -1;
+
 /// @DnDAction : YoYo Games.Data Structures.Create_List
 /// @DnDVersion : 1
 /// @DnDHash : 12F5B826

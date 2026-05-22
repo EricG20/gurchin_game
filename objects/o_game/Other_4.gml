@@ -486,19 +486,30 @@ var l61EB12DC_0 = state;switch(l61EB12DC_0){	/// @DnDAction : YoYo Games.Swit
 	case gm.SELECT:	/// @DnDAction : YoYo Games.Audio.Audio_Set_Volume
 		/// @DnDVersion : 1.1
 		/// @DnDHash : 25A7A9A4
+		/// @DnDDisabled : 1
 		/// @DnDParent : 64AB5EB5
 		/// @DnDArgument : "sound" "menu"
 		/// @DnDSaveInfo : "sound" "menu"
-		audio_sound_gain(menu, 1, 0);
+	
 	
 		/// @DnDAction : YoYo Games.Common.Execute_Script
 		/// @DnDVersion : 1.1
 		/// @DnDHash : 1B882E34
+		/// @DnDDisabled : 1
 		/// @DnDParent : 64AB5EB5
 		/// @DnDArgument : "script" "scr_change_song"
 		/// @DnDArgument : "arg" "menu"
 		/// @DnDSaveInfo : "script" "scr_change_song"
-		script_execute(scr_change_song, menu);
+	
+	
+		/// @DnDAction : YoYo Games.Common.Execute_Script
+		/// @DnDVersion : 1.1
+		/// @DnDHash : 56460083
+		/// @DnDParent : 64AB5EB5
+		/// @DnDArgument : "script" "scr_dynamic_song"
+		/// @DnDArgument : "arg" ""menu""
+		/// @DnDSaveInfo : "script" "scr_dynamic_song"
+		script_execute(scr_dynamic_song, "menu");
 	
 		/// @DnDAction : YoYo Games.Instances.Create_Instance
 		/// @DnDVersion : 1

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_dynamic_song",
+  "isCompatibility":false,
+  "isDnD":true,
+  "name":"scr_dynamic_song",
+  "parent":{
+    "name":"music",
+    "path":"folders/Scripts/music.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

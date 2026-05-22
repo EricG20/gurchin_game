@@ -6,8 +6,8 @@
 /// @DnDArgument : "y" "800"
 /// @DnDArgument : "xscale" "2"
 /// @DnDArgument : "yscale" "2"
-/// @DnDArgument : "caption" ""game speed: ""
-/// @DnDArgument : "text" "global.game_speed"
+/// @DnDArgument : "caption" ""Song: ""
+/// @DnDArgument : "text" "curr_song"
 
 
 /// @DnDAction : YoYo Games.Loops.For_Loop

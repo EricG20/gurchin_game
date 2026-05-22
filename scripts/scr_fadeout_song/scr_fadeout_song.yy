@@ -5,8 +5,8 @@
   "isDnD":true,
   "name":"scr_fadeout_song",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"music",
+    "path":"folders/Scripts/music.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

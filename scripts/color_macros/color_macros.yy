@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"color_macros",
+  "isCompatibility":false,
+  "isDnD":true,
+  "name":"color_macros",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
